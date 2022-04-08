@@ -47,6 +47,7 @@ runs:
         personal_token: ${{inputs.token}}
         publish_dir: book/_build/html
         publish_branch: gh-pages
+        cname: snowex.hackweek.io
 
     - name: Save Build
       if: ${{ always() && inputs.jb-save == 'true'}} 
