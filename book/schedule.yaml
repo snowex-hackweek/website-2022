@@ -1,7 +1,7 @@
 timezone: UTC -7 (Pacific Daylight Time)
 tabs:
 - title: Day 1
-  date: Wed 12, Oct
+  date: Mon 11, July
   contents:
   - time: 9:00 - 9:30
     location: Conference Room A
@@ -20,7 +20,7 @@ tabs:
       elit.
     leads: []
 - title: Day 2
-  date: Thu 13, Oct
+  date: Tues 12, July
   contents:
   - time: 1:00 - 2:00 PM
     title: Coffee Break
@@ -31,8 +31,8 @@ tabs:
       - list1 
       - list2
 - title: Day 3
-  date: Fri 14, Oct
+  date: Wed 13, July
 - title: Day 4
-  date: Sat 15, Oct
+  date: Thurs 14, July
 - title: Day 5
-  date: Sun 16, Oct
+  date: Friday 17, July
