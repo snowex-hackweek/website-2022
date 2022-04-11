@@ -7,31 +7,18 @@ description:
 # - user_groups correspond to hackweek roles defined here: https://uwhackweek.github.io/hackweeks-as-a-service/services/index.html
 # - For 'avatar' an easy option is to use the URL for your GitHub user image: https://api.github.com/users/YOUR_GITHUB_USERNAME
 people:
-  - title: Jessica Scheick
-    avatar: https://avatars.githubusercontent.com/u/11756442?v=4
-    role: Research Assistant Professor
+  - title: HP Marshall
+    avatar: https://avatars.githubusercontent.com/u/23019134?v=4
+    role: Associate Professor
     organizations:
-      - name: University of New Hampshire
-      - name: eScience
-    bio: Jessica is a glaciologist, remote sensing specialist, open science advocate and educator,
-      collaborative developer, open-source software contributor and maintainer, and community manager.
-      She enjoys weaving her many roles together to work with others to build software that makes it easier
-      for everyone to access and manipulate data, and she's especially fond of detecting icebergs.
+      - name: Boise State University
+    bio: 
     expertise:
-      - open science
-      - collaborative development
-      - Python
-      - git
-      - GitHub
-      - glaciers
-      - ICESat-2/icepyx
+      - SnowEx
     social:
       - icon: github
         icon_pack: fab
-        link: https://github.com/jessicas11
-      - icon: github
-        icon_pack: fab
-        link: https://github.com/icesat2py
+        link: https://github.com/hpmarshall
     user_groups:
       - Lead Hackweek Organizer
       - Tutorial Lead
@@ -60,6 +47,34 @@ people:
         link: https://github.com/aaarendt
     user_groups:
       - Lead Hackweek Organizer
+  # =============
+  - title: Jessica Scheick
+    avatar: https://avatars.githubusercontent.com/u/11756442?v=4
+    role: Research Assistant Professor
+    organizations:
+      - name: University of New Hampshire
+      - name: eScience
+    bio: Jessica is a glaciologist, remote sensing specialist, open science advocate and educator,
+      collaborative developer, open-source software contributor and maintainer, and community manager.
+      She enjoys weaving her many roles together to work with others to build software that makes it easier
+      for everyone to access and manipulate data, and she's especially fond of detecting icebergs.
+    expertise:
+      - open science
+      - collaborative development
+      - Python
+      - git
+      - GitHub
+      - glaciers
+      - ICESat-2/icepyx
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/jessicas11
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/icesat2py
+    user_groups:
+      - Project Team Lead
   # =============
   - title: Charley Haley
     avatar: https://avatars.githubusercontent.com/u/70242677?v=4
