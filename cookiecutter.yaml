@@ -4,22 +4,22 @@ about: Hackweeks are participant-driven events that strive to create welcoming s
   for participants to learn new things, build community and gain hands-on experience
   with collaboration and team science
 apply:
-  url: '#'
-  title: Application coming soon
+  url: https://forms.gle/cBxW33Zg1B8YMSJP6
+  title: Apply Here!
 hackweek_mission: https://uwhackweek.github.io/hackweeks-as-a-service/mission.html
 banner:
   title: SnowEx Hackweek
   description: An awesome learning event.
   start_date: 11 July
-  end_date: 17 July
+  end_date: 15 July
   year: 2022
   location: Seattle, WA
   links:
   - url: intro.html
     title: Event Jupyter Book
     new_window: false
-  - url: https://snowex-hackweek.github.io/website/intro.html
-    title: 2021 Website
+  - url: https://snowex.hackweek.io/intro.html
+    title: 2022 Website
     new_window: true
   image: https://geohackweek.github.io/assets/images/banner.jpg
 applicant_info: SnowEx Hackweek 2022 will take place in July 2022. Applications will open in April 2022.
