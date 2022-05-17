@@ -14,7 +14,7 @@ parse:
     dates: "July 11-15 2022"
     github_org_url: "https://github.com/snowex-hackweek"
     book_repo: "website2022"
-    website_url: "https://github.com/snowex-hackweek/website2022"
+    website_url: "https://snowex.hackweek.io"
     jupyterhub_url: "https://uwhackweeks.2i2c.cloud"
     slack_workspace_url: "https://app.slack.com/client/T01S7M0BSNN/C01S7T6RQG3"
     docker_image: "https://hub.docker.com/r/uwhackweek/snowex"
@@ -54,7 +54,7 @@ launch_buttons:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/uwhackweek/jupyterbook-template # Online location of your book
+  url: https://github.com/snowex-hackweek/website2022 # Online location of your book
   path_to_book: book  # Optional path to your book, relative to the repository root
   branch: main  # Which branch of the repository should be used when creating links (optional)
 

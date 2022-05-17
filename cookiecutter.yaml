@@ -16,10 +16,10 @@ banner:
   location: Seattle, WA
   links:
   - url: intro.html
-    title: Event Jupyter Book
+    title: 2022 Jupyter Book
     new_window: false
-  - url: https://snowex.hackweek.io/intro.html
-    title: 2022 Website
+  - url: https://snowex-hackweek.github.io/website
+    title: 2021 Website
     new_window: true
   image: https://geohackweek.github.io/assets/images/banner.jpg
 applicant_info: SnowEx Hackweek 2022 will take place in July 2022. Applications will open in April 2022.
