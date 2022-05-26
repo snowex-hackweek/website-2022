@@ -10,13 +10,14 @@ dependencies:
   # Common
   - python=3.10
   - pip
-  # JupyterBook
-  - cookiecutter
+  # JupyterBook + event website
+  - cookiecutter=1
+  - jupyter-book=0.12.3
   - jinja2>=2.11
   - pygments>=2.6.1
   - pymdown-extensions>=7.1
   - sphinxcontrib-bibtex
-  # User Interface
+  # User interface
   - jupyterlab=3
   - jupyter-resource-usage
   - jupyterhub-singleuser
@@ -38,9 +39,10 @@ dependencies:
   - shapely
   - vim
   - wget
-  - xarray 
+  - xarray
   - zarr
   - pip:
+    # NOTE: required for event website
     - jinja-markdown==1.210911
 platforms:
   - linux-64
