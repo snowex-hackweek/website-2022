@@ -20,8 +20,8 @@ parse:
     docker_image: "https://hub.docker.com/r/uwhackweek/snowex"
     contact_email: "uwhackweek@uw.edu"
     dataset: "SnowEx"
-    anon_reporting_url: "https://INSERT_FORM_LINK"
-    project_spreadsheet_url: "https://INSERT_GOOGLE_SHEET"
+    anon_reporting_url: "https://forms.gle/JcRfzraXraC8epFu9"
+    project_spreadsheet_url: "https://docs.google.com/spreadsheets/d/1oFcfWDGuDQB5muYM6pyQa7uDhoILV7knlBByLShDL18/edit?usp=sharing"
   myst_enable_extensions:
     # Defaults
     - dollarmath
