@@ -44,6 +44,9 @@ dependencies:
   - pip:
     # NOTE: required for event website
     - jinja-markdown==1.210911
+    # Database access repo
+    - git+https://github.com/SnowEx/snowexsql.git
+
 platforms:
   - linux-64
   - osx-64
