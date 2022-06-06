@@ -1,38 +1,171 @@
 timezone: UTC -7 (Pacific Daylight Time)
 tabs:
-- title: Day 1
-  date: Mon 11, July
-  contents:
-  - time: 9:00 - 9:30
-    location: Conference Room A
-    title: Best Practices And Tips For Research Software
-    description: A talk about reproducible research
-    leads:
-    - Scott Henderson
-    - Anthony Arendt
-    resources:
-      - title: "SnowEx Hackweek 2021: Introductory Session"
-        url: https://youtu.be/cHQloxZFtOQ
-  - time: 9:30 - 10:00
-    location: Room A5
-    title: Coffee Break
-    description: Coffee and cakes lorem ipsum dolor sit amet, consectetur adipiscing
-      elit.
-    leads: []
-- title: Day 2
-  date: Tues 12, July
-  contents:
-  - time: 1:00 - 2:00 PM
-    title: Coffee Break
-    description: |
-      
-      more refueling, but with a bulleted list:
-
-      - list1 
-      - list2
-- title: Day 3
-  date: Wed 13, July
-- title: Day 4
-  date: Thurs 14, July
-- title: Day 5
-  date: Friday 17, July
+  - title: Day 1
+    date: Monday 11 Jul
+    contents:
+      - time: 9:00 - 10:00
+        location: Maple Hall
+        title: Welcome to SnowEx Hackweek
+        description: Getting to know each other and setting the stage for our work together.
+        leads:
+          - Anthony Arendt
+          - Charley Haley
+      - time: 10:00 - 10:30
+        location: Maple Hall
+        title: Overview of the SnowEx Mission
+        description:
+        leads:
+          - HP Marshall
+      - time: 10:30 - 10:45
+        title: Movement and coffee break
+        description:
+        leads: [ ]
+      - time: 10:45 - 11:30
+        location: Maple Hall
+        title: Getting Started on Technology
+        description: Still having trouble with getting any technology going? We're here to help you debug!
+        leads:
+          - Joachim Meyer
+      - time: 11:30 - 12:00
+        location: Maple Hall
+        title: Project Ideation
+        description: A chance to learn about existing project ideas and pitch new ones.
+        leads:
+          - Charley Haley
+          - Anthony Arendt
+      - time: 12:00 - 1:00
+        title: Lunch
+        description:
+        leads: [ ]
+      - time: 1:00 - 2:00
+        location: Maple Hall
+        title: Formation of Hacking Projects
+        description: Time to breakout into small groups and find out which project is the best fit for you.
+        leads:
+          - Charley Haley
+          - Anthony Arendt
+      - time: 2:00 - 3:00
+        location: Maple Hall
+        title: Project Set up and Logistics
+        description: Meet your teammates, figure out how/when you want to meet and communicate.
+        leads: [ ]
+  - title: Day 2
+    date: Tues 12 Jul
+    contents:
+    - time: 9:00 - 10:00
+      title: Object Oriented Programming for Collaborative Development in Python
+      description: An introduction to writing well-formed modular code to facilitate collaborative programming.
+          - icepyx
+          - working together
+      leads:
+      - Romina Piunno
+    - time: 10:00 - 10:30 
+      title: Project Team Building
+      leads:
+      - Naomi Alterman
+    - time: 10:30 - 10:45
+      title: Movement and coffee break
+      description:
+      leads: [ ]
+    - time: 10:45 - 12:15
+      title: Databases
+      leads:
+      - Micah Johnson
+      - Micah Sandusky
+    - time: 12:00 - 1:00
+      title: Lunch
+      description:
+      leads: [ ]
+    - time: 1:00 - 1:30 
+      title: NSIDC Data Access
+      leads:
+      - Gail Reckase
+      - Amy Steiker
+    - time: 1:30 - 4:30   
+      title: Project work
+  - title: Day 3
+    date: Wed 13 Jul
+    contents:
+    - time: 9:00 - 9:30
+      title: Open source science and NASA Mission development
+      leads:
+      - HP Marshall
+      - Jessica Lundquest
+    - time: 9:30 - 10:15
+      title: Signals of Opportunity
+      leads:
+      - Xiaolan Xiu
+      - Rashmi Shaw
+      - Simon Yueh
+    - time: 10:15 - 10:30
+      title: coffee and movement break
+      leads: [ ]
+    - time: 10:30 - 11:15
+      title: SWESARR
+      leads:
+      - Dylan Boyd
+      - Batu Osmanogolu
+    - time: 11:15 - 12:30
+      title: LiDAR
+      leads:
+      - Naheem Adebisi
+      - Clare Webster
+    - time: 12:30 - 1:30
+      title: lunch
+      leads: [ ]
+  - title: Day 4
+    date: Thurs 14 Jul
+    contents:
+    - time: 9:00 - 10:30
+      title: Machine Learning
+      leads:
+      - Ibrahim Alabi
+      - Evi Ofekeze
+    - time: 10:30 - 10:45 
+      title: coffee
+      leads: [ ]  
+    - time: 10:45 - 11:30
+      title: AVIRIS-NG
+      leads:
+      - Chelsea Ackroyd
+      - Joachim Meyer
+    - time: 11:30 - 12:15
+      title: Snow Modeling
+      leads:
+      - Melissa Wrzesien
+      - Brendan McAndrew
+    - time: 12:15 - 1:15
+      title: lunch
+      leads: [ ]
+    - time: 1:15 - 2:00
+      title: UAVSAR
+      leads:
+      - Jack Terricone
+      - Zach Keskinen
+    - time: 2:00 - 4:30
+      title: project work
+  - title: Day 5
+    date: Fri 15 Jul
+    contents:
+    - time: 9:00 - 10:30
+      title: open session / project work
+      leads: [ ]
+    - time: 10:30 - 11:00 
+      title: coffee and group photo
+      leads: [ ]
+    - time: 11:00 - 11:30 
+      title: Hackweek Evaluation Form
+      leads: 
+      - Anthony Arendt
+    - time: 11:30 - 12:30 
+      title: lunch
+      leads: [ ]
+    - time: 12:30 - 3:30
+      title: Project Presentations
+      leads: [ ]
+    - time: 3:30 - 3:45
+      title: closing session
+      leads:
+      - HP Marshall
+      - Anthony Arendt
+    
