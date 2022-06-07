@@ -19,7 +19,6 @@ tabs:
       - time: 10:30 - 10:45
         title: Movement and coffee break
         description:
-        leads: [ ]
       - time: 10:45 - 11:30
         location: Maple Hall
         title: Getting Started on Technology
@@ -34,9 +33,8 @@ tabs:
           - Charley Haley
           - Anthony Arendt
       - time: 12:00 - 1:00
-        title: Lunch
+        title: lunch
         description:
-        leads: [ ]
       - time: 1:00 - 2:00
         location: Maple Hall
         title: Formation of Hacking Projects
@@ -48,7 +46,6 @@ tabs:
         location: Maple Hall
         title: Project Set up and Logistics
         description: Meet your teammates, figure out how/when you want to meet and communicate.
-        leads: [ ]
   - title: Day 2
     date: Tues 12 Jul
     contents:
@@ -66,16 +63,14 @@ tabs:
     - time: 10:30 - 10:45
       title: Movement and coffee break
       description:
-      leads: [ ]
     - time: 10:45 - 12:15
       title: Databases
       leads:
       - Micah Johnson
       - Micah Sandusky
     - time: 12:00 - 1:00
-      title: Lunch
+      title: lunch
       description:
-      leads: [ ]
     - time: 1:00 - 1:30 
       title: NSIDC Data Access
       leads:
@@ -99,7 +94,6 @@ tabs:
       - Simon Yueh
     - time: 10:15 - 10:30
       title: coffee and movement break
-      leads: [ ]
     - time: 10:30 - 11:15
       title: SWESARR
       leads:
@@ -112,7 +106,6 @@ tabs:
       - Clare Webster
     - time: 12:30 - 1:30
       title: lunch
-      leads: [ ]
   - title: Day 4
     date: Thurs 14 Jul
     contents:
@@ -123,7 +116,6 @@ tabs:
       - Evi Ofekeze
     - time: 10:30 - 10:45 
       title: coffee
-      leads: [ ]  
     - time: 10:45 - 11:30
       title: AVIRIS-NG
       leads:
@@ -136,7 +128,6 @@ tabs:
       - Brendan McAndrew
     - time: 12:15 - 1:15
       title: lunch
-      leads: [ ]
     - time: 1:15 - 2:00
       title: UAVSAR
       leads:
@@ -149,20 +140,16 @@ tabs:
     contents:
     - time: 9:00 - 10:30
       title: open session / project work
-      leads: [ ]
     - time: 10:30 - 11:00 
       title: coffee and group photo
-      leads: [ ]
     - time: 11:00 - 11:30 
       title: Hackweek Evaluation Form
       leads: 
       - Anthony Arendt
     - time: 11:30 - 12:30 
       title: lunch
-      leads: [ ]
     - time: 12:30 - 3:30
       title: Project Presentations
-      leads: [ ]
     - time: 3:30 - 3:45
       title: closing session
       leads:
