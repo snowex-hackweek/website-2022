@@ -13,6 +13,7 @@ dependencies:
   # JupyterBook + event website
   - cookiecutter=1
   - jupyter-book=0.12.3
+  - jupytext
   - jinja2>=2.11
   - pygments>=2.6.1
   - pymdown-extensions>=7.1
