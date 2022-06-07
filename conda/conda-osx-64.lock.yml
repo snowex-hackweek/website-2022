@@ -380,4 +380,4 @@ dependencies:
   - myst-nb=0.13.2=pyhd8ed1ab_0
   - jupyter-book=0.12.3=pyhd8ed1ab_0
   - pip:
-    - jinja-markdown === 1.210911 --hash=md5:None
+    - jinja-markdown === 1.210911
