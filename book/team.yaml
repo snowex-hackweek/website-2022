@@ -204,3 +204,39 @@ people:
     user_groups:
       - Technology Specialist
   # =============
+  - title: Dylan Boyd
+  avatar: https://avatars.githubusercontent.com/u/28358098?v=4
+  role: Tutorial Lead
+  organizations:
+  - name: Mississippi State University
+    url: https://www.ece.msstate.edu/
+  bio: Dylan Boyd is a Ph.D. student at Mississippi State University's Department of Electrical and Computer Engineering researching methods for recycling signals of opportunity for land applications. His group also is investigating methods for snow water equivalent retrieval for dry snow.
+  expertise:
+  - signals of opportunity
+  - snow remote sensing
+  - soil moisture remote sensing
+  - MATLAB
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/db1950
+  user_groups:
+  - SWESARR Tutorial Lead
+    # =============
+  - title: Batuhan Osmanoglu
+  avatar: https://avatars.githubusercontent.com/u/829307?v=4
+  role: Tutorial Lead
+  organizations:
+  - name: NASA Goddard Space Flight Center
+    url: https://www.nasa.gov/goddard/
+  bio: Batuhan Osmanoglu, Research Physical Scientist, holds a B.Sc. in telecommunications engineering and a Ph.D. in synthetic aperture radar (SAR) interferometry. Since 2013 he has been working at the NASA Goddard Space Flight Center. He is working on instrument and algorithm development of P-, L-, X- and Ku-band SAR systems. He also serves as one of the NISAR Deputy Application Leads at NASA, and is one of the Disasters Program coordinators at Goddard. He is a member of the IEEE and American Geophysical Union. He also chairs the Microwave Remote Sensing workgroup under International Society for Photogrammetry and Remote-Sensing.
+  expertise:
+  - SAR
+  - snow remote sensing
+  social:
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/bosmanoglu
+  user_groups:
+  - SWESARR Tutorial Co-Lead
+  # =============
