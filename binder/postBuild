@@ -1,0 +1,14 @@
+
+# Install AWS CLIv2
+# https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+
+cd /tmp
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install -i /srv/conda/aws-cli -b /srv/conda/bin
+
+# Report version
+aws --version
+
+# Clean up
+rm -r aws awscliv2.zip
