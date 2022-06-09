@@ -12,7 +12,7 @@ people:
     role: Associate Professor
     organizations:
       - name: Boise State University
-    bio: 
+    bio:
     expertise:
       - SnowEx
     social:
@@ -213,7 +213,7 @@ people:
       Romina is a PhD candidate in atmospheric physics at the University of Toronto with a
       background in computer science and mathematics. Her research focuses on deep
       convection in the Labrador Sea and its role in atmospheric carbon sequestration.
-      In additio to her research, Romina is actively involved in a software development 
+      In additio to her research, Romina is actively involved in a software development
       project that aims to simplify the process of accessing geophysical data.
     expertise:
       - Python
@@ -246,3 +246,27 @@ people:
     user_groups:
       - Tutorial Lead
   # =============
+  - title: Micah Sandusky
+    avatar: https://avatars.githubusercontent.com/u/32111103?v=4
+    role: Snowpack Modeler and Software Engineer
+    organizations:
+      - name: M3 Works LLC
+    bio: >
+      Micah is a cofounder at M3 Works LLC and has a professional focus on
+      scientific modeling and software consulting. He has a background in
+      mechanical engineering and software development, including developing
+      cloud applications and contributing to opensource software.
+    expertise:
+      - Software Development
+      - Snowpack Modeling
+      - Cloud Computing
+      - Python
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/micah-prime
+      - icon: twitter
+        icon_pack: fab
+        link: https://twitter.com/sanduskymicah
+    user_groups:
+      - Tutorial Lead
