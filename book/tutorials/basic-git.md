@@ -151,6 +151,19 @@ Do this from `jupyterlab-git`. You can also try from the shell if you watched th
 
 Try before watching. [Show me](https://youtu.be/ejmkkjWJ_Es) -- [Show me in the shell](https://youtu.be/tvmX41b5pTU)
 
+### Pair-activity 2
+
+All of this activity is in JupyterLab.
+
+1. Clone this repo: https://github.com/snowex-hackweek/git-basics
+2. Navigate to the repo, copy `Copyme.md` and rename to `<yourname>.md`
+3. Stage and then commit that new file.
+4. Push to GitHub.
+5. Make some more changes and push to GitHub.
+6. Pull in your partner's (and everyone elses) changes
+
+[Show me](https://youtu.be/w0ub1hBZh70)
+
 ### Skill 1b: Fork a repo on GitHub
 
 You can copy other people's repos but maintain a connection to the original (upstream) repo. In the hackweek, you will use this to get the tutorials and update them each morning.
