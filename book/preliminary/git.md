@@ -84,12 +84,12 @@ personal GitHub account. It will also give you permission to push changes to you
 the {{hackweek}} hackweek organization via the command line.
 
 To test your setup on the JupyterHub, we will be using a test repository from
-the {{hackweek}} Hackweek organization. Paste the following command into your open
+the [SnowEx Hackweek GitHub organization](https://github.com/snowex-hackweek). Paste the following command into your open
 terminal on the JupyterHub. where you will be prompted for your GitHub username
 and the token.
 
 ```shell
-git clone {{github_org_url}}.github_setup_check.git
+git clone https://github.com/snowex-hackweek/github_setup_check.git
 ```
 
 Since this is the first time you are interacting from the JupyterHub with GitHub,
