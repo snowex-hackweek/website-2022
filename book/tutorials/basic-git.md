@@ -65,7 +65,7 @@ Copy the token! You will need it in the next step.
 You will do this by cloning a private repo. Open a shell and issue this command
 
 ```shell
-git clone https://github.com/snowex-hackweek/github_setup_check.github_setup_check.git
+git clone https://github.com/snowex-hackweek/github_setup_check.git
 ```
 
 It will ask for your GitHub username and password. At the password part, paste in the Personal Access Token.
