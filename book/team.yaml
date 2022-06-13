@@ -306,3 +306,20 @@ people:
         link: https://twitter.com/sanduskymicah
     user_groups:
       - Tutorial Lead
+  # =============
+  - title: Gail Reckase
+    avatar: https://github.com/egreckase.png
+    role: Data Support Specialist
+    organizations: 
+      - name: National Snow and Ice Data Center NASA DAAC
+        url: https://nsidc.org/
+    bio: 
+    expertise:
+      - NSIDC Data Access & Services 
+      - GIS
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/egreckase
+    user_groups:
+      - Tutorial Lead
