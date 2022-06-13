@@ -323,3 +323,25 @@ people:
         link: https://github.com/egreckase
     user_groups:
       - Tutorial Lead
+  # =============
+  - title: Chelsea Ackroyd
+    avatar: https://avatars.githubusercontent.com/u/86263902?v=4
+    role: Graduate Student
+    organizations:
+      - name: University of Utah
+    bio: >
+      Chelsea is a PhD student in the Snow HydRO Lab at the University of
+      Utah with a particular interest in remote sensing. Her research is
+      primarily focused on observing changes in snow grain size and
+      albedo using lidar intensity data.
+    expertise:
+      - GIS and Remote Sensing
+      - Drones
+      - Lidar
+      - Jupyter
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/c-ackroyd
+    user_groups:
+      - Tutorial Lead
