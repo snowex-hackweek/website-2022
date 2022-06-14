@@ -263,7 +263,7 @@ people:
     user_groups:
       - Tutorial Lead
 # =============
-- title: Eli Holmes
+  - title: Eli Holmes
     avatar: https://avatars.githubusercontent.com/u/2545978?v=4
     role: Research Scientist
     organizations:
@@ -352,18 +352,18 @@ people:
     organizations:
       - name: University of Nevada, Reno
     bio: >
-        Jack is a PhD student in the Computational Mountain Studies Lab
-        at the University of Nevada, Reno. His research focuses on optimizing and
-        utilizing remote sensing techniques to estimate snowpack properties
-        and fluxes at various space and time scales.
+      Jack is a PhD student in the Computational Mountain Studies Lab at
+      the University of Nevada, Reno. His research focuses on optimizing and
+      utilizing remote sensing techniques to estimate snowpack
+      properties and fluxes at various space and time scales.
     expertise:
       - Snow Hydrology
       - Remote Sensing
-      - SAR/InSAR
       - R
+      - QGIS
     social:
       - icon: github
         icon_pack: fab
-        link: https://github.com/jacktarricone
+        link: https://github.com/c-ackroyd
     user_groups:
       - Tutorial Lead
