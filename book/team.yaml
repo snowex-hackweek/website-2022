@@ -310,12 +310,12 @@ people:
   - title: Gail Reckase
     avatar: https://github.com/egreckase.png
     role: Data Support Specialist
-    organizations: 
+    organizations:
       - name: National Snow and Ice Data Center NASA DAAC
         url: https://nsidc.org/
-    bio: 
+    bio:
     expertise:
-      - NSIDC Data Access & Services 
+      - NSIDC Data Access & Services
       - GIS
     social:
       - icon: github
@@ -345,3 +345,25 @@ people:
         link: https://github.com/c-ackroyd
     user_groups:
       - Tutorial Lead
+    # =============
+    - title: Jack Tarricone
+      avatar: https://avatars.githubusercontent.com/u/54866783?v=4
+      role: Graduate Student
+      organizations:
+        - name: University of Nevada, Reno
+      bio: >
+        Jack is a PhD student in the Computational Mountain Studies Lab
+        at the University of Nevada, Reno. His research focuses on optimizing and
+        utilizing remote sensing techniques to estimate snowpack properties
+        and fluxes at various space and time scales.
+      expertise:
+        - Snow Hydrology
+        - Remote Sensing
+        - SAR/InSAR
+        - R
+      social:
+        - icon: github
+          icon_pack: fab
+          link: https://github.com/jacktarricone
+      user_groups:
+        - Tutorial Lead
