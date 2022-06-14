@@ -344,4 +344,33 @@ people:
         icon_pack: fab
         link: https://github.com/c-ackroyd
     user_groups:
+      - Tutorial Lead  
+        # =============
+  - title: Naheem Adebisi
+    avatar: https://avatars.githubusercontent.com/u/51313944?v=4
+    role: Graduate Student
+    organizations:
+      - name: Boise State University
+    bio: >
+      Naheem is PhD student at the Geoscience Department of Boise State University. 
+      He works with others at the Cryosphere Geophysics and Remote Sensing (CRYOGARS) 
+      group towards understanding the dynamics of snow and other ice  covered part of 
+      the world using state of the art remote sensing and modeling methods. His research 
+      focuses on monitoring snow depth using Interferometric Synthetic Aperture Radar 
+      (InSAR) and machine learning techniques.
+    expertise:
+      - GIS and Remote Sensing
+      - Machine Learning
+      - Python
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/Surfix
+      - icon: twitter
+        icon_pack: fab
+        link: https://twitter.com/survix
+      - icon: linkedin-in
+        icon_pack: fab
+        link: https://www.linkedin.com/in/naheem-adebisi-810958112/          
+    user_groups:
       - Tutorial Lead
