@@ -310,12 +310,12 @@ people:
   - title: Gail Reckase
     avatar: https://github.com/egreckase.png
     role: Data Support Specialist
-    organizations: 
+    organizations:
       - name: National Snow and Ice Data Center NASA DAAC
         url: https://nsidc.org/
-    bio: 
+    bio:
     expertise:
-      - NSIDC Data Access & Services 
+      - NSIDC Data Access & Services
       - GIS
     social:
       - icon: github
@@ -346,24 +346,24 @@ people:
     user_groups:
       - Tutorial Lead
   # =============
-  - title: Zach Keskinen
-    avatar: https://avatars.githubusercontent.com/u/56941602?v=4
-    role: PhD Student / Tutorial Lead
+  - title: Jack Tarricone
+    avatar: https://avatars.githubusercontent.com/u/54866783?v=4
+    role: Graduate Student
     organizations:
-      - name: Boise State University
+      - name: University of Nevada, Reno
     bio: >
-      Zach is interested in remote sensings of snow and avalanches using 
-      synthetic aperture radar, infrasound, and snowpack modeling. He is 
-      co-leading the tutorial on snow analysis with the Uavsar platform.
-
+      Jack is a PhD student in the Computational Mountain Studies Lab at
+      the University of Nevada, Reno. His research focuses on optimizing and
+      utilizing remote sensing techniques to estimate snowpack
+      properties and fluxes at various space and time scales.
     expertise:
-      - Radar Remote-Sensing
-      - Infrasound
-      - Snowpack Modeling
-      - Python
+      - Snow Hydrology
+      - Remote Sensing
+      - R
+      - QGIS
     social:
       - icon: github
         icon_pack: fab
-        link: https://github.com/zachkeskinen
+        link: https://github.com/jacktarricone
     user_groups:
       - Tutorial Lead
