@@ -3,46 +3,58 @@ tabs:
   - title: Day 1
     date: Monday 11 Jul
     contents:
-      - time: 9:00 - 10:00
-        location: Maple Hall
+      - time: 8:00 - 8:45 
+        location: [Maple Hall](https://www.google.com/maps/place/Maple+Hall/@47.6558541,-122.3158624,15z/data=!4m5!3m4!1s0x0:0xa67b9923208b0f24!8m2!3d47.6558455!4d-122.3158562)
+        title: Registration
+      - time: 8:45 - 9:45
         title: Welcome to SnowEx Hackweek
         description: Getting to know each other and setting the stage for our work together.
         leads:
           - Anthony Arendt
           - Charley Haley
-      - time: 10:00 - 10:30
+      - time: 9:45 - 10:15
         location: Maple Hall
-        title: Overview of the SnowEx Mission
+        title: Overview of the SnowEx Mission and Description of the Datasets (Part 1)
         description:
         leads:
           - HP Marshall
-      - time: 10:30 - 10:45
+          - Carrie Vuyovich
+          - Megan Mason  
+      - time: 10:15 - 10:45
         title: Movement and coffee break
         description:
-      - time: 10:45 - 11:30
+      - time: 10:45 - 11:00
+        location: Maple Hall
+        title: Overview of the SnowEx Mission and Description of the Datasets (Part 2)
+        description:
+        leads:
+          - HP Marshall
+          - Carrie Vuyovich
+          - Megan Mason
+      - time: 11:0 - 11:45
         location: Maple Hall
         title: Getting Started on Technology
         description: Still having trouble with getting any technology going? We're here to help you debug!
         leads:
           - Joachim Meyer
-      - time: 11:30 - 12:00
+      - time: 11:45 - 12:15
         location: Maple Hall
         title: Project Ideation
         description: A chance to learn about existing project ideas and pitch new ones.
         leads:
           - Charley Haley
           - Anthony Arendt
-      - time: 12:00 - 1:00
+      - time: 12:15 - 1:15
         title: lunch
         description:
-      - time: 1:00 - 2:00
+      - time: 1:15 - 2:15
         location: Maple Hall
         title: Formation of Hacking Projects
         description: Time to breakout into small groups and find out which project is the best fit for you.
         leads:
           - Charley Haley
           - Anthony Arendt
-      - time: 2:00 - 3:00
+      - time: 2:15 - 3:15
         location: Maple Hall
         title: Project Set up and Logistics
         description: Meet your teammates, figure out how/when you want to meet and communicate.
