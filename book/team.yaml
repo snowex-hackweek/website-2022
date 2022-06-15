@@ -396,7 +396,6 @@ people:
         link: https://github.com/jacktarricone
     user_groups:
       - Tutorial Lead
-
   # =============
   - title: Zach Keskinen
     avatar: https://avatars.githubusercontent.com/u/56941602?v=4
@@ -415,7 +414,29 @@ people:
       - Python
     social:
       - icon: github
-        icon_pack: fab
+      - icon_pack: fab      
         link: https://github.com/zachkeskinen
+    user_groups:
+      - Tutorial Lead      
+  # =============
+  - title: Megan Mason
+    avatar: https://github.com/meganmason.png
+    role: Research Scientist
+    organizations:
+      - name: NASA GSFC / SSAI
+    bio: >
+      Megan works as a data support scientist for the NASA SnowEx campaign.
+      She facilitates the quality control process for the ground-based observations. 
+      She has a background in geophysics studying spatial-temporal 
+      snow distribution patterns using lidar. 
+      Megan also attended Geohackweek as a graduate student in 2019. 
+    expertise:
+      - SnowEx Ground-based Observations / Field Methods
+      - Snow Science
+    social:
+        link: https://github.com/meganmason
+      - icon: twitter
+        icon_pack: fab
+        link: https://twitter.com/megmasonSnoSci
     user_groups:
       - Tutorial Lead
