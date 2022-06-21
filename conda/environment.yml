@@ -13,18 +13,22 @@ dependencies:
   # JupyterBook + event website
   - cookiecutter=1
   - jupyter-book=0.12.3
+  - jupytext
   - jinja2>=2.11
   - pygments>=2.6.1
   - pymdown-extensions>=7.1
   - sphinxcontrib-bibtex
   # User interface
+  - dask-labextension
   - jupyterlab=3
   - jupyter-resource-usage
   - jupyterhub-singleuser
-  - gh-scoped-creds
+  - jupyterlab-git
   # Analysis
   - cartopy
+  - dask
   - datashader
+  - distributed
   - geopandas
   - geoviews
   - gh
@@ -34,6 +38,8 @@ dependencies:
   - ipyleaflet
   - matplotlib
   - pyproj
+  - pystac
+  - pystac-client
   - rioxarray
   - s3fs
   - shapely
