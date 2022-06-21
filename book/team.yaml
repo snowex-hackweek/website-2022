@@ -455,7 +455,6 @@ people:
       make research easier and more reproducible. Micah is also working on
       a new snow penetrometer which he hopes will also help in characterizing
       snow microstructure at the spatial scale.
-
     expertise:
       - Software Development
       - Snowpack Modeling
@@ -466,6 +465,29 @@ people:
       - icon: github
         icon_pack: fab
         link: https://github.com/micahjohnson150
-
     user_groups:
       - Tutorial Lead
+  # =============
+  - title: Melissa Wrzesien
+    avatar: https://github.com/mlwrzesien.png
+    role: Assistant Research Scientist
+    organizations:
+      - name: NASA GSFC / University of Maryland
+    bio: >
+      Melissa's work aims to improve land surface models so they produce better
+      estimates of snow properties. Her recent work involves preparing a model
+      environment that will ingest future snow satellite observations through 
+      data assimilation. Melissa also leads the SnowEx modeling working group and
+      is always happy to chat about ways to improve model representation of snow.
+    expertise:
+      - Land surface modeling
+      - Data assimilation
+      - Snow modeling
+      - NASA Land Information System (LIS)
+      - Matlab --> wishes she was better with Python! :(
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/mlwrzesien
+    user_groups:
+      - Tutorial Lead   
