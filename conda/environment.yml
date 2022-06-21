@@ -51,7 +51,7 @@ dependencies:
     # NOTE: required for event website
     - jinja-markdown==1.210911
     # Database access repo
-    - git+https://github.com/SnowEx/snowexsql.git
+    - snowexsql==0.2.0
 
 platforms:
   - linux-64
