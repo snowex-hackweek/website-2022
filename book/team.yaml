@@ -344,7 +344,7 @@ people:
         icon_pack: fab
         link: https://github.com/c-ackroyd
     user_groups:
-      - Tutorial Lead  
+      - Tutorial Lead
   # =============
   - title: Naheem Adebisi
     avatar: https://avatars.githubusercontent.com/u/51313944?v=4
@@ -352,11 +352,11 @@ people:
     organizations:
       - name: Boise State University
     bio: >
-      Naheem is PhD student at the Geoscience Department of Boise State University. 
-      He works with others at the Cryosphere Geophysics and Remote Sensing (CRYOGARS) 
-      group towards understanding the dynamics of snow and other ice  covered part of 
-      the world using state of the art remote sensing and modeling methods. His research 
-      focuses on monitoring snow depth using Interferometric Synthetic Aperture Radar 
+      Naheem is PhD student at the Geoscience Department of Boise State University.
+      He works with others at the Cryosphere Geophysics and Remote Sensing (CRYOGARS)
+      group towards understanding the dynamics of snow and other ice  covered part of
+      the world using state of the art remote sensing and modeling methods. His research
+      focuses on monitoring snow depth using Interferometric Synthetic Aperture Radar
       (InSAR) and machine learning techniques.
     expertise:
       - GIS and Remote Sensing
@@ -371,7 +371,7 @@ people:
         link: https://twitter.com/survix
       - icon: linkedin-in
         icon_pack: fab
-        link: https://www.linkedin.com/in/naheem-adebisi-810958112/          
+        link: https://www.linkedin.com/in/naheem-adebisi-810958112/
     user_groups:
       - Tutorial Lead
   # =============
@@ -404,10 +404,10 @@ people:
       - name: NASA GSFC / SSAI
     bio: >
       Megan works as a data support scientist for the NASA SnowEx campaign.
-      She facilitates the quality control process for the ground-based observations. 
-      She has a background in geophysics studying spatial-temporal 
-      snow distribution patterns using lidar. 
-      Megan also attended Geohackweek as a graduate student in 2019. 
+      She facilitates the quality control process for the ground-based observations.
+      She has a background in geophysics studying spatial-temporal
+      snow distribution patterns using lidar.
+      Megan also attended Geohackweek as a graduate student in 2019.
     expertise:
       - SnowEx Ground-based Observations / Field Methods
       - Snow Science
@@ -428,8 +428,8 @@ people:
     organizations:
       - name: Boise State University
     bio: >
-      Zach is interested in remote sensings of snow and avalanches using 
-      synthetic aperture radar, infrasound, and snowpack modeling. He is 
+      Zach is interested in remote sensings of snow and avalanches using
+      synthetic aperture radar, infrasound, and snowpack modeling. He is
       co-leading the tutorial on snow analysis with the Uavsar platform.
 
     expertise:
@@ -443,4 +443,29 @@ people:
         link: https://github.com/zachkeskinen
     user_groups:
       - Tutorial Lead
-   
+  # =============
+  - title: Micah Johnson
+    avatar: https://m3works.io/images/subnaught.jpg
+    role: Software Engineer
+    organizations:
+      - name: M3 Works LLC
+    bio: >
+      Micah is a cofounder at M3 Works where he is advancing realtime snow modeling.
+      He also spends his time developing the SnowEx database aiming to
+      make research easier and more reproducible. Micah is also working on
+      a new snow penetrometer which he hopes will also help in characterizing
+      snow microstructure at the spatial scale.
+
+    expertise:
+      - Software Development
+      - Snowpack Modeling
+      - SnowEx Database
+      - Python
+      - git
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/micahjohnson150
+
+    user_groups:
+      - Tutorial Lead
