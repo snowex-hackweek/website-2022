@@ -93,7 +93,7 @@ tabs:
   - title: Day 3
     date: Wed 13 Jul
     contents:
-    - time: 9:30 - 9:00
+    - time: 8:30 - 9:00
       title: Open source science and NASA Mission development
       leads:
       - HP Marshall
@@ -169,4 +169,3 @@ tabs:
       leads:
       - HP Marshall
       - Anthony Arendt
-      
