@@ -16,19 +16,25 @@ parts:
   chapters:
     - file: preliminary/index
       sections:
-        - file: preliminary/swc
         - file: preliminary/github
         - file: preliminary/jupyterhub
         - file: preliminary/git
         - file: preliminary/earthdata
-        - file: preliminary/python
+        - file: preliminary/swc
+        - file: preliminary/supplemental_index
+          sections:
+          - file: preliminary/supplemental/python
+          - file: preliminary/supplemental/conda
 - caption: Tutorials
   chapters:
     - file: tutorials/index
       sections:
-        - file: tutorials/basic-git 
-        - file: tutorials/jupyter
         - file: tutorials/example/tutorial-notebook
+        - file: tutorials/git_and_jupyterlab/index
+          title: Git, GitHub, and JupyterLab
+          sections:
+            - file: tutorials/git_and_jupyterlab/basic-git
+            - file: tutorials/git_and_jupyterlab/jupyter
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
