@@ -21,7 +21,7 @@ tabs:
           - Carrie Vuyovich
           - Megan Mason  
       - time: 10:15 - 10:45
-        title: Movement and coffee break
+        title: coffee and movement break
         description:
       - time: 10:45 - 11:00
         location: Maple Hall
@@ -73,7 +73,7 @@ tabs:
       leads:
       - Naomi Alterman
     - time: 10:00 - 10:15
-      title: Movement and coffee break
+      title: coffee and movement break
       description:
     - time: 10:15 - 11:45
       title: Databases
@@ -129,7 +129,7 @@ tabs:
       - Ibrahim Alabi
       - Evi Ofekeze
     - time: 10:00 - 10:15 
-      title: coffee
+      title: coffee and movement break
     - time: 10:15 - 11:00
       title: AVIRIS-NG
       leads:
