@@ -14,7 +14,7 @@ parse:
     dates: "July 11-15 2022"
     github_org_url: "https://github.com/snowex-hackweek"
     book_repo: "website2022"
-    website_url: "https://snowex.hackweek.io"
+    website_url: "https://snowex-2022.hackweek.io"
     jupyterhub_url: "https://snowex.uwhackweeks.2i2c.cloud"
     slack_workspace_url: "https://snowex2022.slack.com"
     docker_image: "https://hub.docker.com/r/uwhackweek/snowex"
@@ -36,7 +36,7 @@ parse:
 execute:
   # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
   execute_notebooks: 'cache'
-  exclude_patterns: 
+  exclude_patterns:
     - "**/*snowmodeling*.ipynb"
     - "**/3_common_pitfalls.ipynb"
     # Temporarily disable
