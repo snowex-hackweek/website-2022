@@ -8,7 +8,7 @@
 
 ## Location
 
-* SnowEx tutorials and courses will occur in the Maple Hall Great Room.
+* SnowEx tutorials and courses will occur in the [Maple Hall](https://www.google.com/maps/place/Maple+Hall,+Seattle,+WA+98105/@47.6557191,-122.3184271,17z/data=!3m1!4b1!4m5!3m4!1s0x549014f3c132d681:0x14c56094021b0615!8m2!3d47.6557155!4d-122.3162383) Great Room.
 * Doors open at 8:00 am each morning (Monday-Friday). We will start the morning sessions at 8:30 am sharp.
 * Due to space limitations, only registered SnowEx participants will be allowed to attend the tutorials and open working sessions.
 * Participants are expected to attend all scheduled SnowEx activities. Contact [uwhackweek@uw.edu](mailto:uwhackweek@uw.edu) if any circumstances prevent you from attending.
