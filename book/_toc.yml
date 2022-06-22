@@ -6,6 +6,7 @@ parts:
 - caption: Details
   chapters:
     - file: application
+    - file: logistics
     - title: Schedule
       url: https://snowex.hackweek.io//index.html?jump_to=schedule
     - title: Team
@@ -50,3 +51,4 @@ parts:
     - file: reference/open_science
     - file: reference/open_source_software
     - file: reference/questions
+    - file: reference/social
