@@ -36,7 +36,7 @@ parts:
           sections:
             - file: tutorials/git_and_jupyterlab/basic-git
             - file: tutorials/git_and_jupyterlab/jupyter
-            - file: tutorials/nsidc-data-aces            
+            - file: tutorials/nsidc-data-access
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
