@@ -21,7 +21,7 @@ banner:
     title: 2021 Website
     new_window: true
   image: https://geohackweek.github.io/assets/images/banner.jpg
-applicant_info: SnowEx Hackweek 2022 applications are closed. We will be selecting participants in early June 2022.
+applicant_info: All participants have been selected. We look forward to seeing you soon in Seattle!
 team:
   !include book/team.yaml
 schedule:
