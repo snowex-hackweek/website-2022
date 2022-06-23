@@ -36,6 +36,9 @@ sed -i.bak -r 's/--hash=md5:None//' conda-linux-64.lock.yml
 sed -i.bak -r 's/--hash=md5:None//' conda-osx-64.lock.yml
 rm *.yml.bak
 
+# Temporary fix for https://github.com/conda-incubator/conda-lock/issues/179
+echo '    - snowexsql === 0.2.0' >> conda-linux-64.lock.yml
+echo '    - snowexsql === 0.2.0' >> conda-osx-64.lock.yml
 
 # Remove CondaLock environment when the last command was successful
 if [[ $? -eq 0 ]]; then
