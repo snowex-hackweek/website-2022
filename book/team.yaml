@@ -511,3 +511,25 @@ people:
         link: https://github.com/mlwrzesien
     user_groups:
       - Tutorial Lead
+  # =============
+  - title: Xiaolan Xu	
+    avatar: https://avatars.githubusercontent.com/u/7988251?v=4
+    role: Tutorial Lead
+    organizations:
+    - name: Jet Propulsion Lab
+    - name: Radar Science
+    bio: >
+      Expertise in the field of applied electromagnetics, electromagnetic wave propagation and scattering properties from snow-covered terrain, 
+      vegetated land surface, and bare soil, forward modeling, and retrieval algorithm development with applications to Earth remote sensing 
+      in space. She currently leads the NASA Earth Science Research project to improve snow water equivalence estimate using radar 
+      tomography technique and serves on the Science Team for NASA Soil Moisture Active and Passive Mission and Ku-band Radar mission 
+      supported by Canadian Space Agency.
+    expertise:
+    - Microwave Remote Sensing
+    - Signals of Opportunity (SoOP)
+    social:
+      - icon: github
+      icon_pack: fab
+      link: https://github.com/xlxu220
+    user_groups:
+      - SoOP Tutorial Lead
