@@ -36,7 +36,21 @@ parts:
           sections:
             - file: tutorials/git_and_jupyterlab/basic-git
             - file: tutorials/git_and_jupyterlab/jupyter
+<<<<<<< HEAD
             - file: tutorials/nsidc-data-access            
+=======
+            - file: tutorials/nsidc-data-access
+        - file: tutorials/database/index
+          title: Introduction to the SnowEx Database
+          sections:
+            - file: tutorials/database/1_getting_started_example
+            - file: tutorials/database/2_database_structure
+            - file: tutorials/database/3_forming_queries
+            - file: tutorials/database/4_get_spiral_example
+            - file: tutorials/database/5_plot_raster_example
+            - file: tutorials/database/6_exporting_data
+            - file: tutorials/database/7_wrap_up
+>>>>>>> 3169ca7b4d1653444e4fa3a09d2bac721caab406
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
