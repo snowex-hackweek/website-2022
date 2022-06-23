@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python &#8212; SnowEx Hackweek 2022</title>
+    <title>Exporting Data &#8212; SnowEx Hackweek 2022</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Conda" href="conda.html" />
-    <link rel="prev" title="Supplemental Material" href="../supplemental_index.html" />
+    <link rel="next" title="Wrap up" href="7_wrap_up.html" />
+    <link rel="prev" title="Forming Queries: PostGIS Functions" href="5_plot_raster_example.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -143,59 +143,59 @@ const thebe_selector_output = ".output, .cell_output"
   Preparation
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../index.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
    Preliminary Work
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../github.html">
+    <a class="reference internal" href="../../preliminary/github.html">
      GitHub
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../jupyterhub.html">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
      JupyterHub
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../git.html">
+    <a class="reference internal" href="../../preliminary/git.html">
      Git
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../earthdata.html">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
      Earthdata Login
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../swc.html">
+    <a class="reference internal" href="../../preliminary/swc.html">
      Software Carpentry Training
     </a>
    </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="reference internal" href="../supplemental_index.html">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
      Supplemental Material
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
     <label for="toctree-checkbox-2">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul class="current">
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
        Python
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="conda.html">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
        Conda
       </a>
      </li>
@@ -209,24 +209,24 @@ const thebe_selector_output = ".output, .cell_output"
   Tutorials
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/index.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
    Tutorials
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/example/tutorial-notebook.html">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
      Example tutorial notebook
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../tutorials/git_and_jupyterlab/index.html">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
      Git, GitHub, and JupyterLab
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -236,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/git_and_jupyterlab/basic-git.html">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
        Basic Git/GitHub Skills Using
        <code class="docutils literal notranslate">
         <span class="pre">
@@ -246,54 +246,54 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/git_and_jupyterlab/jupyter.html">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
        GitHub, Git, JupyterHub
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../tutorials/database/index.html">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
      Introduction to the SnowEx Database
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
+    <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/1_getting_started_example.html">
+      <a class="reference internal" href="1_getting_started_example.html">
        Introduction to the SnowEx Database
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/2_database_structure.html">
+      <a class="reference internal" href="2_database_structure.html">
        How is the Database Structured?
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/3_forming_queries.html">
+      <a class="reference internal" href="3_forming_queries.html">
        Forming Queries
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/4_get_spiral_example.html">
+      <a class="reference internal" href="4_get_spiral_example.html">
        Forming Queries: Example Visualizng Depths
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/5_plot_raster_example.html">
+      <a class="reference internal" href="5_plot_raster_example.html">
        Forming Queries: PostGIS Functions
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/6_exporting_data.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Exporting Data
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/database/7_wrap_up.html">
+      <a class="reference internal" href="7_wrap_up.html">
        Wrap up
       </a>
      </li>
@@ -418,9 +418,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/preliminary/supplemental/python.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/tutorials/database/6_exporting_data.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -438,10 +438,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Fpreliminary/supplemental/python.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/database/6_exporting_data.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/preliminary/supplemental/python.md"><button
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/database/6_exporting_data.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -456,6 +456,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/snowex-hackweek/website2022/main?urlpath=lab/tree/book/tutorials/database/6_exporting_data.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -467,46 +484,14 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#shapefiles-and-csvs">
+   Shapefiles and CSVs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-software">
-   Python Software
+  <a class="reference internal nav-link" href="#rasters">
+   Rasters
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-conda">
-   What is Conda?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-miniconda">
-   Installing Miniconda
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows">
-     Windows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linux-and-os-x">
-     Linux and OS X
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-anaconda-optional">
-     Installing Anaconda (Optional)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-a-specific-python-version">
-     Installing a specific python version
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -518,7 +503,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Python</h1>
+                <h1>Exporting Data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -529,46 +514,14 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
+  <a class="reference internal nav-link" href="#shapefiles-and-csvs">
+   Shapefiles and CSVs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python-software">
-   Python Software
+  <a class="reference internal nav-link" href="#rasters">
+   Rasters
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-conda">
-   What is Conda?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installing-miniconda">
-   Installing Miniconda
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#windows">
-     Windows
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#linux-and-os-x">
-     Linux and OS X
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-anaconda-optional">
-     Installing Anaconda (Optional)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#installing-a-specific-python-version">
-     Installing a specific python version
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -579,81 +532,87 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="python">
-<h1>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>While we will be using a cloud-hosted computing environment during the hackweek
-(<a class="reference internal" href="../jupyterhub.html#event-jupyterhub"><span class="std std-ref">Why are we using a shared cloud environment?</span></a>), it is often desirable to run Python code on your laptop.
-We also want to ensure that hackweek tutorials or other scientific code is
-reproducible and can be run on different computers and operating systems.</p>
-<p>This lesson takes you through our recommended procedure for managing Python
-environments and software on your personal computer. We suggest you follow these
-instructions in advance so that we can help you troubleshoot during the hackweek
-and have a fully functioning environment after.</p>
-</div>
-<div class="section" id="python-software">
-<h2>Python Software<a class="headerlink" href="#python-software" title="Permalink to this headline">¶</a></h2>
-<p>Python software is distributed as a series of <em>libraries</em> that are called within your code to perform certain tasks. There are many different collections, or <em>distributions</em> of Python software. Generally you install a specific distribution of Python and then add additional libraries as you need them. There are also several different <em>versions</em> of Python. Support for Python 2 ended in 2020, so you should use Python&gt;=3!</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you open a terminal on your computer, chances are if you type ‘python’ you will find it is already installed! But it is best-practice to create separate environments or ‘virtual environments’ to not interfere with existing installations. You can use <a class="reference internal" href="../../reference/glossary.html#term-Conda"><span class="xref std std-term">conda</span></a> for this.</p>
-</div>
-</div>
-<div class="section" id="what-is-conda">
-<h2>What is Conda?<a class="headerlink" href="#what-is-conda" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://conda.pydata.org/docs/"><strong>Conda</strong></a> is an <strong>open source <code class="docutils literal notranslate"><span class="pre">package</span></code> and <code class="docutils literal notranslate"><span class="pre">environment</span></code> management system</strong> for installing multiple versions of software packages, their dependencies and switching easily between them. Conda works with many programming languages but is very popular in the Python community. It works on Linux, OS X and Windows.</p>
-</div>
-<div class="section" id="installing-miniconda">
-<h2>Installing Miniconda<a class="headerlink" href="#installing-miniconda" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://conda.pydata.org/miniconda.html">Miniconda</a> is a command line tool which contains only Python and essential packages. We recommend installing it because it is the easiest way to use conda for Python environment management without taking up too much space.</p>
-<div class="section" id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
-<p>Click <a class="reference external" href="http://conda.pydata.org/miniconda.html">here</a> to download the proper installer for your Windows platform (64 bits).
-We recommend to download the Python 3 version of Miniconda.</p>
-<p>When installing, you will be asked if you wish to make the Anaconda Python your default Python for Windows.
-If you do not have any other installation that is a good option. If you want to keep multiple versions of python on your machine (e.g. ESRI-supplied python, or 64 bit versions of Anaconda), then don’t select the option to modify your path or modify your windows registry settings.</p>
-</div>
-<div class="section" id="linux-and-os-x">
-<h3>Linux and OS X<a class="headerlink" href="#linux-and-os-x" title="Permalink to this headline">¶</a></h3>
-<p>You may follow manual steps from <a class="reference external" href="http://conda.pydata.org/miniconda.html">here</a> similar to the instructions on Windows (see above). Alternatively, you can execute these commands on a terminal shell (in this case, the bash shell):</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># For MacOSX</span>
-<span class="nv">url</span><span class="o">=</span>https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh
-<span class="c1"># For Linux</span>
-<span class="nv">url</span><span class="o">=</span>https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
-wget <span class="nv">$url</span> -O miniconda.sh
-bash miniconda.sh -b -p <span class="nv">$HOME</span>/miniconda
+  <div class="tex2jax_ignore mathjax_ignore section" id="exporting-data">
+<h1>Exporting Data<a class="headerlink" href="#exporting-data" title="Permalink to this headline">¶</a></h1>
+<p>You may want to export your queried data from the database. In this section we talk about how!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the function to get connect to the db</span>
+<span class="kn">from</span> <span class="nn">snowexsql.db</span> <span class="kn">import</span> <span class="n">get_db</span>
+<span class="kn">from</span> <span class="nn">snowexsql.data</span> <span class="kn">import</span> <span class="n">SiteData</span><span class="p">,</span> <span class="n">PointData</span><span class="p">,</span> <span class="n">LayerData</span><span class="p">,</span> <span class="n">ImageData</span>
+
+<span class="c1"># This is what you will use for all of hackweek to access the db</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;snow:hackweek@db.snowexdata.org/snowex&#39;</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="installing-anaconda-optional">
-<h3>Installing Anaconda (Optional)<a class="headerlink" href="#installing-anaconda-optional" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://www.anaconda.com/distribution/">Anaconda</a> is a data science platform that comes with a lot of packages. At its core, Anaconda uses the conda package management system. The list of packages included can be found <a class="reference external" href="https://docs.anaconda.com/anaconda/packages/pkg-docs"><em>here</em></a>.</p>
-<ol class="simple">
-<li><p>To install Anaconda, please click on the link below for your operating system, and follow the instructions on the <a class="reference external" href="https://www.anaconda.com/download/">site</a>.</p></li>
-<li><p>Once Anaconda installation step is finished run <code class="docutils literal notranslate"><span class="pre">python</span></code> in the command line to test if Anaconda is installed correctly. <strong>Note: For windows, please use the Anaconda prompt as the command line. It should be installed with your installation of Anaconda</strong>.
-If Anaconda is installed correctly, you should have this prompt, which emphasizes <strong>Anaconda</strong>:</p></li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python
-Python <span class="m">3</span>.7.3<span class="p">|</span>Anaconda custom <span class="o">(</span>x86_64<span class="o">)</span><span class="p">|</span> <span class="o">(</span>default, Mar <span class="m">27</span> <span class="m">2019</span>, <span class="m">22</span>:11:17<span class="o">)</span>
-...
+</div>
+<div class="section" id="shapefiles-and-csvs">
+<h2>Shapefiles and CSVs<a class="headerlink" href="#shapefiles-and-csvs" title="Permalink to this headline">¶</a></h2>
+<p>The following can be done with ANY SiteData, PointData, or LayerData query.</p>
+<p><strong>Note</strong>: Shapefiles do not support datetime object so they must be converted to strings before writing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the hand method for converting queries to dataframes</span>
+<span class="kn">from</span> <span class="nn">snowexsql.conversions</span> <span class="kn">import</span> <span class="n">query_to_geopandas</span>
+
+<span class="c1"># Grab a session</span>
+<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">geom</span><span class="p">)</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">query_to_geopandas</span><span class="p">(</span><span class="n">qry</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+
+<span class="c1"># Write to shapefile</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s1">&#39;site_data.shp&#39;</span><span class="p">)</span>
+
+<span class="c1"># Write to a csv</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;site_data.csv&#39;</span><span class="p">)</span>
+
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="installing-a-specific-python-version">
-<h3>Installing a specific python version<a class="headerlink" href="#installing-a-specific-python-version" title="Permalink to this headline">¶</a></h3>
-<p>We will be using Python 3 during the week. Since Anaconda (on Linux) expects you to work in the <code class="docutils literal notranslate"><span class="pre">bash</span></code> shell, if this is not already your default shell, you need to set it to be so (use the <code class="docutils literal notranslate"><span class="pre">chsh</span> <span class="pre">-s</span> <span class="pre">/bin/bash</span></code> command to change your default shell to bash), then you can create an isolated Python environment with the following commands:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create --name py39 <span class="nv">python</span><span class="o">=</span><span class="m">3</span>.9
+</div>
+</div>
+<div class="section" id="rasters">
+<h2>Rasters<a class="headerlink" href="#rasters" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the handy function to convert raster db results to rasterio</span>
+<span class="kn">from</span> <span class="nn">snowexsql.conversions</span> <span class="kn">import</span> <span class="n">raster_to_rasterio</span>
+
+<span class="c1"># Import the SQL function to access PostGIS functions</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy.sql</span> <span class="kn">import</span> <span class="n">func</span>
+
+<span class="c1"># Import rasterio for Writing</span>
+<span class="kn">import</span> <span class="nn">rasterio</span> 
+
+<span class="c1"># Grab a session</span>
+<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+
+<span class="c1"># Query 1 raster tile and convert it to a geotiff</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">ST_AsTiff</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">raster</span><span class="p">))</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<span class="c1"># Convert the dataset to a rasterio dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">raster_to_rasterio</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+
+<span class="c1"># Copy the profile/tiff metadata (not to be confused with the database metadata)</span>
+<span class="n">profile</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">profile</span>
+
+<span class="c1"># Write to a file </span>
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;raster.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">profile</span><span class="p">)</span> <span class="k">as</span> <span class="n">dst</span><span class="p">:</span>
+    <span class="n">dst</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>To use Python 3.9:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate py39
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/1676431373.py:14: SAWarning: UserDefinedType Raster() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object&#39;s state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+  result = session.query(func.ST_AsTiff(ImageData.raster)).limit(1).all()
 </pre></div>
 </div>
-<p>To check if you have the correct version activated</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>which python
-python --version
-</pre></div>
 </div>
 </div>
 </div>
@@ -672,7 +631,7 @@ python --version
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./preliminary/supplemental"
+            path: "./tutorials/database"
         },
         predefinedOutput: true
     }
@@ -684,17 +643,17 @@ python --version
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../supplemental_index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="5_plot_raster_example.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Supplemental Material</p>
+            <p class="prev-next-title">Forming Queries: PostGIS Functions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="conda.html" title="next page">
+    <a class='right-next' id="next-link" href="7_wrap_up.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Conda</p>
+        <p class="prev-next-title">Wrap up</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

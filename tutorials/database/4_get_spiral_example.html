@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Git and JupyterLab &#8212; SnowEx Hackweek 2022</title>
+    <title>Forming Queries: Example Visualizng Depths &#8212; SnowEx Hackweek 2022</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Basic Git/GitHub Skills Using jupyterlab-git" href="basic-git.html" />
-    <link rel="prev" title="Example tutorial notebook" href="../example/tutorial-notebook.html" />
+    <link rel="next" title="Forming Queries: PostGIS Functions" href="5_plot_raster_example.html" />
+    <link rel="prev" title="Forming Queries" href="3_forming_queries.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -225,18 +225,18 @@ const thebe_selector_output = ".output, .cell_output"
      Example tutorial notebook
     </a>
    </li>
-   <li class="toctree-l2 current active has-children">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
      Git, GitHub, and JupyterLab
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
     <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="basic-git.html">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
        Basic Git/GitHub Skills Using
        <code class="docutils literal notranslate">
         <span class="pre">
@@ -246,54 +246,54 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="jupyter.html">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
        GitHub, Git, JupyterHub
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../database/index.html">
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
      Introduction to the SnowEx Database
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
     <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
-    <ul>
+    <ul class="current">
      <li class="toctree-l3">
-      <a class="reference internal" href="../database/1_getting_started_example.html">
+      <a class="reference internal" href="1_getting_started_example.html">
        Introduction to the SnowEx Database
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../database/2_database_structure.html">
+      <a class="reference internal" href="2_database_structure.html">
        How is the Database Structured?
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../database/3_forming_queries.html">
+      <a class="reference internal" href="3_forming_queries.html">
        Forming Queries
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../database/4_get_spiral_example.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Forming Queries: Example Visualizng Depths
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../database/5_plot_raster_example.html">
+      <a class="reference internal" href="5_plot_raster_example.html">
        Forming Queries: PostGIS Functions
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../database/6_exporting_data.html">
+      <a class="reference internal" href="6_exporting_data.html">
        Exporting Data
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../database/7_wrap_up.html">
+      <a class="reference internal" href="7_wrap_up.html">
        Wrap up
       </a>
      </li>
@@ -418,9 +418,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/tutorials/git_and_jupyterlab/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/tutorials/database/4_get_spiral_example.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -438,10 +438,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/git_and_jupyterlab/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/database/4_get_spiral_example.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/git_and_jupyterlab/index.md"><button
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/database/4_get_spiral_example.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -456,6 +456,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/snowex-hackweek/website2022/main?urlpath=lab/tree/book/tutorials/database/4_get_spiral_example.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -467,8 +484,30 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preliminary-work">
-   Preliminary Work
+  <a class="reference internal nav-link" href="#process">
+   Process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-get-connected">
+     Step 1: Get connected
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-build-a-query">
+     Step 2: Build a query
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-plot-it">
+     Step 3: Plot it!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recap">
+   Recap
   </a>
  </li>
 </ul>
@@ -481,7 +520,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Git and JupyterLab</h1>
+                <h1>Forming Queries: Example Visualizng Depths</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -492,8 +531,30 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preliminary-work">
-   Preliminary Work
+  <a class="reference internal nav-link" href="#process">
+   Process
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-1-get-connected">
+     Step 1: Get connected
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-2-build-a-query">
+     Step 2: Build a query
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#step-3-plot-it">
+     Step 3: Plot it!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recap">
+   Recap
   </a>
  </li>
 </ul>
@@ -505,38 +566,142 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="git-and-jupyterlab">
-<h1>Git and JupyterLab<a class="headerlink" href="#git-and-jupyterlab" title="Permalink to this headline">¶</a></h1>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>Before we go over this tutorial we expect that you have already gone through
-these preparation materials:</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="forming-queries-example-visualizng-depths">
+<h1>Forming Queries: Example Visualizng Depths<a class="headerlink" href="#forming-queries-example-visualizng-depths" title="Permalink to this headline">¶</a></h1>
+<p>During the SnowEx campaigns a TON of manual snow depths were collected, surveys for hackweek showed an overhelming interest in the manual
+snow depths dataset. This tutorial shows how easy it is to get at that data in the database while learning how to build queries</p>
+<p>Don’t forget your <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/cheat_sheet.html">cheat sheets</a>!</p>
+<p><strong>Goal</strong>: Visualize a small subset of snow depths</p>
+<p><strong>Approach</strong>:</p>
+<ol class="simple">
+<li><p>Connect to the DB</p></li>
+<li><p>Build a query filtering by dataset and date</p></li>
+<li><p>Convert to a GeoDataFrame and plot</p></li>
+</ol>
+<div class="section" id="process">
+<h2>Process<a class="headerlink" href="#process" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-get-connected">
+<h3>Step 1: Get connected<a class="headerlink" href="#step-1-get-connected" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the function to get connect to the db</span>
+<span class="kn">from</span> <span class="nn">snowexsql.db</span> <span class="kn">import</span> <span class="n">get_db</span>
+
+<span class="c1"># Import our class for the points table</span>
+<span class="kn">from</span> <span class="nn">snowexsql.data</span> <span class="kn">import</span> <span class="n">PointData</span>
+
+<span class="c1"># Import a useful function to format that data into a dataframe</span>
+<span class="kn">from</span> <span class="nn">snowexsql.conversions</span> <span class="kn">import</span> <span class="n">query_to_geopandas</span>
+
+<span class="c1"># Import some tools to build dates </span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+
+<span class="c1"># This is what you will use for all of hackweek to access the db</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;snow:hackweek@db.snowexdata.org/snowex&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-2-build-a-query">
+<h3>Step 2: Build a query<a class="headerlink" href="#step-2-build-a-query" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick a dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="s1">&#39;depth&#39;</span>
+
+<span class="c1"># Pick a date</span>
+<span class="n">collection_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="c1"># Get a session</span>
+<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+
+<span class="c1"># The part inside the query function is what we want back, in this case all columns for the point data</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PointData</span><span class="p">)</span>
+
+<span class="c1"># We then want to filter by the selected the data type depth.</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">dataset</span><span class="p">)</span>
+
+<span class="c1"># Filter by a date</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">collection_date</span><span class="p">)</span>
+
+<span class="c1"># Limit it to a couple hundred </span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+
+<span class="c1"># Execute the query and convert to geopandas in one handy function</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">query_to_geopandas</span><span class="p">(</span><span class="n">qry</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+
+<span class="c1"># how many did we retrieve?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="si">}</span><span class="s1"> records returned!&#39;</span><span class="p">)</span>
+
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200 records returned!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="step-3-plot-it">
+<h3>Step 3: Plot it!<a class="headerlink" href="#step-3-plot-it" title="Permalink to this headline">¶</a></h3>
+<div class="cell tag_nbsphinx-gallery tag_nbsphinx-thumbnail docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the Matplotlib Axes object from the dataframe object, color the points by snow depth value</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;PuBu&#39;</span><span class="p">)</span>
+
+<span class="c1"># Use non-scientific notation for x and y ticks</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">ticklabel_format</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;plain&#39;</span><span class="p">,</span> <span class="n">useOffset</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Set the various plots x/y labels and title.</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">dataset</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s1">s collected on </span><span class="si">{</span><span class="n">collection_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Easting [m]&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Northing [m]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Close the session to avoid hanging transactions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/4_get_spiral_example_6_0.png" src="../../_images/4_get_spiral_example_6_0.png" />
+</div>
+</div>
+<p>Lets try to filter to get the data to show only a depth spiral.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let see what instruments are available </span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">instrument</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;depth&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;mesa&#39;,), (&#39;magnaprobe&#39;,), (&#39;camera&#39;,), (&#39;pulse EKKO Pro multi-polarization 1 GHz GPR&#39;,), (&#39;pit ruler&#39;,)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Try This</strong>:</p>
+<ol class="simple">
+<li><p>Change the date</p></li>
+</ol>
+<p><strong>Hint</strong>: You may need to form two queries just to see what dates and surveyors are in the db</p>
+<p><strong>Try This:</strong>
+Go back and add a filter to reduce to just one spiral. Do you know what instrument was used to make depth spirals?</p>
+</div>
+</div>
+<div class="section" id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h2>
+<p>You just plotted snow depths and reduce the scope of the data by compounding filters on it</p>
+<p><strong>You should know:</strong></p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../preliminary/jupyterhub.html"><span class="doc std std-doc">JupyterHub login setup</span></a></p></li>
+<li><p>How to build queries using filtering</p></li>
+<li><p>Where a useful tools like <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/snowexsql.html#snowexsql.conversions.query_to_geopandas"><code class="docutils literal notranslate"><span class="pre">query_to_geopandas</span></code></a> live in the snowexsql library</p></li>
 </ul>
-</div>
-<div class="admonition-learning-objectives admonition">
-<p class="admonition-title">Learning Objectives</p>
-<ul class="simple">
-<li><p>Set up Git in the JupyterHub using <a class="reference internal" href="../../preliminary/git.html"><span class="doc std std-doc">First time <code class="docutils literal notranslate"><span class="pre">git</span></code> setup</span></a></p></li>
-<li><p>Learn how to use the <code class="docutils literal notranslate"><span class="pre">jupyterlab-git</span></code> GUI in JupyterLab</p></li>
-<li><p>Practice four basic Git/GitHub skills: <code class="docutils literal notranslate"><span class="pre">clone</span></code>, <code class="docutils literal notranslate"><span class="pre">commit</span></code>, <code class="docutils literal notranslate"><span class="pre">push</span></code>, and <code class="docutils literal notranslate"><span class="pre">pull</span></code></p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">git</span></code> to create copies of hackweek repositories on GitHub for modification</p></li>
-<li><p>Navigate the JupyterLab interface for writing and executing code</p></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="basic-git.html">Basic Git/GitHub Skills Using <code class="docutils literal notranslate"><span class="pre">jupyterlab-git</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="jupyter.html">GitHub, Git, JupyterHub</a></li>
-</ul>
-</div>
-<div class="section" id="preliminary-work">
-<h2>Preliminary Work<a class="headerlink" href="#preliminary-work" title="Permalink to this headline">¶</a></h2>
-<p>Additional information around the <code class="docutils literal notranslate"><span class="pre">git</span></code> command, <a class="reference external" href="https://github.com">GitHub</a>,
-and our <a class="reference external" href="https://jupyter.org/hub">JupyterHub</a> environment that provides the
-<a class="reference external" href="https://jupyter.org/">JupyterLab</a> can be found under the
-<a class="reference internal" href="../../preliminary/index.html"><span class="doc std std-doc">preliminary content</span></a>.</p>
+<p>If you don’t feel comfortable with these, you are probably not alone, let’s discuss it!</p>
 </div>
 </div>
 
@@ -553,7 +718,7 @@ and our <a class="reference external" href="https://jupyter.org/hub">JupyterHub<
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./tutorials/git_and_jupyterlab"
+            path: "./tutorials/database"
         },
         predefinedOutput: true
     }
@@ -565,17 +730,17 @@ and our <a class="reference external" href="https://jupyter.org/hub">JupyterHub<
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../example/tutorial-notebook.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="3_forming_queries.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Example tutorial notebook</p>
+            <p class="prev-next-title">Forming Queries</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="basic-git.html" title="next page">
+    <a class='right-next' id="next-link" href="5_plot_raster_example.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Basic Git/GitHub Skills Using <code class="docutils literal notranslate"><span class="pre">jupyterlab-git</span></code></p>
+        <p class="prev-next-title">Forming Queries: PostGIS Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
