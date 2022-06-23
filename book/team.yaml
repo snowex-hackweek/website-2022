@@ -204,3 +204,24 @@ people:
     user_groups:
       - Technology Specialist
   # =============
+    - title: Evi Ofekeze
+    avatar: https://avatars.githubusercontent.com/u/77086111?v=4
+    role: Graduate Student
+    organizations:
+      - name: Boise State University
+    bio: >
+      Evi is a graduate student with the CryoGARS Research group at Boise State University, 
+      His research focuses on the application of machine learning to predict snow properties from RADAR and LIDAR. 
+    expertise:
+      - Python
+      - Machine Learning
+      - Software Development
+      - SWESSAR
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/eviofekeze
+    user_groups:
+      - Education Consultant
+     # =============
+  
