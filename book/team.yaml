@@ -591,3 +591,25 @@ people:
         link: https://github.com/mlwrzesien
     user_groups:
       - Tutorial Lead
+  # =============
+  - title: Nicoleta Cristea
+    avatar: https://avatars.githubusercontent.com/u/16614760?v=4
+    role: Research Scientist
+    organizations:
+      - name: eScience Institute
+    bio: >
+      Nicoleta is a research hydrologist interested in using data science methods in
+      research and educational activities. Current projects focus on studying snowy
+      areas with machine learning and physics based models. She is also working on developing
+      GeoSMART, an educational framework for machine learning adoption in the geosciences.
+    expertise:
+      - hydrology, snow hydrology
+      - remote sensing
+      - geospatial data analysis
+      - Python
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/NCristea
+    user_groups:
+      - eScience Hackweek Team
