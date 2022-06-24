@@ -180,6 +180,36 @@ people:
     user_groups:
       - Fiscal Specialist
   # =============
+  - title: Ann Nykamp
+    avatar: http://escience.washington.edu/wp-content/uploads/2019/01/Ann-and-Dubs-2.jpg
+    role: Grants Manager
+    organizations:
+      - name: eScience Institute
+    bio: Ann is the eScience Institute's Grants Manager. Prior to joining eScience in 2018, Ann was a research coordinator and grant specialist for the University of Washington's Child Health Institute, the School of Dentistry, and the Institute for Health Metrics & Evaluation. Her skills include proposal development, financial reporting, fiscal oversight, and interpreting University and sponsor guidelines. 
+    expertise:
+      - hackweek organization and budgeting
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Grants Manager
+  # =============
+  - title: Shrusti Ghela
+    avatar: https://avatars.githubusercontent.com/u/98440566?v=4
+    role: Administrative Assistant 
+    organizations:
+      - name: eScience Institute
+    bio: Shrusti is working with the eScience Institute as a Text Mining Specialist. She is a graduate student in the UW’s Masters in Data Science program. Shrusti has experience in ML, NLP, Data Mining, and Time Series Analysis. Shrusti earned her B.Tech in Information Technology from Vellore Institute of Technology and between her undergraduate and graduate studies she spent over a year working at VIT as a research assistant on problems in Data Visualization and Dimensionality Reduction. She has broad interests in extracting data, deriving data-driven insights, and turning them into powerful narratives. 
+    expertise:
+      - hackweek organization 
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/shrusti-ghela
+    user_groups:
+      - Hackweek Administration
+  # =============
   - title: Don Setiawan
     avatar: https://avatars.githubusercontent.com/u/17802172?v=4
     role: Research Software Engineer
