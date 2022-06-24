@@ -525,8 +525,8 @@ people:
       tomography technique and serves on the Science Team for NASA Soil Moisture Active and Passive Mission and Ku-band Radar mission 
       supported by Canadian Space Agency.
     expertise:
-    - Microwave Remote Sensing
-    - Signals of Opportunity (SoOP)
+      - Microwave Remote Sensing
+      - Signals of Opportunity (SoOP)
     social:
       - icon: github
       icon_pack: fab
