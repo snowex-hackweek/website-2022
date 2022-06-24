@@ -131,6 +131,23 @@ people:
     user_groups:
       - Program Manager
   # =============
+  - title: Jenny Holcomb
+    avatar: http://escience.washington.edu/wp-content/uploads/2020/04/20200528_110700.jpg
+    role: Program Manager
+    organizations:
+      - name: eScience Institute
+    bio: Jenny is the eScience Institute's Office Coordinator. 
+      She handles the logistics for eScience internal events and meetings 
+      and the day to day function of the eScience Studio.
+    expertise:
+      - hackweek organization
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Office Coordinator
+  # =============
   - title: Don Setiawan
     avatar: https://avatars.githubusercontent.com/u/17802172?v=4
     role: Research Software Engineer
