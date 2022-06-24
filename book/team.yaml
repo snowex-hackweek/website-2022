@@ -529,7 +529,7 @@ people:
       - Signals of Opportunity (SoOP)
     social:
       - icon: github
-      icon_pack: fab
-      link: https://github.com/xlxu220
+         icon_pack: fab
+         link: https://github.com/xlxu220
     user_groups:
       - SoOP Tutorial Lead
