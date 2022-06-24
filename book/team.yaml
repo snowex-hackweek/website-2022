@@ -165,6 +165,21 @@ people:
     user_groups:
       - Communications Specialist
   # =============
+  - title: Janet Kim
+    avatar: http://escience.washington.edu/wp-content/uploads/2020/08/image001.png
+    role: Fiscal Specialist
+    organizations:
+      - name: eScience Institute
+    bio: Janet is the fiscal specialist at the eScience Institute. She is responsible for complex fiscal administrative support for the institute directors, faculty, data scientists, postdocs, and research assistants working with the eScience Institute. 
+    expertise:
+      - hackweek organization 
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Fiscal Specialist
+  # =============
   - title: Don Setiawan
     avatar: https://avatars.githubusercontent.com/u/17802172?v=4
     role: Research Software Engineer
