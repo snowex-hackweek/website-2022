@@ -516,8 +516,8 @@ people:
     avatar: https://avatars.githubusercontent.com/u/7988251?v=4
     role: Tutorial Lead
     organizations:
-    - name: Jet Propulsion Lab
-    - name: Radar Science
+      - name: Jet Propulsion Lab
+      - name: Radar Science
     bio: >
       Expertise in the field of applied electromagnetics, electromagnetic wave propagation and scattering properties from snow-covered terrain, 
       vegetated land surface, and bare soil, forward modeling, and retrieval algorithm development with applications to Earth remote sensing 
