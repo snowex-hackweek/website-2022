@@ -148,6 +148,23 @@ people:
     user_groups:
       - Office Coordinator
   # =============
+  - title: Louisa Gaylord
+    avatar: http://escience.washington.edu/wp-content/uploads/2020/07/L.-Gaylord-sq.jpg
+    role: Communications Specialist
+    organizations:
+      - name: eScience Institute
+    bio: Louisa is the communications specialist at the eScience Institute, where she writes about data science and
+      its applications across a wide range of fields. She also manages weekly direct email campaigns, social media 
+      and website updates, creating websites for eScience groups and other technical writing projects. 
+    expertise:
+      - communications 
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Communications Specialist
+  # =============
   - title: Don Setiawan
     avatar: https://avatars.githubusercontent.com/u/17802172?v=4
     role: Research Software Engineer
