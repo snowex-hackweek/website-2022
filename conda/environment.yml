@@ -45,6 +45,7 @@ dependencies:
   - rioxarray
   - s3fs
   - shapely
+  - spectral
   - utm
   - vim
   - wget

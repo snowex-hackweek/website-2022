@@ -14,3 +14,4 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | Tutorial | Topics | Datasets |  Recording Link |
 | -  | - | - |  - |
 | [Example Notebook](./example/tutorial-notebook.ipynb) | Jupyter Book formatting, ipyleaflet | n/a |  Not recorded |
+| [Database](./database/1_getting_started_example.ipynb) | Pits, SMP, Depths, Raster Depths, UAVSAR | n/a |  Not recorded |
