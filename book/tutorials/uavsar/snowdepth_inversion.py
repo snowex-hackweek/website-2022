@@ -67,7 +67,7 @@ def depth_from_phase(delta_phase, inc_angle, permittivity = None,
             # Good to use [kg m-3]
             perm = 1 + 0.0014 * density + 2e-7 * density**2
         else:
-            raise ValueError("Please choose a density calulation method from 'guneriussen2001' or 'webb2021'.")
+            raise ValueError("Please choose a density calculation method from 'guneriussen2001' or 'webb2021'.")
 
     else:
         perm = permittivity
@@ -138,7 +138,7 @@ def phase_from_depth(delta_sd, inc_angle, permittivity = None,
             # Good to use [kg m-3]
             perm = 1 + 0.0014 * density + 2e-7 * density**2
         else:
-            raise ValueError("Please choose a density calulation method from 'guneriussen2001' or 'webb2021'.")
+            raise ValueError("Please choose a density calculation method from 'guneriussen2001' or 'webb2021'.")
 
     else:
         perm = permittivity
