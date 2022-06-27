@@ -46,7 +46,7 @@ parts:
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
-        - file: tutorials/uavsar/uavsar_tutorial.ipynb
+        - file: tutorials/uavsar/uavsar_tutorial
           title: SWE Inversions with Uavsar
 - caption: Projects
   chapters:
