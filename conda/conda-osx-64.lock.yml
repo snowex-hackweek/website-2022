@@ -269,7 +269,7 @@ dependencies:
   - async-timeout=4.0.2=pyhd8ed1ab_0
   - backports.functools_lru_cache=1.6.4=pyhd8ed1ab_0
   - binaryornot=0.4.4=py_1
-  - bleach=5.0.0=pyhd8ed1ab_0
+  - bleach=5.0.1=pyhd8ed1ab_0
   - brotlipy=0.7.0=py310h1961e1f_1004
   - click-log=0.3.2=pyh9f0ad1d_0
   - click-plugins=1.1.1=py_0
@@ -417,4 +417,4 @@ dependencies:
   - pip:
     - jinja-markdown === 1.210911 
     - snowexsql === 0.2.0
-    - uavsar_pytools === 0.5.0
+    - uavsar_pytools === 0.6.1
