@@ -25,10 +25,14 @@ dependencies:
   - jupyterhub-singleuser
   - jupyterlab-git
   # Analysis
+  - asf_search
   - cartopy
+  - contextily
   - dask
   - datashader
   - distributed
+  - earthpy
+  - folium
   - geoalchemy2
   - geopandas
   - geoviews
@@ -38,14 +42,21 @@ dependencies:
   - hvplot
   - ipyleaflet
   - matplotlib-base
+  - param
+  - panel
   - psycopg2
   - pyproj
   - pystac
   - pystac-client
+  - rasterstats
+  - requests
   - rioxarray
   - s3fs
+  - seaborn
+  - scikit-learn
   - shapely
   - spectral
+  - tqdm
   - utm
   - vim
   - wget
@@ -56,6 +67,7 @@ dependencies:
     - jinja-markdown==1.210911
     # NOTE: installed in lock_environment.sh
     # - snowexsql==0.2.0
+    # - uavsar_pytools==0.5.0
 
 platforms:
   - linux-64
