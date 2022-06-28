@@ -46,9 +46,9 @@ parts:
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
-         - file: tutorials/nsidc-data-access/index
-           title: Accessing SnowEx Data at the NSIDC DAAC
-           sections: 
+        - file: tutorials/nsidc-data-access/index
+          title: Accessing SnowEx Data at the NSIDC DAAC
+          sections: 
             - file: tutorials/nsidc-data-access/nsidc-data-access
 - caption: Projects
   chapters:
