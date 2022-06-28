@@ -3790,14 +3790,14 @@ package:
     six: '>=1.9.0'
     webencodings: ''
   hash:
-    md5: 2a2ae7c56b8f72caba261363407b484a
-    sha256: 534fbfbb6f224cfd3ce91be098ee6d2a8c978135a11e9a2cd8d6c8907ccd28f3
+    md5: 1f5151d37e4a2b1137f81c89a3a769f2
+    sha256: b85dd43a40efd13c860086365d181eb9bc64cc757c36a05edc7544c3fa622bf8
   manager: conda
   name: bleach
   optional: false
   platform: linux-64
-  url: https://conda.anaconda.org/conda-forge/noarch/bleach-5.0.0-pyhd8ed1ab_0.tar.bz2
-  version: 5.0.0
+  url: https://conda.anaconda.org/conda-forge/noarch/bleach-5.0.1-pyhd8ed1ab_0.tar.bz2
+  version: 5.0.1
 - category: main
   dependencies:
     cffi: '>=1.0.0'
@@ -9754,14 +9754,14 @@ package:
     six: '>=1.9.0'
     webencodings: ''
   hash:
-    md5: 2a2ae7c56b8f72caba261363407b484a
-    sha256: 534fbfbb6f224cfd3ce91be098ee6d2a8c978135a11e9a2cd8d6c8907ccd28f3
+    md5: 1f5151d37e4a2b1137f81c89a3a769f2
+    sha256: b85dd43a40efd13c860086365d181eb9bc64cc757c36a05edc7544c3fa622bf8
   manager: conda
   name: bleach
   optional: false
   platform: osx-64
-  url: https://conda.anaconda.org/conda-forge/noarch/bleach-5.0.0-pyhd8ed1ab_0.tar.bz2
-  version: 5.0.0
+  url: https://conda.anaconda.org/conda-forge/noarch/bleach-5.0.1-pyhd8ed1ab_0.tar.bz2
+  version: 5.0.1
 - category: main
   dependencies:
     cffi: '>=1.0.0'
