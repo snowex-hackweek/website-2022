@@ -46,6 +46,12 @@ parts:
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
+       - file: tutorials/data-overview/index
+         title: SnowEx Mission and Dataset Descriptions
+         sections:
+           - file: tutorials/data-overview/01_campaigns-overview
+           - file: tutorials/data-overview/02_ground-based-specifics
+           - file: tutorials/data-overview/03_snowexsql_db_querying       
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
