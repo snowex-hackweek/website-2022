@@ -48,6 +48,10 @@ parts:
             - file: tutorials/database/7_wrap_up
         - file: tutorials/uavsar/uavsar_tutorial
           title: SWE Inversions with Uavsar
+          sections:
+            - file: tutorials/uavsar/1_accessing_imagery
+            - file: tutorials/uavsar/2_types_of_uavsar_images
+            - file: tutorials/uavsar/3_interferometric_swe_inversion
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
