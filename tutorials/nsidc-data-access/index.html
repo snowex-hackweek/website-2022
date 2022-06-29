@@ -5,59 +5,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorials &#8212; SnowEx Hackweek 2022</title>
+    <title>NSIDC Data Access &#8212; SnowEx Hackweek 2022</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Example tutorial notebook" href="example/tutorial-notebook.html" />
-    <link rel="prev" title="Conda" href="../preliminary/supplemental/conda.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Accessing SnowEx Data at the NSIDC DAAC" href="nsidc-data-access.html" />
+    <link rel="prev" title="Wrap up" href="../database/7_wrap_up.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -77,26 +77,26 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../../_static/logo.png" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">SnowEx Hackweek 2022</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
+  <a class="reference internal" href="../../intro.html">
    Welcome to SnowEx Hackweek!
   </a>
  </li>
@@ -108,12 +108,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../application.html">
+  <a class="reference internal" href="../../application.html">
    Application
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../logistics.html">
+  <a class="reference internal" href="../../logistics.html">
    Event Logistics
   </a>
  </li>
@@ -128,12 +128,12 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../mission.html">
+  <a class="reference internal" href="../../mission.html">
    Hackweek Mission
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../CoC.html">
+  <a class="reference internal" href="../../CoC.html">
    Event Code of Conduct
   </a>
  </li>
@@ -145,7 +145,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../preliminary/index.html">
+  <a class="reference internal" href="../../preliminary/index.html">
    Preliminary Work
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -155,32 +155,32 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../preliminary/github.html">
+    <a class="reference internal" href="../../preliminary/github.html">
      GitHub
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../preliminary/jupyterhub.html">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
      JupyterHub
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../preliminary/git.html">
+    <a class="reference internal" href="../../preliminary/git.html">
      Git
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../preliminary/earthdata.html">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
      Earthdata Login
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../preliminary/swc.html">
+    <a class="reference internal" href="../../preliminary/swc.html">
      Software Carpentry Training
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../preliminary/supplemental_index.html">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
      Supplemental Material
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -190,12 +190,12 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../preliminary/supplemental/python.html">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
        Python
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="../preliminary/supplemental/conda.html">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
        Conda
       </a>
      </li>
@@ -211,7 +211,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="../index.html">
    Tutorials
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
@@ -219,14 +219,14 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="example/tutorial-notebook.html">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
      Example tutorial notebook
     </a>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="git_and_jupyterlab/index.html">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
      Git, GitHub, and JupyterLab
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
@@ -236,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="git_and_jupyterlab/basic-git.html">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
        Basic Git/GitHub Skills Using
        <code class="docutils literal notranslate">
         <span class="pre">
@@ -246,14 +246,14 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="git_and_jupyterlab/jupyter.html">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
        GitHub, Git, JupyterHub
       </a>
      </li>
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="database/index.html">
+    <a class="reference internal" href="../database/index.html">
      Introduction to the SnowEx Database
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
@@ -263,54 +263,54 @@ const thebe_selector_output = ".output, .cell_output"
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/1_getting_started_example.html">
+      <a class="reference internal" href="../database/1_getting_started_example.html">
        Introduction to the SnowEx Database
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/2_database_structure.html">
+      <a class="reference internal" href="../database/2_database_structure.html">
        How is the Database Structured?
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/3_forming_queries.html">
+      <a class="reference internal" href="../database/3_forming_queries.html">
        Forming Queries
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/4_get_spiral_example.html">
+      <a class="reference internal" href="../database/4_get_spiral_example.html">
        Forming Queries: Example Visualizng Depths
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/5_plot_raster_example.html">
+      <a class="reference internal" href="../database/5_plot_raster_example.html">
        Forming Queries: PostGIS Functions
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/6_exporting_data.html">
+      <a class="reference internal" href="../database/6_exporting_data.html">
        Exporting Data
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="database/7_wrap_up.html">
+      <a class="reference internal" href="../database/7_wrap_up.html">
        Wrap up
       </a>
      </li>
     </ul>
    </li>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="nsidc-data-access/index.html">
+   <li class="toctree-l2 current active has-children">
+    <a class="current reference internal" href="#">
      Accessing SnowEx Data at the NSIDC DAAC
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
     <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="nsidc-data-access/nsidc-data-access.html">
+      <a class="reference internal" href="nsidc-data-access.html">
        Accessing SnowEx Data at the NSIDC DAAC
       </a>
      </li>
@@ -326,12 +326,12 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../projects/list_of_projects.html">
+  <a class="reference internal" href="../../projects/list_of_projects.html">
    List of Projects
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../projects/index.html">
+  <a class="reference internal" href="../../projects/index.html">
    Projects
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
@@ -341,17 +341,17 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../projects/project_roles.html">
+    <a class="reference internal" href="../../projects/project_roles.html">
      Project Roles
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../projects/project_roadmap.html">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
      Project Roadmap
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../projects/project_initialization.html">
+    <a class="reference internal" href="../../projects/project_initialization.html">
      Project Initialization
     </a>
    </li>
@@ -365,32 +365,32 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../reference/glossary.html">
+  <a class="reference internal" href="../../reference/glossary.html">
    Glossaries
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../reference/bibliography.html">
+  <a class="reference internal" href="../../reference/bibliography.html">
    Bibliography
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../reference/open_science.html">
+  <a class="reference internal" href="../../reference/open_science.html">
    Open Science
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../reference/open_source_software.html">
+  <a class="reference internal" href="../../reference/open_source_software.html">
    Open-source Software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../reference/questions.html">
+  <a class="reference internal" href="../../reference/questions.html">
    How to Get Help
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../reference/social.html">
+  <a class="reference internal" href="../../reference/social.html">
    Things to do in Seattle
   </a>
  </li>
@@ -435,7 +435,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/tutorials/index.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/tutorials/nsidc-data-access/index.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -455,10 +455,10 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/index.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/nsidc-data-access/index.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/index.md"><button
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/nsidc-data-access/index.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -485,7 +485,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorials</h1>
+                <h1>NSIDC Data Access</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -496,38 +496,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="tutorials">
-<h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
-<p>These tutorials consist of Jupyter Notebooks that can be run in our
-<a class="reference external" href="https://github.com/snowex-hackweek">preconfigured software environment</a>
-If you are attending the hackweek, you have access to a JupyterHub environment
-with all the necessary Python software packages installed that are needed to run
-through these tutorials interactively. On JupyterHub, your home directory persists
-so any changes you make to the tutorials will be saved and be there for you next
-time you log in.</p>
-<p>All live tutorial recordings available via UW eScience <a class="reference external" href="https://www.youtube.com/playlist?list=PLA6PlfxWZPLSTUaS0uR8FMcNC2wqztwjJ">YouTube Playlist</a>. Or see the table below for links to specific tutorial notebooks and recordings:</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Tutorial</p></th>
-<th class="head"><p>Topics</p></th>
-<th class="head"><p>Datasets</p></th>
-<th class="head"><p>Recording Link</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="example/tutorial-notebook.html"><span class="doc std std-doc">Example Notebook</span></a></p></td>
-<td><p>Jupyter Book formatting, ipyleaflet</p></td>
-<td><p>n/a</p></td>
-<td><p>Not recorded</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="database/1_getting_started_example.html"><span class="doc std std-doc">Database</span></a></p></td>
-<td><p>Pits, SMP, Depths, Raster Depths, UAVSAR</p></td>
-<td><p>n/a</p></td>
-<td><p>Not recorded</p></td>
-</tr>
-</tbody>
-</table>
+  <div class="tex2jax_ignore mathjax_ignore section" id="nsidc-data-access">
+<h1>NSIDC Data Access<a class="headerlink" href="#nsidc-data-access" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nsidc-data-access.html">Accessing SnowEx Data at the NSIDC DAAC</a></li>
+</ul>
 </div>
 </div>
 
@@ -544,7 +518,7 @@ time you log in.</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./tutorials"
+            path: "./tutorials/nsidc-data-access"
         },
         predefinedOutput: true
     }
@@ -556,17 +530,17 @@ time you log in.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../preliminary/supplemental/conda.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../database/7_wrap_up.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Conda</p>
+            <p class="prev-next-title">Wrap up</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="example/tutorial-notebook.html" title="next page">
+    <a class='right-next' id="next-link" href="nsidc-data-access.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Example tutorial notebook</p>
+        <p class="prev-next-title">Accessing SnowEx Data at the NSIDC DAAC</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -588,7 +562,7 @@ time you log in.</p>
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>
