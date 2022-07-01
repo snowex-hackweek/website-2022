@@ -300,11 +300,38 @@ const thebe_selector_output = ".output, .cell_output"
     </ul>
    </li>
    <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../nsidc-data-access/index.html">
-     Accessing SnowEx Data at the NSIDC DAAC
+    <a class="reference internal" href="../core-datasets/index.html">
+     SnowEx Mission and Dataset Descriptions
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
     <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/01_data_coverage.html">
+       SnowEx Field Campaigns Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/02_data_descriptions.html">
+       Ground-Based Measurements and Data Descriptions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/03_database_preview.html">
+       SnowEx Database Preview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../nsidc-data-access/index.html">
+     Accessing SnowEx Data at the NSIDC DAAC
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -334,8 +361,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../projects/index.html">
    Projects
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -626,7 +653,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1926/1676431373.py:14: SAWarning: UserDefinedType Raster() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object&#39;s state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2013/1676431373.py:14: SAWarning: UserDefinedType Raster() will not produce a cache key because the ``cache_ok`` attribute is not set to True.  This can have significant performance implications including some performance degradations in comparison to prior SQLAlchemy versions.  Set this attribute to True if this type object&#39;s state is safe to use in a cache key, or False to disable this warning. (Background on this error at: https://sqlalche.me/e/14/cprf)
   result = session.query(func.ST_AsTiff(ImageData.raster)).limit(1).all()
 </pre></div>
 </div>

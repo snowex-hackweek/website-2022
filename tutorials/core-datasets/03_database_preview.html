@@ -1,0 +1,1518 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnowEx Database Preview &#8212; SnowEx Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="NSIDC Data Access" href="../nsidc-data-access/index.html" />
+    <link rel="prev" title="Ground-Based Measurements and Data Descriptions" href="02_data_descriptions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SnowEx Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to SnowEx Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../logistics.html">
+   Event Logistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
+     Supplemental Material
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
+       Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
+     Example tutorial notebook
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
+     Git, GitHub, and JupyterLab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
+       Basic Git/GitHub Skills Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyterlab-git
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
+       GitHub, Git, JupyterHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../database/index.html">
+     Introduction to the SnowEx Database
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/1_getting_started_example.html">
+       Introduction to the SnowEx Database
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/2_database_structure.html">
+       How is the Database Structured?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/3_forming_queries.html">
+       Forming Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/4_get_spiral_example.html">
+       Forming Queries: Example Visualizng Depths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/5_plot_raster_example.html">
+       Forming Queries: PostGIS Functions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/6_exporting_data.html">
+       Exporting Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/7_wrap_up.html">
+       Wrap up
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     SnowEx Mission and Dataset Descriptions
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="01_data_coverage.html">
+       SnowEx Field Campaigns Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="02_data_descriptions.html">
+       Ground-Based Measurements and Data Descriptions
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       SnowEx Database Preview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../nsidc-data-access/index.html">
+     Accessing SnowEx Data at the NSIDC DAAC
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../nsidc-data-access/nsidc-data-access.html">
+       Accessing SnowEx Data at the NSIDC DAAC
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/list_of_projects.html">
+   List of Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/social.html">
+   Things to do in Seattle
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/core-datasets/03_database_preview.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/snowex-hackweek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/core-datasets/03_database_preview.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/core-datasets/03_database_preview.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/snowex-hackweek/website2022/main?urlpath=lab/tree/book/tutorials/core-datasets/03_database_preview.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-basics">
+   The Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-are-the-data-contained">
+     How are the data contained?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up-computing-environment">
+   Set Up Computing Environment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-s-the-first-thing-you-might-like-to-do">
+     What’s the first thing you might like to do?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grand-mesa-iop-2020">
+   Grand Mesa IOP (2020)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-let-s-find-all-the-pits-that-overlap-with-an-airborne-sensor-of-interest">
+     Example 1: Let’s find all the pits that overlap with an airborne sensor of interest!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-unsure-of-the-flight-date-but-know-which-sensor-you-d-like-to-overlap-with-here-s-how">
+     1a). Unsure of the flight date, but know which sensor you’d like to overlap with, here’s how:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-want-to-select-an-exact-flight-date-match-here-s-how">
+     1b).Want to select an exact flight date match? Here’s how:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-want-to-select-a-range-of-dates-near-the-flight-date-here-s-how">
+     1c). Want to select a range of dates near the flight date? Here’s how:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-have-a-known-date-that-you-wish-to-select-data-for-here-s-how">
+     1d). Have a known date that you wish to select data for, here’s how:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-series-2020">
+   Time Series (2020)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-the-spatial-extent-of-field-campaign-data">
+   Explore the Spatial Extent of Field Campaign Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#query-the-database-to-add-spatial-data-to-our-map">
+     Query the Database to add Spatial Data to Our Map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-find-out-where-we-have-liquid-water-content-lwc-data">
+     Let’s find out where we have liquid water content (LWC) data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-add-these-points-to-our-map">
+     Let’s add these points to our map!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grab-geojson-from-gist">
+   grab geojson from gist
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recap">
+   Recap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>SnowEx Database Preview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-basics">
+   The Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-are-the-data-contained">
+     How are the data contained?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up-computing-environment">
+   Set Up Computing Environment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-s-the-first-thing-you-might-like-to-do">
+     What’s the first thing you might like to do?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grand-mesa-iop-2020">
+   Grand Mesa IOP (2020)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1-let-s-find-all-the-pits-that-overlap-with-an-airborne-sensor-of-interest">
+     Example 1: Let’s find all the pits that overlap with an airborne sensor of interest!
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-unsure-of-the-flight-date-but-know-which-sensor-you-d-like-to-overlap-with-here-s-how">
+     1a). Unsure of the flight date, but know which sensor you’d like to overlap with, here’s how:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-want-to-select-an-exact-flight-date-match-here-s-how">
+     1b).Want to select an exact flight date match? Here’s how:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-want-to-select-a-range-of-dates-near-the-flight-date-here-s-how">
+     1c). Want to select a range of dates near the flight date? Here’s how:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-have-a-known-date-that-you-wish-to-select-data-for-here-s-how">
+     1d). Have a known date that you wish to select data for, here’s how:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-series-2020">
+   Time Series (2020)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#explore-the-spatial-extent-of-field-campaign-data">
+   Explore the Spatial Extent of Field Campaign Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#query-the-database-to-add-spatial-data-to-our-map">
+     Query the Database to add Spatial Data to Our Map
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-find-out-where-we-have-liquid-water-content-lwc-data">
+     Let’s find out where we have liquid water content (LWC) data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#let-s-add-these-points-to-our-map">
+     Let’s add these points to our map!
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grab-geojson-from-gist">
+   grab geojson from gist
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recap">
+   Recap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="snowex-database-preview">
+<h1>SnowEx Database Preview<a class="headerlink" href="#snowex-database-preview" title="Permalink to this headline">¶</a></h1>
+<p>![fireworks] (<a class="reference external" href="https://i.gifer.com/FH7W.gif">https://i.gifer.com/FH7W.gif</a> “fireworks”)</p>
+<p>Learning Objectives:</p>
+<ul class="simple">
+<li><p>First taste of the database!</p></li>
+<li><p>Code snippets to extract and prep data.</p></li>
+<li><p>Generate ideas for project pitches.</p></li>
+</ul>
+<div class="section" id="the-basics">
+<h2>The Basics<a class="headerlink" href="#the-basics" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-are-the-data-contained">
+<h3>How are the data contained?<a class="headerlink" href="#how-are-the-data-contained" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/03_database-tables.png" src="../../_images/03_database-tables.png" />
+</div>
+</div>
+<div class="section" id="set-up-computing-environment">
+<h2>Set Up Computing Environment<a class="headerlink" href="#set-up-computing-environment" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># standard imports</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="c1"># some mapping widgets</span>
+<span class="kn">import</span> <span class="nn">ipyleaflet</span>
+<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">GeoData</span><span class="p">,</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">LayersControl</span><span class="p">,</span> <span class="n">basemap_to_tiles</span><span class="p">,</span> <span class="n">TileLayer</span><span class="p">,</span> <span class="n">SplitMapControl</span><span class="p">,</span> <span class="n">Polygon</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span>
+
+<span class="c1">#database imports</span>
+<span class="kn">from</span> <span class="nn">snowexsql.db</span> <span class="kn">import</span> <span class="n">get_db</span>
+<span class="kn">from</span> <span class="nn">snowexsql.data</span> <span class="kn">import</span> <span class="n">PointData</span><span class="p">,</span> <span class="n">LayerData</span><span class="p">,</span> <span class="n">ImageData</span><span class="p">,</span> <span class="n">SiteData</span>
+<span class="kn">from</span> <span class="nn">snowexsql.conversions</span> <span class="kn">import</span> <span class="n">query_to_geopandas</span><span class="p">,</span> <span class="n">query_to_pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>POINTER –&gt;</strong> Notice where I import the four primary database tables. Can anyone call out what code line does this from the code block above?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the database</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;snow:hackweek@db.snowexdata.org/snowex&#39;</span>
+<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;snowexsql database successfully loaded!&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>snowexsql database successfully loaded!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="what-s-the-first-thing-you-might-like-to-do">
+<h3>What’s the first thing you might like to do?<a class="headerlink" href="#what-s-the-first-thing-you-might-like-to-do" title="Permalink to this headline">¶</a></h3>
+<p>Find overlapping data for data analysis comparison</p>
+</div>
+</div>
+<div class="section" id="grand-mesa-iop-2020">
+<h2>Grand Mesa IOP (2020)<a class="headerlink" href="#grand-mesa-iop-2020" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-1-let-s-find-all-the-pits-that-overlap-with-an-airborne-sensor-of-interest">
+<h3>Example 1: Let’s find all the pits that overlap with an airborne sensor of interest!<a class="headerlink" href="#example-1-let-s-find-all-the-pits-that-overlap-with-an-airborne-sensor-of-interest" title="Permalink to this headline">¶</a></h3>
+<p>First, it would be helpful to know, which of the airborne sensors are part of the database, right?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Query the session using .surveyors() to generate a list</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">surveyors</span><span class="p">)</span>
+
+<span class="c1"># Locate all that are distinct</span>
+<span class="n">airborne_sensors_list</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">surveyors</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;list of airborne sensors by &quot;surveyor&quot; name: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">airborne_sensors_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list of airborne sensors by &quot;surveyor&quot; name: 
+ [(&#39;USGS&#39;,), (&#39;UAVSAR team, JPL&#39;,), (&#39;ASO Inc.&#39;,)]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-unsure-of-the-flight-date-but-know-which-sensor-you-d-like-to-overlap-with-here-s-how">
+<h3>1a). Unsure of the flight date, but know which sensor you’d like to overlap with, here’s how:<a class="headerlink" href="#a-unsure-of-the-flight-date-but-know-which-sensor-you-d-like-to-overlap-with-here-s-how" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Airborne sensor from list above</span>
+<span class="n">sensor</span> <span class="o">=</span> <span class="s1">&#39;UAVSAR team, JPL&#39;</span>
+
+<span class="c1"># Form on the Images table that returns Raster collection dates</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+
+<span class="c1"># Filter for UAVSAR data</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">surveyors</span> <span class="o">==</span> <span class="n">sensor</span><span class="p">)</span>
+
+<span class="c1"># Grab the unique dates</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span>
+
+<span class="c1"># Execute the query </span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">all</span><span class="p">()</span> 
+
+<span class="c1"># Clean up the dates </span>
+<span class="n">dates</span> <span class="o">=</span> <span class="p">[</span><span class="n">d</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span> 
+<span class="n">dlist</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span>
+<span class="n">dlist</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> flight dates are: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">sensor</span><span class="p">,</span> <span class="n">dlist</span><span class="p">))</span>
+
+<span class="c1"># Find all the snow pits done on these days</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">geom</span><span class="p">,</span> <span class="n">SiteData</span><span class="o">.</span><span class="n">site_id</span><span class="p">,</span> <span class="n">SiteData</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">in_</span><span class="p">(</span><span class="n">dates</span><span class="p">))</span>
+
+<span class="c1"># Return a geopandas df</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">query_to_geopandas</span><span class="p">(</span><span class="n">qry</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+
+<span class="c1"># View the returned pandas dataframe!</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Close your session to avoid hanging transactions</span>
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>UAVSAR team, JPL flight dates are: 2020-01-31, 2020-02-12
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                             geom site_id        date
+0  POINT (742453.000 4325752.000)    1C14  2020-01-31
+1  POINT (744396.000 4323540.000)    8C26  2020-01-31
+2  POINT (740652.000 4327445.000)     2C2  2020-01-31
+3  POINT (741580.000 4326713.000)     2C9  2020-01-31
+4  POINT (745340.000 4322754.000)    8S28  2020-01-31
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="b-want-to-select-an-exact-flight-date-match-here-s-how">
+<h3>1b).Want to select an exact flight date match? Here’s how:<a class="headerlink" href="#b-want-to-select-an-exact-flight-date-match-here-s-how" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick a day from the list of dates</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">dates</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
+
+<span class="c1"># Find all the snow pits done on these days </span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">geom</span><span class="p">,</span> <span class="n">SiteData</span><span class="o">.</span><span class="n">site_id</span><span class="p">,</span> <span class="n">SiteData</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span>
+
+<span class="c1"># Return a geopandas df</span>
+<span class="n">df_exact</span> <span class="o">=</span> <span class="n">query_to_geopandas</span><span class="p">(</span><span class="n">qry</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> pits overlap with </span><span class="si">%s</span><span class="s1"> on </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_exact</span><span class="p">),</span> <span class="n">sensor</span><span class="p">,</span> <span class="n">dt</span><span class="p">))</span>
+
+<span class="c1"># View snows pits that align with first UAVSAR date</span>
+<span class="n">df_exact</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17 pits overlap with UAVSAR team, JPL on 2020-01-31
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>geom</th>
+      <th>site_id</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POINT (742453.000 4325752.000)</td>
+      <td>1C14</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>POINT (744396.000 4323540.000)</td>
+      <td>8C26</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>POINT (740652.000 4327445.000)</td>
+      <td>2C2</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>POINT (741580.000 4326713.000)</td>
+      <td>2C9</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>POINT (745340.000 4322754.000)</td>
+      <td>8S28</td>
+      <td>2020-01-31</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="c-want-to-select-a-range-of-dates-near-the-flight-date-here-s-how">
+<h3>1c). Want to select a range of dates near the flight date? Here’s how:<a class="headerlink" href="#c-want-to-select-a-range-of-dates-near-the-flight-date-here-s-how" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Form a date range to query on either side of our chosen day </span>
+<span class="n">date_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">dt</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+
+<span class="c1"># Find all the snow pits done on these days </span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">geom</span><span class="p">,</span> <span class="n">SiteData</span><span class="o">.</span><span class="n">site_id</span><span class="p">,</span> <span class="n">SiteData</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">SiteData</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">in_</span><span class="p">(</span><span class="n">date_range</span><span class="p">))</span>
+
+<span class="c1"># Return a geopandas df</span>
+<span class="n">df_range</span> <span class="o">=</span> <span class="n">query_to_geopandas</span><span class="p">(</span><span class="n">qry</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+
+<span class="c1"># Clean up dates (for print statement only)</span>
+<span class="n">dlist</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">date_range</span><span class="p">]</span>
+<span class="n">dlist</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlist</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> pits overlap with </span><span class="si">%s</span><span class="s1"> on </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_range</span><span class="p">),</span> <span class="n">sensor</span><span class="p">,</span> <span class="n">dlist</span><span class="p">))</span>
+
+<span class="c1"># View snow pits that are +/- 1 day of the first UAVSAR flight date</span>
+<span class="n">df_range</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47 pits overlap with UAVSAR team, JPL on 2020-01-30, 2020-01-31, 2020-02-01
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>geom</th>
+      <th>site_id</th>
+      <th>date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>9</th>
+      <td>POINT (744862.000 4323250.000)</td>
+      <td>4C30</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>POINT (740765.000 4327379.000)</td>
+      <td>2C3</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>POINT (743402.000 4324736.000)</td>
+      <td>5C20</td>
+      <td>2020-01-30</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>POINT (746303.000 4322571.000)</td>
+      <td>9S40</td>
+      <td>2020-02-01</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>POINT (741378.000 4326992.000)</td>
+      <td>1C7</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>POINT (746553.000 4323759.000)</td>
+      <td>6N46</td>
+      <td>2020-02-01</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>POINT (741493.000 4326833.000)</td>
+      <td>1C8</td>
+      <td>2020-01-31</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>POINT (744561.000 4322721.000)</td>
+      <td>5S21</td>
+      <td>2020-02-01</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>POINT (745937.000 4322754.000)</td>
+      <td>2S37</td>
+      <td>2020-02-01</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>POINT (741960.000 4326644.000)</td>
+      <td>6C10</td>
+      <td>2020-01-31</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="d-have-a-known-date-that-you-wish-to-select-data-for-here-s-how">
+<h3>1d). Have a known date that you wish to select data for, here’s how:<a class="headerlink" href="#d-have-a-known-date-that-you-wish-to-select-data-for-here-s-how" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find all the data that was collected on 2-12-2020</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+
+<span class="c1">#--------------- Point Data -----------------------------------</span>
+<span class="c1"># Grab all Point data instruments from our date</span>
+<span class="n">point_instruments</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">instrument</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">point_type</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">type</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<span class="c1"># Clean up point data (i.e. remove tuple)</span>
+<span class="n">point_instruments</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">point_instruments</span><span class="p">]</span>
+<span class="n">point_instruments</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">point_instruments</span><span class="p">)</span>
+<span class="n">point_type</span> <span class="o">=</span> <span class="p">[</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">point_type</span><span class="p">]</span>
+<span class="n">point_type</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">point_type</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Point data on </span><span class="si">%s</span><span class="s1"> are: </span><span class="si">%s</span><span class="s1">, with the following list of parameters: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span> <span class="n">point_instruments</span><span class="p">,</span> <span class="n">point_type</span><span class="p">))</span>
+
+<span class="c1">#--------------- Layer Data -----------------------------------</span>
+<span class="c1"># Grab all Layer data instruments from our date</span>
+<span class="n">layer_instruments</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">instrument</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">layer_type</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">type</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<span class="c1"># Clean up layer data </span>
+<span class="n">layer_instruments</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">layer_instruments</span> <span class="k">if</span> <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span>
+<span class="n">layer_instruments</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">layer_instruments</span><span class="p">)</span>
+<span class="n">layer_type</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">layer_type</span><span class="p">]</span>
+<span class="n">layer_type</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">layer_type</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Layer Data on </span><span class="si">%s</span><span class="s1"> are: </span><span class="si">%s</span><span class="s1">, with the following list of parameters: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span> <span class="n">layer_instruments</span><span class="p">,</span> <span class="n">layer_type</span><span class="p">))</span>
+
+<span class="c1">#--------------- Image Data -----------------------------------</span>
+<span class="c1"># Grab all Image data instruments from our date</span>
+<span class="n">image_instruments</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">instrument</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">image_type</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">type</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">dt</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+
+<span class="c1"># Clean up image data (i.e. remove tuple)</span>
+<span class="n">image_instruments</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">image_instruments</span><span class="p">]</span>
+<span class="n">image_instruments</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">image_instruments</span><span class="p">)</span>
+<span class="n">image_type</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">image_type</span><span class="p">]</span>
+<span class="n">image_type</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">image_type</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Image Data on </span><span class="si">%s</span><span class="s1"> are: </span><span class="si">%s</span><span class="s1">, with the following list of parameters: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span> <span class="n">image_instruments</span><span class="p">,</span> <span class="n">image_type</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Point data on 2020-02-12 are: camera, magnaprobe, pit ruler, with the following list of parameters: depth
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Layer Data on 2020-02-12 are: snowmicropen, with the following list of parameters: force, density, grain_size, permittivity, lwc_vol, manual_wetness, grain_type, temperature, hand_hardness
+
+Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of parameters: insar correlation, insar interferogram real, insar interferogram imaginary, insar amplitude
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="time-series-2020">
+<h2>Time Series (2020)<a class="headerlink" href="#time-series-2020" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up database</span>
+<span class="kn">from</span> <span class="nn">snowexsql.db</span> <span class="kn">import</span> <span class="n">get_db</span>
+<span class="kn">from</span> <span class="nn">snowexsql.data</span> <span class="kn">import</span> <span class="n">PointData</span><span class="p">,</span> <span class="n">LayerData</span><span class="p">,</span> <span class="n">ImageData</span><span class="p">,</span> <span class="n">SiteData</span>
+<span class="kn">from</span> <span class="nn">snowexsql.conversions</span> <span class="kn">import</span> <span class="n">query_to_geopandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Query temp profiles from 2 sites: Banner Forest, Banner Snotel</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot full timeseries of temp profile vs depth in side by side plot </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="explore-the-spatial-extent-of-field-campaign-data">
+<h2>Explore the Spatial Extent of Field Campaign Data<a class="headerlink" href="#explore-the-spatial-extent-of-field-campaign-data" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bbox</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">125</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="o">-</span><span class="mi">102</span><span class="p">,</span> <span class="mi">31</span><span class="p">]</span>
+<span class="n">west</span><span class="p">,</span> <span class="n">north</span><span class="p">,</span> <span class="n">east</span><span class="p">,</span> <span class="n">south</span> <span class="o">=</span> <span class="n">bbox</span>
+<span class="n">bbox_ctr</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">north</span><span class="o">+</span><span class="n">south</span><span class="p">),</span> <span class="mf">0.5</span><span class="o">*</span><span class="p">(</span><span class="n">west</span><span class="o">+</span><span class="n">east</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">basemap</span><span class="o">=</span><span class="n">basemaps</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">Positron</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">bbox_ctr</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="n">rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">bounds</span><span class="o">=</span><span class="p">((</span><span class="n">south</span><span class="p">,</span> <span class="n">west</span><span class="p">),</span> <span class="p">(</span><span class="n">north</span><span class="p">,</span> <span class="n">east</span><span class="p">)))</span> <span class="c1">#SW and NE corners of the rectangle (lat, lon)</span>
+<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">rectangle</span><span class="p">)</span>
+<span class="n">m</span>
+
+<span class="c1"># more info on available basemaps here: https://ipyleaflet.readthedocs.io/en/latest/map_and_basemaps/basemaps.html</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "0a5a25c6598747468706ed5d794a20f7"}
+</script></div>
+</div>
+<div class="section" id="query-the-database-to-add-spatial-data-to-our-map">
+<h3>Query the Database to add Spatial Data to Our Map<a class="headerlink" href="#query-the-database-to-add-spatial-data-to-our-map" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # database imports</span>
+<span class="c1"># from snowexsql.db import get_db</span>
+<span class="c1"># from snowexsql.data import PointData, LayerData, ImageData, SiteData</span>
+<span class="c1"># from snowexsql.conversions import query_to_geopandas, query_to_pandas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the database</span>
+<span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;snow:hackweek@db.snowexdata.org/snowex&#39;</span>
+<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="let-s-find-out-where-we-have-liquid-water-content-lwc-data">
+<h3>Let’s find out where we have liquid water content (LWC) data<a class="headerlink" href="#let-s-find-out-where-we-have-liquid-water-content-lwc-data" title="Permalink to this headline">¶</a></h3>
+<p><strong>Pointer –&gt;</strong>  LWC data is in the LayerData table, because data at a single location were measured as a profile on the pit wall face (i.e has a vertical dimension)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># query the LayerData for all LWC values</span>
+<span class="c1"># qry = session.query(LayerData).filter(LayerData.type == &#39;lwc_vol&#39;)</span>
+
+<span class="c1"># query the geometry property of PointData</span>
+<span class="c1"># qry = session.query(LayerData.geom).distinct()</span>
+
+<span class="c1"># query the LayerData for all LWC values</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">LayerData</span><span class="o">.</span><span class="n">latitude</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;lwc_vol&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span> <span class="c1"># </span>
+
+<span class="c1"># # query the geometry property of PointData</span>
+<span class="c1"># qry = query(LayerData.geom).distinct()</span>
+
+<span class="c1"># # limit the number of entries</span>
+<span class="c1"># qry = qry.limit(2000)</span>
+
+<span class="c1"># convert query to geopandas df</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">query_to_pandas</span><span class="p">(</span><span class="n">qry</span><span class="p">,</span> <span class="n">engine</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="n">gpd</span><span class="o">.</span><span class="n">points_from_xy</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">longitude</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">latitude</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+
+<span class="c1"># # convert query to geopandas df</span>
+<span class="c1"># df = query_to_geopandas(qry, engine)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># how many did we retrieve?</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span><span class="si">}</span><span class="s1"> records returned!&#39;</span><span class="p">)</span>
+
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;geopandas.geodataframe.GeoDataFrame&#39;&gt;
+    longitude   latitude                     geometry
+0 -108.221437  39.034623  POINT (-108.22144 39.03462)
+1 -108.220926  39.036475  POINT (-108.22093 39.03648)
+2 -108.220239  39.064288  POINT (-108.22024 39.06429)
+3 -108.220220  39.064180  POINT (-108.22022 39.06418)
+4 -108.219632  39.034409  POINT (-108.21963 39.03441)
+155 records returned!
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="let-s-add-these-points-to-our-map">
+<h3>Let’s add these points to our map!<a class="headerlink" href="#let-s-add-these-points-to-our-map" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span><span class="n">basemap</span><span class="o">=</span><span class="n">basemaps</span><span class="o">.</span><span class="n">CartoDB</span><span class="o">.</span><span class="n">Positron</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="n">bbox_ctr</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="c1"># geo_data = GeoData(geo_dataframe = df)</span>
+
+<span class="n">geo_data</span> <span class="o">=</span> <span class="n">GeoData</span><span class="p">(</span><span class="n">geo_dataframe</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span>
+    <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;radius&#39;</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;#3366cc&#39;</span><span class="p">,</span> <span class="s1">&#39;opacity&#39;</span><span class="p">:</span><span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span><span class="mf">1.9</span><span class="p">,</span> <span class="s1">&#39;dashArray&#39;</span><span class="p">:</span><span class="s1">&#39;2&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span><span class="mf">0.6</span><span class="p">},</span>
+    <span class="n">hover_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span> <span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">},</span>
+    <span class="n">point_style</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;radius&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span> <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">},</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;lwc obs.&#39;</span><span class="p">)</span>
+
+<span class="n">m</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">geo_data</span><span class="p">)</span> 
+<span class="n">m</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">LayersControl</span><span class="p">())</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "acd701aa930646bdb1bf25c5da0182d7"}
+</script></div>
+</div>
+</div>
+</div>
+<div class="section" id="grab-geojson-from-gist">
+<h2>grab geojson from gist<a class="headerlink" href="#grab-geojson-from-gist" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/meganmason/21e6de1f7487b3e7defbe60ddde07e0e/raw/06939d8fffc0539a6014ee0d7c0c1d58938d9e8d/pits_raw.geojson&quot;</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>field_1</th>
+      <th>Identifier</th>
+      <th>PitID</th>
+      <th>Location</th>
+      <th>Site</th>
+      <th>Easting</th>
+      <th>Northing</th>
+      <th>Zone</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Date</th>
+      <th>Local/Stan</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>CAAMCL_20191220_1300</td>
+      <td>CAAMCL</td>
+      <td>American River Basin</td>
+      <td>Caples Lake</td>
+      <td>757216</td>
+      <td>4288787</td>
+      <td>10</td>
+      <td>38.71033</td>
+      <td>-120.04187</td>
+      <td>12/20</td>
+      <td>13:00:00</td>
+      <td>POINT (-120.04187 38.71033)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>CAAMCL_20200131_1215</td>
+      <td>CAAMCL</td>
+      <td>American River Basin</td>
+      <td>Caples Lake</td>
+      <td>757220</td>
+      <td>4288788</td>
+      <td>10</td>
+      <td>38.71034</td>
+      <td>-120.04182</td>
+      <td>1/31</td>
+      <td>12:15:00</td>
+      <td>POINT (-120.04182 38.71034)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>CAAMCL_20200214_1200</td>
+      <td>CAAMCL</td>
+      <td>American River Basin</td>
+      <td>Caples Lake</td>
+      <td>757218</td>
+      <td>4288787</td>
+      <td>10</td>
+      <td>38.71033</td>
+      <td>-120.04185</td>
+      <td>2/14</td>
+      <td>12:00:00</td>
+      <td>POINT (-120.04185 38.71033)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>CAAMCL_20200221_1200</td>
+      <td>CAAMCL</td>
+      <td>American River Basin</td>
+      <td>Caples Lake</td>
+      <td>757217</td>
+      <td>4288780</td>
+      <td>10</td>
+      <td>38.71027</td>
+      <td>-120.04186</td>
+      <td>2/21</td>
+      <td>12:00:00</td>
+      <td>POINT (-120.04186 38.71027)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>CAAMCL_20200228_1130</td>
+      <td>CAAMCL</td>
+      <td>American River Basin</td>
+      <td>Caples Lake</td>
+      <td>757215</td>
+      <td>4288778</td>
+      <td>10</td>
+      <td>38.71025</td>
+      <td>-120.04188</td>
+      <td>2/28</td>
+      <td>11:30:00</td>
+      <td>POINT (-120.04188 38.71025)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"636f3ba7a4ba4a1fb654c292747f0dc8": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "94a93c71d0474a189772c57f5b215f64": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "move"}}, "228b125244054d44b7b52496e38f5ef7": {"model_name": "LeafletTileLayerModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletTileLayerView", "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>", "base": true, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": 18, "max_zoom": 20, "min_native_zoom": 0, "min_zoom": 1, "name": "CartoDB.Positron", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "tile_size", "tms"], "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "tile_size": 256, "tms": false, "url": "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", "visible": true}}, "751175da35f649e1a7aa7eace32ce81f": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "cecb00a0ad444cbbbdb07f2692abcd1f": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "0a5a25c6598747468706ed5d794a20f7": {"model_name": "LeafletMapModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_dom_classes": [], "_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletMapView", "bottom": 0.0, "bounce_at_zoom_limits": true, "box_zoom": true, "center": [40.0, -113.5], "close_popup_on_click": true, "controls": ["IPY_MODEL_f4c0601c8f024c0bb475db8152af856a", "IPY_MODEL_d3db4e553dda4b5396784cb9cc84d967"], "crs": {"name": "EPSG3857", "custom": false}, "default_style": "IPY_MODEL_636f3ba7a4ba4a1fb654c292747f0dc8", "double_click_zoom": true, "dragging": true, "dragging_style": "IPY_MODEL_94a93c71d0474a189772c57f5b215f64", "east": 0.0, "fullscreen": false, "inertia": true, "inertia_deceleration": 3000, "inertia_max_speed": 1500, "interpolation": "bilinear", "keyboard": true, "keyboard_pan_offset": 80, "keyboard_zoom_offset": 1, "layers": ["IPY_MODEL_228b125244054d44b7b52496e38f5ef7", "IPY_MODEL_f99569fca1cd43a392b31bcab0e6e47f"], "layout": "IPY_MODEL_751175da35f649e1a7aa7eace32ce81f", "left": 9007199254740991.0, "max_zoom": 18.0, "min_zoom": 1.0, "modisdate": "2022-06-30", "north": 0.0, "options": ["bounce_at_zoom_limits", "box_zoom", "center", "close_popup_on_click", "double_click_zoom", "dragging", "fullscreen", "inertia", "inertia_deceleration", "inertia_max_speed", "interpolation", "keyboard", "keyboard_pan_offset", "keyboard_zoom_offset", "max_zoom", "min_zoom", "prefer_canvas", "scroll_wheel_zoom", "tap", "tap_tolerance", "touch_zoom", "world_copy_jump", "zoom", "zoom_animation_threshold", "zoom_delta", "zoom_snap", "zoom_start"], "prefer_canvas": false, "right": 0.0, "scroll_wheel_zoom": false, "south": 0.0, "style": "IPY_MODEL_cecb00a0ad444cbbbdb07f2692abcd1f", "tap": true, "tap_tolerance": 15, "top": 9007199254740991.0, "touch_zoom": true, "west": 0.0, "window_url": "", "world_copy_jump": false, "zoom": 4.0, "zoom_animation_threshold": 4, "zoom_delta": 1.0, "zoom_snap": 1.0, "zoom_start": 12.0}}, "f4c0601c8f024c0bb475db8152af856a": {"model_name": "LeafletZoomControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletZoomControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletZoomControlView", "options": ["position", "zoom_in_text", "zoom_in_title", "zoom_out_text", "zoom_out_title"], "position": "topleft", "zoom_in_text": "+", "zoom_in_title": "Zoom in", "zoom_out_text": "-", "zoom_out_title": "Zoom out"}}, "d3db4e553dda4b5396784cb9cc84d967": {"model_name": "LeafletAttributionControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletAttributionControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletAttributionControlView", "options": ["position", "prefix"], "position": "bottomright", "prefix": "ipyleaflet"}}, "f99569fca1cd43a392b31bcab0e6e47f": {"model_name": "LeafletRectangleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletRectangleModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletRectangleView", "base": false, "bottom": false, "bounds": [[31, -125], [49, -102]], "color": "#0033FF", "dash_array": null, "draggable": false, "fill": true, "fill_color": null, "fill_opacity": 0.2, "line_cap": "round", "line_join": "round", "locations": [], "name": "", "no_clip": true, "opacity": 1.0, "options": ["color", "dash_array", "draggable", "fill", "fill_color", "fill_opacity", "line_cap", "line_join", "no_clip", "opacity", "pointer_events", "smooth_factor", "stroke", "transform", "weight"], "pointer_events": "", "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "rotation": true, "scaling": true, "smooth_factor": 1.0, "stroke": true, "transform": false, "uniform_scaling": false, "weight": 5}}, "943ac968c6944e178da75af5cdb04f44": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "c41a9f2985914ab4bd4c21dc35d38317": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "move"}}, "24b4611e4bf74800b9c148fa38c91398": {"model_name": "LeafletTileLayerModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletTileLayerView", "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>", "base": true, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": 18, "max_zoom": 20, "min_native_zoom": 0, "min_zoom": 1, "name": "CartoDB.Positron", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "tile_size", "tms"], "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "tile_size": 256, "tms": false, "url": "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", "visible": true}}, "537d3c47e21e4626b619e29972d9dab6": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2864e35bed814464957f41515c277aa1": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "acd701aa930646bdb1bf25c5da0182d7": {"model_name": "LeafletMapModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_dom_classes": [], "_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletMapView", "bottom": 0.0, "bounce_at_zoom_limits": true, "box_zoom": true, "center": [40.0, -113.5], "close_popup_on_click": true, "controls": ["IPY_MODEL_09a1e6680d6a4821951a74c6b9ca466b", "IPY_MODEL_b7ecd602782a4ab89e9b48fcb4900b77", "IPY_MODEL_89a9164c78da48329939b272336afd90"], "crs": {"name": "EPSG3857", "custom": false}, "default_style": "IPY_MODEL_943ac968c6944e178da75af5cdb04f44", "double_click_zoom": true, "dragging": true, "dragging_style": "IPY_MODEL_c41a9f2985914ab4bd4c21dc35d38317", "east": 0.0, "fullscreen": false, "inertia": true, "inertia_deceleration": 3000, "inertia_max_speed": 1500, "interpolation": "bilinear", "keyboard": true, "keyboard_pan_offset": 80, "keyboard_zoom_offset": 1, "layers": ["IPY_MODEL_24b4611e4bf74800b9c148fa38c91398", "IPY_MODEL_dc1439e6e2b04736b86cfcd7368c747c"], "layout": "IPY_MODEL_537d3c47e21e4626b619e29972d9dab6", "left": 9007199254740991.0, "max_zoom": 18.0, "min_zoom": 1.0, "modisdate": "2022-06-30", "north": 0.0, "options": ["bounce_at_zoom_limits", "box_zoom", "center", "close_popup_on_click", "double_click_zoom", "dragging", "fullscreen", "inertia", "inertia_deceleration", "inertia_max_speed", "interpolation", "keyboard", "keyboard_pan_offset", "keyboard_zoom_offset", "max_zoom", "min_zoom", "prefer_canvas", "scroll_wheel_zoom", "tap", "tap_tolerance", "touch_zoom", "world_copy_jump", "zoom", "zoom_animation_threshold", "zoom_delta", "zoom_snap", "zoom_start"], "prefer_canvas": false, "right": 0.0, "scroll_wheel_zoom": false, "south": 0.0, "style": "IPY_MODEL_2864e35bed814464957f41515c277aa1", "tap": true, "tap_tolerance": 15, "top": 9007199254740991.0, "touch_zoom": true, "west": 0.0, "window_url": "", "world_copy_jump": false, "zoom": 4.0, "zoom_animation_threshold": 4, "zoom_delta": 1.0, "zoom_snap": 1.0, "zoom_start": 12.0}}, "09a1e6680d6a4821951a74c6b9ca466b": {"model_name": "LeafletZoomControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletZoomControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletZoomControlView", "options": ["position", "zoom_in_text", "zoom_in_title", "zoom_out_text", "zoom_out_title"], "position": "topleft", "zoom_in_text": "+", "zoom_in_title": "Zoom in", "zoom_out_text": "-", "zoom_out_title": "Zoom out"}}, "b7ecd602782a4ab89e9b48fcb4900b77": {"model_name": "LeafletAttributionControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletAttributionControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletAttributionControlView", "options": ["position", "prefix"], "position": "bottomright", "prefix": "ipyleaflet"}}, "dc1439e6e2b04736b86cfcd7368c747c": {"model_name": "LeafletGeoJSONModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletGeoJSONModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletGeoJSONView", "base": false, "bottom": false, "data": {"type": "FeatureCollection", "features": [{"id": "0", "type": "Feature", "properties": {"longitude": -108.22143736654294, "latitude": 39.03462275770759}, "geometry": {"type": "Point", "coordinates": [-108.22143736654294, 39.03462275770759]}}, {"id": "1", "type": "Feature", "properties": {"longitude": -108.22092579631844, "latitude": 39.0364754430594}, "geometry": {"type": "Point", "coordinates": [-108.22092579631844, 39.0364754430594]}}, {"id": "2", "type": "Feature", "properties": {"longitude": -108.22023922899777, "latitude": 39.06428809399202}, "geometry": {"type": "Point", "coordinates": [-108.22023922899777, 39.06428809399202]}}, {"id": "3", "type": "Feature", "properties": {"longitude": -108.22022037769548, "latitude": 39.06417953563942}, "geometry": {"type": "Point", "coordinates": [-108.22022037769548, 39.06417953563942]}}, {"id": "4", "type": "Feature", "properties": {"longitude": -108.21963222273214, "latitude": 39.034408538336336}, "geometry": {"type": "Point", "coordinates": [-108.21963222273214, 39.034408538336336]}}, {"id": "5", "type": "Feature", "properties": {"longitude": -108.21860452010492, "latitude": 39.06295178388973}, "geometry": {"type": "Point", "coordinates": [-108.21860452010492, 39.06295178388973]}}, {"id": "6", "type": "Feature", "properties": {"longitude": -108.21851302839987, "latitude": 39.03378723541754}, "geometry": {"type": "Point", "coordinates": [-108.21851302839987, 39.03378723541754]}}, {"id": "7", "type": "Feature", "properties": {"longitude": -108.21781403657259, "latitude": 39.03629309680316}, "geometry": {"type": "Point", "coordinates": [-108.21781403657259, 39.03629309680316]}}, {"id": "8", "type": "Feature", "properties": {"longitude": -108.21732327014556, "latitude": 39.06232659828033}, "geometry": {"type": "Point", "coordinates": [-108.21732327014556, 39.06232659828033]}}, {"id": "9", "type": "Feature", "properties": {"longitude": -108.21648097233562, "latitude": 39.06200017418442}, "geometry": {"type": "Point", "coordinates": [-108.21648097233562, 39.06200017418442]}}, {"id": "10", "type": "Feature", "properties": {"longitude": -108.21556127562778, "latitude": 39.061879102893414}, "geometry": {"type": "Point", "coordinates": [-108.21556127562778, 39.061879102893414]}}, {"id": "11", "type": "Feature", "properties": {"longitude": -108.21319890405339, "latitude": 39.05936316182878}, "geometry": {"type": "Point", "coordinates": [-108.21319890405339, 39.05936316182878]}}, {"id": "12", "type": "Feature", "properties": {"longitude": -108.21137293658585, "latitude": 39.03617520368139}, "geometry": {"type": "Point", "coordinates": [-108.21137293658585, 39.03617520368139]}}, {"id": "13", "type": "Feature", "properties": {"longitude": -108.21038344247991, "latitude": 39.058674174664255}, "geometry": {"type": "Point", "coordinates": [-108.21038344247991, 39.058674174664255]}}, {"id": "14", "type": "Feature", "properties": {"longitude": -108.20975279652006, "latitude": 39.03595624802808}, "geometry": {"type": "Point", "coordinates": [-108.20975279652006, 39.03595624802808]}}, {"id": "15", "type": "Feature", "properties": {"longitude": -108.20911223519593, "latitude": 39.05721129925941}, "geometry": {"type": "Point", "coordinates": [-108.20911223519593, 39.05721129925941]}}, {"id": "16", "type": "Feature", "properties": {"longitude": -108.20815047172141, "latitude": 39.05610717681743}, "geometry": {"type": "Point", "coordinates": [-108.20815047172141, 39.05610717681743]}}, {"id": "17", "type": "Feature", "properties": {"longitude": -108.20579406225173, "latitude": 39.03205958353486}, "geometry": {"type": "Point", "coordinates": [-108.20579406225173, 39.03205958353486]}}, {"id": "18", "type": "Feature", "properties": {"longitude": -108.20559829681612, "latitude": 39.02119895283987}, "geometry": {"type": "Point", "coordinates": [-108.20559829681612, 39.02119895283987]}}, {"id": "19", "type": "Feature", "properties": {"longitude": -108.20413234400863, "latitude": 39.053983811704484}, "geometry": {"type": "Point", "coordinates": [-108.20413234400863, 39.053983811704484]}}, {"id": "20", "type": "Feature", "properties": {"longitude": -108.20378834171974, "latitude": 39.05538096859388}, "geometry": {"type": "Point", "coordinates": [-108.20378834171974, 39.05538096859388]}}, {"id": "21", "type": "Feature", "properties": {"longitude": -108.20348114483323, "latitude": 39.03564377543784}, "geometry": {"type": "Point", "coordinates": [-108.20348114483323, 39.03564377543784]}}, {"id": "22", "type": "Feature", "properties": {"longitude": -108.2033955621495, "latitude": 39.01994791885283}, "geometry": {"type": "Point", "coordinates": [-108.2033955621495, 39.01994791885283]}}, {"id": "23", "type": "Feature", "properties": {"longitude": -108.20288861721943, "latitude": 39.02108891762639}, "geometry": {"type": "Point", "coordinates": [-108.20288861721943, 39.02108891762639]}}, {"id": "24", "type": "Feature", "properties": {"longitude": -108.20129160533239, "latitude": 39.01795146194345}, "geometry": {"type": "Point", "coordinates": [-108.20129160533239, 39.01795146194345]}}, {"id": "25", "type": "Feature", "properties": {"longitude": -108.20090818903557, "latitude": 39.04960910452067}, "geometry": {"type": "Point", "coordinates": [-108.20090818903557, 39.04960910452067]}}, {"id": "26", "type": "Feature", "properties": {"longitude": -108.20076489438127, "latitude": 39.05323630580767}, "geometry": {"type": "Point", "coordinates": [-108.20076489438127, 39.05323630580767]}}, {"id": "27", "type": "Feature", "properties": {"longitude": -108.20045236400476, "latitude": 39.03160707878529}, "geometry": {"type": "Point", "coordinates": [-108.20045236400476, 39.03160707878529]}}, {"id": "28", "type": "Feature", "properties": {"longitude": -108.19987229338378, "latitude": 39.033133694186056}, "geometry": {"type": "Point", "coordinates": [-108.19987229338378, 39.033133694186056]}}, {"id": "29", "type": "Feature", "properties": {"longitude": -108.19983802883242, "latitude": 39.03312386195069}, "geometry": {"type": "Point", "coordinates": [-108.19983802883242, 39.03312386195069]}}, {"id": "30", "type": "Feature", "properties": {"longitude": -108.1997381369313, "latitude": 39.03565300743376}, "geometry": {"type": "Point", "coordinates": [-108.1997381369313, 39.03565300743376]}}, {"id": "31", "type": "Feature", "properties": {"longitude": -108.19875565475864, "latitude": 39.034791556427685}, "geometry": {"type": "Point", "coordinates": [-108.19875565475864, 39.034791556427685]}}, {"id": "32", "type": "Feature", "properties": {"longitude": -108.19862424668679, "latitude": 39.01911262467933}, "geometry": {"type": "Point", "coordinates": [-108.19862424668679, 39.01911262467933]}}, {"id": "33", "type": "Feature", "properties": {"longitude": -108.19841479276255, "latitude": 39.04721585033679}, "geometry": {"type": "Point", "coordinates": [-108.19841479276255, 39.04721585033679]}}, {"id": "34", "type": "Feature", "properties": {"longitude": -108.19778752248236, "latitude": 39.01866007779271}, "geometry": {"type": "Point", "coordinates": [-108.19778752248236, 39.01866007779271]}}, {"id": "35", "type": "Feature", "properties": {"longitude": -108.19769448722697, "latitude": 39.02189209794249}, "geometry": {"type": "Point", "coordinates": [-108.19769448722697, 39.02189209794249]}}, {"id": "36", "type": "Feature", "properties": {"longitude": -108.19764604203829, "latitude": 39.02165669746245}, "geometry": {"type": "Point", "coordinates": [-108.19764604203829, 39.02165669746245]}}, {"id": "37", "type": "Feature", "properties": {"longitude": -108.19705236516776, "latitude": 39.04427317094712}, "geometry": {"type": "Point", "coordinates": [-108.19705236516776, 39.04427317094712]}}, {"id": "38", "type": "Feature", "properties": {"longitude": -108.19625859528661, "latitude": 39.03396574621333}, "geometry": {"type": "Point", "coordinates": [-108.19625859528661, 39.03396574621333]}}, {"id": "39", "type": "Feature", "properties": {"longitude": -108.19592449492974, "latitude": 39.04562442311102}, "geometry": {"type": "Point", "coordinates": [-108.19592449492974, 39.04562442311102]}}, {"id": "40", "type": "Feature", "properties": {"longitude": -108.1943779869894, "latitude": 39.03332589534543}, "geometry": {"type": "Point", "coordinates": [-108.1943779869894, 39.03332589534543]}}, {"id": "41", "type": "Feature", "properties": {"longitude": -108.19231591052547, "latitude": 39.01947436699322}, "geometry": {"type": "Point", "coordinates": [-108.19231591052547, 39.01947436699322]}}, {"id": "42", "type": "Feature", "properties": {"longitude": -108.19216852391054, "latitude": 39.021155511586414}, "geometry": {"type": "Point", "coordinates": [-108.19216852391054, 39.021155511586414]}}, {"id": "43", "type": "Feature", "properties": {"longitude": -108.19194652827834, "latitude": 39.03376283936172}, "geometry": {"type": "Point", "coordinates": [-108.19194652827834, 39.03376283936172]}}, {"id": "44", "type": "Feature", "properties": {"longitude": -108.19191944646494, "latitude": 39.03998743543614}, "geometry": {"type": "Point", "coordinates": [-108.19191944646494, 39.03998743543614]}}, {"id": "45", "type": "Feature", "properties": {"longitude": -108.19185143271088, "latitude": 39.02158030796287}, "geometry": {"type": "Point", "coordinates": [-108.19185143271088, 39.02158030796287]}}, {"id": "46", "type": "Feature", "properties": {"longitude": -108.19157548129412, "latitude": 39.03146560144451}, "geometry": {"type": "Point", "coordinates": [-108.19157548129412, 39.03146560144451]}}, {"id": "47", "type": "Feature", "properties": {"longitude": -108.19141685766095, "latitude": 39.01826351214106}, "geometry": {"type": "Point", "coordinates": [-108.19141685766095, 39.01826351214106]}}, {"id": "48", "type": "Feature", "properties": {"longitude": -108.19140026007422, "latitude": 39.03472265414738}, "geometry": {"type": "Point", "coordinates": [-108.19140026007422, 39.03472265414738]}}, {"id": "49", "type": "Feature", "properties": {"longitude": -108.19103463896819, "latitude": 39.03403816486377}, "geometry": {"type": "Point", "coordinates": [-108.19103463896819, 39.03403816486377]}}, {"id": "50", "type": "Feature", "properties": {"longitude": -108.19010583288373, "latitude": 39.03357433373753}, "geometry": {"type": "Point", "coordinates": [-108.19010583288373, 39.03357433373753]}}, {"id": "51", "type": "Feature", "properties": {"longitude": -108.19006136493464, "latitude": 39.0177894009436}, "geometry": {"type": "Point", "coordinates": [-108.19006136493464, 39.0177894009436]}}, {"id": "52", "type": "Feature", "properties": {"longitude": -108.18975829731649, "latitude": 39.03971912885595}, "geometry": {"type": "Point", "coordinates": [-108.18975829731649, 39.03971912885595]}}, {"id": "53", "type": "Feature", "properties": {"longitude": -108.1894813320662, "latitude": 39.031261970372725}, "geometry": {"type": "Point", "coordinates": [-108.1894813320662, 39.031261970372725]}}, {"id": "54", "type": "Feature", "properties": {"longitude": -108.18945154120027, "latitude": 39.03667568639045}, "geometry": {"type": "Point", "coordinates": [-108.18945154120027, 39.03667568639045]}}, {"id": "55", "type": "Feature", "properties": {"longitude": -108.18782408219361, "latitude": 39.037807604897154}, "geometry": {"type": "Point", "coordinates": [-108.18782408219361, 39.037807604897154]}}, {"id": "56", "type": "Feature", "properties": {"longitude": -108.18731116282429, "latitude": 39.03210151611125}, "geometry": {"type": "Point", "coordinates": [-108.18731116282429, 39.03210151611125]}}, {"id": "57", "type": "Feature", "properties": {"longitude": -108.18728379599106, "latitude": 39.03861438951564}, "geometry": {"type": "Point", "coordinates": [-108.18728379599106, 39.03861438951564]}}, {"id": "58", "type": "Feature", "properties": {"longitude": -108.18681031293202, "latitude": 39.03220654618196}, "geometry": {"type": "Point", "coordinates": [-108.18681031293202, 39.03220654618196]}}, {"id": "59", "type": "Feature", "properties": {"longitude": -108.18637455013138, "latitude": 39.03183566619117}, "geometry": {"type": "Point", "coordinates": [-108.18637455013138, 39.03183566619117]}}, {"id": "60", "type": "Feature", "properties": {"longitude": -108.18568367337248, "latitude": 39.032945116315204}, "geometry": {"type": "Point", "coordinates": [-108.18568367337248, 39.032945116315204]}}, {"id": "61", "type": "Feature", "properties": {"longitude": -108.18567342964606, "latitude": 39.01923310186932}, "geometry": {"type": "Point", "coordinates": [-108.18567342964606, 39.01923310186932]}}, {"id": "62", "type": "Feature", "properties": {"longitude": -108.18543411432225, "latitude": 39.03486702389674}, "geometry": {"type": "Point", "coordinates": [-108.18543411432225, 39.03486702389674]}}, {"id": "63", "type": "Feature", "properties": {"longitude": -108.18423271828408, "latitude": 39.03341457866033}, "geometry": {"type": "Point", "coordinates": [-108.18423271828408, 39.03341457866033]}}, {"id": "64", "type": "Feature", "properties": {"longitude": -108.1834173209633, "latitude": 39.01671913854266}, "geometry": {"type": "Point", "coordinates": [-108.1834173209633, 39.01671913854266]}}, {"id": "65", "type": "Feature", "properties": {"longitude": -108.18323177089411, "latitude": 39.03273273362865}, "geometry": {"type": "Point", "coordinates": [-108.18323177089411, 39.03273273362865]}}, {"id": "66", "type": "Feature", "properties": {"longitude": -108.18235416154971, "latitude": 39.035342158200926}, "geometry": {"type": "Point", "coordinates": [-108.18235416154971, 39.035342158200926]}}, {"id": "67", "type": "Feature", "properties": {"longitude": -108.1822502460726, "latitude": 39.01877202374605}, "geometry": {"type": "Point", "coordinates": [-108.1822502460726, 39.01877202374605]}}, {"id": "68", "type": "Feature", "properties": {"longitude": -108.18178402549249, "latitude": 39.019751748108874}, "geometry": {"type": "Point", "coordinates": [-108.18178402549249, 39.019751748108874]}}, {"id": "69", "type": "Feature", "properties": {"longitude": -108.1809127770634, "latitude": 39.01697391230324}, "geometry": {"type": "Point", "coordinates": [-108.1809127770634, 39.01697391230324]}}, {"id": "70", "type": "Feature", "properties": {"longitude": -108.18072684932028, "latitude": 39.01845590846829}, "geometry": {"type": "Point", "coordinates": [-108.18072684932028, 39.01845590846829]}}, {"id": "71", "type": "Feature", "properties": {"longitude": -108.18012677604642, "latitude": 39.032387383274845}, "geometry": {"type": "Point", "coordinates": [-108.18012677604642, 39.032387383274845]}}, {"id": "72", "type": "Feature", "properties": {"longitude": -108.17785583731398, "latitude": 39.03314323138315}, "geometry": {"type": "Point", "coordinates": [-108.17785583731398, 39.03314323138315]}}, {"id": "73", "type": "Feature", "properties": {"longitude": -108.17678140980806, "latitude": 39.0267658474241}, "geometry": {"type": "Point", "coordinates": [-108.17678140980806, 39.0267658474241]}}, {"id": "74", "type": "Feature", "properties": {"longitude": -108.17636808133669, "latitude": 39.019161219628394}, "geometry": {"type": "Point", "coordinates": [-108.17636808133669, 39.019161219628394]}}, {"id": "75", "type": "Feature", "properties": {"longitude": -108.17615893750046, "latitude": 39.03079582176853}, "geometry": {"type": "Point", "coordinates": [-108.17615893750046, 39.03079582176853]}}, {"id": "76", "type": "Feature", "properties": {"longitude": -108.17577830990707, "latitude": 39.02846227102886}, "geometry": {"type": "Point", "coordinates": [-108.17577830990707, 39.02846227102886]}}, {"id": "77", "type": "Feature", "properties": {"longitude": -108.17560874185271, "latitude": 39.028079783120965}, "geometry": {"type": "Point", "coordinates": [-108.17560874185271, 39.028079783120965]}}, {"id": "78", "type": "Feature", "properties": {"longitude": -108.17517111760047, "latitude": 39.019348435717}, "geometry": {"type": "Point", "coordinates": [-108.17517111760047, 39.019348435717]}}, {"id": "79", "type": "Feature", "properties": {"longitude": -108.17498951789352, "latitude": 39.02767738857603}, "geometry": {"type": "Point", "coordinates": [-108.17498951789352, 39.02767738857603]}}, {"id": "80", "type": "Feature", "properties": {"longitude": -108.17416756924544, "latitude": 39.02192772220562}, "geometry": {"type": "Point", "coordinates": [-108.17416756924544, 39.02192772220562]}}, {"id": "81", "type": "Feature", "properties": {"longitude": -108.17399306146595, "latitude": 39.03036494932604}, "geometry": {"type": "Point", "coordinates": [-108.17399306146595, 39.03036494932604]}}, {"id": "82", "type": "Feature", "properties": {"longitude": -108.17369166055113, "latitude": 39.02546574121359}, "geometry": {"type": "Point", "coordinates": [-108.17369166055113, 39.02546574121359]}}, {"id": "83", "type": "Feature", "properties": {"longitude": -108.17257036129763, "latitude": 39.027807920216986}, "geometry": {"type": "Point", "coordinates": [-108.17257036129763, 39.027807920216986]}}, {"id": "84", "type": "Feature", "properties": {"longitude": -108.17202703121949, "latitude": 39.02434428307895}, "geometry": {"type": "Point", "coordinates": [-108.17202703121949, 39.02434428307895]}}, {"id": "85", "type": "Feature", "properties": {"longitude": -108.17169135921415, "latitude": 39.030444255067884}, "geometry": {"type": "Point", "coordinates": [-108.17169135921415, 39.030444255067884]}}, {"id": "86", "type": "Feature", "properties": {"longitude": -108.17150847369598, "latitude": 39.02402539399322}, "geometry": {"type": "Point", "coordinates": [-108.17150847369598, 39.02402539399322]}}, {"id": "87", "type": "Feature", "properties": {"longitude": -108.17135631305068, "latitude": 39.02002169353377}, "geometry": {"type": "Point", "coordinates": [-108.17135631305068, 39.02002169353377]}}, {"id": "88", "type": "Feature", "properties": {"longitude": -108.17124379098304, "latitude": 39.03008204199586}, "geometry": {"type": "Point", "coordinates": [-108.17124379098304, 39.03008204199586]}}, {"id": "89", "type": "Feature", "properties": {"longitude": -108.17117273118822, "latitude": 39.017674890536775}, "geometry": {"type": "Point", "coordinates": [-108.17117273118822, 39.017674890536775]}}, {"id": "90", "type": "Feature", "properties": {"longitude": -108.17061659735758, "latitude": 39.031616369335175}, "geometry": {"type": "Point", "coordinates": [-108.17061659735758, 39.031616369335175]}}, {"id": "91", "type": "Feature", "properties": {"longitude": -108.17009781382406, "latitude": 39.03245963091673}, "geometry": {"type": "Point", "coordinates": [-108.17009781382406, 39.03245963091673]}}, {"id": "92", "type": "Feature", "properties": {"longitude": -108.16975699700129, "latitude": 39.02508197993265}, "geometry": {"type": "Point", "coordinates": [-108.16975699700129, 39.02508197993265]}}, {"id": "93", "type": "Feature", "properties": {"longitude": -108.16907053521783, "latitude": 39.01826349674738}, "geometry": {"type": "Point", "coordinates": [-108.16907053521783, 39.01826349674738]}}, {"id": "94", "type": "Feature", "properties": {"longitude": -108.16836575580797, "latitude": 39.01624637414493}, "geometry": {"type": "Point", "coordinates": [-108.16836575580797, 39.01624637414493]}}, {"id": "95", "type": "Feature", "properties": {"longitude": -108.16818763441047, "latitude": 39.032278101491244}, "geometry": {"type": "Point", "coordinates": [-108.16818763441047, 39.032278101491244]}}, {"id": "96", "type": "Feature", "properties": {"longitude": -108.16733275671113, "latitude": 39.01840146053016}, "geometry": {"type": "Point", "coordinates": [-108.16733275671113, 39.01840146053016]}}, {"id": "97", "type": "Feature", "properties": {"longitude": -108.1672580693638, "latitude": 39.01795820330875}, "geometry": {"type": "Point", "coordinates": [-108.1672580693638, 39.01795820330875]}}, {"id": "98", "type": "Feature", "properties": {"longitude": -108.16654071722839, "latitude": 39.0321569951184}, "geometry": {"type": "Point", "coordinates": [-108.16654071722839, 39.0321569951184]}}, {"id": "99", "type": "Feature", "properties": {"longitude": -108.16621713629071, "latitude": 39.031004984384495}, "geometry": {"type": "Point", "coordinates": [-108.16621713629071, 39.031004984384495]}}, {"id": "100", "type": "Feature", "properties": {"longitude": -108.16617157319915, "latitude": 39.01942729244128}, "geometry": {"type": "Point", "coordinates": [-108.16617157319915, 39.01942729244128]}}, {"id": "101", "type": "Feature", "properties": {"longitude": -108.16612803056634, "latitude": 39.03063344860054}, "geometry": {"type": "Point", "coordinates": [-108.16612803056634, 39.03063344860054]}}, {"id": "102", "type": "Feature", "properties": {"longitude": -108.1653158634249, "latitude": 39.018010087731106}, "geometry": {"type": "Point", "coordinates": [-108.1653158634249, 39.018010087731106]}}, {"id": "103", "type": "Feature", "properties": {"longitude": -108.16516070480759, "latitude": 39.01669099715868}, "geometry": {"type": "Point", "coordinates": [-108.16516070480759, 39.01669099715868]}}, {"id": "104", "type": "Feature", "properties": {"longitude": -108.16480727823469, "latitude": 39.01946618902541}, "geometry": {"type": "Point", "coordinates": [-108.16480727823469, 39.01946618902541]}}, {"id": "105", "type": "Feature", "properties": {"longitude": -108.16468951316398, "latitude": 39.01692278073399}, "geometry": {"type": "Point", "coordinates": [-108.16468951316398, 39.01692278073399]}}, {"id": "106", "type": "Feature", "properties": {"longitude": -108.16409282641744, "latitude": 39.016827184538464}, "geometry": {"type": "Point", "coordinates": [-108.16409282641744, 39.016827184538464]}}, {"id": "107", "type": "Feature", "properties": {"longitude": -108.16401243260434, "latitude": 39.02143784613485}, "geometry": {"type": "Point", "coordinates": [-108.16401243260434, 39.02143784613485]}}, {"id": "108", "type": "Feature", "properties": {"longitude": -108.16368820922699, "latitude": 39.0307002284909}, "geometry": {"type": "Point", "coordinates": [-108.16368820922699, 39.0307002284909]}}, {"id": "109", "type": "Feature", "properties": {"longitude": -108.16328837610558, "latitude": 39.020483289962755}, "geometry": {"type": "Point", "coordinates": [-108.16328837610558, 39.020483289962755]}}, {"id": "110", "type": "Feature", "properties": {"longitude": -108.16275063452767, "latitude": 39.030461193245074}, "geometry": {"type": "Point", "coordinates": [-108.16275063452767, 39.030461193245074]}}, {"id": "111", "type": "Feature", "properties": {"longitude": -108.16262107783388, "latitude": 39.01580037757149}, "geometry": {"type": "Point", "coordinates": [-108.16262107783388, 39.01580037757149]}}, {"id": "112", "type": "Feature", "properties": {"longitude": -108.16238281544572, "latitude": 39.01656034442324}, "geometry": {"type": "Point", "coordinates": [-108.16238281544572, 39.01656034442324]}}, {"id": "113", "type": "Feature", "properties": {"longitude": -108.16212365170243, "latitude": 39.03285133244842}, "geometry": {"type": "Point", "coordinates": [-108.16212365170243, 39.03285133244842]}}, {"id": "114", "type": "Feature", "properties": {"longitude": -108.16211133229905, "latitude": 39.031427610454756}, "geometry": {"type": "Point", "coordinates": [-108.16211133229905, 39.031427610454756]}}, {"id": "115", "type": "Feature", "properties": {"longitude": -108.16203450052717, "latitude": 39.01574105311044}, "geometry": {"type": "Point", "coordinates": [-108.16203450052717, 39.01574105311044]}}, {"id": "116", "type": "Feature", "properties": {"longitude": -108.16126214010691, "latitude": 39.013109630949465}, "geometry": {"type": "Point", "coordinates": [-108.16126214010691, 39.013109630949465]}}, {"id": "117", "type": "Feature", "properties": {"longitude": -108.16000104119986, "latitude": 39.02874558183991}, "geometry": {"type": "Point", "coordinates": [-108.16000104119986, 39.02874558183991]}}, {"id": "118", "type": "Feature", "properties": {"longitude": -108.15928374866921, "latitude": 39.01925963778051}, "geometry": {"type": "Point", "coordinates": [-108.15928374866921, 39.01925963778051]}}, {"id": "119", "type": "Feature", "properties": {"longitude": -108.15722011834616, "latitude": 39.010812928725585}, "geometry": {"type": "Point", "coordinates": [-108.15722011834616, 39.010812928725585]}}, {"id": "120", "type": "Feature", "properties": {"longitude": -108.15693378600697, "latitude": 39.016805948538966}, "geometry": {"type": "Point", "coordinates": [-108.15693378600697, 39.016805948538966]}}, {"id": "121", "type": "Feature", "properties": {"longitude": -108.15595633812802, "latitude": 39.018430752740386}, "geometry": {"type": "Point", "coordinates": [-108.15595633812802, 39.018430752740386]}}, {"id": "122", "type": "Feature", "properties": {"longitude": -108.15512714453467, "latitude": 39.01750961795518}, "geometry": {"type": "Point", "coordinates": [-108.15512714453467, 39.01750961795518]}}, {"id": "123", "type": "Feature", "properties": {"longitude": -108.15479967343127, "latitude": 39.01214126522517}, "geometry": {"type": "Point", "coordinates": [-108.15479967343127, 39.01214126522517]}}, {"id": "124", "type": "Feature", "properties": {"longitude": -108.1546718490443, "latitude": 39.00870571112627}, "geometry": {"type": "Point", "coordinates": [-108.1546718490443, 39.00870571112627]}}, {"id": "125", "type": "Feature", "properties": {"longitude": -108.15181355604899, "latitude": 39.02813138568829}, "geometry": {"type": "Point", "coordinates": [-108.15181355604899, 39.02813138568829]}}, {"id": "126", "type": "Feature", "properties": {"longitude": -108.15178334450462, "latitude": 39.030896406292555}, "geometry": {"type": "Point", "coordinates": [-108.15178334450462, 39.030896406292555]}}, {"id": "127", "type": "Feature", "properties": {"longitude": -108.15110786043364, "latitude": 39.03160962530204}, "geometry": {"type": "Point", "coordinates": [-108.15110786043364, 39.03160962530204]}}, {"id": "128", "type": "Feature", "properties": {"longitude": -108.14962085504702, "latitude": 39.016591320047176}, "geometry": {"type": "Point", "coordinates": [-108.14962085504702, 39.016591320047176]}}, {"id": "129", "type": "Feature", "properties": {"longitude": -108.14889582946005, "latitude": 39.029744731076285}, "geometry": {"type": "Point", "coordinates": [-108.14889582946005, 39.029744731076285]}}, {"id": "130", "type": "Feature", "properties": {"longitude": -108.14877286492516, "latitude": 39.032228201572934}, "geometry": {"type": "Point", "coordinates": [-108.14877286492516, 39.032228201572934]}}, {"id": "131", "type": "Feature", "properties": {"longitude": -108.14860967327309, "latitude": 39.015890914603645}, "geometry": {"type": "Point", "coordinates": [-108.14860967327309, 39.015890914603645]}}, {"id": "132", "type": "Feature", "properties": {"longitude": -108.14791503716627, "latitude": 39.007603657884985}, "geometry": {"type": "Point", "coordinates": [-108.14791503716627, 39.007603657884985]}}, {"id": "133", "type": "Feature", "properties": {"longitude": -108.14787207256487, "latitude": 39.01815214516334}, "geometry": {"type": "Point", "coordinates": [-108.14787207256487, 39.01815214516334]}}, {"id": "134", "type": "Feature", "properties": {"longitude": -108.14630002041682, "latitude": 39.01675331157304}, "geometry": {"type": "Point", "coordinates": [-108.14630002041682, 39.01675331157304]}}, {"id": "135", "type": "Feature", "properties": {"longitude": -108.14596427092235, "latitude": 39.029402714730004}, "geometry": {"type": "Point", "coordinates": [-108.14596427092235, 39.029402714730004]}}, {"id": "136", "type": "Feature", "properties": {"longitude": -108.14576053935936, "latitude": 39.03130762871748}, "geometry": {"type": "Point", "coordinates": [-108.14576053935936, 39.03130762871748]}}, {"id": "137", "type": "Feature", "properties": {"longitude": -108.14515916693657, "latitude": 39.03075236192415}, "geometry": {"type": "Point", "coordinates": [-108.14515916693657, 39.03075236192415]}}, {"id": "138", "type": "Feature", "properties": {"longitude": -108.14350364566792, "latitude": 39.015648785060904}, "geometry": {"type": "Point", "coordinates": [-108.14350364566792, 39.015648785060904]}}, {"id": "139", "type": "Feature", "properties": {"longitude": -108.1431138144662, "latitude": 39.02934189091522}, "geometry": {"type": "Point", "coordinates": [-108.1431138144662, 39.02934189091522]}}, {"id": "140", "type": "Feature", "properties": {"longitude": -108.14175248865276, "latitude": 39.01611937153815}, "geometry": {"type": "Point", "coordinates": [-108.14175248865276, 39.01611937153815]}}, {"id": "141", "type": "Feature", "properties": {"longitude": -108.14158056859242, "latitude": 39.014367412485974}, "geometry": {"type": "Point", "coordinates": [-108.14158056859242, 39.014367412485974]}}, {"id": "142", "type": "Feature", "properties": {"longitude": -108.14157952238622, "latitude": 39.03072769083888}, "geometry": {"type": "Point", "coordinates": [-108.14157952238622, 39.03072769083888]}}, {"id": "143", "type": "Feature", "properties": {"longitude": -108.14043579864595, "latitude": 39.02901495904474}, "geometry": {"type": "Point", "coordinates": [-108.14043579864595, 39.02901495904474]}}, {"id": "144", "type": "Feature", "properties": {"longitude": -108.13941933611433, "latitude": 39.01555763533912}, "geometry": {"type": "Point", "coordinates": [-108.13941933611433, 39.01555763533912]}}, {"id": "145", "type": "Feature", "properties": {"longitude": -108.13910391830856, "latitude": 39.031108390851024}, "geometry": {"type": "Point", "coordinates": [-108.13910391830856, 39.031108390851024]}}, {"id": "146", "type": "Feature", "properties": {"longitude": -108.13821675101312, "latitude": 39.016456042231106}, "geometry": {"type": "Point", "coordinates": [-108.13821675101312, 39.016456042231106]}}, {"id": "147", "type": "Feature", "properties": {"longitude": -108.13744527755205, "latitude": 39.02956316964255}, "geometry": {"type": "Point", "coordinates": [-108.13744527755205, 39.02956316964255]}}, {"id": "148", "type": "Feature", "properties": {"longitude": -108.1351592153939, "latitude": 39.030398888881194}, "geometry": {"type": "Point", "coordinates": [-108.1351592153939, 39.030398888881194]}}, {"id": "149", "type": "Feature", "properties": {"longitude": -108.13404742042775, "latitude": 39.0296148037084}, "geometry": {"type": "Point", "coordinates": [-108.13404742042775, 39.0296148037084]}}, {"id": "150", "type": "Feature", "properties": {"longitude": -108.13394616803406, "latitude": 39.013828604775554}, "geometry": {"type": "Point", "coordinates": [-108.13394616803406, 39.013828604775554]}}, {"id": "151", "type": "Feature", "properties": {"longitude": -108.13182393407043, "latitude": 39.01747909261867}, "geometry": {"type": "Point", "coordinates": [-108.13182393407043, 39.01747909261867]}}, {"id": "152", "type": "Feature", "properties": {"longitude": -108.12659890452441, "latitude": 39.016467530475325}, "geometry": {"type": "Point", "coordinates": [-108.12659890452441, 39.016467530475325]}}, {"id": "153", "type": "Feature", "properties": {"longitude": -108.12461584905586, "latitude": 39.01610331643039}, "geometry": {"type": "Point", "coordinates": [-108.12461584905586, 39.01610331643039]}}, {"id": "154", "type": "Feature", "properties": {"longitude": -108.00312700623464, "latitude": 39.03917744689935}, "geometry": {"type": "Point", "coordinates": [-108.00312700623464, 39.03917744689935]}}]}, "hover_style": {"fillColor": "red", "fillOpacity": 0.2}, "layers": [], "name": "lwc obs.", "options": [], "point_style": {"radius": 5, "color": "red", "fillOpacity": 0.8, "fillColor": "blue", "weight": 3}, "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "style": {"color": "black", "radius": 8, "fillColor": "#3366cc", "opacity": 0.5, "weight": 1.9, "dashArray": "2", "fillOpacity": 0.6}}}, "89a9164c78da48329939b272336afd90": {"model_name": "LeafletLayersControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletLayersControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletLayersControlView", "options": ["position"], "position": "topleft"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/core-datasets"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="02_data_descriptions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Ground-Based Measurements and Data Descriptions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../nsidc-data-access/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NSIDC Data Access</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
