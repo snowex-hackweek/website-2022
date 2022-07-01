@@ -1,0 +1,954 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UAVSAR &#8212; SnowEx Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Uavsar Data Products" href="2_types_of_uavsar_images.html" />
+    <link rel="prev" title="Uavsar Tutorial" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SnowEx Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to SnowEx Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../logistics.html">
+   Event Logistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
+     Supplemental Material
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
+       Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
+     Example tutorial notebook
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
+     Git, GitHub, and JupyterLab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
+       Basic Git/GitHub Skills Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyterlab-git
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
+       GitHub, Git, JupyterHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../database/index.html">
+     Introduction to the SnowEx Database
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/1_getting_started_example.html">
+       Introduction to the SnowEx Database
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/2_database_structure.html">
+       How is the Database Structured?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/3_forming_queries.html">
+       Forming Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/4_get_spiral_example.html">
+       Forming Queries: Example Visualizng Depths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/5_plot_raster_example.html">
+       Forming Queries: PostGIS Functions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/6_exporting_data.html">
+       Exporting Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/7_wrap_up.html">
+       Wrap up
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     Uavsar
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       UAVSAR
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="2_types_of_uavsar_images.html">
+       Uavsar Data Products
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="3_interferometric_swe_inversion.html">
+       Why would I use Uavsar for snow?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../core-datasets/index.html">
+     SnowEx Mission and Dataset Descriptions
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/01_data_coverage.html">
+       SnowEx Field Campaigns Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/02_data_descriptions.html">
+       Ground-Based Measurements and Data Descriptions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/03_database_preview.html">
+       SnowEx Database Preview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../nsidc-data-access/index.html">
+     Accessing SnowEx Data at the NSIDC DAAC
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../nsidc-data-access/nsidc-data-access.html">
+       Accessing SnowEx Data at the NSIDC DAAC
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/list_of_projects.html">
+   List of Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/social.html">
+   Things to do in Seattle
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/uavsar/1_accessing_imagery.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/snowex-hackweek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/uavsar/1_accessing_imagery.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/uavsar/1_accessing_imagery.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/snowex-hackweek/website2022/main?urlpath=lab/tree/book/tutorials/uavsar/1_accessing_imagery.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-uavsar">
+   What is UAVSAR?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nasa-snowex-2020-and-2021-uavsar-campaings">
+     NASA SnowEx 2020 and 2021 UAVSAR Campaings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-would-i-use-uavsar">
+   Why would I use UAVSAR?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-uavsar-images">
+   Accessing Uavsar Images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-download-and-conversion-with-uavsar-pytools">
+   Data Download and Conversion with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     uavsar_pytools
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#netrc-authorization">
+     Netrc Authorization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-and-converting-a-single-uavsar-interferogram-scene">
+     Downloading and converting a single Uavsar interferogram scene
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-and-converting-a-full-uavsar-collection">
+     Downloading and converting a full Uavsar collection
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>UAVSAR</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-uavsar">
+   What is UAVSAR?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nasa-snowex-2020-and-2021-uavsar-campaings">
+     NASA SnowEx 2020 and 2021 UAVSAR Campaings
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-would-i-use-uavsar">
+   Why would I use UAVSAR?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-uavsar-images">
+   Accessing Uavsar Images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-download-and-conversion-with-uavsar-pytools">
+   Data Download and Conversion with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     uavsar_pytools
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#netrc-authorization">
+     Netrc Authorization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-and-converting-a-single-uavsar-interferogram-scene">
+     Downloading and converting a single Uavsar interferogram scene
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#downloading-and-converting-a-full-uavsar-collection">
+     Downloading and converting a full Uavsar collection
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="uavsar">
+<h1>UAVSAR<a class="headerlink" href="#uavsar" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default" id="sthelens">
+<a class="reference internal image-reference" href="../../_images/sthelens.jpeg"><img alt="uavsar scene" src="../../_images/sthelens.jpeg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Uavsar polarimetry imagery of Mt. St Helens. Source: Jones et al. 2008</span><a class="headerlink" href="#sthelens" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>Developers: <br />
+Jack Tarricone, University of Nevada, Reno <br />
+Zach Keskinen, Boise State University</em></p>
+<p><em>Other contributors: <br />
+Ross Palomaki, Montana State University<br />
+Naheem Adebisi, Boise State University</em></p>
+<div class="section" id="what-is-uavsar">
+<h2>What is UAVSAR?<a class="headerlink" href="#what-is-uavsar" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://uavsar.jpl.nasa.gov/education/what-is-uavsar.html">UAVSAR</a> is a low frequency plane-based synthetic aperature radar. UAVSAR stands for “Uninhabited Aerial Vehicle Synthetic Aperature Radar”. It captures imagery using a L-band radar. This low frequency means it can penetrate into and through clouds, vegetation, and snow.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>frequency (cm)</p></th>
+<th class="head"><p>resolution (rng x azi m)</p></th>
+<th class="head"><p>Swath Width (km)</p></th>
+<th class="head"><p>Polarizations</p></th>
+<th class="head"><p>Launch date</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>L-band 23</p></td>
+<td><p>1.8 x 5.5</p></td>
+<td><p>16</p></td>
+<td><p>VV, VH, HV, HH</p></td>
+<td><p>2007</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="nasa-snowex-2020-and-2021-uavsar-campaings">
+<h3>NASA SnowEx 2020 and 2021 UAVSAR Campaings<a class="headerlink" href="#nasa-snowex-2020-and-2021-uavsar-campaings" title="Permalink to this headline">¶</a></h3>
+<p>During the winter of 2020 and 2021, NASA conducted an L-band InSAR timeseries across the Western US with the goal of tracking changes in SWE. Field teams in 13 different locations in 2020, and in 6 locations in 2021, deployed on the date of the flight to perform calibration and validation observations.</p>
+<div class="figure align-default" id="uavsar-map">
+<a class="reference internal image-reference" href="../../_images/SnowEx_map.jpg"><img alt="uavsar map" src="../../_images/SnowEx_map.jpg" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Map of the UAVSAR flight locations for NASA SnowEx. Note that the Montana site (Central Agricultral Research Center) is not on this map. Source: Chris Hiemstra</span><a class="headerlink" href="#uavsar-map" title="Permalink to this image">¶</a></p>
+</div>
+<hr class="docutils" />
+<p>The site locations from the above map along with the <a class="reference external" href="https://api.daac.asf.alaska.edu/services/utils/mission_list">Uavsar defined campaign name</a> and currently processed pairs of InSAR images for each site. Note that the image pair count may contain multiple versions of the same image and may increase as more pairs of images are processed by JPL. Also note that the Lowman campaign name is the wrong state when searching.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Site Location</p></th>
+<th class="head"><p>Campaign Name</p></th>
+<th class="head"><p>Image Pairs</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Grand Mesa</p></td>
+<td><p>Grand Mesa, CO</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boise River Basin</p></td>
+<td><p>Lowman, CO</p></td>
+<td><p>17</p></td>
+</tr>
+<tr class="row-even"><td><p>Frazier Experimental Forest</p></td>
+<td><p>Fraser, CO</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p>Senator Beck Basin</p></td>
+<td><p>Ironton, CO</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>East River</p></td>
+<td><p>Peeler Peak, CO</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cameron Pass</p></td>
+<td><p>Rocky Mountains NP, CO</p></td>
+<td><p>15</p></td>
+</tr>
+<tr class="row-even"><td><p>Reynold Creek</p></td>
+<td><p>Silver City, ID</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Central Agricultral Research Center</p></td>
+<td><p>Utica, MT</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>Little Cottonwoody Canyon</p></td>
+<td><p>Salt Lake City, UT</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jemez River</p></td>
+<td><p>Los Alamos, NM</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>American River Basin</p></td>
+<td><p>Eldorado National Forest, CA</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sagehen Creek</p></td>
+<td><p>Donner Memorial State Park, CA</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>Lakes Basin</p></td>
+<td><p>Sierra National Forest, CA</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="why-would-i-use-uavsar">
+<h2>Why would I use UAVSAR?<a class="headerlink" href="#why-would-i-use-uavsar" title="Permalink to this headline">¶</a></h2>
+<p>UAVSAR works with low frequency radar waves. This means it is unaffected by clouds, maintains coherence, a measure of radar image quality, over long periods, and a time series was captured over 13 sites as part of the winter of 2019-2020 and 2020-2021. Additionally the uavsar is awesome.</p>
+</div>
+<div class="section" id="accessing-uavsar-images">
+<h2>Accessing Uavsar Images<a class="headerlink" href="#accessing-uavsar-images" title="Permalink to this headline">¶</a></h2>
+<p>Uavsar imagery can be downloaded from both the <a class="reference external" href="https://uavsar.jpl.nasa.gov/cgi-bin/data.pl">JPL</a> and <a class="reference external" href="https://search.asf.alaska.edu/#/?dataset=UAVSAR">Alaska Satellite Facility</a>. However both provide the imagery in a binary format that is not readily usable or readable by GIS software or python libraries.</p>
+</div>
+<div class="section" id="data-download-and-conversion-with-uavsar-pytools">
+<h2>Data Download and Conversion with <code class="docutils literal notranslate"><span class="pre">uavsar_pytools</span></code><a class="headerlink" href="#data-download-and-conversion-with-uavsar-pytools" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">uavsar_pytools</span></code> (<a class="reference external" href="https://github.com/SnowEx/uavsar_pytools">github</a>)is a Python package developed out of work started at SnowEx Hackweek 2021. It nativiely downloads, formats, and converts this data in analysis ready rasters projected in WSG-84 Lat/Lon (maybe more information here). The data traditionally comes in a binary format, which is not injestible by traditional geospatial analysis software (Python, R, QGIS, ArcGIS). It can download and convert either individual images - <code class="docutils literal notranslate"><span class="pre">UavsarScene</span></code> or entire collections of images - <code class="docutils literal notranslate"><span class="pre">UavsarCollection</span></code>.</p>
+<div class="section" id="netrc-authorization">
+<h3>Netrc Authorization<a class="headerlink" href="#netrc-authorization" title="Permalink to this headline">¶</a></h3>
+<p>In order to download uavsar images you will need a <a class="reference external" href="https://www.gnu.org/software/inetutils/manual/html_node/The-_002enetrc-file.html">netrc file</a> that contains your earthdata username and password. If you need to register for a NASA earthdata account use this <a class="reference external" href="https://urs.earthdata.nasa.gov/">link</a>. A netrc file is a hidden file, it won’t appear in the your file explorer, that is in your home directory and that programs can access to get the appropriate usernames and passwords. While you won’t need to use this for this demonstration uavsar_pytools has a tool to create this netrc file on a local computer. You only need to create this file once and then it should be permanently stored on your computer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ## Creating .netrc file with Earthdata login information</span>
+<span class="c1"># from uavsar_pytools.uavsar_tools import create_netrc</span>
+
+<span class="c1"># # This will prompt you for your username and password and save this</span>
+<span class="c1"># # information into a .netrc file in your home directory. You only need to run</span>
+<span class="c1"># # this command once per computer. Then it will be saved.</span>
+<span class="c1"># create_netrc()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="downloading-and-converting-a-single-uavsar-interferogram-scene">
+<h3>Downloading and converting a single Uavsar interferogram scene<a class="headerlink" href="#downloading-and-converting-a-single-uavsar-interferogram-scene" title="Permalink to this headline">¶</a></h3>
+<p>You can find urls for Uavsar images at the <a class="reference external" href="https://search.asf.alaska.edu/#/?dataset=UAVSAR">ASF vertex website</a>. Make sure to change the platform to Uavsar and you may also want to filter to  ground projected interferograms.</p>
+<div class="figure align-default" id="vertexexample">
+<a class="reference internal image-reference" href="../../_images/vertex_example.png"><img alt="vertex example" src="../../_images/vertex_example.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Example of getting the uavsar URL from vertex.</span><a class="headerlink" href="#vertexexample" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">uavsar_pytools</span> <span class="kn">import</span> <span class="n">UavsarScene</span>
+<span class="k">except</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Install uavsar_pytools with `pip install uavsar_pytools`&#39;</span><span class="p">)</span>
+
+<span class="c1">## This is the directory you want to download and convert the images in.</span>
+<span class="n">work_dir</span> <span class="o">=</span> <span class="s1">&#39;/tmp/uavsar_data&#39;</span>
+
+<span class="c1">## This is a url you want to download. Can be obtained from vertex</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://datapool.asf.alaska.edu/INTERFEROMETRY_GRD/UA/</span><span class="se">\</span>
+<span class="s1">lowman_23205_21009-004_21012-000_0007d_s01_L090_01_int_grd.zip&#39;</span>
+
+<span class="c1">## clean = True will delete the binary and zip files leaving only the tiffs</span>
+<span class="n">scene</span> <span class="o">=</span> <span class="n">UavsarScene</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="n">url</span><span class="p">,</span> <span class="n">work_dir</span><span class="o">=</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">clean</span><span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">## After running url_to_tiffs() you will download the zip file, unzip the binary </span>
+<span class="c1">## files, and convert them to geotiffs in the directory with the scene name in</span>
+<span class="c1">## the work directory. It also generate a .csv pandas dictionary of metadata.</span>
+<span class="c1"># scene.url_to_tiffs()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="downloading-and-converting-a-full-uavsar-collection">
+<h3>Downloading and converting a full Uavsar collection<a class="headerlink" href="#downloading-and-converting-a-full-uavsar-collection" title="Permalink to this headline">¶</a></h3>
+<p>If you want to download and convert an entire Uavsar collection for a larger analysis you can use <code class="docutils literal notranslate"><span class="pre">UavsarCollection</span></code>. The collection names for the SnowEx campaign are listed in the table in the introduction. The <code class="docutils literal notranslate"><span class="pre">UavsarCollection</span></code> only downloads interferometric image pairs, but will soon be able to select between InSAR pairs and PolSAR images.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">uavsar_pytools</span> <span class="kn">import</span> <span class="n">UavsarCollection</span>
+<span class="c1">## Collection name, the SnowEx Collection names are listed above. These are case </span>
+<span class="c1">## and space sensitive.</span>
+<span class="n">collection_name</span> <span class="o">=</span> <span class="s1">&#39;Grand Mesa, CO&#39;</span>
+
+<span class="c1">## Directory to save collection into. This will be filled with directory with </span>
+<span class="c1">## scene names and tiffs inside of them.</span>
+<span class="n">out_dir</span> <span class="o">=</span> <span class="s1">&#39;/tmp/collection_ex/&#39;</span>
+
+<span class="c1">## This is optional, but you will generally want to at least limit the date</span>
+<span class="c1">## range between 2019 and today.</span>
+<span class="n">date_range</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;2019-11-01&#39;</span><span class="p">,</span> <span class="s1">&#39;today&#39;</span><span class="p">)</span>
+
+<span class="c1"># Keywords: to download incidence angles with each image use `inc = True`</span>
+<span class="c1"># For only certain pols use `pols = [&#39;VV&#39;,&#39;HV&#39;]`</span>
+<span class="n">collection</span> <span class="o">=</span> <span class="n">UavsarCollection</span><span class="p">(</span><span class="n">collection</span> <span class="o">=</span> <span class="n">collection_name</span><span class="p">,</span> <span class="n">work_dir</span> <span class="o">=</span> <span class="n">out_dir</span><span class="p">,</span> <span class="n">dates</span> <span class="o">=</span> <span class="n">date_range</span><span class="p">)</span>
+
+<span class="c1">## You can use this to check how many image pairs have at least one image in</span>
+<span class="c1">## the date range.</span>
+<span class="n">collection</span><span class="o">.</span><span class="n">find_urls</span><span class="p">()</span>
+
+<span class="c1">## When you are ready to download all the images run:</span>
+<span class="c1"># collection.collection_to_tiffs()</span>
+<span class="c1">## This will take a long time and a lot of space, ~1-5 gB and 10 minutes per </span>
+<span class="c1">## image pair depending on which scene, so run it if you have the space and time.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:uavsar_pytools.uavsar_collection:Found 13 image pairs
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/uavsar"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Uavsar Tutorial</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_types_of_uavsar_images.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Uavsar Data Products</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
