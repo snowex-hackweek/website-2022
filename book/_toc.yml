@@ -60,8 +60,12 @@ parts:
             - file: tutorials/core-datasets/03_database_preview
         - file: tutorials/nsidc-data-access/index
           title: Accessing SnowEx Data at the NSIDC DAAC
-          sections: 
+          sections:
             - file: tutorials/nsidc-data-access/nsidc-data-access
+        - file: tutorials/aviris-ng/index
+          title: AVIRIS-NG
+          sections:
+            - file: tutorials/aviris-ng/AVIRIS-NG_Tutorial
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
