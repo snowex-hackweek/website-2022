@@ -31,7 +31,7 @@ tabs:
           - HP Marshall
           - Carrie Vuyovich
           - Megan Mason
-      - time: 11:0 - 11:45
+      - time: 11:00 - 11:45
         location: Maple Hall
         title: Getting Started on Technology
         description: Still having trouble with getting any technology going? We're here to help you debug!
@@ -101,8 +101,8 @@ tabs:
     - time: 9:00 - 9:45
       title: Signals of Opportunity
       leads:
-      - Xiaolan Xiu
-      - Rashmi Shaw
+      - Xiaolan Xu
+      - Rashmi Shah
       - Simon Yueh
     - time: 9:45 - 10:00
       title: coffee and movement break
@@ -126,7 +126,7 @@ tabs:
     - time: 8:30 - 10:00
       title: Machine Learning
       leads:
-      - Ibrahim Alabi
+      - Ibrahim Olalekan Alabi
       - Evi Ofekeze
     - time: 10:00 - 10:15 
       title: coffee and movement break
