@@ -47,13 +47,14 @@ parts:
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
         - file: tutorials/microwave
-          title: Microwave Tutorials
           sections:
             - file: tutorials/microwave/index
+              title: Microwave Tutorials
               sections:
                 - file: tutorials/microwave/swesarr/index
-                - file: tutorials/microwave/swesarr/swesarr_tut
-                  title: SWESARR
+                  sections:
+                  - file: tutorials/microwave/swesarr/swesarr_tut
+                    title: SWESARR
         - file: tutorials/uavsar/index
           title: Uavsar
           sections:
