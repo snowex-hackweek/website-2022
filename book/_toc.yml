@@ -51,6 +51,32 @@ parts:
           sections:
             - file: tutorials/OOP/OOP_tutorial
             - file: tutorials/OOP/alien
+        - file: tutorials/lidar/index
+          title: Lidar Remote Sensing of Snow
+          sections:
+            - file: tutorials/lidar/1_introduction_to_lidar
+            - file: tutorials/lidar/2_elevation_differencing
+            - file: tutorials/lidar/3_common_pitfalls
+        - file: tutorials/uavsar/index
+          title: Uavsar
+          sections:
+            - file: tutorials/uavsar/1_accessing_imagery
+            - file: tutorials/uavsar/2_types_of_uavsar_images
+            - file: tutorials/uavsar/3_interferometric_swe_inversion
+        - file: tutorials/core-datasets/index
+          title: SnowEx Mission and Dataset Descriptions
+          sections:
+            - file: tutorials/core-datasets/01_data_coverage
+            - file: tutorials/core-datasets/02_data_descriptions
+            - file: tutorials/core-datasets/03_database_preview
+        - file: tutorials/nsidc-data-access/index
+          title: Accessing SnowEx Data at the NSIDC DAAC
+          sections:
+            - file: tutorials/nsidc-data-access/nsidc-data-access
+        - file: tutorials/aviris-ng/index
+          title: AVIRIS-NG
+          sections:
+            - file: tutorials/aviris-ng/AVIRIS-NG_Tutorial
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
