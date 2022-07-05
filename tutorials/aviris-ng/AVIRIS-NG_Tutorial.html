@@ -1,0 +1,2518 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to AVIRIS-NG &#8212; SnowEx Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="List of Projects" href="../../projects/list_of_projects.html" />
+    <link rel="prev" title="AVIRIS-NG" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SnowEx Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to SnowEx Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../logistics.html">
+   Event Logistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
+     Supplemental Material
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
+       Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
+     Example tutorial notebook
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
+     Git, GitHub, and JupyterLab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
+       Basic Git/GitHub Skills Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyterlab-git
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
+       GitHub, Git, JupyterHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../database/index.html">
+     Introduction to the SnowEx Database
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/1_getting_started_example.html">
+       Introduction to the SnowEx Database
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/2_database_structure.html">
+       How is the Database Structured?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/3_forming_queries.html">
+       Forming Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/4_get_spiral_example.html">
+       Forming Queries: Example Visualizng Depths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/5_plot_raster_example.html">
+       Forming Queries: PostGIS Functions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/6_exporting_data.html">
+       Exporting Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/7_wrap_up.html">
+       Wrap up
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../uavsar/index.html">
+     Uavsar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/1_accessing_imagery.html">
+       UAVSAR
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/2_types_of_uavsar_images.html">
+       Uavsar Data Products
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/3_interferometric_swe_inversion.html">
+       Why would I use Uavsar for snow?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../core-datasets/index.html">
+     SnowEx Mission and Dataset Descriptions
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/01_data_coverage.html">
+       SnowEx Field Campaigns Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/02_data_descriptions.html">
+       Ground-Based Measurements and Data Descriptions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/03_database_preview.html">
+       SnowEx Database Preview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../nsidc-data-access/index.html">
+     Accessing SnowEx Data at the NSIDC DAAC
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../nsidc-data-access/nsidc-data-access.html">
+       Accessing SnowEx Data at the NSIDC DAAC
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     AVIRIS-NG
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Introduction to AVIRIS-NG
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/list_of_projects.html">
+   List of Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/social.html">
+   Things to do in Seattle
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/aviris-ng/AVIRIS-NG_Tutorial.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/snowex-hackweek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/aviris-ng/AVIRIS-NG_Tutorial.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/aviris-ng/AVIRIS-NG_Tutorial.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction to AVIRIS-NG
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#review-of-hyperspectral-data">
+     Review of Hyperspectral Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spectral-resolution">
+       Spectral Resolution
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multispectral-vs-hyperspectral-data">
+       Multispectral vs. Hyperspectral Data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aviris-ng-meets-snowex">
+     AVIRIS-NG Meets SnowEx
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#where-can-i-get-the-data">
+       Where can I get the data?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-look-at-the-data">
+     First look at the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-many-flight-lines">
+     Exploring many flight lines
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#breaking-down-the-command">
+       Breaking down the command:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-the-created-index-and-some-geo-spatial-information-into-a-geo-dataframe-to-explore-interactively">
+       Load the created index and some geo-spatial information into a Geo-Dataframe to explore interactively
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-a-single-flight-line">
+     Exploring a single flight line
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spectral-python-library">
+       Spectral Python library
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-band-index-for-a-wavelength">
+       Find band index for a wavelength
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#inspect-spatial-metadata">
+         Inspect spatial metadata
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-the-data">
+       Exploring the data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#define-wavelengths-for-the-colors-we-want">
+         Define wavelengths for the colors we want
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-a-method-to-get-the-values-for-many-different-wavelengths">
+         Create a method to get the values for many different wavelengths
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inspection-plot-for-selected-bands">
+       Inspection plot for selected bands
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subset-of-swamp-angle-study-plot-sasp">
+       Subset of Swamp Angle Study Plot (SASP)
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#plot-the-image-absed-of-the-prevsiously-determined-band-indices-bgr">
+         Plot the image absed of the prevsiously determined band indices (BGR)
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-to-spectral-feature-fitting">
+     Introduction to Spectral Feature Fitting
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-more-data">
+       Load more data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-the-point-of-interest">
+       Load the point of interest
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-the-coordinates-in-pixel-space">
+       Find the coordinates in pixel space
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#show-the-measured-reflectance-at-this-pixel">
+       Show the measured reflectance at this pixel
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-it-up">
+   Wrapping it up
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to AVIRIS-NG</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction to AVIRIS-NG
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#review-of-hyperspectral-data">
+     Review of Hyperspectral Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spectral-resolution">
+       Spectral Resolution
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#multispectral-vs-hyperspectral-data">
+       Multispectral vs. Hyperspectral Data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aviris-ng-meets-snowex">
+     AVIRIS-NG Meets SnowEx
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#where-can-i-get-the-data">
+       Where can I get the data?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#first-look-at-the-data">
+     First look at the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-many-flight-lines">
+     Exploring many flight lines
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#breaking-down-the-command">
+       Breaking down the command:
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-the-created-index-and-some-geo-spatial-information-into-a-geo-dataframe-to-explore-interactively">
+       Load the created index and some geo-spatial information into a Geo-Dataframe to explore interactively
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-a-single-flight-line">
+     Exploring a single flight line
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#spectral-python-library">
+       Spectral Python library
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-band-index-for-a-wavelength">
+       Find band index for a wavelength
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#inspect-spatial-metadata">
+         Inspect spatial metadata
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploring-the-data">
+       Exploring the data
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#define-wavelengths-for-the-colors-we-want">
+         Define wavelengths for the colors we want
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#create-a-method-to-get-the-values-for-many-different-wavelengths">
+         Create a method to get the values for many different wavelengths
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inspection-plot-for-selected-bands">
+       Inspection plot for selected bands
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subset-of-swamp-angle-study-plot-sasp">
+       Subset of Swamp Angle Study Plot (SASP)
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#plot-the-image-absed-of-the-prevsiously-determined-band-indices-bgr">
+         Plot the image absed of the prevsiously determined band indices (BGR)
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction-to-spectral-feature-fitting">
+     Introduction to Spectral Feature Fitting
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-more-data">
+       Load more data
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-the-point-of-interest">
+       Load the point of interest
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#find-the-coordinates-in-pixel-space">
+       Find the coordinates in pixel space
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#show-the-measured-reflectance-at-this-pixel">
+       Show the measured reflectance at this pixel
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wrapping-it-up">
+   Wrapping it up
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-aviris-ng">
+<h1>Introduction to AVIRIS-NG<a class="headerlink" href="#introduction-to-aviris-ng" title="Permalink to this headline">¶</a></h1>
+<img alt="AVIRIS Logo" src="../../_images/Aviris.png" />
+<p><b>Contributors:</b> Joachim Meyer<sup>1</sup>, Chelsea Ackroyd<sup>1</sup>, McKenzie Skiles<sup>1</sup>
+<br>
+<sup>1</sup>University of Utah</p>
+<div class="admonition-learning-objectives admonition">
+<p class="admonition-title">Learning Objectives</p>
+<ul class="simple">
+<li><p>Become familiar with hyperspectral data, including data orginiating from AVIRIS-NG</p></li>
+<li><p>Understand the fundamental methods for displaying and exploring hyperspectral data in Python</p></li>
+<li><p>Identify the amount of ice in a given pixel using spectral feature fitting methodology</p></li>
+</ul>
+</div>
+<div class="section" id="review-of-hyperspectral-data">
+<h2>Review of Hyperspectral Data<a class="headerlink" href="#review-of-hyperspectral-data" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.neonscience.org/resources/learning-hub/tutorials/hyper-spec-intro">https://www.neonscience.org/resources/learning-hub/tutorials/hyper-spec-intro</a></p>
+<div class="section" id="spectral-resolution">
+<h3>Spectral Resolution<a class="headerlink" href="#spectral-resolution" title="Permalink to this headline">¶</a></h3>
+<p>Incoming solar radiation is either reflected, absorbed, or transmitted (or a combination of all three) depending on the surface material. This spectral response allows us to identify varying surface types (e.g. vegetation, snow, water, etc.) in a remote sensing image. The <b>spectral resolution</b>, or the wavelength interval, determines the amount of detail recorded in the spectral response: finer spectral resolutions have bands with narrow wavelength intervals, while coarser spectral resolutions have bands with larger wavelength intervals, and therefore, less detail in the spectral response.</p>
+<p><img alt="NEON Tutorial" src="https://raw.githubusercontent.com/NEONScience/NEON-Data-Skills/dev-aten/graphics/hyperspectral-general/spectrumZoomed.png" /></p>
+<p><img alt="NEON FWHM" src="https://raw.githubusercontent.com/NEONScience/NEON-Data-Skills/dev-aten/graphics/hyperspectral-general/FWHM2.png" /></p>
+</div>
+<div class="section" id="multispectral-vs-hyperspectral-data">
+<h3>Multispectral vs. Hyperspectral Data<a class="headerlink" href="#multispectral-vs-hyperspectral-data" title="Permalink to this headline">¶</a></h3>
+<p>Multispectral instruments have larger spectral resolutions with fewer bands. This level of detail can be limiting in distinguishing between surface types. Hyperspectral instruments, in comparison, typically have hundreds of bands with relatively narrow wavelength intervals. The image below illustrates the difference in spectral responses between a multispectral (Landsat 8 OLI) and a hyperspectral (AVIRIS) sensor.</p>
+<img alt="AVIRIS Logo" src="../../_images/Hyper_vs_Multispectral.png" />
+</div>
+</div>
+<div class="section" id="aviris-ng-meets-snowex">
+<h2>AVIRIS-NG Meets SnowEx<a class="headerlink" href="#aviris-ng-meets-snowex" title="Permalink to this headline">¶</a></h2>
+<br>
+AVIRIS-NG measures upwelling radiance across 485 continuous spectral bands.
+<br><br>
+<table><thead>
+<tr><th style="text-align:center">Flight Altitude</th><th style="text-align:center">Spatial Resolution</th><th style="text-align:center">Spectral Resolution</th><th style="text-align:center">Spectral Range</th><th style="text-align:center">2021 Flight Dates</th><th style="text-align:center">Study Sites</th></tr>
+</thead>
+<tbody>
+    <tr><td style="text-align:center">25,000 ft ASL</td><td style="text-align:center">4 m</td><td style="text-align:center">5 nm</td><td style="text-align:center">380 nm to 2510 nm</td><td style="text-align:center">03/19, 04/11, 04/29</td><td style="text-align:center">Senator Beck Basin; Grand Mesa Study Plot</td></tr>
+</tbody>
+</table>
+<br><div class="section" id="where-can-i-get-the-data">
+<h3>Where can I get the data?<a class="headerlink" href="#where-can-i-get-the-data" title="Permalink to this headline">¶</a></h3>
+<p>NSIDC (Soon public)</p>
+<p>Data products:</p>
+<ul class="simple">
+<li><p>Spectral radiance/observation geometry (L1B)</p></li>
+<li><p>Corrected Reflectance (L2)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="first-look-at-the-data">
+<h2>First look at the data<a class="headerlink" href="#first-look-at-the-data" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You will always want the data file <strong>and</strong> the header file when processing </div></p>
+</div>
+<p>For today, we are downloading and using a sub sample. The download is done via the Python <a class="reference external" href="https://docs.python.org/3/library/urllib.request.html">urllib.request</a> native library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">urllib.request</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The data file</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SBB_data_file</span> <span class="o">=</span> <span class="s1">&#39;data/ang20210411t181022_rfl_v2z1a_img_SASP&#39;</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span>
+    <span class="s1">&#39;https://github.com/snowex-hackweek/tutorial-data/blob/main/SnowEx-2022/AVIRIS-NG/ang20210411t181022_rfl_v2z1a_img_SASP?raw=true&#39;</span><span class="p">,</span>
+    <span class="n">SBB_data_file</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The header file</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SBB_header_file</span> <span class="o">=</span> <span class="s1">&#39;data/ang20210411t181022_rfl_v2z1a_img_SASP.hdr&#39;</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span>
+    <span class="s1">&#39;https://raw.githubusercontent.com/snowex-hackweek/tutorial-data/main/SnowEx-2022/AVIRIS-NG/ang20210411t181022_rfl_v2z1a_img_SASP.hdr&#39;</span><span class="p">,</span>
+    <span class="n">SBB_header_file</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>The original header file (hold on tight on why …)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">original_header_file</span> <span class="o">=</span> <span class="s1">&#39;data/ang20210411t181022_rfl_v2z1a_img.hdr&#39;</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span>
+    <span class="s1">&#39;https://raw.githubusercontent.com/snowex-hackweek/tutorial-data/main/SnowEx-2022/AVIRIS-NG/ang20210411t181022_rfl_v2z1a_img.hdr&#39;</span><span class="p">,</span>
+    <span class="n">original_header_file</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploring-many-flight-lines">
+<h2>Exploring many flight lines<a class="headerlink" href="#exploring-many-flight-lines" title="Permalink to this headline">¶</a></h2>
+<p>Interactive exploration using GeoPandas and the folium plotting library:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://geopandas.org/en/stable/docs/user_guide/interactive_mapping.html">https://geopandas.org/en/stable/docs/user_guide/interactive_mapping.html</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>With a little help from GDAL, we can create an index for all flight lines and see where they are:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gdal.org/programs/gdaltindex.html">https://gdal.org/programs/gdaltindex.html</a></p></li>
+</ul>
+<p>A example command that creates a <a class="reference external" href="https://www.geopackage.org/">GeoPackage</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gdaltindex -t_srs EPSG:4326 index.gpkg ang20210411t1*_rfl*img
+</pre></div>
+</div>
+<div class="section" id="breaking-down-the-command">
+<h3>Breaking down the command:<a class="headerlink" href="#breaking-down-the-command" title="Permalink to this headline">¶</a></h3>
+<p>This command creates an index file <code class="docutils literal notranslate"><span class="pre">index.gpkg</span></code> for all flightlines starting with <code class="docutils literal notranslate"><span class="pre">ang20210411t1*</span></code> and selects only the reflectance prodcuts <code class="docutils literal notranslate"><span class="pre">_rfl*img</span></code>. The star <code class="docutils literal notranslate"><span class="pre">*</span></code> acts as a wildcard to include more than one file where the elements of the string as whole matches. The <code class="docutils literal notranslate"><span class="pre">-t_srs</span> <span class="pre">EPSG:4326</span></code> ensures that the read projection for all files will be stored as WGS 84 in the index. It does not change anything with the flight line data itself.
+Specifically for hyperspectral data, it is important to <em>not</em> include the header files (ending with <code class="docutils literal notranslate"><span class="pre">.hdr</span></code>). GDAL automatically reads those with every image file and adding them to the list of files would cause a duplication.</p>
+<p>One way to test the included files is to use the search string with the list (<code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>) command in the terminal.
+The <code class="docutils literal notranslate"><span class="pre">-l</span></code> option lists the output with one line per file.</p>
+<p>Example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls index.gpkg ang20210411t1*_rfl*img
+</pre></div>
+</div>
+<p>Sample output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-rw-r--r-- <span class="m">1</span> username groupname <span class="m">2438534400</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t180555_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">1611382400</span> Feb <span class="m">16</span> <span class="m">08</span>:24 ang20210411t181022_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">1980166800</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t181414_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">1898560000</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t181822_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">9076497200</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t184544_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">8742760000</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t185350_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">8283032400</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t191149_rfl_v2z1a_img
+-rw-r--r-- <span class="m">1</span> username groupname <span class="m">8161863200</span> Feb <span class="m">16</span> <span class="m">08</span>:23 ang20210411t191954_rfl_v2z1a_img
+</pre></div>
+</div>
+</div>
+<div class="section" id="load-the-created-index-and-some-geo-spatial-information-into-a-geo-dataframe-to-explore-interactively">
+<h3>Load the created index and some geo-spatial information into a Geo-Dataframe to explore interactively<a class="headerlink" href="#load-the-created-index-and-some-geo-spatial-information-into-a-geo-dataframe-to-explore-interactively" title="Permalink to this headline">¶</a></h3>
+<p>GeoPandas has the ability to read files from disk or from a remote URL. When using a URL the information is held in memory for that session and will be lost once you restart the Python kernel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flight_lines</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://github.com/snowex-hackweek/tutorial-data/blob/main/SnowEx-2022/AVIRIS-NG/20210411_flights.gpkg?raw=true&#39;</span><span class="p">)</span>
+<span class="n">sbb</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/snowex-hackweek/tutorial-data/main/SnowEx-2022/AVIRIS-NG/SBB_basin.geojson&#39;</span><span class="p">)</span>
+<span class="n">swamp_angel</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/snowex-hackweek/tutorial-data/main/SnowEx-2022/AVIRIS-NG/SwampAngel.geojson&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a map with multiple layers to explore where the lines are</span>
+<span class="c1">## Layer 1 used as base layer</span>
+<span class="n">sbb_layer</span> <span class="o">=</span> <span class="n">sbb</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;SBB basin&#39;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span>
+<span class="p">)</span>
+<span class="c1">## Layer 2</span>
+<span class="n">swamp_angel</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">sbb_layer</span><span class="p">,</span>                   <span class="c1">## Add this layer to the Layer 1</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Swamp Angel Study Plot&#39;</span>
+<span class="p">)</span>
+<span class="c1">## Layer 3</span>
+<span class="n">flight_lines</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">sbb_layer</span><span class="p">,</span>                   <span class="c1">## Add this layer to the Layer 1</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;AVIRIS flight lines&#39;</span><span class="p">,</span>
+    <span class="n">column</span><span class="o">=</span><span class="s1">&#39;location&#39;</span>
+<span class="p">)</span>
+<span class="c1"># Top right box to toggle layer visibility</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">sbb_layer</span><span class="p">)</span>
+
+<span class="c1"># Show the final map with all layer</span>
+<span class="n">sbb_layer</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;head&gt;    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_d966996b1eff939c9a87833c1af0984f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            &lt;/style&gt;
+
+
+                    &lt;style&gt;
+                        .foliumtooltip {
+
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+
+
+                    &lt;style&gt;
+                        .foliumtooltip {
+
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+
+
+                    &lt;style&gt;
+                        .foliumtooltip {
+
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+
+
+    &lt;script src=&quot;https://code.jquery.com/ui/1.12.1/jquery-ui.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;$( function() {
+        $( &quot;.maplegend&quot; ).draggable({
+            start: function (event, ui) {
+                $(this).css({
+                    right: &quot;auto&quot;,
+                    top: &quot;auto&quot;,
+                    bottom: &quot;auto&quot;
+                });
+            }
+        });
+    });
+    &lt;/script&gt;
+    &lt;style type=&#x27;text/css&#x27;&gt;
+      .maplegend {
+        position: absolute;
+        z-index:9999;
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        padding: 10px;
+        font: 12px/14px Arial, Helvetica, sans-serif;
+        right: 10px;
+        bottom: 20px;
+      }
+      .maplegend .legend-title {
+        text-align: left;
+        margin-bottom: 5px;
+        font-weight: bold;
+        }
+      .maplegend .legend-scale ul {
+        margin: 0;
+        margin-bottom: 0px;
+        padding: 0;
+        float: left;
+        list-style: none;
+        }
+      .maplegend .legend-scale ul li {
+        list-style: none;
+        margin-left: 0;
+        line-height: 16px;
+        margin-bottom: 2px;
+        }
+      .maplegend ul.legend-labels li span {
+        display: block;
+        float: left;
+        height: 14px;
+        width: 14px;
+        margin-right: 5px;
+        margin-left: 0;
+        border: 0px solid #ccc;
+        }
+      .maplegend .legend-source {
+        color: #777;
+        clear: both;
+        }
+      .maplegend a {
+        color: #777;
+        }
+    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;    
+
+    &lt;div id=&#x27;maplegend location&#x27; class=&#x27;maplegend&#x27;&gt;
+        &lt;div class=&#x27;legend-title&#x27;&gt;location&lt;/div&gt;
+        &lt;div class=&#x27;legend-scale&#x27;&gt;
+            &lt;ul class=&#x27;legend-labels&#x27;&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#1f77b4&#x27;&gt;&lt;/span&gt;ang20210411t180555_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#ff7f0e&#x27;&gt;&lt;/span&gt;ang20210411t181022_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#98df8a&#x27;&gt;&lt;/span&gt;ang20210411t181414_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#9467bd&#x27;&gt;&lt;/span&gt;ang20210411t181822_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#c49c94&#x27;&gt;&lt;/span&gt;ang20210411t184544_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#7f7f7f&#x27;&gt;&lt;/span&gt;ang20210411t185350_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#dbdb8d&#x27;&gt;&lt;/span&gt;ang20210411t191149_rfl_v2z1a_img&lt;/li&gt;
+                &lt;li&gt;&lt;span style=&#x27;background:#9edae5&#x27;&gt;&lt;/span&gt;ang20210411t191954_rfl_v2z1a_img&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_d966996b1eff939c9a87833c1af0984f&quot; &gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;    
+
+            var map_d966996b1eff939c9a87833c1af0984f = L.map(
+                &quot;map_d966996b1eff939c9a87833c1af0984f&quot;,
+                {
+                    center: [37.91146433916268, -107.72347040689607],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_d966996b1eff939c9a87833c1af0984f);
+
+
+
+
+
+            var tile_layer_59be966952def471736b749da51c1e52 = L.tileLayer(
+                &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;Data by \u0026copy; \u003ca href=\&quot;http://openstreetmap.org\&quot;\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\&quot;http://www.openstreetmap.org/copyright\&quot;\u003eODbL\u003c/a\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            ).addTo(map_d966996b1eff939c9a87833c1af0984f);
+
+
+            map_d966996b1eff939c9a87833c1af0984f.fitBounds(
+                [[37.90311685948122, -107.73835720064125], [37.919811818844124, -107.70858361315089]],
+                {}
+            );
+
+
+        function geo_json_bd9fd54ad709f4186a138eadc826a871_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;green&quot;, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+            }
+        }
+        function geo_json_bd9fd54ad709f4186a138eadc826a871_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_bd9fd54ad709f4186a138eadc826a871_pointToLayer(feature, latlng) {
+            var opts = {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 2, &quot;stroke&quot;: true, &quot;weight&quot;: 3};
+
+            let style = geo_json_bd9fd54ad709f4186a138eadc826a871_styler(feature)
+            Object.assign(opts, style)
+
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_bd9fd54ad709f4186a138eadc826a871_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        geo_json_bd9fd54ad709f4186a138eadc826a871.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_bd9fd54ad709f4186a138eadc826a871_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_bd9fd54ad709f4186a138eadc826a871 = L.geoJson(null, {
+                onEachFeature: geo_json_bd9fd54ad709f4186a138eadc826a871_onEachFeature,
+
+                style: geo_json_bd9fd54ad709f4186a138eadc826a871_styler,
+                pointToLayer: geo_json_bd9fd54ad709f4186a138eadc826a871_pointToLayer
+        });
+
+        function geo_json_bd9fd54ad709f4186a138eadc826a871_add (data) {
+            geo_json_bd9fd54ad709f4186a138eadc826a871
+                .addData(data)
+                .addTo(map_d966996b1eff939c9a87833c1af0984f);
+        }
+            geo_json_bd9fd54ad709f4186a138eadc826a871_add({&quot;bbox&quot;: [-107.73835720064125, 37.90311685948122, -107.70858361315089, 37.919811818844124], &quot;features&quot;: [{&quot;bbox&quot;: [-107.73835720064125, 37.90311685948122, -107.70858361315089, 37.919811818844124], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.71750048013101, 37.90311685948122], [-107.71768878291722, 37.90312575389424], [-107.71784885107407, 37.90315434664936], [-107.71792800982458, 37.903119684855206], [-107.71799907482975, 37.903119190959714], [-107.71813323031303, 37.903170087946606], [-107.71832309185274, 37.90320214591636], [-107.71890309968254, 37.9036533718363], [-107.71900593937454, 37.90369000751234], [-107.71904457231462, 37.90372006283246], [-107.71911250910112, 37.90382324305823], [-107.71921940960827, 37.90392835691911], [-107.71925581753248, 37.90400915117867], [-107.71936271852125, 37.90411426488817], [-107.71940328431761, 37.90417587386829], [-107.71961208681759, 37.904325801250216], [-107.71969114832794, 37.904322692789556], [-107.7199104075495, 37.9041826954833], [-107.7201529629562, 37.90403774392486], [-107.7204314656325, 37.903794228240606], [-107.72057791744481, 37.903762324262445], [-107.72064439301305, 37.903733213834], [-107.72098743146756, 37.903698596498906], [-107.72111861777356, 37.90364114852352], [-107.72118649764208, 37.90361308762322], [-107.72125297281842, 37.90358397686424], [-107.72150405522994, 37.9035455987899], [-107.72172026170293, 37.90342202240222], [-107.72189574735707, 37.90348859269433], [-107.72198315378374, 37.90348515429497], [-107.72210252701785, 37.90348432195064], [-107.72228258566038, 37.903477237569824], [-107.72251617994216, 37.90360934799949], [-107.72272747790085, 37.9036316071865], [-107.72297950039888, 37.90369350355418], [-107.72313537685622, 37.90372963033863], [-107.72322839896964, 37.90376491560186], [-107.72333592128498, 37.90367089083568], [-107.72340354978873, 37.90367042043469], [-107.72358071889913, 37.90363003714667], [-107.7243177281762, 37.90362489028015], [-107.72439190473463, 37.90359240521438], [-107.72450131700431, 37.90354716868583], [-107.72466660823711, 37.903640646148155], [-107.72494261698793, 37.903687232714354], [-107.72501349899878, 37.90374236934887], [-107.72518170624191, 37.90373574978233], [-107.72546812781056, 37.903915219076424], [-107.72566907858979, 37.90394125664606], [-107.72576254538805, 37.90377650844717], [-107.72586660774978, 37.90380206214906], [-107.72600461268415, 37.9038253540793], [-107.72622205833643, 37.90386417771006], [-107.72628162699357, 37.90395463236426], [-107.72637440336028, 37.90405652960594], [-107.72663487482832, 37.90431260730581], [-107.7266816977849, 37.90455669339637], [-107.72703104713011, 37.904879789955224], [-107.7270684342053, 37.90493655984867], [-107.72723187244287, 37.90508771330801], [-107.7274510353564, 37.905116367833045], [-107.72755809247923, 37.905142655684706], [-107.72796533254406, 37.9051855349515], [-107.72813710058915, 37.905236155085284], [-107.72826288374951, 37.90525972779566], [-107.72856279769344, 37.90504808357105], [-107.72870927632532, 37.905006629266886], [-107.72877574949605, 37.90497751432503], [-107.72900366993053, 37.90493673730202], [-107.72911362293473, 37.9048885801677], [-107.72955978362667, 37.9048517362673], [-107.72969414370932, 37.90490269100632], [-107.72982110461473, 37.9048976885796], [-107.73017186316757, 37.90465015674886], [-107.73047484323075, 37.90461365656604], [-107.73073391044255, 37.90438708008235], [-107.73072944115442, 37.90431588946302], [-107.73110170927052, 37.90408354253077], [-107.73129999191269, 37.904027422428236], [-107.73153513856013, 37.90388495926127], [-107.73173611972327, 37.90382807291577], [-107.73191948456306, 37.90373403437468], [-107.73217958049338, 37.90384481369902], [-107.7322139643894, 37.903843457306145], [-107.7323517772366, 37.90384248645291], [-107.73302516528696, 37.90402027870844], [-107.73310586218096, 37.90398493088272], [-107.73338364725645, 37.9039519850943], [-107.7339534934848, 37.90406842052609], [-107.73420230393074, 37.90409460463153], [-107.73440420681015, 37.904122509011465], [-107.73496547508576, 37.90410037136637], [-107.73515805717555, 37.90412698650163], [-107.73563250271891, 37.9041567007832], [-107.7361834768891, 37.90429195373869], [-107.73651212495318, 37.90431604127439], [-107.73670294783582, 37.904388396260856], [-107.73694323079091, 37.904419791856746], [-107.73725970983836, 37.904539790371196], [-107.73739076527588, 37.90464170510237], [-107.73753618286186, 37.90467538984874], [-107.73791948035239, 37.90492214844773], [-107.7380934404805, 37.90508588411128], [-107.73817381141404, 37.90511449935205], [-107.73825651595311, 37.90535267313724], [-107.73831307180117, 37.9054337213046], [-107.73831397229982, 37.9055132241634], [-107.73835246628687, 37.905594461846746], [-107.7383533703186, 37.90567425499805], [-107.73835676441985, 37.90572823897367], [-107.73835720064125, 37.905766726925904], [-107.73799212649209, 37.90603380412012], [-107.73775628825113, 37.90630199993698], [-107.73753479870226, 37.906604063162675], [-107.73740751689346, 37.90686247866544], [-107.73725865864678, 37.90698265187331], [-107.73709994434196, 37.90712147674178], [-107.73682859185564, 37.90765736074053], [-107.73677041448036, 37.908077234222446], [-107.73677461789245, 37.90814408820889], [-107.73673991187174, 37.908201549103985], [-107.73675124968086, 37.90838191324265], [-107.73671391205437, 37.90851326382866], [-107.73664348355423, 37.90869338575967], [-107.73640300535216, 37.909091531840346], [-107.73630205856243, 37.90931315836143], [-107.73617427494067, 37.90945504720671], [-107.7360279341384, 37.90962145245602], [-107.73558169475073, 37.91003649356796], [-107.73547568981128, 37.910157030623644], [-107.73538787061784, 37.910311857920135], [-107.73502522244777, 37.91064914444843], [-107.73513314926535, 37.91080380790749], [-107.73518165976357, 37.91091138647217], [-107.73525820082914, 37.91126883621301], [-107.7354162450991, 37.91138226497809], [-107.73548270736214, 37.91157366664877], [-107.73568252180628, 37.91181822702879], [-107.73571795096517, 37.911872007040905], [-107.7358291012976, 37.9119115806229], [-107.73603624174616, 37.91218220618861], [-107.73607886975195, 37.91240424075293], [-107.73622089786257, 37.91253555270356], [-107.73631875145233, 37.912646551199686], [-107.73638680815917, 37.91296434643452], [-107.73652430381503, 37.913161368905776], [-107.73666396239032, 37.91331470343784], [-107.73666634774382, 37.9135256234984], [-107.73666806076953, 37.91355287084765], [-107.7365039012518, 37.91374538478371], [-107.73646857325875, 37.914155544673065], [-107.73652561042675, 37.914312540727174], [-107.73657427573441, 37.91471924146873], [-107.73664690851803, 37.91482331626826], [-107.73668233993968, 37.9148770958828], [-107.73675418887852, 37.9149559771807], [-107.73679262467283, 37.915090781269825], [-107.7369346594668, 37.91522209205703], [-107.7369700913023, 37.915275871566166], [-107.73707703385169, 37.91538096738877], [-107.7371493672809, 37.91558924965998], [-107.73719032527453, 37.91567567679471], [-107.7372322183904, 37.91590367399069], [-107.7371782242378, 37.916578966915424], [-107.73722710437625, 37.916649004608125], [-107.73722855991767, 37.916777596229906], [-107.73726950364306, 37.91689028957073], [-107.73727069806887, 37.91699577753908], [-107.73730959176666, 37.91705150567857], [-107.7373450248291, 37.91710528501553], [-107.73756188639379, 37.91729303585814], [-107.73779708972747, 37.917407519190164], [-107.73783834506308, 37.91752630461756], [-107.73798216150124, 37.91765925538428], [-107.73784527176323, 37.917660228245374], [-107.73774235576599, 37.9176908385866], [-107.73767355484235, 37.917664757089376], [-107.73752951873301, 37.91764161976528], [-107.73724405816888, 37.917891272046596], [-107.73669320472843, 37.917930858119476], [-107.73654783994789, 37.91797409177762], [-107.7363876874319, 37.918076368414994], [-107.7362250781102, 37.918286026033634], [-107.73609355585185, 37.91832325161331], [-107.73602371620942, 37.9183538415998], [-107.73589671017339, 37.918517592702905], [-107.73576464192648, 37.918655281302215], [-107.73560187750671, 37.918848838965445], [-107.73548214936802, 37.918849688718126], [-107.73528168891427, 37.91885759674001], [-107.73522866949094, 37.91900125989688], [-107.73509406641432, 37.91922408061835], [-107.73486190012008, 37.91928978774561], [-107.7347672957677, 37.91941175847009], [-107.73463117501538, 37.919465556738004], [-107.73449681110388, 37.91941461819026], [-107.7344186141275, 37.91938678003575], [-107.73418560350797, 37.9193959710188], [-107.7341227919492, 37.91945089706728], [-107.73407129340433, 37.91945126283599], [-107.7339380691238, 37.91945651647842], [-107.73385628678899, 37.91967810125264], [-107.73386235902558, 37.91977472168258], [-107.73368990317101, 37.919811818844124], [-107.7334846617436, 37.91965223783877], [-107.73323421593597, 37.91947250956629], [-107.73192667754287, 37.91947305242798], [-107.73166506142657, 37.91942636680705], [-107.7315270256225, 37.91940308276615], [-107.73145850172513, 37.91937710172883], [-107.73135455944782, 37.91935302559489], [-107.73118075699782, 37.919248395060016], [-107.73096121935272, 37.91922700314747], [-107.73074156087925, 37.919367261432605], [-107.73065877425576, 37.91940148659759], [-107.73022700450956, 37.919404529229695], [-107.73014373862325, 37.919339782763906], [-107.72993585495443, 37.91929162803851], [-107.7298519756633, 37.91881147932667], [-107.72948055173615, 37.9185044965809], [-107.72934747251318, 37.918353531734375], [-107.72923191273186, 37.918239952115464], [-107.72919136165567, 37.91815001659017], [-107.72894918272225, 37.917976198178124], [-107.72888220124624, 37.91792411182236], [-107.72880981566496, 37.9178983375979], [-107.72877132746088, 37.917812973688896], [-107.72862798480473, 37.91771009242225], [-107.72848483504312, 37.91765911973806], [-107.72812096875214, 37.91749565773923], [-107.72807655969478, 37.917428241310525], [-107.72803980798666, 37.91737557198305], [-107.72799536371551, 37.917308100241534], [-107.72762923517345, 37.91704530904652], [-107.72734607647885, 37.917008296454824], [-107.7272955551485, 37.91664795119476], [-107.72718756510824, 37.91660949741518], [-107.72708803686866, 37.91653209674041], [-107.72705228423278, 37.916506435436716], [-107.72689843081228, 37.9163318892639], [-107.72679833655229, 37.91607927829441], [-107.72662122764407, 37.915921736672615], [-107.72647853875885, 37.9157352829454], [-107.72640669961544, 37.91565639498278], [-107.72625346687656, 37.915482547901135], [-107.72616632716358, 37.915350251683904], [-107.72611667216388, 37.91517600957808], [-107.7259191412058, 37.91497132484909], [-107.72576941446762, 37.91491428444588], [-107.72523529593808, 37.915332135811894], [-107.72516740724082, 37.915360199354595], [-107.72507530745028, 37.91540052972879], [-107.72423351902488, 37.91540641919726], [-107.72393281338368, 37.91517254899588], [-107.7229074413484, 37.91438098846176], [-107.722690080517, 37.914275149188775], [-107.72250585106728, 37.914101712681756], [-107.72242436979158, 37.91407269343642], [-107.72232076657188, 37.91402048740103], [-107.72225092560896, 37.91399561365017], [-107.72183731054328, 37.91376172638914], [-107.72149805216527, 37.913736824263594], [-107.72145299839707, 37.913620115200054], [-107.72155086438319, 37.913498216356516], [-107.72158026975883, 37.91338886845629], [-107.72161307148656, 37.91333458740076], [-107.72164226235074, 37.91321942533709], [-107.72141118498048, 37.91305353536551], [-107.72125550134903, 37.91301745495454], [-107.7211644673193, 37.91302103465924], [-107.720824759548, 37.912808183733766], [-107.72049958164085, 37.91276565559319], [-107.72036144755403, 37.91269604510147], [-107.72016110564684, 37.91264961369889], [-107.71981822928386, 37.91238291179905], [-107.71965212550813, 37.91230202196965], [-107.71952980519444, 37.9123555793001], [-107.71941987490804, 37.91238667731939], [-107.71929149718875, 37.91238757016274], [-107.71912205687197, 37.91244663823194], [-107.71861452887127, 37.91245016320953], [-107.71843403298402, 37.91240583067776], [-107.71813698711107, 37.91241750574834], [-107.71797627286455, 37.91232661609287], [-107.71791850858673, 37.91219844392379], [-107.71775391049057, 37.91208026893998], [-107.71754884846679, 37.9121700487408], [-107.71729391176542, 37.91213478140886], [-107.71709643381392, 37.9120598709557], [-107.71683827074533, 37.91202609935782], [-107.71676942710761, 37.911972544166424], [-107.71671580672066, 37.911934047139276], [-107.71668138497657, 37.911907269509584], [-107.71653704029642, 37.91185708166359], [-107.71627672573995, 37.91197104898357], [-107.71589960479142, 37.912006420392366], [-107.71573084858892, 37.91203789008607], [-107.71552659702846, 37.912069096799165], [-107.71542602146832, 37.91209899177275], [-107.71528995058995, 37.9121286238492], [-107.715157271113, 37.9122133230044], [-107.7150671612485, 37.91225056384828], [-107.71467812244788, 37.91259066184554], [-107.7145429228552, 37.91269974595094], [-107.71447813233843, 37.91275638692186], [-107.7144274322908, 37.912797292781114], [-107.71436351724371, 37.91285316773943], [-107.7141576847142, 37.91288461318302], [-107.71405681904155, 37.912914592894545], [-107.71379648258464, 37.91286808812999], [-107.7135518106534, 37.912836075214216], [-107.71343848715114, 37.912793082272515], [-107.71326503332453, 37.91277059361689], [-107.71318951395922, 37.912903646414414], [-107.71302850010274, 37.91293870692441], [-107.71290351869891, 37.91293956889389], [-107.71272542232842, 37.91297277425546], [-107.71265970660127, 37.91297322751126], [-107.71255335635462, 37.91300483548483], [-107.71234749383316, 37.91300625396459], [-107.71216392731843, 37.91293661238338], [-107.71204670961357, 37.912987925890874], [-107.71200844273396, 37.91298818962115], [-107.71187427492819, 37.912937287838794], [-107.7118044381585, 37.912912407702706], [-107.71170084356561, 37.912860191947956], [-107.71163100692272, 37.91283531170353], [-107.71155851248868, 37.912807808341114], [-107.71133572214252, 37.91281655141777], [-107.71113129464636, 37.91293335199054], [-107.71094885873127, 37.91282346496209], [-107.71077476589929, 37.91274692409098], [-107.7106536124611, 37.91268585793897], [-107.71058926109112, 37.91245985404557], [-107.710217890148, 37.9121443878319], [-107.71000096880714, 37.91211599784075], [-107.70992837651137, 37.912033602545506], [-107.70992751434633, 37.91195497592937], [-107.7097874951691, 37.91178349635166], [-107.70973125687505, 37.91158598154615], [-107.709454481593, 37.91152180929151], [-107.70939334315977, 37.91134553885684], [-107.70928422883046, 37.91129238883572], [-107.7090137225673, 37.91124669825267], [-107.7088772287849, 37.91117789417986], [-107.70879785433144, 37.91092410966456], [-107.70886467249554, 37.910813569667795], [-107.70916305076663, 37.910648562393014], [-107.70931923250055, 37.9105488722752], [-107.70939151498615, 37.91038468398538], [-107.7091796087233, 37.91018864302109], [-107.70910797301238, 37.910029634356185], [-107.70933686337202, 37.90980657749148], [-107.7093657365807, 37.90968226368997], [-107.70925908133471, 37.909565084469435], [-107.70922085389134, 37.909507018119314], [-107.70921764835248, 37.90921344616458], [-107.70914394555012, 37.90921633512409], [-107.70885357149132, 37.90902929441536], [-107.70877720250044, 37.90880910473035], [-107.70868588231289, 37.90874352321092], [-107.70864813272559, 37.9087032247692], [-107.70881192508125, 37.9084744878579], [-107.70880620005362, 37.90838281042565], [-107.70873426315592, 37.908279653574105], [-107.70869770909482, 37.90819462902471], [-107.70879420506893, 37.908034988142894], [-107.70882461878959, 37.90795265153932], [-107.70892346645721, 37.907872899739644], [-107.70896144548345, 37.90777008211461], [-107.70891798624476, 37.90770775735257], [-107.7088825783154, 37.90765396840682], [-107.70884584523968, 37.907601292291965], [-107.70881007575638, 37.90754695398935], [-107.70872490487936, 37.90755029487483], [-107.70867270490815, 37.907550652331224], [-107.70867211963406, 37.90749689617399], [-107.70866859235733, 37.90744048216746], [-107.70858361315089, 37.90737945335739], [-107.70869729199771, 37.90725330210176], [-107.70873916455965, 37.9071795317775], [-107.70883461738453, 37.90714008565488], [-107.70898088799366, 37.90701222325564], [-107.70916461977464, 37.90697222181207], [-107.70927952394857, 37.90693807216871], [-107.70932841250848, 37.906805717726655], [-107.70936221190966, 37.90677844863044], [-107.70939460674415, 37.906750129558695], [-107.7094284060955, 37.90672286044512], [-107.7096126737317, 37.9065355445638], [-107.70984474084268, 37.90640719598618], [-107.70996092986324, 37.906359180183856], [-107.71002743686546, 37.90633006505652], [-107.71013007790778, 37.90632935977321], [-107.71023466406857, 37.906325257019446], [-107.71029813321742, 37.90626977404728], [-107.71046828371281, 37.90623936249448], [-107.71065135050675, 37.906197658209166], [-107.71070322220223, 37.90615231189696], [-107.71073702078668, 37.90612504243345], [-107.71079504212089, 37.90590938891365], [-107.71083687916673, 37.905840172361266], [-107.71099782377459, 37.905794651442974], [-107.7110292258868, 37.90573932316342], [-107.71107048140125, 37.905671063667256], [-107.71098971234353, 37.90555523608114], [-107.71122652037873, 37.90551906330597], [-107.71150696627454, 37.905370088100604], [-107.71165781897028, 37.905154699529945], [-107.71175675302796, 37.90507487413029], [-107.71183773589965, 37.90500407492631], [-107.71190808956482, 37.9049473071553], [-107.7121223793948, 37.90488669901641], [-107.71215189332992, 37.904710946286116], [-107.71221806523124, 37.904601455477184], [-107.71241696266034, 37.9044914446571], [-107.71246439213239, 37.904407876603194], [-107.71278281545518, 37.904405683615934], [-107.71294358955161, 37.904303045148865], [-107.7129971479451, 37.904103959359134], [-107.7131179050936, 37.90406980302182], [-107.71339315049794, 37.90397992661645], [-107.71348875716062, 37.90389634223627], [-107.71369208776878, 37.90389494095595], [-107.71375691194545, 37.9038382666864], [-107.7138265351155, 37.903782088808725], [-107.71381729709205, 37.903634406669546], [-107.71381682893487, 37.90359197924354], [-107.71420044618317, 37.90348346459685], [-107.71446352771116, 37.90357133746027], [-107.71432357606167, 37.90372666977591], [-107.71440865926407, 37.903879907162334], [-107.71440953503904, 37.90395947057702], [-107.71447835415334, 37.90395676699669], [-107.71454688334988, 37.90398276808429], [-107.71461805416908, 37.9040081241041], [-107.71468819507494, 37.90411466475677], [-107.71473396919531, 37.904180302995215], [-107.71499961116308, 37.90421506196131], [-107.71506857993867, 37.90424122747726], [-107.71514736378572, 37.90417234777009], [-107.71539209482825, 37.9038569131855], [-107.71542885523677, 37.903827250994404], [-107.71546124641468, 37.9037989303762], [-107.71552373363464, 37.90374850605524], [-107.71598856219923, 37.9037049075992], [-107.71603746534166, 37.90361873031899], [-107.71621355741222, 37.903399394104746], [-107.71637127396527, 37.90342756801548], [-107.71651893284505, 37.90342176540272], [-107.71660782709318, 37.903307187143106], [-107.71671979826036, 37.90321682728501], [-107.7171477446621, 37.9031658267971], [-107.71728234315295, 37.90321689271657], [-107.71738331170295, 37.90318687503963], [-107.7174852790197, 37.903158028713655], [-107.71750048013101, 37.90311685948122]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;Id&quot;: 1, &quot;__folium_color&quot;: &quot;green&quot;, &quot;gridcode&quot;: 0}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+
+
+    geo_json_bd9fd54ad709f4186a138eadc826a871.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+
+    let handleObject = feature=&gt;typeof(feature)==&#x27;object&#x27; ? JSON.stringify(feature) : feature;
+    let fields = [&quot;Id&quot;, &quot;gridcode&quot;];
+    let aliases = [&quot;Id&quot;, &quot;gridcode&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+
+    return div
+    }
+    ,{&quot;className&quot;: &quot;foliumtooltip&quot;, &quot;sticky&quot;: true});
+
+
+        function geo_json_578934116720145f76cff640b9abc362_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+            }
+        }
+        function geo_json_578934116720145f76cff640b9abc362_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_578934116720145f76cff640b9abc362_pointToLayer(feature, latlng) {
+            var opts = {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 2, &quot;stroke&quot;: true, &quot;weight&quot;: 3};
+
+            let style = geo_json_578934116720145f76cff640b9abc362_styler(feature)
+            Object.assign(opts, style)
+
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_578934116720145f76cff640b9abc362_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        geo_json_578934116720145f76cff640b9abc362.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_578934116720145f76cff640b9abc362_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_578934116720145f76cff640b9abc362 = L.geoJson(null, {
+                onEachFeature: geo_json_578934116720145f76cff640b9abc362_onEachFeature,
+
+                style: geo_json_578934116720145f76cff640b9abc362_styler,
+                pointToLayer: geo_json_578934116720145f76cff640b9abc362_pointToLayer
+        });
+
+        function geo_json_578934116720145f76cff640b9abc362_add (data) {
+            geo_json_578934116720145f76cff640b9abc362
+                .addData(data)
+                .addTo(map_d966996b1eff939c9a87833c1af0984f);
+        }
+            geo_json_578934116720145f76cff640b9abc362_add({&quot;bbox&quot;: [-107.71318069991997, 37.905944599161586, -107.70923313202582, 37.90813349417708], &quot;features&quot;: [{&quot;bbox&quot;: [-107.71318069991997, 37.905944599161586, -107.70923313202582, 37.90813349417708], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-107.70923313202582, 37.90603628434695], [-107.71311930411984, 37.905944599161586], [-107.71318069991997, 37.90804890272556], [-107.70932867250787, 37.90813349417708], [-107.70923313202582, 37.90603628434695]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;Name&quot;: &quot;Swamp Angel&quot;, &quot;id&quot;: 1}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+
+
+    geo_json_578934116720145f76cff640b9abc362.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+
+    let handleObject = feature=&gt;typeof(feature)==&#x27;object&#x27; ? JSON.stringify(feature) : feature;
+    let fields = [&quot;id&quot;, &quot;Name&quot;];
+    let aliases = [&quot;id&quot;, &quot;Name&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+
+    return div
+    }
+    ,{&quot;className&quot;: &quot;foliumtooltip&quot;, &quot;sticky&quot;: true});
+
+
+        function geo_json_52dab6f7d535b2c0561b2e9e5ff96709_styler(feature) {
+            switch(feature.id) {
+                case &quot;0&quot;: 
+                    return {&quot;color&quot;: &quot;#1f77b4&quot;, &quot;fillColor&quot;: &quot;#1f77b4&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                case &quot;2&quot;: 
+                    return {&quot;color&quot;: &quot;#98df8a&quot;, &quot;fillColor&quot;: &quot;#98df8a&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                case &quot;3&quot;: 
+                    return {&quot;color&quot;: &quot;#9467bd&quot;, &quot;fillColor&quot;: &quot;#9467bd&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                case &quot;4&quot;: 
+                    return {&quot;color&quot;: &quot;#c49c94&quot;, &quot;fillColor&quot;: &quot;#c49c94&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                case &quot;5&quot;: 
+                    return {&quot;color&quot;: &quot;#7f7f7f&quot;, &quot;fillColor&quot;: &quot;#7f7f7f&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                case &quot;6&quot;: 
+                    return {&quot;color&quot;: &quot;#dbdb8d&quot;, &quot;fillColor&quot;: &quot;#dbdb8d&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                case &quot;7&quot;: 
+                    return {&quot;color&quot;: &quot;#9edae5&quot;, &quot;fillColor&quot;: &quot;#9edae5&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+                default:
+                    return {&quot;color&quot;: &quot;#ff7f0e&quot;, &quot;fillColor&quot;: &quot;#ff7f0e&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+            }
+        }
+        function geo_json_52dab6f7d535b2c0561b2e9e5ff96709_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_52dab6f7d535b2c0561b2e9e5ff96709_pointToLayer(feature, latlng) {
+            var opts = {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 2, &quot;stroke&quot;: true, &quot;weight&quot;: 3};
+
+            let style = geo_json_52dab6f7d535b2c0561b2e9e5ff96709_styler(feature)
+            Object.assign(opts, style)
+
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_52dab6f7d535b2c0561b2e9e5ff96709_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        geo_json_52dab6f7d535b2c0561b2e9e5ff96709.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_52dab6f7d535b2c0561b2e9e5ff96709_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_52dab6f7d535b2c0561b2e9e5ff96709 = L.geoJson(null, {
+                onEachFeature: geo_json_52dab6f7d535b2c0561b2e9e5ff96709_onEachFeature,
+
+                style: geo_json_52dab6f7d535b2c0561b2e9e5ff96709_styler,
+                pointToLayer: geo_json_52dab6f7d535b2c0561b2e9e5ff96709_pointToLayer
+        });
+
+        function geo_json_52dab6f7d535b2c0561b2e9e5ff96709_add (data) {
+            geo_json_52dab6f7d535b2c0561b2e9e5ff96709
+                .addData(data)
+                .addTo(map_d966996b1eff939c9a87833c1af0984f);
+        }
+            geo_json_52dab6f7d535b2c0561b2e9e5ff96709_add({&quot;bbox&quot;: [-108.233326675322, 37.861724680829376, -107.67298538776008, 39.1080224262576], &quot;features&quot;: [{&quot;bbox&quot;: [-107.72314449136518, 37.861724680829376, -107.67298538776008, 37.93350638921639], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.70338319071516, 37.93350638921639], [-107.67298538776008, 37.92779407231128], [-107.69277297451887, 37.861724680829376], [-107.72314449136518, 37.867432916987106], [-107.70338319071516, 37.93350638921639]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#1f77b4&quot;, &quot;location&quot;: &quot;ang20210411t180555_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.73552631664273, 37.87669358776095, -107.69227962654472, 37.936396843206985], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.71918992834564, 37.936396843206985], [-107.69227962654472, 37.93134440847416], [-107.70863527516624, 37.87669358776095], [-107.73552631664273, 37.881743040164245], [-107.71918992834564, 37.936396843206985]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;1&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#ff7f0e&quot;, &quot;location&quot;: &quot;ang20210411t181022_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.75093749403118, 37.879629621953534, -107.70882624877689, 37.93874208397885], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.7359433097127, 37.93874208397885], [-107.70882624877689, 37.934049380721646], [-107.72383989700427, 37.879629621953534], [-107.75093749403118, 37.88431963344973], [-107.7359433097127, 37.93874208397885]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;2&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#98df8a&quot;, &quot;location&quot;: &quot;ang20210411t181414_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-107.7694298788461, 37.885382995517176, -107.7278485495358, 37.94667958591254], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.75418336860064, 37.94667958591254], [-107.7278485495358, 37.94224472901796], [-107.74311395243434, 37.885382995517176], [-107.7694298788461, 37.889813584428694], [-107.75418336860064, 37.94667958591254]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;3&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#9467bd&quot;, &quot;location&quot;: &quot;ang20210411t181822_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.22417117140125, 38.993287478981536, -107.8875690800669, 39.065455837158716], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.89347910146546, 39.065455837158716], [-107.8875690800669, 39.03942708596599], [-108.21814146022257, 38.993287478981536], [-108.22417117140125, 39.01930398602075], [-107.89347910146546, 39.065455837158716]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;4&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#c49c94&quot;, &quot;location&quot;: &quot;ang20210411t184544_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.22710790812546, 39.009774990142866, -107.89030459437203, 39.07979747714366], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.89570741759144, 39.07979747714366], [-107.89030459437203, 39.05600998101473], [-108.22159540923494, 39.009774990142866], [-108.22710790812546, 39.033551259565876], [-107.89570741759144, 39.07979747714366]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;5&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#7f7f7f&quot;, &quot;location&quot;: &quot;ang20210411t185350_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.22941403106852, 39.022181814342034, -107.90361883438085, 39.09140721172099], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.90919772770579, 39.09140721172099], [-107.90361883438085, 39.06686839301465], [-108.22372577870141, 39.022181814342034], [-108.22941403106852, 39.04670941949515], [-107.90919772770579, 39.09140721172099]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;6&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#dbdb8d&quot;, &quot;location&quot;: &quot;ang20210411t191149_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-108.233326675322, 39.03773336549973, -107.90411233484957, 39.1080224262576], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[-107.90983183735736, 39.1080224262576], [-107.90411233484957, 39.08287016380258], [-108.22749387173431, 39.03773336549973], [-108.233326675322, 39.062874004631304], [-107.90983183735736, 39.1080224262576]]], &quot;type&quot;: &quot;Polygon&quot;}, &quot;id&quot;: &quot;7&quot;, &quot;properties&quot;: {&quot;__folium_color&quot;: &quot;#9edae5&quot;, &quot;location&quot;: &quot;ang20210411t191954_rfl_v2z1a_img&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+
+
+    geo_json_52dab6f7d535b2c0561b2e9e5ff96709.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+
+    let handleObject = feature=&gt;typeof(feature)==&#x27;object&#x27; ? JSON.stringify(feature) : feature;
+    let fields = [&quot;location&quot;];
+    let aliases = [&quot;location&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+
+    return div
+    }
+    ,{&quot;className&quot;: &quot;foliumtooltip&quot;, &quot;sticky&quot;: true});
+
+
+            var layer_control_510942e7bd5bceafa3684676981e153a = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_59be966952def471736b749da51c1e52,
+                },
+                overlays :  {
+                    &quot;SBB basin&quot; : geo_json_bd9fd54ad709f4186a138eadc826a871,
+                    &quot;Swamp Angel Study Plot&quot; : geo_json_578934116720145f76cff640b9abc362,
+                    &quot;AVIRIS flight lines&quot; : geo_json_52dab6f7d535b2c0561b2e9e5ff96709,
+                },
+            };
+            L.control.layers(
+                layer_control_510942e7bd5bceafa3684676981e153a.base_layers,
+                layer_control_510942e7bd5bceafa3684676981e153a.overlays,
+                {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
+            ).addTo(map_d966996b1eff939c9a87833c1af0984f);
+
+&lt;/script&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="exploring-a-single-flight-line">
+<h2>Exploring a single flight line<a class="headerlink" href="#exploring-a-single-flight-line" title="Permalink to this headline">¶</a></h2>
+<p>Check our current file location (This is called a <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">magic command</a>)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">pwd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/runner/work/website2022/website2022/book/tutorials/aviris-ng&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Which output we can store in a local variable</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">home_folder</span> <span class="o">=</span> <span class="o">%</span><span class="k">pwd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create absolute paths to our downloaded files</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SBB_data_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">home_folder</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">SBB_data_file</span><span class="si">}</span><span class="s1">&#39;</span>
+<span class="n">SBB_header_file</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">home_folder</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">SBB_header_file</span><span class="si">}</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="spectral-python-library">
+<h3>Spectral Python library<a class="headerlink" href="#spectral-python-library" title="Permalink to this headline">¶</a></h3>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.spectralpython.net/">https://www.spectralpython.net/</a></p></li>
+<li><p><a class="reference external" href="https://github.com/spectralpython/spectral">https://github.com/spectralpython/spectral</a></p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spectral</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a file object for the original image</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">spectral</span><span class="o">.</span><span class="n">open_image</span><span class="p">(</span><span class="n">SBB_header_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get information about the bands</span>
+<span class="n">image</span><span class="o">.</span><span class="n">bands</span><span class="o">.</span><span class="n">centers</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Darn … we have an empty output. This subset was created using the GDAL library. Unfortunately, GDAL does not write the headers in a format that the spectral library recognizes. This is where the original header file comes into play.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">spectral.io.envi</span> <span class="k">as</span> <span class="nn">envi</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>We are giving the original header, but the subset data file.
+It’s a workaround to get to the band information.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span> <span class="o">=</span> <span class="n">envi</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">original_header_file</span><span class="p">,</span> <span class="n">SBB_data_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="find-band-index-for-a-wavelength">
+<h3>Find band index for a wavelength<a class="headerlink" href="#find-band-index-for-a-wavelength" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">bands</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>spectral.spectral.BandInfo
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahhh … much better</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bands</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">header</span><span class="o">.</span><span class="n">bands</span><span class="o">.</span><span class="n">centers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bands</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 377.071821,  382.081821,  387.091821,  392.101821,  397.101821,
+        402.111821,  407.121821,  412.131821,  417.141821,  422.151821,
+        427.161821,  432.171821,  437.171821,  442.181821,  447.191821,
+        452.201821,  457.211821,  462.221821,  467.231821,  472.231821,
+        477.241821,  482.251821,  487.261821,  492.271821,  497.281821,
+        502.291821,  507.301821,  512.301821,  517.311821,  522.321821,
+        527.331821,  532.341821,  537.351821,  542.361821,  547.361821,
+        552.371821,  557.381821,  562.391821,  567.401821,  572.411821,
+        577.421821,  582.431821,  587.431821,  592.441821,  597.451821,
+        602.461821,  607.471821,  612.481821,  617.491821,  622.491821,
+        627.501821,  632.511821,  637.521821,  642.531821,  647.541821,
+        652.551821,  657.561821,  662.561821,  667.571821,  672.581821,
+        677.591821,  682.601821,  687.611821,  692.621821,  697.621821,
+        702.631821,  707.641821,  712.651821,  717.661821,  722.671821,
+        727.681821,  732.691821,  737.691821,  742.701821,  747.711821,
+        752.721821,  757.731821,  762.741821,  767.751821,  772.751821,
+        777.761821,  782.771821,  787.781821,  792.791821,  797.801821,
+        802.811821,  807.821821,  812.821821,  817.831821,  822.841821,
+        827.851821,  832.861821,  837.871821,  842.881821,  847.881821,
+        852.891821,  857.901821,  862.911821,  867.921821,  872.931821,
+        877.941821,  882.951821,  887.951821,  892.961821,  897.971821,
+        902.981821,  907.991821,  913.001821,  918.011821,  923.021821,
+        928.021821,  933.031821,  938.041821,  943.051821,  948.061821,
+        953.071821,  958.081821,  963.081821,  968.091821,  973.101821,
+        978.111821,  983.121821,  988.131821,  993.141821,  998.151821,
+       1003.151821, 1008.161821, 1013.171821, 1018.181821, 1023.191821,
+       1028.201821, 1033.211821, 1038.211821, 1043.221821, 1048.231821,
+       1053.241821, 1058.251821, 1063.261821, 1068.271821, 1073.281821,
+       1078.281821, 1083.291821, 1088.301821, 1093.311821, 1098.321821,
+       1103.331821, 1108.341821, 1113.341821, 1118.351821, 1123.361821,
+       1128.371821, 1133.381821, 1138.391821, 1143.401821, 1148.411821,
+       1153.411821, 1158.421821, 1163.431821, 1168.441821, 1173.451821,
+       1178.461821, 1183.471821, 1188.471821, 1193.481821, 1198.491821,
+       1203.501821, 1208.511821, 1213.521821, 1218.531821, 1223.541821,
+       1228.541821, 1233.551821, 1238.561821, 1243.571821, 1248.581821,
+       1253.591821, 1258.601821, 1263.601821, 1268.611821, 1273.621821,
+       1278.631821, 1283.641821, 1288.651821, 1293.661821, 1298.671821,
+       1303.671821, 1308.681821, 1313.691821, 1318.701821, 1323.711821,
+       1328.721821, 1333.731821, 1338.731821, 1343.741821, 1348.751821,
+       1353.761821, 1358.771821, 1363.781821, 1368.791821, 1373.801821,
+       1378.801821, 1383.811821, 1388.821821, 1393.831821, 1398.841821,
+       1403.851821, 1408.861821, 1413.861821, 1418.871821, 1423.881821,
+       1428.891821, 1433.901821, 1438.911821, 1443.921821, 1448.931821,
+       1453.931821, 1458.941821, 1463.951821, 1468.961821, 1473.971821,
+       1478.981821, 1483.991821, 1488.991821, 1494.001821, 1499.011821,
+       1504.021821, 1509.031821, 1514.041821, 1519.051821, 1524.061821,
+       1529.061821, 1534.071821, 1539.081821, 1544.091821, 1549.101821,
+       1554.111821, 1559.121821, 1564.121821, 1569.131821, 1574.141821,
+       1579.151821, 1584.161821, 1589.171821, 1594.181821, 1599.191821,
+       1604.191821, 1609.201821, 1614.211821, 1619.221821, 1624.231821,
+       1629.241821, 1634.251821, 1639.251821, 1644.261821, 1649.271821,
+       1654.281821, 1659.291821, 1664.301821, 1669.311821, 1674.321821,
+       1679.321821, 1684.331821, 1689.341821, 1694.351821, 1699.361821,
+       1704.371821, 1709.381821, 1714.381821, 1719.391821, 1724.401821,
+       1729.411821, 1734.421821, 1739.431821, 1744.441821, 1749.451821,
+       1754.451821, 1759.461821, 1764.471821, 1769.481821, 1774.491821,
+       1779.501821, 1784.511821, 1789.511821, 1794.521821, 1799.531821,
+       1804.541821, 1809.551821, 1814.561821, 1819.571821, 1824.581821,
+       1829.581821, 1834.591821, 1839.601821, 1844.611821, 1849.621821,
+       1854.631821, 1859.641821, 1864.651821, 1869.651821, 1874.661821,
+       1879.671821, 1884.681821, 1889.691821, 1894.701821, 1899.711821,
+       1904.711821, 1909.721821, 1914.731821, 1919.741821, 1924.751821,
+       1929.761821, 1934.771821, 1939.781821, 1944.781821, 1949.791821,
+       1954.801821, 1959.811821, 1964.821821, 1969.831821, 1974.841821,
+       1979.841821, 1984.851821, 1989.861821, 1994.871821, 1999.881821,
+       2004.891821, 2009.901821, 2014.911821, 2019.911821, 2024.921821,
+       2029.931821, 2034.941821, 2039.951821, 2044.961821, 2049.971821,
+       2054.971821, 2059.981821, 2064.991821, 2070.001821, 2075.011821,
+       2080.021821, 2085.031821, 2090.041821, 2095.041821, 2100.051821,
+       2105.061821, 2110.071821, 2115.081821, 2120.091821, 2125.101821,
+       2130.101821, 2135.111821, 2140.121821, 2145.131821, 2150.141821,
+       2155.151821, 2160.161821, 2165.171821, 2170.171821, 2175.181821,
+       2180.191821, 2185.201821, 2190.211821, 2195.221821, 2200.231821,
+       2205.231821, 2210.241821, 2215.251821, 2220.261821, 2225.271821,
+       2230.281821, 2235.291821, 2240.301821, 2245.301821, 2250.311821,
+       2255.321821, 2260.331821, 2265.341821, 2270.351821, 2275.361821,
+       2280.361821, 2285.371821, 2290.381821, 2295.391821, 2300.401821,
+       2305.411821, 2310.421821, 2315.431821, 2320.431821, 2325.441821,
+       2330.451821, 2335.461821, 2340.471821, 2345.481821, 2350.491821,
+       2355.491821, 2360.501821, 2365.511821, 2370.521821, 2375.531821,
+       2380.541821, 2385.551821, 2390.561821, 2395.561821, 2400.571821,
+       2405.581821, 2410.591821, 2415.601821, 2420.611821, 2425.621821,
+       2430.621821, 2435.631821, 2440.641821, 2445.651821, 2450.661821,
+       2455.671821, 2460.681821, 2465.691821, 2470.691821, 2475.701821,
+       2480.711821, 2485.721821, 2490.731821, 2495.741821, 2500.751821])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="inspect-spatial-metadata">
+<h4>Inspect spatial metadata<a class="headerlink" href="#inspect-spatial-metadata" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">header</span><span class="o">.</span><span class="n">metadata</span><span class="p">[</span><span class="s1">&#39;map info&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;UTM&#39;,
+ &#39;1&#39;,
+ &#39;1&#39;,
+ &#39;261034.240288&#39;,
+ &#39;4202245.79268&#39;,
+ &#39;4.0&#39;,
+ &#39;4.0&#39;,
+ &#39;13&#39;,
+ &#39;North&#39;,
+ &#39;WGS-84&#39;,
+ &#39;units=Meters&#39;,
+ &#39;rotation=-15.0000000&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploring-the-data">
+<h3>Exploring the data<a class="headerlink" href="#exploring-the-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="define-wavelengths-for-the-colors-we-want">
+<h4>Define wavelengths for the colors we want<a class="headerlink" href="#define-wavelengths-for-the-colors-we-want" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">red</span> <span class="o">=</span> <span class="mi">645</span>
+<span class="n">green</span> <span class="o">=</span> <span class="mi">510</span>
+<span class="n">blue</span> <span class="o">=</span> <span class="mi">440</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">bands</span> <span class="o">-</span> <span class="n">red</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>53
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bands</span><span class="p">[</span><span class="mi">54</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>647.541821
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-method-to-get-the-values-for-many-different-wavelengths">
+<h4>Create a method to get the values for many different wavelengths<a class="headerlink" href="#create-a-method-to-get-the-values-for-many-different-wavelengths" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">index_for_band</span><span class="p">(</span><span class="n">band</span><span class="p">):</span>
+    <span class="c1"># Return the index with the minimum difference between the target and available band center</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">bands</span> <span class="o">-</span> <span class="n">band</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_for_band</span><span class="p">(</span><span class="n">green</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_for_band</span><span class="p">(</span><span class="n">blue</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="inspection-plot-for-selected-bands">
+<h3>Inspection plot for selected bands<a class="headerlink" href="#inspection-plot-for-selected-bands" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="c1">#Increase the default figure output resolution</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.dpi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">200</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="subset-of-swamp-angle-study-plot-sasp">
+<h3>Subset of Swamp Angle Study Plot (SASP)<a class="headerlink" href="#subset-of-swamp-angle-study-plot-sasp" title="Permalink to this headline">¶</a></h3>
+<p>Use GDAL warp to subset</p>
+<div class="toggle docutils container">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gdalwarp -co <span class="nv">INTERLEAVE</span><span class="o">=</span>BIL -of ENVI <span class="se">\ </span>                                  <span class="c1"># Preserve the data as ENVI file</span>
+         -te <span class="m">261469</span>.404472 <span class="m">4198850</span>.600453 <span class="m">261811</span>.425717 <span class="m">4199084</span>.295516 <span class="se">\ </span><span class="c1"># The target extent</span>
+         ang20210411t181022_rfl_v2z1a_img                                <span class="c1"># Source file</span>
+         ang20210411t181022_rfl_v2z1a_img_SASP                           <span class="c1"># Destination file</span>
+</pre></div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Going back to the original header file for the spatial extent</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">spectral</span><span class="o">.</span><span class="n">open_image</span><span class="p">(</span><span class="n">SBB_header_file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show some first image information</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>	Data Source:   &#39;/home/runner/work/website2022/website2022/book/tutorials/aviris-ng/data/ang20210411t181022_rfl_v2z1a_img_SASP&#39;
+	# Rows:             58
+	# Samples:          86
+	# Bands:           425
+	Interleave:        BIL
+	Quantization:  32 bits
+	Data format:   float32
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the entire image into memory as an array</span>
+<span class="n">image_data</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="plot-the-image-absed-of-the-prevsiously-determined-band-indices-bgr">
+<h4>Plot the image absed of the prevsiously determined band indices (BGR)<a class="headerlink" href="#plot-the-image-absed-of-the-prevsiously-determined-band-indices-bgr" title="Permalink to this headline">¶</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">view</span> <span class="o">=</span> <span class="n">spectral</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image_data</span><span class="p">,</span> <span class="p">(</span><span class="mi">53</span><span class="p">,</span><span class="mi">27</span><span class="p">,</span><span class="mi">13</span><span class="p">),</span> <span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;RGB of SASP&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/AVIRIS-NG_Tutorial_77_0.png" src="../../_images/AVIRIS-NG_Tutorial_77_0.png" />
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Exercise</p>
+<p>Pick the wavelengths of your choice and plot the Swamp Angle Study plot.</p>
+<p>Which bands did you pick?
+Does the image look as expected?</p>
+<p>Let’s discuss the result with your neighbour.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="introduction-to-spectral-feature-fitting">
+<h2>Introduction to Spectral Feature Fitting<a class="headerlink" href="#introduction-to-spectral-feature-fitting" title="Permalink to this headline">¶</a></h2>
+<p>Using the Spectral Feature Fitting method, we can compare the absorption features within the image spectra to a reference spectra in order to identify the presence of a specific material within a given pixel. Here, we will demonstrate this using the ice absorption feature in a snow-covered pixel found within Swamp Angel Study Plot.</p>
+<div class="section" id="load-more-data">
+<h3>Load more data<a class="headerlink" href="#load-more-data" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">absspec_fname</span> <span class="o">=</span> <span class="s1">&#39;data/h2o_indices.csv&#39;</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span>
+    <span class="s1">&#39;https://raw.githubusercontent.com/snowex-hackweek/tutorial-data/main/SnowEx-2022/AVIRIS-NG/h2o_indices.csv&#39;</span><span class="p">,</span>
+    <span class="n">absspec_fname</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-the-point-of-interest">
+<h3>Load the point of interest<a class="headerlink" href="#load-the-point-of-interest" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">roi</span> <span class="o">=</span> <span class="n">geopandas</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/snowex-hackweek/tutorial-data/main/SnowEx-2022/AVIRIS-NG/roi.geojson&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sasp</span> <span class="o">=</span> <span class="n">swamp_angel</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Swamp Angel Study Plot&#39;</span><span class="p">,</span>
+    <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;Stamen Terrain&quot;</span>
+<span class="p">)</span>
+<span class="n">roi</span><span class="o">.</span><span class="n">explore</span><span class="p">(</span>
+    <span class="n">m</span><span class="o">=</span><span class="n">sasp</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span>
+    
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;head&gt;    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_0c49f18c8869919316fd66e1dab8a091 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            &lt;/style&gt;
+
+
+                    &lt;style&gt;
+                        .foliumtooltip {
+
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+
+
+                    &lt;style&gt;
+                        .foliumtooltip {
+
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+
+&lt;/head&gt;
+&lt;body&gt;    
+
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_0c49f18c8869919316fd66e1dab8a091&quot; &gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;    
+
+            var map_0c49f18c8869919316fd66e1dab8a091 = L.map(
+                &quot;map_0c49f18c8869919316fd66e1dab8a091&quot;,
+                {
+                    center: [37.90703904666933, -107.7112069159729],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_0c49f18c8869919316fd66e1dab8a091);
+
+
+
+
+
+            var tile_layer_6a81af74c242b5aee913536450884010 = L.tileLayer(
+                &quot;https://stamen-tiles-a.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png&quot;,
+                {&quot;attribution&quot;: &quot;Map tiles by \u003ca href=\&quot;http://stamen.com\&quot;\u003eStamen Design\u003c/a\u003e, \u003ca href=\&quot;http://creativecommons.org/licenses/by/3.0\&quot;\u003eCC BY 3.0\u003c/a\u003e \u0026mdash; Map data \u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            ).addTo(map_0c49f18c8869919316fd66e1dab8a091);
+
+
+            map_0c49f18c8869919316fd66e1dab8a091.fitBounds(
+                [[37.905944599161586, -107.71318069991997], [37.90813349417708, -107.70923313202582]],
+                {}
+            );
+
+
+        function geo_json_48a75b9c6276efa334411bd2ba1ec24f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+            }
+        }
+        function geo_json_48a75b9c6276efa334411bd2ba1ec24f_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_48a75b9c6276efa334411bd2ba1ec24f_pointToLayer(feature, latlng) {
+            var opts = {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 2, &quot;stroke&quot;: true, &quot;weight&quot;: 3};
+
+            let style = geo_json_48a75b9c6276efa334411bd2ba1ec24f_styler(feature)
+            Object.assign(opts, style)
+
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_48a75b9c6276efa334411bd2ba1ec24f_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        geo_json_48a75b9c6276efa334411bd2ba1ec24f.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_48a75b9c6276efa334411bd2ba1ec24f_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_48a75b9c6276efa334411bd2ba1ec24f = L.geoJson(null, {
+                onEachFeature: geo_json_48a75b9c6276efa334411bd2ba1ec24f_onEachFeature,
+
+                style: geo_json_48a75b9c6276efa334411bd2ba1ec24f_styler,
+                pointToLayer: geo_json_48a75b9c6276efa334411bd2ba1ec24f_pointToLayer
+        });
+
+        function geo_json_48a75b9c6276efa334411bd2ba1ec24f_add (data) {
+            geo_json_48a75b9c6276efa334411bd2ba1ec24f
+                .addData(data)
+                .addTo(map_0c49f18c8869919316fd66e1dab8a091);
+        }
+            geo_json_48a75b9c6276efa334411bd2ba1ec24f_add({&quot;bbox&quot;: [-107.71318069991997, 37.905944599161586, -107.70923313202582, 37.90813349417708], &quot;features&quot;: [{&quot;bbox&quot;: [-107.71318069991997, 37.905944599161586, -107.70923313202582, 37.90813349417708], &quot;geometry&quot;: {&quot;coordinates&quot;: [[[[-107.70923313202582, 37.90603628434695], [-107.71311930411984, 37.905944599161586], [-107.71318069991997, 37.90804890272556], [-107.70932867250787, 37.90813349417708], [-107.70923313202582, 37.90603628434695]]]], &quot;type&quot;: &quot;MultiPolygon&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;Name&quot;: &quot;Swamp Angel&quot;, &quot;id&quot;: 1}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+
+
+    geo_json_48a75b9c6276efa334411bd2ba1ec24f.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+
+    let handleObject = feature=&gt;typeof(feature)==&#x27;object&#x27; ? JSON.stringify(feature) : feature;
+    let fields = [&quot;id&quot;, &quot;Name&quot;];
+    let aliases = [&quot;id&quot;, &quot;Name&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+
+    return div
+    }
+    ,{&quot;className&quot;: &quot;foliumtooltip&quot;, &quot;sticky&quot;: true});
+
+
+        function geo_json_c2f1d3f6cd5c2896a8321187dce058e7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;color&quot;: &quot;orange&quot;, &quot;fillColor&quot;: &quot;orange&quot;, &quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+            }
+        }
+        function geo_json_c2f1d3f6cd5c2896a8321187dce058e7_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_c2f1d3f6cd5c2896a8321187dce058e7_pointToLayer(feature, latlng) {
+            var opts = {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 2, &quot;stroke&quot;: true, &quot;weight&quot;: 3};
+
+            let style = geo_json_c2f1d3f6cd5c2896a8321187dce058e7_styler(feature)
+            Object.assign(opts, style)
+
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_c2f1d3f6cd5c2896a8321187dce058e7_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        geo_json_c2f1d3f6cd5c2896a8321187dce058e7.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_c2f1d3f6cd5c2896a8321187dce058e7_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_c2f1d3f6cd5c2896a8321187dce058e7 = L.geoJson(null, {
+                onEachFeature: geo_json_c2f1d3f6cd5c2896a8321187dce058e7_onEachFeature,
+
+                style: geo_json_c2f1d3f6cd5c2896a8321187dce058e7_styler,
+                pointToLayer: geo_json_c2f1d3f6cd5c2896a8321187dce058e7_pointToLayer
+        });
+
+        function geo_json_c2f1d3f6cd5c2896a8321187dce058e7_add (data) {
+            geo_json_c2f1d3f6cd5c2896a8321187dce058e7
+                .addData(data)
+                .addTo(map_0c49f18c8869919316fd66e1dab8a091);
+        }
+            geo_json_c2f1d3f6cd5c2896a8321187dce058e7_add({&quot;bbox&quot;: [-107.7106718748472, 37.906970095987695, -107.7106718748472, 37.906970095987695], &quot;features&quot;: [{&quot;bbox&quot;: [-107.7106718748472, 37.906970095987695, -107.7106718748472, 37.906970095987695], &quot;geometry&quot;: {&quot;coordinates&quot;: [-107.7106718748472, 37.906970095987695], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;OBJECTID&quot;: 1, &quot;__folium_color&quot;: &quot;orange&quot;}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+
+
+    geo_json_c2f1d3f6cd5c2896a8321187dce058e7.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+
+    let handleObject = feature=&gt;typeof(feature)==&#x27;object&#x27; ? JSON.stringify(feature) : feature;
+    let fields = [&quot;OBJECTID&quot;];
+    let aliases = [&quot;OBJECTID&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+
+    return div
+    }
+    ,{&quot;className&quot;: &quot;foliumtooltip&quot;, &quot;sticky&quot;: true});
+
+&lt;/script&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
+</div>
+</div>
+<div class="section" id="find-the-coordinates-in-pixel-space">
+<h3>Find the coordinates in pixel space<a class="headerlink" href="#find-the-coordinates-in-pixel-space" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span>
+
+<span class="k">with</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">SBB_data_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">sbb_subset</span><span class="p">:</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sbb_subset</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">roi</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">roi</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">y</span><span class="p">)</span> <span class="c1"># The index methods returns arrays</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>31 54
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="show-the-measured-reflectance-at-this-pixel">
+<h3>Show the measured reflectance at this pixel<a class="headerlink" href="#show-the-measured-reflectance-at-this-pixel" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#plot spectrum for a given pixel</span>
+<span class="n">my_pixel</span> <span class="o">=</span> <span class="n">image_data</span><span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">my_pixel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Wavelength (nm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reflectance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/AVIRIS-NG_Tutorial_88_0.png" src="../../_images/AVIRIS-NG_Tutorial_88_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the file into a numpy array</span>
+<span class="n">absspec_fullres</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="n">absspec_fname</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># Skip the header row</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> 
+<span class="c1"># Extract columns from array</span>
+<span class="n">wvl_nm_fullres</span> <span class="o">=</span> <span class="n">absspec_fullres</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="c1"># extract the wavelength column</span>
+<span class="n">wvl_cm_fullres</span> <span class="o">=</span> <span class="n">wvl_nm_fullres</span> <span class="o">/</span> <span class="mf">1e9</span> <span class="o">*</span> <span class="mf">1e2</span>  <span class="c1"># convert wavelength from nm to cm</span>
+<span class="n">ice_k</span> <span class="o">=</span> <span class="n">absspec_fullres</span><span class="p">[:,</span> <span class="mi">4</span><span class="p">]</span> <span class="c1"># get k for ice</span>
+
+<span class="c1"># Calculate absorption coefficients in cm^-1</span>
+<span class="n">ice_abs_fullres</span> <span class="o">=</span> <span class="n">ice_k</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">4.0</span> <span class="o">/</span> <span class="n">wvl_cm_fullres</span>
+
+<span class="c1"># Plot absorption coefficients</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wvl_nm_fullres</span><span class="p">,</span> <span class="n">ice_abs_fullres</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Wavelength (nm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Absorption Coefficient ($cm^{-1}$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/AVIRIS-NG_Tutorial_90_0.png" src="../../_images/AVIRIS-NG_Tutorial_90_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate e-folding distances in cm</span>
+<span class="n">ice_efld_fullres</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">ice_abs_fullres</span>
+
+<span class="c1"># Plot e-folding distance</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">wvl_nm_fullres</span><span class="p">,</span> <span class="n">ice_efld_fullres</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Wavelength (nm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;e-folding distance (cm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/AVIRIS-NG_Tutorial_91_0.png" src="../../_images/AVIRIS-NG_Tutorial_91_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot reflectance for example pixels of each cover type.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span> <span class="p">(</span><span class="n">bands</span><span class="p">,</span> <span class="n">image_data</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;royalblue&#39;</span><span class="p">)</span> <span class="c1"># A bright iceberg pixel</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Wavelength (nm)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Reflectance&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mi">400</span><span class="p">,</span> <span class="mi">2500</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mi">1028</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.55</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dotted&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/AVIRIS-NG_Tutorial_92_0.png" src="../../_images/AVIRIS-NG_Tutorial_92_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">CubicSpline</span>
+
+<span class="c1"># Create CubicSpline functions that use the original absorption spectra wavelengths and values</span>
+<span class="n">ice_cs</span> <span class="o">=</span> <span class="n">CubicSpline</span><span class="p">(</span><span class="n">wvl_nm_fullres</span><span class="p">,</span> <span class="n">ice_abs_fullres</span><span class="p">)</span>
+
+<span class="c1"># Interpolate to AVIRIS-NG band center wavelengths</span>
+<span class="n">ice_abs_imgres</span> <span class="o">=</span> <span class="n">ice_cs</span><span class="p">(</span><span class="n">bands</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the absorption feature wavelength bounds for both abs features</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="mi">940</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="mi">1095</span>
+
+<span class="n">lower_bound_index</span> <span class="o">=</span> <span class="n">index_for_band</span><span class="p">(</span><span class="n">lower_bound</span><span class="p">)</span>
+<span class="n">upper_bound_index</span> <span class="o">=</span> <span class="n">index_for_band</span><span class="p">(</span><span class="n">upper_bound</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remember: Numpy&#39;s upper bound index is excluded. Hence +1</span>
+<span class="n">bands_in_feature</span> <span class="o">=</span> <span class="n">bands</span><span class="p">[</span><span class="n">lower_bound_index</span><span class="p">:</span><span class="n">upper_bound_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">band_index_in_feature</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">lower_bound_index</span><span class="p">,</span> <span class="n">upper_bound_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an input X value array with wavelengths and ice abs coeffs</span>
+<span class="n">xval_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">bands_in_feature</span><span class="p">,</span> <span class="n">ice_abs_imgres</span><span class="p">[</span><span class="n">band_index_in_feature</span><span class="p">]))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">))</span>
+<span class="n">yval_array</span> <span class="o">=</span> <span class="n">my_pixel</span><span class="p">[</span><span class="n">band_index_in_feature</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xval_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">yval_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 32)
+(32,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import &#39;nnls&#39; and set up your x and y arrays</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">nnls</span>
+<span class="n">x_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">bands_in_feature</span><span class="p">),</span> 
+        <span class="n">bands_in_feature</span><span class="p">,</span>
+        <span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">bands_in_feature</span><span class="p">,</span>
+        <span class="n">ice_abs_imgres</span><span class="p">[</span><span class="n">band_index_in_feature</span><span class="p">]</span>
+    <span class="p">])</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">y_values</span> <span class="o">=</span> <span class="n">my_pixel</span><span class="p">[</span><span class="n">band_index_in_feature</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_values</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(32, 4)
+(32,)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solve for a, b, d_water, and d_ice using nnls</span>
+<span class="n">coeff</span><span class="p">,</span> <span class="n">resid</span> <span class="o">=</span> <span class="n">nnls</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y_values</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">coeff</span><span class="p">)</span>
+
+<span class="c1"># Look at the estimated water thickness</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;estimated ice thickness = </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">coeff</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="mi">3</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[9.49543765e-01 0.00000000e+00 5.78546826e-04 2.16367229e+00]
+estimated ice thickness = 2.164
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate your modeled spectral feature from &#39;fit_water&#39;</span>
+<span class="n">nnls_predicted_berg_abs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x_values</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">coeff</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot both over your measured spectral feature</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bands_in_feature</span><span class="p">,</span> <span class="n">my_pixel</span><span class="p">[</span><span class="n">band_index_in_feature</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;deepskyblue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">bands_in_feature</span><span class="p">,</span> <span class="n">nnls_predicted_berg_abs</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;crimson&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;measured ice spectrum&#39;</span><span class="p">,</span> 
+            <span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">nnls</span><span class="se">\&#39;</span><span class="s1"> modeled ice spectrum&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/AVIRIS-NG_Tutorial_100_0.png" src="../../_images/AVIRIS-NG_Tutorial_100_0.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="wrapping-it-up">
+<h1>Wrapping it up<a class="headerlink" href="#wrapping-it-up" title="Permalink to this headline">¶</a></h1>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/aviris-ng"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">AVIRIS-NG</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../projects/list_of_projects.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">List of Projects</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
