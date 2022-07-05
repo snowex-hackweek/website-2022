@@ -3,6 +3,11 @@
 book/tutorials/aviris-ng/data/*
 !book/tutorials/aviris-ng/data/.gitkeep
 
+# DB tutorial
+book/tutorials/database/*
+!book/tutorials/database/*.ipynb
+!book/tutorials/database/index.md
+
 # Jupyter Book things
 .bash_history
 *_build
