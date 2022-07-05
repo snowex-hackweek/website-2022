@@ -1,12 +1,17 @@
 .DS_Store
 # Tutorial data
+## Aviris
 book/tutorials/aviris-ng/data/*
 !book/tutorials/aviris-ng/data/.gitkeep
 
-# DB tutorial
+## DB
 book/tutorials/database/*
 !book/tutorials/database/*.ipynb
 !book/tutorials/database/index.md
+
+## Lidar
+book/tutorials/lidar/output/
+!book/tutorials/lidar/output/.gitkeep
 
 # Jupyter Book things
 .bash_history
