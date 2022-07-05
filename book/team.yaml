@@ -131,6 +131,85 @@ people:
     user_groups:
       - Program Manager
   # =============
+  - title: Jenny Holcomb
+    avatar: http://escience.washington.edu/wp-content/uploads/2020/04/20200528_110700.jpg
+    role: Hackweek Organizer
+    organizations:
+      - name: eScience Institute
+    bio: Jenny is the eScience Institute's Office Coordinator. 
+      She handles the logistics for eScience internal events and meetings 
+      and the day to day function of the eScience Studio.
+    expertise:
+      - hackweek organization
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Office Coordinator
+  # =============
+  - title: Louisa Gaylord
+    avatar: http://escience.washington.edu/wp-content/uploads/2020/07/L.-Gaylord-sq.jpg
+    role: Communications Specialist
+    organizations:
+      - name: eScience Institute
+    bio: Louisa is the communications specialist at the eScience Institute, where she writes about data science and
+      its applications across a wide range of fields. She also manages weekly direct email campaigns, social media 
+      and website updates, creating websites for eScience groups and other technical writing projects. 
+    expertise:
+      - communications 
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Communications Specialist
+  # =============
+  - title: Janet Kim
+    avatar: http://escience.washington.edu/wp-content/uploads/2020/08/image001.png
+    role: Fiscal Specialist
+    organizations:
+      - name: eScience Institute
+    bio: Janet is the fiscal specialist at the eScience Institute. She is responsible for complex fiscal administrative support for the institute directors, faculty, data scientists, postdocs, and research assistants working with the eScience Institute. 
+    expertise:
+      - hackweek organization 
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Fiscal Specialist
+  # =============
+  - title: Ann Nykamp
+    avatar: http://escience.washington.edu/wp-content/uploads/2019/01/Ann-and-Dubs-2.jpg
+    role: Grants Manager
+    organizations:
+      - name: eScience Institute
+    bio: Ann is the eScience Institute's Grants Manager. Prior to joining eScience in 2018, Ann was a research coordinator and grant specialist for the University of Washington's Child Health Institute, the School of Dentistry, and the Institute for Health Metrics & Evaluation. Her skills include proposal development, financial reporting, fiscal oversight, and interpreting University and sponsor guidelines. 
+    expertise:
+      - hackweek organization and budgeting
+    social:
+      - icon: github
+        icon_pack: fab
+        link: 
+    user_groups:
+      - Grants Manager
+  # =============
+  - title: Shrusti Ghela
+    avatar: https://avatars.githubusercontent.com/u/98440566?v=4
+    role: Administrative Assistant 
+    organizations:
+      - name: eScience Institute
+    bio: Shrusti is working with the eScience Institute as a Text Mining Specialist. She is a graduate student in the UW’s Masters in Data Science program. Shrusti has experience in ML, NLP, Data Mining, and Time Series Analysis. Shrusti earned her B.Tech in Information Technology from Vellore Institute of Technology and between her undergraduate and graduate studies she spent over a year working at VIT as a research assistant on problems in Data Visualization and Dimensionality Reduction. She has broad interests in extracting data, deriving data-driven insights, and turning them into powerful narratives. 
+    expertise:
+      - hackweek organization 
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/shrusti-ghela
+    user_groups:
+      - Hackweek Administration
+  # =============
   - title: Don Setiawan
     avatar: https://avatars.githubusercontent.com/u/17802172?v=4
     role: Research Software Engineer
@@ -203,6 +282,26 @@ people:
         link: https://github.com/jomey
     user_groups:
       - Technology Specialist
+  # =============
+  - title: Evi Ofekeze
+    avatar: https://avatars.githubusercontent.com/u/77086111?v=4
+    role: Graduate Student
+    organizations:
+      - name: Boise State University
+    bio: >
+      Evi is a graduate student with the CryoGARS Research group at Boise State University, 
+      His research focuses on the application of machine learning to predict snow properties from RADAR and LIDAR. 
+    expertise:
+      - Python
+      - Machine Learning
+      - Software Development
+      - SWESSAR
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/eviofekeze
+    user_groups:
+      - Tutorial Lead
   # =============
   - title: Dylan Boyd
     avatar: https://avatars.githubusercontent.com/u/28358098?v=4
@@ -281,6 +380,7 @@ people:
         link: https://github.com/eeholmes
     user_groups:
       - Tutorial Lead
+      - Lead Project Coordinator
   # =============
   - title: Micah Sandusky
     avatar: https://avatars.githubusercontent.com/u/32111103?v=4
@@ -490,4 +590,64 @@ people:
         icon_pack: fab
         link: https://github.com/mlwrzesien
     user_groups:
-      - Tutorial Lead   
+      - Tutorial Lead
+  # =============
+  - title: Xiaolan Xu
+    avatar: https://avatars.githubusercontent.com/u/7988251?v=4
+    role: Tutorial Lead
+    organizations:
+      - name: Jet Propulsion Lab
+      - name: Radar Science
+    bio: >
+      Expertise in the field of applied electromagnetics, electromagnetic wave propagation and scattering properties from snow-covered terrain, 
+      vegetated land surface, and bare soil, forward modeling, and retrieval algorithm development with applications to Earth remote sensing 
+      in space. She currently leads the NASA Earth Science Research project to improve snow water equivalence estimate using radar 
+      tomography technique and serves on the Science Team for NASA Soil Moisture Active and Passive Mission and Ku-band Radar mission 
+      supported by Canadian Space Agency.
+    expertise:
+      - Microwave Remote Sensing
+      - Signals of Opportunity (SoOP)
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/xlxu220
+    user_groups:
+      - Tutorial Lead
+  - title: Nicoleta Cristea
+    avatar: https://avatars.githubusercontent.com/u/16614760?v=4
+    role: Research Scientist
+    organizations:
+      - name: eScience Institute
+    bio: >
+      Nicoleta is a research hydrologist interested in using data science methods in
+      research and educational activities. Current projects focus on studying snowy
+      areas with machine learning and physics based models. She is also working on developing
+      GeoSMART, an educational framework for machine learning adoption in the geosciences.
+    expertise:
+      - hydrology, snow hydrology
+      - remote sensing
+      - geospatial data analysis
+      - Python
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/NCristea
+    user_groups:
+      - eScience Hackweek Team
+  # =============
+  - title: Ibrahim Olalekan Alabi
+    avatar: https://avatars.githubusercontent.com/u/72909059?v=4
+    role: Graduate Student
+    organizations:
+      - name: Boise State University
+    bio: Ibrahim Alabi is a second-year PhD student in the Computing PhD program (Data Science Emphasis) at Boise State University. His doctoral research revolves around the use of Machine Learning to improve snow products. Specifically, his research is focused on using Machine Learning approaches to predict the amount of water stored in the seasonal snowpack.
+    expertise:
+      - Machine Learning
+      - Python
+      - snow science
+    social:
+      - icon: github
+        icon_pack: fab
+        link: https://github.com/Ibrahim-Ola
+    user_groups:
+      - Tutorial Lead

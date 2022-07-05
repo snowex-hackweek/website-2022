@@ -1,4 +1,7 @@
 .DS_Store
+# Tutorial data
+book/tutorials/aviris-ng/data/*
+!book/tutorials/aviris-ng/data/.gitkeep
 
 # Jupyter Book things
 .bash_history
