@@ -1,5 +1,10 @@
 .DS_Store
 
+# DB tutorial
+book/tutorials/database/*
+!book/tutorials/database/*.ipynb
+!book/tutorials/database/index.md
+
 # Jupyter Book things
 .bash_history
 *_build
