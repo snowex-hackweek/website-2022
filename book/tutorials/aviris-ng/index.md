@@ -1,1 +1,4 @@
 # AVIRIS-NG
+
+```{tableofcontents}
+```
