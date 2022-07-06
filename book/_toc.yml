@@ -46,6 +46,17 @@ parts:
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
+        - file: tutorials/OOP/index
+          title: Object Oriented Programming
+          sections:
+            - file: tutorials/OOP/OOP_tutorial
+            - file: tutorials/OOP/alien
+        - file: tutorials/lidar/index
+          title: Lidar Remote Sensing of Snow
+          sections:
+            - file: tutorials/lidar/1_introduction_to_lidar
+            - file: tutorials/lidar/2_elevation_differencing
+            - file: tutorials/lidar/3_common_pitfalls
         - file: tutorials/uavsar/index
           title: Uavsar
           sections:
@@ -60,8 +71,12 @@ parts:
             - file: tutorials/core-datasets/03_database_preview
         - file: tutorials/nsidc-data-access/index
           title: Accessing SnowEx Data at the NSIDC DAAC
-          sections: 
+          sections:
             - file: tutorials/nsidc-data-access/nsidc-data-access
+        - file: tutorials/aviris-ng/index
+          title: AVIRIS-NG
+          sections:
+            - file: tutorials/aviris-ng/AVIRIS-NG_Tutorial
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
