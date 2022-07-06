@@ -51,6 +51,11 @@ parts:
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
+        - file: tutorials/OOP/index
+          title: Object Oriented Programming
+          sections:
+            - file: tutorials/OOP/OOP_tutorial
+            - file: tutorials/OOP/alien
         - file: tutorials/lidar/index
           title: Lidar Remote Sensing of Snow
           sections:
@@ -73,6 +78,11 @@ parts:
           title: Accessing SnowEx Data at the NSIDC DAAC
           sections:
             - file: tutorials/nsidc-data-access/nsidc-data-access
+        - file: tutorials/microwave/index
+          title: Microwave Tutorials
+          sections:
+            - file: tutorials/microwave/swesarr/swesarr_tut
+              title: SWESARR
         - file: tutorials/aviris-ng/index
           title: AVIRIS-NG
           sections:

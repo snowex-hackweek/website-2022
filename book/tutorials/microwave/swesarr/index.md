@@ -1,4 +1,4 @@
-# AVIRIS-NG
+# SWESARR Tutorial
 
 ```{tableofcontents}
 ```
