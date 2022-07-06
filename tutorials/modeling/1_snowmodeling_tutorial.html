@@ -1,0 +1,2073 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snow Modeling &#8212; SnowEx Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Interactive Data Exploration" href="2_snowmodeling_extra.html" />
+    <link rel="prev" title="Snow Modeling" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SnowEx Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to SnowEx Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../logistics.html">
+   Event Logistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
+     Supplemental Material
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
+       Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
+     Example tutorial notebook
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
+     Git, GitHub, and JupyterLab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
+       Basic Git/GitHub Skills Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyterlab-git
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
+       GitHub, Git, JupyterHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     Snow Modeling
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Snow Modeling
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="2_snowmodeling_extra.html">
+       Interactive Data Exploration
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../database/index.html">
+     Introduction to the SnowEx Database
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/1_getting_started_example.html">
+       Introduction to the SnowEx Database
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/2_database_structure.html">
+       How is the Database Structured?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/3_forming_queries.html">
+       Forming Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/4_get_spiral_example.html">
+       Forming Queries: Example Visualizng Depths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/5_plot_raster_example.html">
+       Forming Queries: PostGIS Functions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/6_exporting_data.html">
+       Exporting Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/7_wrap_up.html">
+       Wrap up
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../OOP/index.html">
+     Object Oriented Programming
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OOP/OOP_tutorial.html">
+       Object Oriented Programming
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OOP/alien.html">
+       Try it yourself!
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../lidar/index.html">
+     Lidar Remote Sensing of Snow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../lidar/1_introduction_to_lidar.html">
+       Introduction to Lidar Remote Sensing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../lidar/2_elevation_differencing.html">
+       Elevation Differencing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../lidar/3_common_pitfalls.html">
+       Common Pitfall in Elevation differencing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../uavsar/index.html">
+     Uavsar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/1_accessing_imagery.html">
+       UAVSAR
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/2_types_of_uavsar_images.html">
+       Uavsar Data Products
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/3_interferometric_swe_inversion.html">
+       Why would I use Uavsar for snow?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../core-datasets/index.html">
+     SnowEx Mission and Dataset Descriptions
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/01_data_coverage.html">
+       SnowEx Field Campaigns Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/02_data_descriptions.html">
+       Ground-Based Measurements and Data Descriptions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/03_database_preview.html">
+       SnowEx Database Preview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../nsidc-data-access/index.html">
+     Accessing SnowEx Data at the NSIDC DAAC
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../nsidc-data-access/nsidc-data-access.html">
+       Accessing SnowEx Data at the NSIDC DAAC
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../microwave/index.html">
+     Microwave Tutorials
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../microwave/swesarr/swesarr_tut.html">
+       SWESARR
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../aviris-ng/index.html">
+     AVIRIS-NG
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../aviris-ng/AVIRIS-NG_Tutorial.html">
+       Introduction to AVIRIS-NG
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/list_of_projects.html">
+   List of Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/social.html">
+   Things to do in Seattle
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/modeling/1_snowmodeling_tutorial.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/snowex-hackweek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/modeling/1_snowmodeling_tutorial.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/modeling/1_snowmodeling_tutorial.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/snowex-hackweek/website2022/main?urlpath=lab/tree/book/tutorials/modeling/1_snowmodeling_tutorial.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Snow Modeling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-lis">
+     What is LIS?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-modeled-output">
+     Working with Modeled Output
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-libraries">
+     Import Libraries
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-lis-snowmodel-output">
+     Load the LIS-SnowModel Output
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explore-the-data">
+     Explore the Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accessing-attributes">
+       Accessing Attributes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accessing-variables">
+       Accessing Variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dimensions-and-coordinate-variables">
+       Dimensions and Coordinate Variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subsetting-in-space-or-time">
+       Subsetting in Space or Time
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#latitude-and-longitude">
+         Latitude and Longitude
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#basic-spatial-subsetting">
+         Basic Spatial Subsetting
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#subset-across-multiple-dimensions">
+         Subset Across Multiple Dimensions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plotting">
+       Plotting
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#timeseries-plots">
+         Timeseries Plots
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregation">
+     Aggregation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#area-average">
+       Area Average
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparing-model-output">
+     Comparing Model Output
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lis-snowmodel-raster-vs-snodas-raster">
+       LIS-SnowModel (raster) vs. SNODAS (raster)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lis-snowmodel-raster-vs-snodas-raster-vs-snotel-point">
+       LIS-SnowModel (raster) vs. SNODAS (raster) vs. SNOTEL (point)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-data-exploration">
+   Interactive Data Exploration
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-data">
+     Load Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snotel-sites-info">
+       SNOTEL Sites info
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snotel-depth-swe">
+       SNOTEL Depth &amp; SWE
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snodas-swe">
+       SNODAS SWE
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lis-snowmodel-outputs">
+       LIS-SnowModel Outputs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interactive-widget">
+     Interactive Widget
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snotel-site-map-and-timeseries">
+       SNOTEL Site Map and Timeseries
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     Exercise 2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-for-an-extra-challenge">
+     Exercise 3 (for an extra challenge!)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resources">
+     Resources
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Snow Modeling</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Snow Modeling
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-lis">
+     What is LIS?
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#working-with-modeled-output">
+     Working with Modeled Output
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-libraries">
+     Import Libraries
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-the-lis-snowmodel-output">
+     Load the LIS-SnowModel Output
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explore-the-data">
+     Explore the Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accessing-attributes">
+       Accessing Attributes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accessing-variables">
+       Accessing Variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#dimensions-and-coordinate-variables">
+       Dimensions and Coordinate Variables
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#subsetting-in-space-or-time">
+       Subsetting in Space or Time
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#latitude-and-longitude">
+         Latitude and Longitude
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#basic-spatial-subsetting">
+         Basic Spatial Subsetting
+        </a>
+       </li>
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#subset-across-multiple-dimensions">
+         Subset Across Multiple Dimensions
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plotting">
+       Plotting
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h4 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#timeseries-plots">
+         Timeseries Plots
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#aggregation">
+     Aggregation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#area-average">
+       Area Average
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparing-model-output">
+     Comparing Model Output
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lis-snowmodel-raster-vs-snodas-raster">
+       LIS-SnowModel (raster) vs. SNODAS (raster)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lis-snowmodel-raster-vs-snodas-raster-vs-snotel-point">
+       LIS-SnowModel (raster) vs. SNODAS (raster) vs. SNOTEL (point)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-data-exploration">
+   Interactive Data Exploration
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#load-data">
+     Load Data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snotel-sites-info">
+       SNOTEL Sites info
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snotel-depth-swe">
+       SNOTEL Depth &amp; SWE
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snodas-swe">
+       SNODAS SWE
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lis-snowmodel-outputs">
+       LIS-SnowModel Outputs
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interactive-widget">
+     Interactive Widget
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snotel-site-map-and-timeseries">
+       SNOTEL Site Map and Timeseries
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercises">
+   Exercises
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     Exercise 2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3-for-an-extra-challenge">
+     Exercise 3 (for an extra challenge!)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resources">
+     Resources
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="snow-modeling">
+<h1>Snow Modeling<a class="headerlink" href="#snow-modeling" title="Permalink to this headline">¶</a></h1>
+<p><strong>Contributors:</strong> <em>Melissa Wrzesien<sup>1,2</sup>, Brendan McAndrew<sup>1,3</sup>, Jian Li<sup>4,5</sup>, Caleb Spradlin<sup>4,6</sup></em></p>
+<p><em><sup>1</sup> Hydrological Sciences Lab, NASA Goddard Space Flight Center, <sup>2</sup> University of Maryland, <sup>3</sup> Science Systems and Applications, Inc., <sup>4</sup> InuTeq, LLC, <sup>5</sup> Computational and Information Sciences and Technology Office (CISTO), NASA Goddard Space Flight Center, <sup>6</sup> High Performance Computing, NASA Goddard Space Flight Center</em></p>
+<div class="admonition-learning-objectives admonition">
+<p class="admonition-title">Learning Objectives</p>
+<ul class="simple">
+<li><p>Learn about the role of modeling in a satellite mission</p></li>
+<li><p>Open, explore, and visualize gridded model output</p></li>
+<li><p>Compare model output to raster- and point-based observation datasets</p></li>
+</ul>
+</div>
+<p>The goal of a future snow satellite is to provide improved understanding of global snow mass, as compared to current estimates. However, <em>a single sensor likely won’t be able to accurately observe all types of snow in all conditions for the entire globe</em>. Instead, we need to combine future snow observations with other tools - including currently available satellite data and modeling.</p>
+<p>Models can also help to extend snow observations to areas where observations are not available. Data may be missing due to orbit gaps or masked out in regions of higher uncertainty. Remote sensing observations and models can be combined through <strong>data assimilation</strong>, a process where observations are used to constrain model estimates.</p>
+<center>
+    <img src="./images/DAflowchart_v4.png" style="width: 50%; border-radius:10px">
+</center>
+<p>The figure above shows a conceptual example of how satellite observations with orbit gaps could be combined with a model to produce results with no missing data.</p>
+<div class="section" id="what-is-lis">
+<h2>What is LIS?<a class="headerlink" href="#what-is-lis" title="Permalink to this headline">¶</a></h2>
+<p>Since models will likely play a role in processing observations from a snow satellite mission, it is important to become comfortable working with gridded data products. Today we will use sample model output from <strong>NASA’s Land Information System (LIS)</strong>.</p>
+<blockquote>
+<div><p>The Land Information System is a software framework for land surface modeling and data assimilation developed with the goal of integrating satellite and ground-based observational data products with advanced modeling techniques to produce estimates of land surface states and fluxes.</p>
+</div></blockquote>
+<p><strong>TL;DR</strong> LIS = land surface models + data assimilation</p>
+<center>
+    <img src="./images/LIS_schematic.png" style="width: 75%; border-radius:10px">
+</center>
+<p>One key feature LIS provides is flexibility to meet user needs. LIS consists of a collection of plug-ins, or modules, that allow users to design simulations with their choice of land surface model, meteorological forcing, data assimilation, hydrological routing, land surface parameters, and more. The plug-in based design also provides extensibility, making it easier to add new functionality to the LIS framework.</p>
+<p>Current efforts to expand support for snow modeling include implementation of snow modules, such as <a class="reference external" href="https://doi.org/10.1175/JHM548.1">SnowModel</a> and <a class="reference external" href="http://www.umr-cnrm.fr/spip.php?article265&amp;lang=en">Crocus</a>, into the LIS framework. These models, when run at the scale of ~100 meters, will enable simulation of wind redistribution, snow grain size, and other important processes for more accurate snow modeling.</p>
+<p>Development of LIS is led by the <a class="reference external" href="https://earth.gsfc.nasa.gov/hydro">Hydrological Sciences Laboratory</a> at <a class="reference external" href="https://www.nasa.gov/goddard">NASA’s Goddard Space Flight Center</a>.</p>
+</div>
+<div class="section" id="working-with-modeled-output">
+<h2>Working with Modeled Output<a class="headerlink" href="#working-with-modeled-output" title="Permalink to this headline">¶</a></h2>
+<p>Here we will use sample model output from a <strong>LIS-SnowModel</strong> simulation over a <strong>western Colorado domain</strong>. Daily estimates of <strong>SWE, snow depth, and snow density</strong> are written to output. The SnowModel simulation has a <strong>spatial resolution of 100 m</strong>. We’ve provided four years of output, though here we’ll mostly use output from water year 2020.</p>
+<p>Below, we’ll walk through how to open and interact with the LIS-SnowModel output. Our main objectives are to demonstrate how to do the following with a gridded dataset like LIS-SnowModel:</p>
+<ul class="simple">
+<li><p>Understand attributes of model data file and variables available within</p></li>
+<li><p>Create a spatial map of model output</p></li>
+<li><p>Create time series at a point and averaged across domain</p></li>
+<li><p>Compare LIS-SnowModel to raster and point data</p></li>
+<li><p>Create a visualization for quick evaluation of model estimates</p></li>
+</ul>
+</div>
+<div class="section" id="import-libraries">
+<h2>Import Libraries<a class="headerlink" href="#import-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># interface to Amazon S3 filesystem</span>
+<span class="kn">import</span> <span class="nn">s3fs</span>
+
+<span class="c1"># interact with n-d arrays</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+
+<span class="c1"># interact with tabular data (incl. spatial)</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+
+<span class="c1"># interactive plots</span>
+<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span>
+<span class="kn">import</span> <span class="nn">geoviews</span> <span class="k">as</span> <span class="nn">gv</span>
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span>
+<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
+<span class="c1"># set bokeh as the holoviews plotting backend</span>
+<span class="n">hv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+<span class="c1"># set holoviews backend to Bokeh</span>
+<span class="n">gv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+
+<span class="c1"># used to find nearest grid cell to a given location</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">distance</span>
+
+<span class="kn">import</span> <span class="nn">fsspec</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+
+<span class="kn">from</span> <span class="nn">geoviews</span> <span class="kn">import</span> <span class="n">opts</span>
+<span class="kn">from</span> <span class="nn">geoviews</span> <span class="kn">import</span> <span class="n">tile_sources</span> <span class="k">as</span> <span class="n">gvts</span>
+<span class="kn">from</span> <span class="nn">datashader.colors</span> <span class="kn">import</span> <span class="n">viridis</span>
+<span class="kn">import</span> <span class="nn">datashader</span>
+<span class="kn">from</span> <span class="nn">holoviews.operation.datashader</span> <span class="kn">import</span> <span class="n">datashade</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">dynspread</span><span class="p">,</span> <span class="n">spread</span><span class="p">,</span> <span class="n">rasterize</span>
+<span class="kn">from</span> <span class="nn">holoviews.streams</span> <span class="kn">import</span> <span class="n">Selection1D</span><span class="p">,</span> <span class="n">Params</span>
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="kn">import</span> <span class="nn">param</span> <span class="k">as</span> <span class="nn">pm</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">holoviews.operation.datashader</span> <span class="k">as</span> <span class="nn">hd</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+
+<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">()</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">ParamMethod</span><span class="o">.</span><span class="n">loading_indicator</span> <span class="o">=</span><span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-the-lis-snowmodel-output">
+<h2>Load the LIS-SnowModel Output<a class="headerlink" href="#load-the-lis-snowmodel-output" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">xarray</span></code> library makes working with labelled n-dimensional arrays easy and efficient. If you’re familiar with the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library it should feel pretty familiar.</p>
+<p>Here we load the LIS-SnowModel output into an <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create S3 filesystem object</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># define the name of our S3 bucket</span>
+<span class="n">bucket_name</span> <span class="o">=</span> <span class="s1">&#39;eis-dh-hydro/SNOWEX-HACKWEEK&#39;</span>
+
+<span class="c1"># define path to store on S3</span>
+<span class="n">lis_output_s3_path_time_chunk</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;s3://</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s1">/2022/ZARR/SURFACEMODEL/LIS_HIST_rechunkedV4.d01.zarr&#39;</span>
+<span class="n">lis_output_s3_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;s3://</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s1">/2022/ZARR/SURFACEMODEL/LIS_HIST_default_chunks.d01.zarr/&#39;</span>
+
+<span class="c1"># create key-value mapper for S3 object (required to read data stored on S3)</span>
+<span class="n">lis_output_mapper</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">lis_output_s3_path</span><span class="p">)</span>
+<span class="n">lis_output_mapper_tc</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="n">lis_output_s3_path_time_chunk</span><span class="p">)</span>
+
+<span class="c1"># open the dataset</span>
+<span class="n">lis_output_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">lis_output_mapper</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">lis_output_ds_tc</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">lis_output_mapper_tc</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="explore-the-data">
+<h2>Explore the Data<a class="headerlink" href="#explore-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Display an interactive widget for inspecting the dataset by running a cell containing the variable name. Expand the dropdown menus and click on the document and database icons to inspect the variables and attributes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lis_output_ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-attributes">
+<h3>Accessing Attributes<a class="headerlink" href="#accessing-attributes" title="Permalink to this headline">¶</a></h3>
+<p>Dataset attributes (metadata) are accessible via the <code class="docutils literal notranslate"><span class="pre">attrs</span></code> attribute:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lis_output_ds</span><span class="o">.</span><span class="n">attrs</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="accessing-variables">
+<h3>Accessing Variables<a class="headerlink" href="#accessing-variables" title="Permalink to this headline">¶</a></h3>
+<p>Variables can be accessed using either <strong>dot notation</strong> or <strong>square bracket notation</strong>. Here we will stick with square bracket notation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># square bracket notation</span>
+<span class="n">lis_output_ds</span><span class="p">[</span><span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-watch-out-for-large-datasets admonition">
+<p class="admonition-title">Watch out for large datasets!</p>
+<p>Note that the 4-ish years of model output (1694 daily time steps for a domain of size 6650 x 4800) has a size of over <strong>200 gb</strong>! As we’ll see below, this is just for an area over western Colorado. If we’re interested in modeling the western United States or CONUS or even global at high resolution, we need to be prepared to work with some large datasets.</p>
+</div>
+</div>
+<div class="section" id="dimensions-and-coordinate-variables">
+<h3>Dimensions and Coordinate Variables<a class="headerlink" href="#dimensions-and-coordinate-variables" title="Permalink to this headline">¶</a></h3>
+<p>The dimensions and coordinate variable fields put the “<em>labelled</em>” in “labelled n-dimensional arrays”:</p>
+<ul class="simple">
+<li><p><strong>Dimensions:</strong> labels for each dimension in the dataset (e.g., <code class="docutils literal notranslate"><span class="pre">time</span></code>)</p></li>
+<li><p><strong>Coordinates:</strong> labels for indexing along dimensions (e.g., <code class="docutils literal notranslate"><span class="pre">'2020-01-01'</span></code>)</p></li>
+</ul>
+<p>We can use these labels to select, slice, and aggregate the dataset.</p>
+</div>
+<div class="section" id="subsetting-in-space-or-time">
+<h3>Subsetting in Space or Time<a class="headerlink" href="#subsetting-in-space-or-time" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">xarray</span></code> provides two methods for selecting or subsetting along coordinate variables:</p>
+<ul class="simple">
+<li><p>index selection: <code class="docutils literal notranslate"><span class="pre">ds.isel(time=0)</span></code></p></li>
+<li><p>value selection <code class="docutils literal notranslate"><span class="pre">ds.sel(time='2020-01-01')</span></code></p></li>
+</ul>
+<p>For example, we can use value selection to select based on the the coorindates of a given dimension:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lis_output_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">.sel()</span></code> approach also allows the use of shortcuts in some cases. For example, here we select all timesteps in the month of January 2020. Note that length of the time dimension is now only 31.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lis_output_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2020-01&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="latitude-and-longitude">
+<h4>Latitude and Longitude<a class="headerlink" href="#latitude-and-longitude" title="Permalink to this headline">¶</a></h4>
+<p>You may have noticed that latitude (<code class="docutils literal notranslate"><span class="pre">lat</span></code>) and longitude (<code class="docutils literal notranslate"><span class="pre">lon</span></code>) are not listed as dimensions. This dataset would be easier to work with if <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> were coordinate variables and dimensions. Here we define a helper function that reads the spatial information from the dataset attributes, generates arrays containing the <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> values, and appends them to the dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_latlon_coords</span><span class="p">(</span><span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Adds lat/lon as dimensions and coordinates to an xarray.Dataset object.&quot;&quot;&quot;</span>
+    
+    <span class="c1"># get attributes from dataset</span>
+    <span class="n">attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">attrs</span>
+    
+    <span class="c1"># get x, y resolutions</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="mf">.001</span> <span class="c1">#round(float(attrs[&#39;DX&#39;]), 3)</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="mf">.001</span> <span class="c1">#round(float(attrs[&#39;DY&#39;]), 3)</span>
+       
+    <span class="c1"># get grid cells in x, y dimensions</span>
+    <span class="n">ew_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;east_west&#39;</span><span class="p">])</span>
+    <span class="n">ns_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;north_south&#39;</span><span class="p">])</span>
+    
+    <span class="c1"># get lower-left lat and lon</span>
+    <span class="n">ll_lat</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;SOUTH_WEST_CORNER_LAT&#39;</span><span class="p">]),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">ll_lon</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;SOUTH_WEST_CORNER_LON&#39;</span><span class="p">]),</span> <span class="mi">3</span><span class="p">)</span>
+    
+    <span class="c1"># calculate upper-right lat and lon</span>
+    <span class="n">ur_lat</span> <span class="o">=</span>  <span class="mf">41.5122</span> <span class="c1">#ll_lat + (dy * ns_len)</span>
+    <span class="n">ur_lon</span> <span class="o">=</span> <span class="o">-</span><span class="mf">103.9831</span> <span class="c1">#ll_lon + (dx * ew_len)</span>
+    
+    <span class="c1"># define the new coordinates</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># create an arrays containing the lat/lon at each gridcell</span>
+        <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ll_lat</span><span class="p">,</span> <span class="n">ur_lat</span><span class="p">,</span> <span class="n">ns_len</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ll_lon</span><span class="p">,</span> <span class="n">ur_lon</span><span class="p">,</span> <span class="n">ew_len</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="n">lon_attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span>
+    <span class="n">lat_attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span>
+    
+    <span class="c1"># rename the original lat and lon variables</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;lon&#39;</span><span class="p">:</span><span class="s1">&#39;orig_lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="s1">&#39;orig_lat&#39;</span><span class="p">})</span>
+    <span class="c1"># rename the grid dimensions to lat and lon</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;north_south&#39;</span><span class="p">:</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;east_west&#39;</span><span class="p">:</span> <span class="s1">&#39;lon&#39;</span><span class="p">})</span>
+    <span class="c1"># assign the coords above as coordinates</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+    <span class="n">dataset</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">lon_attrs</span>
+    <span class="n">dataset</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">lat_attrs</span>
+    
+    
+    <span class="k">return</span> <span class="n">dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that the function is defined, let’s use it to append <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> coordinates to the LIS output:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lis_output_ds</span> <span class="o">=</span> <span class="n">add_latlon_coords</span><span class="p">(</span><span class="n">lis_output_ds</span><span class="p">)</span>
+<span class="n">lis_output_ds_tc</span> <span class="o">=</span> <span class="n">add_latlon_coords</span><span class="p">(</span><span class="n">lis_output_ds_tc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Inspect the dataset:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lis_output_ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> are listed as coordinate variables and have replaced the <code class="docutils literal notranslate"><span class="pre">north_south</span></code> and <code class="docutils literal notranslate"><span class="pre">east_west</span></code> dimensions. This will make it easier to spatially subset the dataset!</p>
+</div>
+<div class="section" id="basic-spatial-subsetting">
+<h4>Basic Spatial Subsetting<a class="headerlink" href="#basic-spatial-subsetting" title="Permalink to this headline">¶</a></h4>
+<p>We can use the <code class="docutils literal notranslate"><span class="pre">slice()</span></code> function on the <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimensions to select data between a range of latitudes and longitudes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># uncomment line below to work with the full domain -&gt; this will be much slower!</span>
+<span class="c1">#lis_output_ds.sel(lat=slice(35.5, 41), lon=slice(-109, -104))</span>
+
+<span class="c1"># just Grand Mesa -&gt; smaller domain for faster run times</span>
+<span class="c1"># note the smaller lat/lon extents in the dimensions</span>
+<span class="n">lis_output_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mf">38.6</span><span class="p">,</span> <span class="mf">39.4</span><span class="p">),</span> <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mf">108.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">107.1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice how the sizes of the <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> dimensions have decreased.</p>
+</div>
+<div class="section" id="subset-across-multiple-dimensions">
+<h4>Subset Across Multiple Dimensions<a class="headerlink" href="#subset-across-multiple-dimensions" title="Permalink to this headline">¶</a></h4>
+<p>Now we will combine the above examples for subsetting both spatially and temporally:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a range of dates to select</span>
+<span class="n">wy_2020_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2019-10-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-09-30&#39;</span><span class="p">)</span>
+
+<span class="c1"># define lat/lon for Grand Mesa area</span>
+<span class="n">lat_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mf">38.6</span><span class="p">,</span> <span class="mf">39.4</span><span class="p">)</span>
+<span class="n">lon_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mf">108.6</span><span class="p">,</span> <span class="o">-</span><span class="mf">107.1</span><span class="p">)</span>
+
+<span class="c1"># select the snow depth and subset to wy_2020_slice</span>
+<span class="n">snd_GM_wy2020_ds</span> <span class="o">=</span> <span class="n">lis_output_ds</span><span class="p">[</span><span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">wy_2020_slice</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="n">lat_slice</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="n">lon_slice</span><span class="p">)</span>
+<span class="n">snd_GM_wy2020_ds_tc</span> <span class="o">=</span> <span class="n">lis_output_ds_tc</span><span class="p">[</span><span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">wy_2020_slice</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="n">lat_slice</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="n">lon_slice</span><span class="p">)</span>
+
+<span class="c1"># inspect resulting dataset</span>
+<span class="n">snd_GM_wy2020_ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-subset-for-more-manageable-sizes admonition">
+<p class="admonition-title">Subset for more manageable sizes!</p>
+<p>We’ve now subsetted both spatially (down to just Grand Mesa domain) and temporally (water year 2020). Note the smaller size of the data array -&gt; <strong>a decrease from over 200 gb to 1.7 gb</strong>! This smaller dataset will be much easier to work with, but feel free to try some of the commands with the full dataset, just give it a few minutes to process!</p>
+</div>
+</div>
+</div>
+<div class="section" id="plotting">
+<h3>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h3>
+<p>We’ve imported two plotting libraries:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>: static plots</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hvplot</span></code>: interactive plots</p></li>
+</ul>
+<p>We can make a quick <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>-based plot for the subsetted data using the <code class="docutils literal notranslate"><span class="pre">.plot()</span></code> function supplied by <code class="docutils literal notranslate"><span class="pre">xarray.Dataset</span></code> objects. For this example, we’ll select one day and plot it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># simple matplotlilb plot</span>
+<span class="n">snd_GM_wy2020_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Similarly we can make an interactive plot using the <code class="docutils literal notranslate"><span class="pre">hvplot</span></code> accessor and specifying a <code class="docutils literal notranslate"><span class="pre">quadmesh</span></code> plot type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hvplot based map</span>
+<span class="n">snd_GM_20200101_plot</span> <span class="o">=</span> <span class="n">snd_GM_wy2020_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                                                                               <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+                                                                               <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;EsriImagery&#39;</span><span class="p">)</span>
+
+<span class="n">snd_GM_20200101_plot</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pan, zoom, and scroll around the map. Hover over the LIS-SnowModel data to see the data values.</p>
+<p>If we try to plot more than one time-step <code class="docutils literal notranslate"><span class="pre">hvplot</span></code> will also provide a time-slider we can use to scrub back and forth in time:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">snd_GM_wy2020_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2020-01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                             <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+                             <span class="n">tiles</span><span class="o">=</span><span class="s1">&#39;EsriImagery&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>From here on out we will stick with <code class="docutils literal notranslate"><span class="pre">hvplot</span></code> for plotting.</p>
+<div class="section" id="timeseries-plots">
+<h4>Timeseries Plots<a class="headerlink" href="#timeseries-plots" title="Permalink to this headline">¶</a></h4>
+<p>We can generate a timeseries for a given grid cell by selecting and calling the plot function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define point to take timeseries (note: must be present in coordinates of dataset)</span>
+<span class="n">ts_lon</span><span class="p">,</span> <span class="n">ts_lat</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mf">107.8702</span><span class="p">,</span> <span class="mf">39.0504</span><span class="p">)</span>
+
+<span class="c1"># plot timeseries</span>
+<span class="n">snd_GM_wy2020_ds_tc</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="n">ts_lat</span><span class="p">,</span> <span class="n">lon</span><span class="o">=</span><span class="n">ts_lon</span><span class="p">)</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Snow Depth Timeseries @ Lon: </span><span class="si">{</span><span class="n">ts_lon</span><span class="si">}</span><span class="s1">, Lat: </span><span class="si">{</span><span class="n">ts_lat</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                                                   <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Snow Depth (m)&#39;</span><span class="p">)</span> <span class="o">+</span> \
+    <span class="n">snd_GM_20200101_plot</span> <span class="o">*</span> <span class="n">gv</span><span class="o">.</span><span class="n">Points</span><span class="p">([(</span><span class="n">ts_lon</span><span class="p">,</span> <span class="n">ts_lat</span><span class="p">)])</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the next section we’ll learn how to create a timeseries over a broader area.</p>
+</div>
+</div>
+</div>
+<div class="section" id="aggregation">
+<h2>Aggregation<a class="headerlink" href="#aggregation" title="Permalink to this headline">¶</a></h2>
+<p>We can perform aggregation operations on the dataset such as <code class="docutils literal notranslate"><span class="pre">min()</span></code>, <code class="docutils literal notranslate"><span class="pre">max()</span></code>, <code class="docutils literal notranslate"><span class="pre">mean()</span></code>, and <code class="docutils literal notranslate"><span class="pre">sum()</span></code> by specifying the dimensions along which to perform the calculation.</p>
+<p>For example we can calculate the daily mean snow depth for the region around Grand Mesa for water year 2020:</p>
+<div class="section" id="area-average">
+<h3>Area Average<a class="headerlink" href="#area-average" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># take area-averaged mean at each timestep</span>
+<span class="n">mean_snd_GM_wy2020_ds</span> <span class="o">=</span> <span class="n">snd_GM_wy2020_ds_tc</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">])</span>
+
+<span class="c1"># inspect the dataset</span>
+<span class="n">mean_snd_GM_wy2020_ds</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot timeseries (hvplot knows how to plot based on dataset&#39;s dimensionality!)</span>
+<span class="n">mean_snd_GM_wy2020_ds</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Mean LIS-SnowModel Snow Depth for Grand Mesa area&#39;</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Snow Depth (m)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="comparing-model-output">
+<h2>Comparing Model Output<a class="headerlink" href="#comparing-model-output" title="Permalink to this headline">¶</a></h2>
+<p>Now that we’re familiar with the model output, let’s compare it to two other datasets: SNODAS (raster) and SNOTEL (point).</p>
+<div class="section" id="lis-snowmodel-raster-vs-snodas-raster">
+<h3>LIS-SnowModel (raster) vs. SNODAS (raster)<a class="headerlink" href="#lis-snowmodel-raster-vs-snodas-raster" title="Permalink to this headline">¶</a></h3>
+<p>First, we’ll load the SNODAS dataset which we also have hosted on S3 as a Zarr store. This command will take a minute or two to run.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load SNODAS dataset</span>
+
+<span class="c1">#snodas depth</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;SNODAS/snodas_snowdepth_20161001_20200930.zarr&quot;</span>    
+<span class="n">snodas_depth_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># apply scale factor to convert to meters (0.001 per SNODAS user guide)</span>
+<span class="n">snodas_depth_ds</span> <span class="o">=</span> <span class="n">snodas_depth_ds</span> <span class="o">*</span> <span class="mf">0.001</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next we define a helper function to extract the (lon, lat) of the nearest grid cell to a given point:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">nearest_grid</span><span class="p">(</span><span class="n">ds</span><span class="p">,</span> <span class="n">pt</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the nearest lon and lat to pt in a given Dataset (ds).</span>
+<span class="sd">    </span>
+<span class="sd">    pt : input point, tuple (longitude, latitude)</span>
+<span class="sd">    output:</span>
+<span class="sd">        lon, lat</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">coord</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">coords</span><span class="p">)</span> <span class="k">for</span> <span class="n">coord</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">]):</span>
+        <span class="n">df_loc</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">df_loc</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[[</span><span class="s1">&#39;orig_lon&#39;</span><span class="p">,</span> <span class="s1">&#39;orig_lat&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">to_dataframe</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    
+    <span class="n">loc_valid</span> <span class="o">=</span> <span class="n">df_loc</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">pts</span> <span class="o">=</span> <span class="n">loc_valid</span><span class="p">[[</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">cdist</span><span class="p">([</span><span class="n">pt</span><span class="p">],</span> <span class="n">pts</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">loc_valid</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">loc_valid</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next cell will look pretty similar to what we did earlier to plot a timeseries of a single point in the LIS-SnowModel data. The general steps are:</p>
+<ul class="simple">
+<li><p>Extract the coordinates of the SNODAS grid cell nearest to our LIS-SnowModel grid cell (<code class="docutils literal notranslate"><span class="pre">ts_lon</span></code> and <code class="docutils literal notranslate"><span class="pre">ts_lat</span></code> from earlier)</p></li>
+<li><p>Subset the SNODAS and LIS-SnowModel data to the grid cells and date ranges of interest</p></li>
+<li><p>Create the plots!</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># drop off irrelevant variables</span>
+<span class="n">drop_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;orig_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;orig_lon&#39;</span><span class="p">]</span>
+<span class="n">lis_output_ds</span> <span class="o">=</span> <span class="n">lis_output_ds</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get lon, lat of snodas grid cell nearest to the LIS coordinates we used earlier</span>
+<span class="n">snodas_ts_lon</span><span class="p">,</span> <span class="n">snodas_ts_lat</span> <span class="o">=</span> <span class="n">nearest_grid</span><span class="p">(</span><span class="n">snodas_depth_ds</span><span class="p">,</span> <span class="p">(</span><span class="n">ts_lon</span><span class="p">,</span> <span class="n">ts_lat</span><span class="p">))</span>
+
+<span class="c1"># define a date range to plot (shorter = quicker for demo)</span>
+<span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;2020-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-06-01&#39;</span><span class="p">)</span>
+<span class="n">plot_daterange</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+
+<span class="c1"># select SNODAS grid cell and subset to plot_daterange</span>
+<span class="n">snodas_snd_subset_ds</span> <span class="o">=</span> <span class="n">snodas_depth_ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">snodas_ts_lon</span><span class="p">,</span>
+                                             <span class="n">lat</span><span class="o">=</span><span class="n">snodas_ts_lat</span><span class="p">,</span>
+                                             <span class="n">time</span><span class="o">=</span><span class="n">plot_daterange</span><span class="p">)</span>
+
+<span class="c1"># select LIS grid cell and subset to plot_daterange</span>
+<span class="n">lis_snd_subset_ds</span> <span class="o">=</span> <span class="n">lis_output_ds</span><span class="p">[</span><span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lat</span><span class="o">=</span><span class="n">ts_lat</span><span class="p">,</span>
+                                                        <span class="n">lon</span><span class="o">=</span><span class="n">ts_lon</span><span class="p">,</span>
+                                                        <span class="n">time</span><span class="o">=</span><span class="n">plot_daterange</span><span class="p">)</span>
+
+<span class="c1"># create SNODAS snow depth plot</span>
+<span class="n">snodas_snd_plot</span> <span class="o">=</span> <span class="n">snodas_snd_subset_ds</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;SNODAS&#39;</span><span class="p">)</span>
+
+<span class="c1"># create LIS snow depth plot</span>
+<span class="n">lis_snd_plot</span> <span class="o">=</span> <span class="n">lis_snd_subset_ds</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;LIS-SnowModel&#39;</span><span class="p">)</span>
+
+<span class="c1"># create SNODAS vs LIS snow depth plot</span>
+<span class="n">lis_vs_snodas_snd_plot</span> <span class="o">=</span> <span class="p">(</span><span class="n">lis_snd_plot</span> <span class="o">*</span> <span class="n">snodas_snd_plot</span><span class="p">)</span>
+
+<span class="c1"># display the plot</span>
+<span class="n">lis_vs_snodas_snd_plot</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Snow Depth @ Lon: </span><span class="si">{</span><span class="n">ts_lon</span><span class="si">}</span><span class="s1">, Lat: </span><span class="si">{</span><span class="n">ts_lat</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                            <span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span>
+                            <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;Date&#39;</span><span class="p">,</span>
+                            <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;Snow Depth (m)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lis-snowmodel-raster-vs-snodas-raster-vs-snotel-point">
+<h3>LIS-SnowModel (raster) vs. SNODAS (raster) vs. SNOTEL (point)<a class="headerlink" href="#lis-snowmodel-raster-vs-snodas-raster-vs-snotel-point" title="Permalink to this headline">¶</a></h3>
+<p>Now let’s add SNOTEL point data to our plot.</p>
+<p>First, we’re going to define some helper functions to load the SNOTEL data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load csv containing metadata for SNOTEL sites in a given state (e.g,. &#39;colorado&#39;)</span>
+<span class="k">def</span> <span class="nf">load_site</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+    
+    <span class="c1"># define the path to the file</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SNOTEL/snotel_</span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+    
+    <span class="c1"># load the csv into a pandas DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;s3://</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># load SNOTEL data for a specific site</span>
+<span class="k">def</span> <span class="nf">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+    
+    <span class="c1"># define the path to the file</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SNOTEL/snotel_</span><span class="si">{</span><span class="n">state</span><span class="si">}{</span><span class="n">var</span><span class="si">}</span><span class="s2">_20162020.txt&quot;</span>
+    
+    <span class="c1"># determine how many lines to skip in the file (they start with #)</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">skips</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span>
+    
+    <span class="c1"># load the data into a pandas DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;s3://</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skips</span><span class="p">)</span>
+    
+    <span class="c1"># convert the Date column from strings to datetime objects</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For the purposes of this tutorial let’s load the SNOTEL data for sites in Colorado. We’ll pick one site to plot in a few cells.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load SNOTEL snow depth for Colorado into a dictionary</span>
+<span class="n">snotel_depth</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;CO&#39;</span><span class="p">:</span> <span class="n">load_snotel_txt</span><span class="p">(</span><span class="s1">&#39;CO&#39;</span><span class="p">,</span> <span class="s1">&#39;depth&#39;</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We’ll need another helper function to load the depth data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get snotel depth</span>
+<span class="k">def</span> <span class="nf">get_depth</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">site</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+    
+    <span class="c1"># grab the depth for the given state (e.g., CO)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">snotel_depth</span><span class="p">[</span><span class="n">state</span><span class="p">]</span>
+    
+    <span class="c1"># define a date range mask</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">start_date</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">end_date</span><span class="p">)</span>
+    
+    <span class="c1"># use mask to subset between time range</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+    
+    <span class="c1"># extract timeseries for the given site</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="n">site</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load the site metadata for Colorado:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">co_sites</span> <span class="o">=</span> <span class="n">load_site</span><span class="p">(</span><span class="s1">&#39;colorado&#39;</span><span class="p">)</span>
+
+<span class="c1"># peek at the first 5 rows</span>
+<span class="n">co_sites</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The point we’ve been using so far in the tutorial actually corresponds to the coordinates for the Park Reservoir SNOTEL on Grand Mesa! Let’s extract the site data for that point:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the depth data by passing the site name to the get_depth() function</span>
+<span class="n">park_res_snd_df</span> <span class="o">=</span> <span class="n">get_depth</span><span class="p">(</span><span class="s1">&#39;CO&#39;</span><span class="p">,</span> <span class="s1">&#39;Park Reservoir (682)&#39;</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+
+<span class="c1"># convert from cm to m</span>
+<span class="n">park_res_snd_df</span> <span class="o">=</span> <span class="n">park_res_snd_df</span> <span class="o">/</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we’re ready to plot:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create SNOTEL plot</span>
+<span class="n">park_res_plot</span> <span class="o">=</span> <span class="n">park_res_snd_df</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;SNOTEL&#39;</span><span class="p">)</span>
+
+<span class="c1"># combine the SNOTEl plot with the LIS vs SNODAS plot</span>
+<span class="p">(</span><span class="n">lis_vs_snodas_snd_plot</span> <span class="o">*</span> <span class="n">park_res_plot</span><span class="p">)</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Snow Depth @ Lon: </span><span class="si">{</span><span class="n">ts_lon</span><span class="si">}</span><span class="s1">, Lat: </span><span class="si">{</span><span class="n">ts_lat</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="interactive-data-exploration">
+<h1>Interactive Data Exploration<a class="headerlink" href="#interactive-data-exploration" title="Permalink to this headline">¶</a></h1>
+<p>We’ve now built up the separate pieces for visualizing LIS-SnowModel output spatially and temporally, and we’ve combined our time series with those from SNOTEL stations and SNODAS. Now we can bring it all together in an interactive tool.</p>
+<p>The code in the cells below will generate an interactive panel for comparing of LIS-SnowModel output, SNODAS, and SNOTEL snow depth and snow water equivalent at SNOTEL site locations.</p>
+<p><strong>Note: some cells below take several minutes to run and some aspects of the interactive widgets may not work in the rendered version on the Hackweek site.</strong></p>
+<div class="section" id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="snotel-sites-info">
+<h3>SNOTEL Sites info<a class="headerlink" href="#snotel-sites-info" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create dictionary linking state names and abbreviations</span>
+<span class="n">snotel</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;CO&quot;</span> <span class="p">:</span> <span class="s2">&quot;colorado&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ID&quot;</span> <span class="p">:</span> <span class="s2">&quot;idaho&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;NM&quot;</span> <span class="p">:</span> <span class="s2">&quot;newmexico&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;UT&quot;</span> <span class="p">:</span> <span class="s2">&quot;utah&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;WY&quot;</span> <span class="p">:</span> <span class="s2">&quot;wyoming&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load SNOTEL site metadata for sites in the given state</span>
+<span class="k">def</span> <span class="nf">load_site</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+    
+    <span class="c1"># define path to file</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SNOTEL/snotel_</span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+    
+    <span class="c1"># load csv into pandas DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">df</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="snotel-depth-swe">
+<h3>SNOTEL Depth &amp; SWE<a class="headerlink" href="#snotel-depth-swe" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+    
+    <span class="c1"># define path to file</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SNOTEL/snotel_</span><span class="si">{</span><span class="n">state</span><span class="si">}{</span><span class="n">var</span><span class="si">}</span><span class="s2">_20162020.txt&quot;</span>
+
+    <span class="c1"># open text file</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># read each line and note those that begin with &#39;#&#39;</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">skips</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span>
+    
+    <span class="c1"># load txt file into pandas DataFrame (skipping lines beginning with &#39;#&#39;)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skips</span><span class="p">)</span>
+    
+    <span class="c1"># convert Date column from str to pandas datetime objects</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load SNOTEL depth &amp; swe into dictionaries</span>
+
+<span class="c1"># define empty dicts</span>
+<span class="n">snotel_depth</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">snotel_swe</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># loop over states and load SNOTEL data</span>
+<span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">snotel</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading state </span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">snotel_depth</span><span class="p">[</span><span class="n">state</span><span class="p">]</span> <span class="o">=</span> <span class="n">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="s1">&#39;depth&#39;</span><span class="p">)</span>
+    <span class="n">snotel_swe</span><span class="p">[</span><span class="n">state</span><span class="p">]</span> <span class="o">=</span> <span class="n">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="s1">&#39;swe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="snodas-swe">
+<h3>SNODAS SWE<a class="headerlink" href="#snodas-swe" title="Permalink to this headline">¶</a></h3>
+<p>We’ve already loaded in SNODAS snow depths, but here we’ll load in SWE. As above, this cell might take a few minutes to run since it’s a large dataset to read.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load snodas swe data</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;SNODAS/snodas_swe_20161001_20200930.zarr&quot;</span>
+<span class="n">snodas_swe_ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lis-snowmodel-outputs">
+<h3>LIS-SnowModel Outputs<a class="headerlink" href="#lis-snowmodel-outputs" title="Permalink to this headline">¶</a></h3>
+<p>We’ve already read in the LIS-SnowModel data above. Here we subset by time for October 2019 - June 2020.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># subset LIS data for winter 2020 </span>
+<span class="n">time_range</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2019-10-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-06-30&#39;</span><span class="p">)</span>
+<span class="n">lis_sf</span> <span class="o">=</span> <span class="n">lis_output_ds_tc</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_range</span><span class="p">)</span>
+<span class="n">lis_sf</span> <span class="o">=</span> <span class="n">lis_sf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the next cell, we extract the data variable names and timesteps from the LIS outputs. These will be used to define the widget options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gather metadata from LIS</span>
+<span class="c1"># get variable names:string</span>
+<span class="n">vnames</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lis_sf</span><span class="o">.</span><span class="n">data_vars</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vnames</span><span class="p">)</span>
+
+<span class="c1"># get time-stamps:string</span>
+<span class="n">tstamps</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime_as_string</span><span class="p">(</span><span class="n">lis_sf</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tstamps</span><span class="p">),</span> <span class="n">tstamps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tstamps</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">holoviews</span></code> plotting library automatically adjusts the range of plot colorbars based on the range of values in the data being plotted. This may not be ideal when comparing data on different timesteps. In the next cell we assign the upper and lower bounds for each data variable which we’ll later use to set a static colorbar range.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmap_lims</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;SM_SWE_inst&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span>
+ <span class="s1">&#39;SM_SnowDensity_inst&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mf">550.0</span><span class="p">),</span>
+ <span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="interactive-widget">
+<h2>Interactive Widget<a class="headerlink" href="#interactive-widget" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="snotel-site-map-and-timeseries">
+<h3>SNOTEL Site Map and Timeseries<a class="headerlink" href="#snotel-site-map-and-timeseries" title="Permalink to this headline">¶</a></h3>
+<p>The two cells that follow will create an interactive panel for comparing LIS-SnowModel, SNODAS, and SNOTEL snow depth and snow water equivalent. The SNOTEL site locations are plotted as points on an interactive map for each state. Hover over the sites to view metadata and click on a site to generate a timeseries!</p>
+<p><strong>Note: it will take some time for the timeseries to display.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get snotel depth</span>
+<span class="k">def</span> <span class="nf">get_depth</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">site</span><span class="p">,</span> <span class="n">ts</span><span class="p">,</span> <span class="n">te</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">snotel_depth</span><span class="p">[</span><span class="n">state</span><span class="p">]</span>
+    
+    <span class="c1"># subset between time range</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">ts</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">te</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+    
+    <span class="c1"># extract timeseries for the site</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="n">site</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+
+<span class="c1"># get snotel swe</span>
+<span class="k">def</span> <span class="nf">get_swe</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">site</span><span class="p">,</span> <span class="n">ts</span><span class="p">,</span> <span class="n">te</span><span class="p">):</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">snotel_swe</span><span class="p">[</span><span class="n">state</span><span class="p">]</span>
+    
+    <span class="c1"># subset between time range</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">ts</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">te</span><span class="p">)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+    
+    <span class="c1"># extract timeseries for the site</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="o">.</span><span class="n">Date</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="n">site</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+
+<span class="c1"># co-locate site &amp; LIS-SnowModel model cell</span>
+<span class="k">def</span> <span class="nf">nearest_grid</span><span class="p">(</span><span class="n">pt</span><span class="p">):</span>
+    <span class="c1"># pt : input point, tuple (longtitude, latitude)</span>
+    <span class="c1"># output:</span>
+    <span class="c1">#        x_idx, y_idx </span>
+    <span class="n">loc_valid</span> <span class="o">=</span> <span class="n">df_loc</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+    <span class="n">pts</span> <span class="o">=</span> <span class="n">loc_valid</span><span class="p">[[</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">distance</span><span class="o">.</span><span class="n">cdist</span><span class="p">([</span><span class="n">pt</span><span class="p">],</span> <span class="n">pts</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">loc_valid</span><span class="p">[</span><span class="s1">&#39;east_west&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">loc_valid</span><span class="p">[</span><span class="s1">&#39;north_south&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+<span class="c1"># get LIS-SnowModel variable </span>
+<span class="k">def</span> <span class="nf">var_subset</span><span class="p">(</span><span class="n">dset</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">ts</span><span class="p">,</span> <span class="n">te</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">dset</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">lon</span><span class="o">=</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="o">=</span><span class="n">lat</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">te</span><span class="p">))</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+
+<span class="c1"># line plots</span>
+<span class="k">def</span> <span class="nf">line_callback</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">vname</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">):</span>
+    <span class="n">sites</span> <span class="o">=</span> <span class="n">load_site</span><span class="p">(</span><span class="n">snotel</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">sites</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">var_subset</span><span class="p">(</span><span class="n">lis_sf</span><span class="p">,</span> <span class="n">vname</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span> 
+    <span class="n">xr_sf</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+    
+    <span class="n">xr_snodas</span> <span class="o">=</span> <span class="n">xr_sf</span>
+    
+    <span class="n">ck</span> <span class="o">=</span> <span class="n">get_depth</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">site_name</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;time&#39;</span><span class="p">})</span>
+    <span class="n">xr_snotel</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">ck</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">index</span><span class="p">:</span>
+        <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Var: -- Lon: -- Lat: --&#39;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">xr_sf</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;LIS-SnowModel&#39;</span><span class="p">)</span> \
+                <span class="o">*</span> <span class="n">xr_snotel</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SNOTEL&#39;</span><span class="p">)</span> \
+                <span class="o">*</span> <span class="n">xr_snodas</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SNODAS&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">legend_position</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+        
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sites</span> <span class="o">=</span> <span class="n">load_site</span><span class="p">(</span><span class="n">snotel</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
+        <span class="n">first_index</span> <span class="o">=</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="n">sites</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">first_index</span><span class="p">]</span>
+    
+        
+        <span class="n">xr_sf</span> <span class="o">=</span> <span class="n">var_subset</span><span class="p">(</span><span class="n">lis_sf</span><span class="p">,</span> <span class="n">vname</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span>
+    
+        <span class="n">vs</span> <span class="o">=</span> <span class="n">vname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Var: </span><span class="si">{</span><span class="n">vs</span><span class="si">}</span><span class="s1"> Lon: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">lon</span><span class="si">}</span><span class="s1"> Lat: </span><span class="si">{</span><span class="n">row</span><span class="o">.</span><span class="n">lat</span><span class="si">}</span><span class="s1">&#39;</span>
+
+        
+        <span class="c1"># update snotel data </span>
+        <span class="k">if</span> <span class="s1">&#39;depth&#39;</span> <span class="ow">in</span> <span class="n">vname</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="n">xr_snotel</span> <span class="o">=</span>  <span class="n">get_depth</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">site_name</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;time&#39;</span><span class="p">})</span><span class="o">*</span><span class="mf">0.01</span>
+            <span class="n">xr_snodas</span> <span class="o">=</span>  <span class="n">var_subset</span><span class="p">(</span><span class="n">snodas_depth_ds</span><span class="p">,</span> <span class="s1">&#39;SNOWDEPTH&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="s1">&#39;swe&#39;</span> <span class="ow">in</span> <span class="n">vname</span><span class="o">.</span><span class="n">lower</span><span class="p">():</span>
+            <span class="n">xr_snotel</span> <span class="o">=</span>  <span class="n">get_swe</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">site_name</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span><span class="o">.</span><span class="n">to_xarray</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;Date&#39;</span><span class="p">:</span> <span class="s1">&#39;time&#39;</span><span class="p">})</span><span class="o">/</span><span class="mi">1000</span>
+            <span class="n">xr_snodas</span> <span class="o">=</span>  <span class="n">var_subset</span><span class="p">(</span><span class="n">snodas_swe_ds</span><span class="p">,</span> <span class="s1">&#39;SWE&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lon</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">ts_tag</span><span class="p">,</span> <span class="n">te_tag</span><span class="p">)</span><span class="o">/</span><span class="mi">1000</span>
+
+    
+        <span class="k">return</span> <span class="n">xr_sf</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="n">title</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;LIS-SnowModel&#39;</span><span class="p">)</span> \
+               <span class="o">*</span> <span class="n">xr_snotel</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SNOTEL&#39;</span><span class="p">)</span> \
+               <span class="o">*</span> <span class="n">xr_snodas</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SNODAS&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># satic snowdepth as background</span>
+<span class="n">dds</span> <span class="o">=</span> <span class="n">lis_sf</span><span class="p">[</span><span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="s1">&#39;2020-02-01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># prepare the panel that will display a static plot of snow depth. Snotel sites will be plotted on top</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">dds</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">quadmesh</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rasterize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">project</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                             <span class="n">xlabel</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;viridis&#39;</span><span class="p">,</span>
+                             <span class="n">clim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">snow_depth_bg</span><span class="o">=</span><span class="n">hd</span><span class="o">.</span><span class="n">regrid</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sites on map</span>
+<span class="k">def</span> <span class="nf">plot_points</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>  
+    <span class="c1"># dataframe to hvplot obj Points</span>
+    <span class="n">sites</span><span class="o">=</span><span class="n">load_site</span><span class="p">(</span><span class="n">snotel</span><span class="p">[</span><span class="n">state</span><span class="p">])</span>
+    <span class="n">pts_opts</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">nonselection_alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">tools</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;tap&#39;</span><span class="p">,</span> <span class="s1">&#39;hover&#39;</span><span class="p">])</span>
+    <span class="c1">#site_points=sites.hvplot.points(x=&#39;lon&#39;, y=&#39;lat&#39;, c=&#39;elev&#39;, cmap=&#39;fire&#39;, geo=True, hover_cols=[&#39;site_name&#39;, &#39;ntwk&#39;, &#39;state&#39;, &#39;lon&#39;, &#39;lat&#39;]).opts(**pts_opts)  </span>
+    <span class="n">site_points</span><span class="o">=</span><span class="n">sites</span><span class="o">.</span><span class="n">hvplot</span><span class="o">.</span><span class="n">points</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hover_cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;site_name&#39;</span><span class="p">,</span> <span class="s1">&#39;ntwk&#39;</span><span class="p">,</span> <span class="s1">&#39;state&#39;</span><span class="p">,</span> <span class="s1">&#39;lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="o">**</span><span class="n">pts_opts</span><span class="p">)</span>  
+    <span class="k">return</span> <span class="n">site_points</span>
+
+<span class="c1"># base map</span>
+<span class="n">tiles</span> <span class="o">=</span> <span class="n">gvts</span><span class="o">.</span><span class="n">OSM</span><span class="p">()</span>
+
+<span class="c1"># state widget</span>
+<span class="n">state_select</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">Select</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">snotel</span><span class="o">.</span><span class="n">keys</span><span class="p">()),</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;State&quot;</span><span class="p">)</span>
+<span class="n">state_stream</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">state_select</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rename</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;state&#39;</span><span class="p">})</span>
+
+<span class="c1"># variable widget</span>
+<span class="n">var_select</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">Select</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">,</span> <span class="s1">&#39;SM_SWE_inst&#39;</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;LIS Variable List&quot;</span><span class="p">)</span>
+<span class="n">var_stream</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">var_select</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rename</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;vname&#39;</span><span class="p">})</span>
+
+<span class="c1"># date range widget</span>
+<span class="n">date_fmt</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span>
+<span class="n">sdate_input</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">DatetimeInput</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Start date&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">dt</span><span class="p">(</span><span class="mi">2019</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">start</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">tstamps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">date_fmt</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">tstamps</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">date_fmt</span><span class="p">),</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_fmt</span><span class="p">)</span>
+<span class="n">sdate_stream</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">sdate_input</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rename</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;ts_tag&#39;</span><span class="p">})</span>
+<span class="n">edate_input</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">DatetimeInput</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;End date&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">dt</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">30</span><span class="p">),</span><span class="n">start</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">tstamps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">date_fmt</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">tstamps</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">date_fmt</span><span class="p">),</span><span class="nb">format</span><span class="o">=</span><span class="n">date_fmt</span><span class="p">)</span>
+<span class="n">edate_stream</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">edate_input</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rename</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;te_tag&#39;</span><span class="p">})</span>
+
+<span class="c1"># generate site points as dynamic map</span>
+<span class="c1"># plots points and calls plot_points() when user selects a site</span>
+<span class="n">site_dmap</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="n">plot_points</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="p">[</span><span class="n">state_stream</span><span class="p">])</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">)</span>
+<span class="c1"># pick site</span>
+<span class="n">select_stream</span> <span class="o">=</span> <span class="n">Selection1D</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="n">site_dmap</span><span class="p">)</span>
+
+<span class="c1"># link widgets to callback function</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="n">line_callback</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="p">[</span><span class="n">select_stream</span><span class="p">,</span> <span class="n">state_stream</span><span class="p">,</span> <span class="n">var_stream</span><span class="p">,</span> <span class="n">sdate_stream</span><span class="p">,</span> <span class="n">edate_stream</span><span class="p">])</span>
+
+<span class="c1"># create panel layout</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="n">snow_depth_bg</span><span class="o">*</span><span class="n">site_dmap</span><span class="o">*</span><span class="n">tiles</span><span class="p">,</span> <span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">state_select</span><span class="p">,</span> <span class="n">var_select</span><span class="p">,</span> <span class="n">pn</span><span class="o">.</span><span class="n">Row</span><span class="p">(</span><span class="n">sdate_input</span><span class="p">,</span> <span class="n">edate_input</span><span class="p">),</span> <span class="n">line</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+<p>You now know how to see what variables are available in a typical model output file and you’ve learned how to inspect gridded model estimates both spatially and temporally. Below are a few exercises for both practicing the above skills and for becoming more familiar with the sample model output.</p>
+<div class="section" id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h2>
+<p>So far we’ve mostly worked with the Grand Mesa region. Can you spatially subset the data to inspect the LIS-SnowModel estimates for the Front Range? What about for Senator Beck basin? Try to use hvplot to plot a map of SWE values for February 2020.</p>
+</div>
+<div class="section" id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h2>
+<p>Here we focused on water year 2020. Can you select a point (maybe the same Park Reservoir SNOTEL point we worked with here) and make a multi-year time series?</p>
+</div>
+<div class="section" id="exercise-3-for-an-extra-challenge">
+<h2>Exercise 3 (for an extra challenge!)<a class="headerlink" href="#exercise-3-for-an-extra-challenge" title="Permalink to this headline">¶</a></h2>
+<p>We learned about the SnowEx database in a tutorial earlier this week. Can you create a new notebook for combining the model output with your choice of field observation available in the database? Does the model over or underestimate the SnowEx observation?</p>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h1>
+<p>We’re now more familiar with model output and how to interact with it in Python. The code in this notebook is a great jumping off point for developing more advanced comparisons and interactive widgets.</p>
+<p>The Python code can be adapted to other LIS simulations and to other model output as well, with minor modifications. Anyone interested in testing your new skills can combine what you learned here with the other SnowEx Hackweek tutorials - try comparing the LIS-SnowModel output with other snow observations collected during the 2017 field campaign!</p>
+<p>For more information on <a class="reference external" href="https://lis.gsfc.nasa.gov/">NASA’s Land Information System</a> please see the links below</p>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<p><strong>Links</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lis.gsfc.nasa.gov/">LIS Website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NASA-LIS/LISF">LIS on GitHub</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NASA-LIS/LISF/blob/master/docs/">LIS Documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bmcandr/lis-public-tc-walkthrough">LIS Test Case Walkthrough</a></p></li>
+</ul>
+<p><strong>References</strong></p>
+<ul class="simple">
+<li><p>Kumar, S.V., C.D. Peters-Lidard, Y. Tian, P.R. Houser, J. Geiger, S. Olden, L. Lighty, J.L. Eastman, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E. F. Wood, and J. Sheffield, 2006: Land Information System - An interoperable framework for high resolution land surface modeling. Environ. Modeling &amp; Software, 21, 1402-1415, <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2005.07.004">doi:10.1016/j.envsoft.2005.07.004</a></p></li>
+<li><p>Peters-Lidard, C.D., P.R. Houser, Y. Tian, S.V. Kumar, J. Geiger, S. Olden, L. Lighty, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E.F. Wood, and J. Sheffield, 2007: High-performance Earth system modeling with NASA/GSFC’s Land Information System. Innovations in Systems and Software Engineering, 3(3), 157-165, <a class="reference external" href="https://doi.org/10.1007/s11334-007-0028-x">doi:10.1007/s11334-007-0028-x</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/modeling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Snow Modeling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_snowmodeling_extra.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Interactive Data Exploration</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

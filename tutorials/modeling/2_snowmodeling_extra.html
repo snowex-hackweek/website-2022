@@ -1,0 +1,1212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Data Exploration &#8212; SnowEx Hackweek 2022</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SnowEx Database" href="../database/index.html" />
+    <link rel="prev" title="Snow Modeling" href="1_snowmodeling_tutorial.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SnowEx Hackweek 2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to SnowEx Hackweek!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Details
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../application.html">
+   Application
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../logistics.html">
+   Event Logistics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=schedule">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://snowex.hackweek.io//index.html?jump_to=team">
+   Team
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../mission.html">
+   Hackweek Mission
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../CoC.html">
+   Event Code of Conduct
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Preparation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../preliminary/index.html">
+   Preliminary Work
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/github.html">
+     GitHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/jupyterhub.html">
+     JupyterHub
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/git.html">
+     Git
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/earthdata.html">
+     Earthdata Login
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../preliminary/swc.html">
+     Software Carpentry Training
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../preliminary/supplemental_index.html">
+     Supplemental Material
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/python.html">
+       Python
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../preliminary/supplemental/conda.html">
+       Conda
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../index.html">
+   Tutorials
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../example/tutorial-notebook.html">
+     Example tutorial notebook
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../git_and_jupyterlab/index.html">
+     Git, GitHub, and JupyterLab
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/basic-git.html">
+       Basic Git/GitHub Skills Using
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         jupyterlab-git
+        </span>
+       </code>
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../git_and_jupyterlab/jupyter.html">
+       GitHub, Git, JupyterHub
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="index.html">
+     Snow Modeling
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="1_snowmodeling_tutorial.html">
+       Snow Modeling
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       Interactive Data Exploration
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../database/index.html">
+     Introduction to the SnowEx Database
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/1_getting_started_example.html">
+       Introduction to the SnowEx Database
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/2_database_structure.html">
+       How is the Database Structured?
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/3_forming_queries.html">
+       Forming Queries
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/4_get_spiral_example.html">
+       Forming Queries: Example Visualizng Depths
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/5_plot_raster_example.html">
+       Forming Queries: PostGIS Functions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/6_exporting_data.html">
+       Exporting Data
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../database/7_wrap_up.html">
+       Wrap up
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../OOP/index.html">
+     Object Oriented Programming
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OOP/OOP_tutorial.html">
+       Object Oriented Programming
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../OOP/alien.html">
+       Try it yourself!
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../lidar/index.html">
+     Lidar Remote Sensing of Snow
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../lidar/1_introduction_to_lidar.html">
+       Introduction to Lidar Remote Sensing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../lidar/2_elevation_differencing.html">
+       Elevation Differencing
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../lidar/3_common_pitfalls.html">
+       Common Pitfall in Elevation differencing
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../uavsar/index.html">
+     Uavsar
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/1_accessing_imagery.html">
+       UAVSAR
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/2_types_of_uavsar_images.html">
+       Uavsar Data Products
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../uavsar/3_interferometric_swe_inversion.html">
+       Why would I use Uavsar for snow?
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../core-datasets/index.html">
+     SnowEx Mission and Dataset Descriptions
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+    <label for="toctree-checkbox-10">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/01_data_coverage.html">
+       SnowEx Field Campaigns Overview
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/02_data_descriptions.html">
+       Ground-Based Measurements and Data Descriptions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../core-datasets/03_database_preview.html">
+       SnowEx Database Preview
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../nsidc-data-access/index.html">
+     Accessing SnowEx Data at the NSIDC DAAC
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+    <label for="toctree-checkbox-11">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../nsidc-data-access/nsidc-data-access.html">
+       Accessing SnowEx Data at the NSIDC DAAC
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../microwave/index.html">
+     Microwave Tutorials
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+    <label for="toctree-checkbox-12">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../microwave/swesarr/swesarr_tut.html">
+       SWESARR
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../aviris-ng/index.html">
+     AVIRIS-NG
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../aviris-ng/AVIRIS-NG_Tutorial.html">
+       Introduction to AVIRIS-NG
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projects/list_of_projects.html">
+   List of Projects
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/index.html">
+   Projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+  <label for="toctree-checkbox-14">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roles.html">
+     Project Roles
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_roadmap.html">
+     Project Roadmap
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/project_initialization.html">
+     Project Initialization
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/bibliography.html">
+   Bibliography
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_science.html">
+   Open Science
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/open_source_software.html">
+   Open-source Software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/questions.html">
+   How to Get Help
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/social.html">
+   Things to do in Seattle
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/tutorials/modeling/2_snowmodeling_extra.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/snowex-hackweek/website2022"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/snowex-hackweek/website2022/issues/new?title=Issue%20on%20page%20%2Ftutorials/modeling/2_snowmodeling_extra.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/snowex-hackweek/website2022/edit/main/book/tutorials/modeling/2_snowmodeling_extra.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/snowex-hackweek/website2022/main?urlpath=lab/tree/book/tutorials/modeling/2_snowmodeling_extra.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-libraries">
+   Import Libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snotel-sites-info">
+     SNOTEL Sites info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snotel-depth-swe">
+     SNOTEL Depth &amp; SWE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snodas-depth-swe">
+     SNODAS Depth &amp; SWE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lis-outputs">
+     LIS Outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-widget-to-explore-model-output">
+   Interactive widget to explore model output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More Information
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Interactive Data Exploration</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-libraries">
+   Import Libraries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#load-data">
+   Load Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snotel-sites-info">
+     SNOTEL Sites info
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snotel-depth-swe">
+     SNOTEL Depth &amp; SWE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#snodas-depth-swe">
+     SNODAS Depth &amp; SWE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lis-outputs">
+     LIS Outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-widget-to-explore-model-output">
+   Interactive widget to explore model output
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More Information
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="interactive-data-exploration">
+<h1>Interactive Data Exploration<a class="headerlink" href="#interactive-data-exploration" title="Permalink to this headline">¶</a></h1>
+<p>This notebook demonstrates how the functions and techniques we covered in the first notebook can be combined to build interactive data exploration tools. The panel enables exploration of LIS output using an interactive map.</p>
+<p><strong>Note: some cells below take several minutes to run and some aspects of the interactive widgets may not work in the rendered version on the Hackweek site.</strong></p>
+<div class="section" id="import-libraries">
+<h2>Import Libraries<a class="headerlink" href="#import-libraries" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">geopandas</span>
+<span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="kn">import</span> <span class="nn">fsspec</span>
+<span class="kn">import</span> <span class="nn">s3fs</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">distance</span>
+
+<span class="kn">import</span> <span class="nn">holoviews</span> <span class="k">as</span> <span class="nn">hv</span><span class="o">,</span> <span class="nn">geoviews</span> <span class="k">as</span> <span class="nn">gv</span>
+<span class="kn">from</span> <span class="nn">geoviews</span> <span class="kn">import</span> <span class="n">opts</span>
+<span class="kn">from</span> <span class="nn">geoviews</span> <span class="kn">import</span> <span class="n">tile_sources</span> <span class="k">as</span> <span class="n">gvts</span>
+
+<span class="kn">from</span> <span class="nn">datashader.colors</span> <span class="kn">import</span> <span class="n">viridis</span>
+<span class="kn">import</span> <span class="nn">datashader</span>
+<span class="kn">from</span> <span class="nn">holoviews.operation.datashader</span> <span class="kn">import</span> <span class="n">datashade</span><span class="p">,</span> <span class="n">shade</span><span class="p">,</span> <span class="n">dynspread</span><span class="p">,</span> <span class="n">spread</span><span class="p">,</span> <span class="n">rasterize</span>
+
+<span class="kn">from</span> <span class="nn">holoviews.streams</span> <span class="kn">import</span> <span class="n">Selection1D</span><span class="p">,</span> <span class="n">Params</span>
+<span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
+<span class="kn">import</span> <span class="nn">param</span> <span class="k">as</span> <span class="nn">pm</span>
+<span class="kn">import</span> <span class="nn">hvplot.pandas</span> 
+<span class="kn">import</span> <span class="nn">hvplot.xarray</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">holoviews.operation.datashader</span> <span class="k">as</span> <span class="nn">hd</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">()</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">ParamMethod</span><span class="o">.</span><span class="n">loading_indicator</span> <span class="o">=</span><span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create S3 filesystem object</span>
+<span class="n">s3</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">()</span>
+
+<span class="c1"># define S3 bucket name</span>
+<span class="n">bucket</span> <span class="o">=</span> <span class="s2">&quot;s3://eis-dh-hydro/SNOWEX-HACKWEEK&quot;</span>
+
+<span class="c1"># set holoviews backend to Bokeh</span>
+<span class="n">gv</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;bokeh&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="snotel-sites-info">
+<h3>SNOTEL Sites info<a class="headerlink" href="#snotel-sites-info" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create dictionary linking state names and abbreviations</span>
+<span class="n">snotel</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;AZ&quot;</span> <span class="p">:</span> <span class="s2">&quot;arizona&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;CO&quot;</span> <span class="p">:</span> <span class="s2">&quot;colorado&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;ID&quot;</span> <span class="p">:</span> <span class="s2">&quot;idaho&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MT&quot;</span> <span class="p">:</span> <span class="s2">&quot;montana&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;NM&quot;</span> <span class="p">:</span> <span class="s2">&quot;newmexico&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;UT&quot;</span> <span class="p">:</span> <span class="s2">&quot;utah&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;WY&quot;</span> <span class="p">:</span> <span class="s2">&quot;wyoming&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load SNOTEL site metadata for sites in the given state</span>
+<span class="k">def</span> <span class="nf">load_site</span><span class="p">(</span><span class="n">state</span><span class="p">):</span>
+    
+    <span class="c1"># define path to file</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SNOTEL/snotel_</span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">.csv&quot;</span>
+    
+    <span class="c1"># load csv into pandas DataFrame</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">df</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="snotel-depth-swe">
+<h3>SNOTEL Depth &amp; SWE<a class="headerlink" href="#snotel-depth-swe" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">var</span><span class="p">):</span>
+    
+    <span class="c1"># define path to file</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;SNOTEL/snotel_</span><span class="si">{</span><span class="n">state</span><span class="si">}{</span><span class="n">var</span><span class="si">}</span><span class="s2">_20162020.txt&quot;</span>
+
+    <span class="c1"># open text file</span>
+    <span class="n">fh</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># read each line and note those that begin with &#39;#&#39;</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+    <span class="n">skips</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="mi">1</span> <span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="n">lines</span> <span class="k">if</span> <span class="n">ln</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="p">))</span>
+    
+    <span class="c1"># load txt file into pandas DataFrame (skipping lines beginning with &#39;#&#39;)</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">skiprows</span><span class="o">=</span><span class="n">skips</span><span class="p">)</span>
+    
+    <span class="c1"># convert Date column from str to pandas datetime objects</span>
+    <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load SNOTEL depth &amp; swe into dictionaries</span>
+
+<span class="c1"># define empty dicts</span>
+<span class="n">snotel_depth</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">snotel_swe</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># loop over states and load SNOTEL data</span>
+<span class="k">for</span> <span class="n">state</span> <span class="ow">in</span> <span class="n">snotel</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Loading state </span><span class="si">{</span><span class="n">state</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">snotel_depth</span><span class="p">[</span><span class="n">state</span><span class="p">]</span> <span class="o">=</span> <span class="n">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="s1">&#39;depth&#39;</span><span class="p">)</span>
+    <span class="n">snotel_swe</span><span class="p">[</span><span class="n">state</span><span class="p">]</span> <span class="o">=</span> <span class="n">load_snotel_txt</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="s1">&#39;swe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="snodas-depth-swe">
+<h3>SNODAS Depth &amp; SWE<a class="headerlink" href="#snodas-depth-swe" title="Permalink to this headline">¶</a></h3>
+<p>Like the LIS output we have been working with, a sample of SNODAS data is available on our S3 bucket in Zarr format. We can therefore load the SNODAS just as we load the LIS data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load snodas depth data</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;SNODAS/snodas_snowdepth_20161001_20200930.zarr&quot;</span>
+<span class="n">snodas_depth</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># load snodas swe data</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;SNODAS/snodas_swe_20161001_20200930.zarr&quot;</span>
+<span class="n">snodas_swe</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">),</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lis-outputs">
+<h3>LIS Outputs<a class="headerlink" href="#lis-outputs" title="Permalink to this headline">¶</a></h3>
+<p>Next we’ll load the LIS outputs. First, we’ll define the helper function we saw in the previous notebook that adds <code class="docutils literal notranslate"><span class="pre">lat</span></code> and <code class="docutils literal notranslate"><span class="pre">lon</span></code> as coordinate variables. We’ll use this immediately upon loading the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_latlon_coords</span><span class="p">(</span><span class="n">dataset</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Adds lat/lon as dimensions and coordinates to an xarray.Dataset object.&quot;&quot;&quot;</span>
+    
+    <span class="c1"># get attributes from dataset</span>
+    <span class="n">attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">attrs</span>
+    
+    <span class="c1"># get x, y resolutions</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="mf">.001</span> <span class="c1">#round(float(attrs[&#39;DX&#39;]), 3)</span>
+    <span class="n">dy</span> <span class="o">=</span> <span class="mf">.001</span> <span class="c1">#round(float(attrs[&#39;DY&#39;]), 3)</span>
+   
+    
+    <span class="c1"># get grid cells in x, y dimensions</span>
+    <span class="n">ew_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;east_west&#39;</span><span class="p">])</span>
+    <span class="n">ns_len</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;north_south&#39;</span><span class="p">])</span>
+    <span class="c1">#ew_len = len(dataset[&#39;lon&#39;])</span>
+    <span class="c1">#ns_len = len(dataset[&#39;lat&#39;])</span>
+    
+    <span class="c1"># get lower-left lat and lon</span>
+    <span class="n">ll_lat</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;SOUTH_WEST_CORNER_LAT&#39;</span><span class="p">]),</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="n">ll_lon</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">attrs</span><span class="p">[</span><span class="s1">&#39;SOUTH_WEST_CORNER_LON&#39;</span><span class="p">]),</span> <span class="mi">3</span><span class="p">)</span>
+    
+    <span class="c1"># calculate upper-right lat and lon</span>
+    <span class="n">ur_lat</span> <span class="o">=</span>  <span class="mf">41.5122</span> <span class="c1">#ll_lat + (dy * ns_len)</span>
+    <span class="n">ur_lon</span> <span class="o">=</span> <span class="o">-</span><span class="mf">103.9831</span> <span class="c1">#ll_lon + (dx * ew_len)</span>
+    
+    <span class="c1"># define the new coordinates</span>
+    <span class="n">coords</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="c1"># create an arrays containing the lat/lon at each gridcell</span>
+        <span class="s1">&#39;lat&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ll_lat</span><span class="p">,</span> <span class="n">ur_lat</span><span class="p">,</span> <span class="n">ns_len</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+        <span class="s1">&#39;lon&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">ll_lon</span><span class="p">,</span> <span class="n">ur_lon</span><span class="p">,</span> <span class="n">ew_len</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="p">}</span>
+    
+    <span class="n">lon_attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span>
+    <span class="n">lat_attrs</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span>
+    
+    <span class="c1"># rename the original lat and lon variables</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;lon&#39;</span><span class="p">:</span><span class="s1">&#39;orig_lon&#39;</span><span class="p">,</span> <span class="s1">&#39;lat&#39;</span><span class="p">:</span><span class="s1">&#39;orig_lat&#39;</span><span class="p">})</span>
+    <span class="c1"># rename the grid dimensions to lat and lon</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">rename</span><span class="p">({</span><span class="s1">&#39;north_south&#39;</span><span class="p">:</span> <span class="s1">&#39;lat&#39;</span><span class="p">,</span> <span class="s1">&#39;east_west&#39;</span><span class="p">:</span> <span class="s1">&#39;lon&#39;</span><span class="p">})</span>
+    <span class="c1"># assign the coords above as coordinates</span>
+    <span class="n">dataset</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">coords</span><span class="p">)</span>
+    <span class="n">dataset</span><span class="o">.</span><span class="n">lon</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">lon_attrs</span>
+    <span class="n">dataset</span><span class="o">.</span><span class="n">lat</span><span class="o">.</span><span class="n">attrs</span> <span class="o">=</span> <span class="n">lat_attrs</span>
+    
+    
+    <span class="k">return</span> <span class="n">dataset</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load the LIS data and apply <code class="docutils literal notranslate"><span class="pre">add_latlon_coords()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># LIS surfacemodel DA_10km</span>
+<span class="c1">#key = &quot;2022/ZARR/SURFACEMODEL/LIS_HIST_default_chunks.d01.zarr&quot;</span>
+<span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;2022/ZARR/SURFACEMODEL/LIS_HIST_rechunkedV4.d01.zarr&quot;</span>
+<span class="n">s3_mapper</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="n">get_mapper</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">bucket</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">lis_sf</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_zarr</span><span class="p">(</span><span class="n">s3_mapper</span><span class="p">,</span> <span class="n">consolidated</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">lis_sf</span> <span class="o">=</span> <span class="n">add_latlon_coords</span><span class="p">(</span><span class="n">lis_sf</span><span class="p">)</span>
+<span class="n">drop_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;orig_lat&#39;</span><span class="p">,</span> <span class="s1">&#39;orig_lon&#39;</span><span class="p">]</span>
+<span class="n">lis_sf</span> <span class="o">=</span> <span class="n">lis_sf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Working with the full LIS output dataset can be slow and consume lots of memory. Here we temporally subset the data to a shorter window of time. The full dataset contains daily values from 09/02/2016 to 4/22/2021. Feel free to explore the full dataset by modifying the <code class="docutils literal notranslate"><span class="pre">time_range</span></code> variable below and re-running all cells that follow.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># subset LIS data for winter 2020 </span>
+<span class="n">time_range</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="s1">&#39;2019-10-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2020-04-30&#39;</span><span class="p">)</span>
+<span class="n">lis_sf</span> <span class="o">=</span> <span class="n">lis_sf</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time_range</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the next cell, we extract the data variable names and timesteps from the LIS outputs. These will be used to define the widget options.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># gather metadata from LIS</span>
+
+<span class="c1"># get variable names:string</span>
+<span class="n">vnames</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lis_sf</span><span class="o">.</span><span class="n">data_vars</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vnames</span><span class="p">)</span>
+
+<span class="c1"># get time-stamps:string</span>
+<span class="n">tstamps</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">datetime_as_string</span><span class="p">(</span><span class="n">lis_sf</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tstamps</span><span class="p">),</span> <span class="n">tstamps</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tstamps</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">holoviews</span></code> plotting library automatically adjusts the range of plot colorbars based on the range of values in the data being plotted. This may not be ideal when comparing data on different timesteps. In the next cell we assign the upper and lower bounds for each data variable which we’ll later use to set a static colorbar range.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmap_lims</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;SM_SWE_inst&#39;</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.3111445262836696e-10</span><span class="p">,</span> <span class="mf">3.0499227046966553</span><span class="p">),</span>
+ <span class="s1">&#39;SM_SnowDensity_inst&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mf">99.99999237060547</span><span class="p">,</span> <span class="mf">550.0</span><span class="p">),</span>
+ <span class="s1">&#39;SM_SnowDepth_inst&#39;</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mf">1.0889861234986142e-09</span><span class="p">,</span> <span class="mf">6.424593448638916</span><span class="p">)}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cmap_lims</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="interactive-widget-to-explore-model-output">
+<h2>Interactive widget to explore model output<a class="headerlink" href="#interactive-widget-to-explore-model-output" title="Permalink to this headline">¶</a></h2>
+<p>The cell below creates a <code class="docutils literal notranslate"><span class="pre">panel</span></code> layout for exploring LIS output rasters. Select a variable using the drop down and then use the date slider to scrub back and forth in time!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="c1"># start and end dates</span>
+<span class="n">start_date</span> <span class="o">=</span> <span class="s1">&#39;2020-01-01&#39;</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="s1">&#39;2020-01-07&#39;</span>
+
+<span class="n">date_fmt</span> <span class="o">=</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">date_fmt</span><span class="p">)</span>
+<span class="n">e</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">end_date</span><span class="p">,</span> <span class="n">date_fmt</span><span class="p">)</span>
+
+<span class="n">lis_sub</span> <span class="o">=</span> <span class="n">lis_sf</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">))</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># date widget (slider &amp; key in)</span>
+<span class="c1"># define date widgets</span>
+<span class="n">date_slider</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">DateSlider</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;LIS Model Date&quot;</span><span class="p">)</span>
+<span class="n">dt_input</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">DatetimeInput</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;LIS Model Date Input&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">date_fmt</span><span class="p">)</span>
+<span class="n">date_stream</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">date_slider</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rename</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;date&#39;</span><span class="p">})</span>
+
+<span class="c1"># variable widget</span>
+<span class="n">var_select</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">Select</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="n">vnames</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;LIS Variable List&quot;</span><span class="p">)</span>
+<span class="n">var_stream</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">var_select</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rename</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;vname&#39;</span><span class="p">})</span>
+
+<span class="c1">#colorbar widget</span>
+<span class="n">color_bar_range</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">RangeSlider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Color Bar Range&quot;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">),</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">cbar_strem</span> <span class="o">=</span> <span class="n">Params</span><span class="p">(</span><span class="n">color_bar_range</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">],</span> <span class="n">rname</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="s1">&#39;clim&#39;</span><span class="p">})</span>
+
+
+<span class="c1"># base map widget</span>
+<span class="n">map_layer</span><span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtonGroup</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Base map layer&#39;</span><span class="p">,</span>
+    <span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Open Street Map&#39;</span><span class="p">,</span> <span class="s1">&#39;Satellite Imagery&#39;</span><span class="p">],</span>
+    <span class="n">value</span><span class="o">=</span><span class="s1">&#39;Satellite Imagery&#39;</span><span class="p">,</span>
+    <span class="n">button_type</span><span class="o">=</span><span class="s1">&#39;primary&#39;</span><span class="p">,</span>
+    <span class="n">background</span><span class="o">=</span><span class="s1">&#39;#f307eb&#39;</span><span class="p">)</span>
+
+<span class="c1"># lis output display callback function</span>
+<span class="c1"># returns plot of LIS output when date/variable is changed</span>
+<span class="k">def</span> <span class="nf">var_layer</span><span class="p">(</span><span class="n">vname</span><span class="p">,</span> <span class="n">date</span><span class="p">,</span> <span class="n">clim</span><span class="p">):</span>
+    <span class="n">t_stamp</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">dssm</span> <span class="o">=</span> <span class="n">lis_sub</span><span class="p">[</span><span class="n">vname</span><span class="p">]</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">t_stamp</span><span class="p">)</span>
+
+    <span class="n">image</span> <span class="o">=</span> <span class="n">dssm</span><span class="o">.</span><span class="n">hvplot</span><span class="p">(</span><span class="n">geo</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="c1">#clim = cmap_lims[vname]</span>
+    <span class="k">return</span> <span class="n">image</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">clim</span><span class="o">=</span><span class="n">clim</span><span class="p">)</span>
+
+<span class="c1"># watches date widget for updates</span>
+<span class="nd">@pn</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="n">dt_input</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">watch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_update_date</span><span class="p">(</span><span class="n">dt_input</span><span class="p">):</span>
+    <span class="n">date_slider</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="n">dt_input</span>
+
+<span class="nd">@pn</span><span class="o">.</span><span class="n">depends</span><span class="p">(</span><span class="n">var_select</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">watch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">_update_range</span><span class="p">(</span><span class="n">var_select</span><span class="p">):</span>
+    <span class="n">vname</span><span class="o">=</span><span class="n">var_select</span>
+    <span class="n">t</span><span class="o">=</span><span class="n">cmap_lims</span><span class="p">[</span><span class="n">vname</span><span class="p">]</span>
+    <span class="n">color_bar_range</span><span class="o">.</span><span class="n">start</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">color_bar_range</span><span class="o">.</span><span class="n">end</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">color_bar_range</span><span class="o">.</span><span class="n">value</span><span class="o">=</span><span class="n">t</span>
+    
+<span class="c1"># updates basemap on widget change</span>
+<span class="k">def</span> <span class="nf">update_map</span><span class="p">(</span><span class="n">maps</span><span class="p">):</span>
+    <span class="n">tile</span> <span class="o">=</span> <span class="n">gvts</span><span class="o">.</span><span class="n">OSM</span> <span class="k">if</span> <span class="n">maps</span><span class="o">==</span><span class="s1">&#39;Open Street Map&#39;</span> <span class="k">else</span> <span class="n">gvts</span><span class="o">.</span><span class="n">EsriImagery</span>
+    <span class="k">return</span> <span class="n">tile</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># link widgets to callback functions</span>
+<span class="n">streams</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">vname</span><span class="o">=</span><span class="n">var_select</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">date</span><span class="o">=</span><span class="n">date_slider</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="n">color_bar_range</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>        
+<span class="n">dmap</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="n">var_layer</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="n">streams</span><span class="p">)</span>
+<span class="n">dtile</span> <span class="o">=</span> <span class="n">hv</span><span class="o">.</span><span class="n">DynamicMap</span><span class="p">(</span><span class="n">update_map</span><span class="p">,</span> <span class="n">streams</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">maps</span><span class="o">=</span><span class="n">map_layer</span><span class="o">.</span><span class="n">param</span><span class="o">.</span><span class="n">value</span><span class="p">))</span>
+
+<span class="c1"># create panel layout of widgets and plot</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="n">var_select</span><span class="p">,</span> <span class="n">date_slider</span><span class="p">,</span> <span class="n">dt_input</span><span class="p">,</span> <span class="n">map_layer</span><span class="p">,</span><span class="n">color_bar_range</span><span class="p">,</span>
+          <span class="n">dtile</span><span class="o">*</span><span class="n">rasterize</span><span class="p">(</span><span class="n">dmap</span><span class="p">,</span> <span class="n">aggregator</span><span class="o">=</span><span class="n">datashader</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">.</span><span class="n">opts</span><span class="p">(</span><span class="n">cmap</span><span class="o">=</span><span class="n">viridis</span><span class="p">,</span><span class="n">colorbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">600</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Thank you for joining us for this tutorial. We hope that you are now more familiar with <a class="reference external" href="https://lis.gsfc.nasa.gov/">NASA’s Land Information System</a> and how to use Python to explore and use the model simulation output LIS generates. For more information please see the links under More information below</p>
+</div>
+<div class="section" id="more-information">
+<h2>More Information<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>Links</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://lis.gsfc.nasa.gov/">LIS Website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NASA-LIS/LISF">LIS on GitHub</a></p></li>
+<li><p><a class="reference external" href="https://github.com/NASA-LIS/LISF/blob/master/docs/">LIS Documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/bmcandr/lis-public-tc-walkthrough">LIS Test Case Walkthrough</a></p></li>
+</ul>
+<p><strong>References</strong></p>
+<ul class="simple">
+<li><p>Kumar, S.V., C.D. Peters-Lidard, Y. Tian, P.R. Houser, J. Geiger, S. Olden, L. Lighty, J.L. Eastman, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E. F. Wood, and J. Sheffield, 2006: Land Information System - An interoperable framework for high resolution land surface modeling. Environ. Modeling &amp; Software, 21, 1402-1415, <a class="reference external" href="https://doi.org/10.1016/j.envsoft.2005.07.004">doi:10.1016/j.envsoft.2005.07.004</a></p></li>
+<li><p>Peters-Lidard, C.D., P.R. Houser, Y. Tian, S.V. Kumar, J. Geiger, S. Olden, L. Lighty, B. Doty, P. Dirmeyer, J. Adams, K. Mitchell, E.F. Wood, and J. Sheffield, 2007: High-performance Earth system modeling with NASA/GSFC’s Land Information System. Innovations in Systems and Software Engineering, 3(3), 157-165, <a class="reference external" href="https://doi.org/10.1007/s11334-007-0028-x">doi:10.1007/s11334-007-0028-x</a></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./tutorials/modeling"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="1_snowmodeling_tutorial.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Snow Modeling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../database/index.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">SnowEx Database</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By eScience Institute, University of Washington<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
