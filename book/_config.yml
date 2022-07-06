@@ -21,7 +21,7 @@ parse:
     contact_email: "uwhackweek@uw.edu"
     dataset: "SnowEx"
     anon_reporting_url: "https://forms.gle/JcRfzraXraC8epFu9"
-    project_spreadsheet_url: "https://docs.google.com/spreadsheets/d/1oFcfWDGuDQB5muYM6pyQa7uDhoILV7knlBByLShDL18/edit?usp=sharing"
+    project_summary_url: "https://docs.google.com/document/d/15yGrmzGLW_HmaatZaZh-oySSKxl2qNPz6mIcy1V0liI/edit"
   myst_enable_extensions:
     # Defaults
     - dollarmath
@@ -35,7 +35,7 @@ parse:
 # See https://jupyterbook.org/content/execute.html
 execute:
   # NOTE: 'cache' to use jupyter-cache, or 'force' to run all
-  execute_notebooks: 'force'
+  execute_notebooks: 'cache'
   exclude_patterns: 
     - "**/geospatial-advanced.ipynb"
   allow_errors: false
