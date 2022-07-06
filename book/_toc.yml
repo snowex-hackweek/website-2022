@@ -73,6 +73,11 @@ parts:
           title: Accessing SnowEx Data at the NSIDC DAAC
           sections:
             - file: tutorials/nsidc-data-access/nsidc-data-access
+        - file: tutorials/microwave/index
+          title: Microwave Tutorials
+          sections:
+            - file: tutorials/microwave/swesarr/swesarr_tut
+              title: SWESARR
         - file: tutorials/aviris-ng/index
           title: AVIRIS-NG
           sections:
