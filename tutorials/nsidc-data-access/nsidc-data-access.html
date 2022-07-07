@@ -668,6 +668,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#learning-objectives">
    Learning Objectives:
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     ___
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#explore-snow-products-and-resources">
@@ -841,6 +848,13 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal nav-link" href="#learning-objectives">
    Learning Objectives:
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     ___
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#explore-snow-products-and-resources">
@@ -1003,7 +1017,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Accessing SnowEx Data at the NSIDC DAAC<a class="headerlink" href="#accessing-snowex-data-at-the-nsidc-daac" title="Permalink to this headline">¶</a></h1>
 <p>2022 SnowEx Hackweek</p>
 <p>Authors: Amy Steiker, Gail Reckase NSIDC DAAC, CIRES, University of Colorado</p>
-<p>This tutorial provides a brief overview of the resources provided by the NASA National Snow and Ice Data Center Distributed Active Archive Center, or NSIDC DAAC, and demonstrates how to discovery and access SnowEx data programmatically.</p>
+<p>This tutorial provides a brief overview of the resources provided by the NASA National Snow and Ice Data Center Distributed Active Archive Center, or NSIDC DAAC, and demonstrates how to discover and access SnowEx data programmatically.</p>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -1012,15 +1026,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Set up Earthdata Login authentication needed to access NASA Earthdata.</p></li>
 <li><p>Download SnowEx data programmatically using the NSIDC DAAC Application Programming Interface (API).</p></li>
 </ol>
+<div class="section" id="id1">
+<h3>___<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="explore-snow-products-and-resources">
 <h2>Explore snow products and resources<a class="headerlink" href="#explore-snow-products-and-resources" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="nsidc-introduction">
 <h3>NSIDC introduction<a class="headerlink" href="#nsidc-introduction" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://nsidc.org">The National Snow and Ice Data Center</a>, located in Boulder, Colorado, provides over 1100 data sets covering the Earth’s cryosphere and more, all of which are available to the public free of charge. Beyond providing these data, NSIDC creates tools for data access, supports data users, performs scientific research, and educates the public about the cryosphere.</p>
+<p><a class="reference external" href="https://nsidc.org">The National Snow and Ice Data Center</a>, located in Boulder, Colorado, provides over 1300 data sets covering the Earth’s cryosphere and more, all of which are available to the public free of charge. Beyond providing these data, NSIDC creates tools for data access, supports data users, performs scientific research, and educates the public about the cryosphere.</p>
 <img alt="../../_images/nsidc-daac-header.png" class="align-left" src="../../_images/nsidc-daac-header.png" />
-<p>The <a class="reference external" href="https://nsidc.org/daac">NASA National Snow and Ice Data Center Distributed Active Archive Center (NSIDC DAAC)</a> provides access to over 700 data products (over 2 PB of data and growing!) in support of cryospheric research, global change detection, and water resource management. NSIDC is one of 12 DAACs as part of NASA’s EOSDIS, or Earth Observing System Data and Information System, and is also the largest program within the National Snow and Ice Data Center, as part of the University of Colorado’s Cooperative Institute for Research in Environmental Sciences.</p>
+<p>The <a class="reference external" href="https://nsidc.org/daac">NASA National Snow and Ice Data Center Distributed Active Archive Center (NSIDC DAAC)</a> provides access to over 750 data products (over 2 PB of data and growing!) in support of cryospheric research, global change detection, and water resource management. NSIDC is one of 12 DAACs as part of NASA’s EOSDIS, or Earth Observing System Data and Information System, and is also the largest program within the National Snow and Ice Data Center, as part of the University of Colorado’s Cooperative Institute for Research in Environmental Sciences.</p>
 <div class="section" id="select-data-resources">
 <h4>Select Data Resources<a class="headerlink" href="#select-data-resources" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
@@ -1081,7 +1097,7 @@ const thebe_selector_output = ".output, .cell_output"
 <hr class="docutils" />
 <div class="section" id="import-packages">
 <h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h2>
-<p>Get started by importing packages needed to run the following code blocks, including the <code class="docutils literal notranslate"><span class="pre">tutorial_helper_functions</span></code> module provided within this repository.</p>
+<p>Get started by importing packages needed to run the following code blocks.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
