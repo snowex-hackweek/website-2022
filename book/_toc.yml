@@ -51,8 +51,6 @@ parts:
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
             - file: tutorials/database/7_wrap_up
-<<<<<<< HEAD
-<<<<<<< HEAD
         - file: tutorials/uavsar/uavsar_tutorial
           title: SWE Inversions with UAVSAR
         - file: tutorials/uavsar/index
@@ -67,12 +65,10 @@ parts:
             - file: tutorials/core-datasets/01_data_coverage
             - file: tutorials/core-datasets/02_data_descriptions
             - file: tutorials/core-datasets/03_database_preview
->>>>>>> fcd1aa4f02377cba0713e6c96807f8780b961161
         - file: tutorials/nsidc-data-access/index
           title: Accessing SnowEx Data at the NSIDC DAAC
           sections:
             - file: tutorials/nsidc-data-access/nsidc-data-access
->>>>>>> 85bf6a1449a0f42c4d27ac9c50ef3ab043f2da74
 - caption: Projects
   chapters:
     - file: projects/list_of_projects
