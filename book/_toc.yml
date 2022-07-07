@@ -36,6 +36,11 @@ parts:
           sections:
             - file: tutorials/git_and_jupyterlab/basic-git
             - file: tutorials/git_and_jupyterlab/jupyter
+        - file: tutorials/modeling/index
+          title: Snow Modeling
+          sections:
+            - file: tutorials/modeling/1_snowmodeling_tutorial
+            - file: tutorials/modeling/2_snowmodeling_extra
         - file: tutorials/database/index
           title: Introduction to the SnowEx Database
           sections:
