@@ -11,6 +11,9 @@
 
 ```{admonition} Quick links for the event
 :class: seealso
+* WiFi, University of Washington
+    * UW NetID: event0568
+    * Password: w9K6-x9L6-e5M5
 * JupyterHub: {{ jupyterhub_url }}
 * GitHub organization: {{ github_org_url}}
 * Projects Summary Document: {{ project_summary_url }}
