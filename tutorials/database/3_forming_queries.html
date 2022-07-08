@@ -320,7 +320,12 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="7_wrap_up.html">
+      <a class="reference internal" href="7_bonus_challenge.html">
+       Bonus Challenge: Analyzing Pits
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="8_wrap_up.html">
        Wrap up
       </a>
      </li>
@@ -837,7 +842,7 @@ D. a row of values
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;snowexsql.data.PointData object at 0x7f71fc0f8310&gt;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;snowexsql.data.PointData object at 0x7fdbfc168970&gt;]
 </pre></div>
 </div>
 </div>
@@ -878,7 +883,7 @@ D. a row of values
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;snowexsql.data.LayerData object at 0x7f71fc0fa980&gt;, &lt;snowexsql.data.LayerData object at 0x7f71fc0fb1f0&gt;, &lt;snowexsql.data.LayerData object at 0x7f71fc0fb370&gt;, &lt;snowexsql.data.LayerData object at 0x7f71fc0fb3d0&gt;, &lt;snowexsql.data.LayerData object at 0x7f71fc0fb430&gt;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;snowexsql.data.LayerData object at 0x7fdbfc16b2e0&gt;, &lt;snowexsql.data.LayerData object at 0x7fdbfc16b970&gt;, &lt;snowexsql.data.LayerData object at 0x7fdbfc16baf0&gt;, &lt;snowexsql.data.LayerData object at 0x7fdbfc16bb50&gt;, &lt;snowexsql.data.LayerData object at 0x7fdbfc16bbb0&gt;]
 </pre></div>
 </div>
 </div>
@@ -909,7 +914,7 @@ D. a row of values
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Available Dates = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])))</span>
 
 <span class="c1"># Get the unique surveyors in the table</span>
-<span class="n">results</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">surveyors</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">LayerData</span><span class="o">.</span><span class="n">observers</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Available surveyors = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])))</span>
 
 <span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
@@ -917,16 +922,16 @@ D. a row of values
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available types = force, grain_size, density, permittivity, lwc_vol, manual_wetness, grain_type, temperature, hand_hardness
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available types = sample_signal, force, grain_size, density, reflectance, permittivity, lwc_vol, manual_wetness, equivalent_diameter, specific_surface_area, grain_type, temperature, hand_hardness
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available Instruments = None, snowmicropen
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available Instruments = IS3-SP-15-01US, IRIS, snowmicropen, None, IS3-SP-11-01F
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available Dates = 2020-02-04, 2020-02-11, 2020-02-12, 2020-01-30, 2020-02-10, 2020-02-01, 2020-02-08, 2020-02-09, 2020-02-06, 2020-01-31, 2020-02-02, 2020-02-03, 2020-02-05, 2020-01-29, 2020-01-28
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available Dates = 2020-03-12, 2020-02-04, 2020-03-07, 2020-02-21, 2020-04-06, 2020-01-09, 2020-05-03, 2019-12-10, 2020-01-04, 2020-02-27, 2020-02-13, 2020-02-14, 2020-04-17, 2020-01-19, 2020-01-17, 2020-02-19, 2019-12-18, 2020-02-26, 2019-12-30, 2020-02-03, 2020-03-13, 2020-01-30, 2019-10-24, 2020-03-11, 2020-02-01, 2020-01-24, 2020-04-22, 2020-02-09, 2020-04-19, 2020-03-31, 2020-05-12, 2020-01-08, 2020-01-23, 2020-02-06, 2020-03-05, 2020-04-01, 2019-10-29, 2020-01-31, 2020-04-18, 2020-04-29, 2020-01-22, 2020-02-20, 2020-02-07, 2020-02-12, 2020-05-06, 2020-03-18, 2019-12-03, 2020-02-08, 2020-05-13, 2019-12-20, 2019-12-23, 2020-04-28, 2020-02-28, 2020-05-20, 2020-02-05, 2020-01-28, 2020-01-16, 2020-04-21, 2019-12-19, 2020-02-11, 2020-03-28, 2020-01-27, 2020-02-10, 2020-03-06, 2020-03-04, 2019-11-24, 2020-04-09, 2020-03-21, 2020-03-16, 2020-02-02, 2020-04-27, 2020-02-25, 2020-04-08, 2020-03-25, 2019-12-16, 2020-01-29
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available surveyors = None
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available surveyors = None, Juha Lemmetyinen, Kate Hale, Céline Vargel, Carrie Vuyovich, Juha Lemmetyinen &amp; Ioanna Merkouriadi, Carrie Vuyovich &amp; Juha Lemmetyinen, Kehan Yang
 </pre></div>
 </div>
 </div>
