@@ -65,7 +65,7 @@ parts:
             - file: tutorials/lidar/2_elevation_differencing
             - file: tutorials/lidar/3_common_pitfalls
         - file: tutorials/uavsar/index
-          title: Uavsar
+          title: UAVSAR
           sections:
             - file: tutorials/uavsar/1_accessing_imagery
             - file: tutorials/uavsar/2_types_of_uavsar_images
