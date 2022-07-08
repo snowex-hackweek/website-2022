@@ -799,11 +799,17 @@ snow depths dataset. This tutorial shows how easy it is to get at that data in t
 <span class="c1"># Pick a date</span>
 <span class="n">collection_date</span> <span class="o">=</span> <span class="n">date</span><span class="p">(</span><span class="mi">2020</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 
+<span class="c1"># Site name</span>
+<span class="n">site_name</span> <span class="o">=</span> <span class="s2">&quot;Grand Mesa&quot;</span>
+
 <span class="c1"># Get a session</span>
 <span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
 
 <span class="c1"># The part inside the query function is what we want back, in this case all columns for the point data</span>
 <span class="n">qry</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">PointData</span><span class="p">)</span>
+
+<span class="c1"># Filter by site</span>
+<span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">site_name</span> <span class="o">==</span> <span class="n">site_name</span><span class="p">)</span>
 
 <span class="c1"># We then want to filter by the selected the data type depth.</span>
 <span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">dataset</span><span class="p">)</span>
@@ -811,7 +817,7 @@ snow depths dataset. This tutorial shows how easy it is to get at that data in t
 <span class="c1"># Filter by a date</span>
 <span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">PointData</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">collection_date</span><span class="p">)</span>
 
-<span class="c1"># Limit it to a couple hundred </span>
+<span class="c1"># Limit it to a couple hundred - just for exploration</span>
 <span class="n">qry</span> <span class="o">=</span> <span class="n">qry</span><span class="o">.</span><span class="n">limit</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 
 <span class="c1"># Execute the query and convert to geopandas in one handy function</span>
@@ -865,16 +871,11 @@ snow depths dataset. This tutorial shows how easy it is to get at that data in t
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;mesa&#39;,), (&#39;magnaprobe&#39;,), (&#39;camera&#39;,), (&#39;pulse EKKO Pro multi-polarization 1 GHz GPR&#39;,), (&#39;pit ruler&#39;,)]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(None,), (&#39;Mala 1600 MHz GPR&#39;,), (&#39;Mala 800 MHz GPR&#39;,), (&#39;pulse EKKO Pro multi-polarization 1 GHz GPR&#39;,), (&#39;pit ruler&#39;,), (&#39;mesa&#39;,), (&#39;magnaprobe&#39;,), (&#39;camera&#39;,)]
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Try This</strong>:</p>
-<ol class="simple">
-<li><p>Change the date</p></li>
-</ol>
-<p><strong>Hint</strong>: You may need to form two queries just to see what dates and surveyors are in the db</p>
 <p><strong>Try This:</strong>
 Go back and add a filter to reduce to just one spiral. Do you know what instrument was used to make depth spirals?</p>
 </div>
