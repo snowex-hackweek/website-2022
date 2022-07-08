@@ -30,5 +30,5 @@ In the unfortunate event that you obtain a positive COVID test during or right b
 
 ## Communication
 
-Our team is committed to providing up-to-date communications to all participants about the timing and location of possible infected persons. We will keep your personal information confidential if you request for us to do so.
+Our team is committed to providing up-to-date communications to all participants about the timing and location of possible infected persons. We will keep your personal information confidential.
 
