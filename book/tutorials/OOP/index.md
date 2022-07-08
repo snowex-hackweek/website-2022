@@ -1,4 +1,2 @@
 # Object Oriented Programming
 
-```{tableofcontents}
-```
