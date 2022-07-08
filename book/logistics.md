@@ -3,8 +3,8 @@
 ## Wireless
 
 * WiFi: University of Washington
-* UW NetID: TBD
-* Password: TBD
+* UW NetID: event0568
+* Password: w9K6-x9L6-e5M5
 
 ## Location
 
