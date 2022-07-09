@@ -945,11 +945,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>snowexsql database successfully loaded!
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="what-s-the-first-thing-you-might-like-to-do">
 <h3>What’s the first thing you might like to do?<a class="headerlink" href="#what-s-the-first-thing-you-might-like-to-do" title="Permalink to this headline">¶</a></h3>
@@ -970,12 +965,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">airborne_sensors_list</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">ImageData</span><span class="o">.</span><span class="n">surveyors</span><span class="p">)</span><span class="o">.</span><span class="n">distinct</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;list of airborne sensors by &quot;surveyor&quot; name: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">airborne_sensors_list</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list of airborne sensors by &quot;surveyor&quot; name: 
- [(&#39;USGS&#39;,), (&#39;UAVSAR team, JPL&#39;,), (&#39;ASO Inc.&#39;,)]
 </pre></div>
 </div>
 </div>
@@ -1021,19 +1010,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>UAVSAR team, JPL flight dates are: 2020-01-31, 2020-02-12
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                             geom site_id        date
-0  POINT (742453.000 4325752.000)    1C14  2020-01-31
-1  POINT (744396.000 4323540.000)    8C26  2020-01-31
-2  POINT (740652.000 4327445.000)     2C2  2020-01-31
-3  POINT (741580.000 4326713.000)     2C9  2020-01-31
-4  POINT (745340.000 4322754.000)    8S28  2020-01-31
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="b-want-to-select-an-exact-flight-date-match-here-s-how">
@@ -1057,67 +1033,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17 pits overlap with UAVSAR team, JPL on 2020-01-31
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>geom</th>
-      <th>site_id</th>
-      <th>date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>POINT (742453.000 4325752.000)</td>
-      <td>1C14</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>POINT (744396.000 4323540.000)</td>
-      <td>8C26</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>POINT (740652.000 4327445.000)</td>
-      <td>2C2</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>POINT (741580.000 4326713.000)</td>
-      <td>2C9</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>POINT (745340.000 4322754.000)</td>
-      <td>8S28</td>
-      <td>2020-01-31</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="c-want-to-select-a-range-of-dates-near-the-flight-date-here-s-how">
@@ -1145,97 +1060,6 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47 pits overlap with UAVSAR team, JPL on 2020-01-30, 2020-01-31, 2020-02-01
-</pre></div>
-</div>
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>geom</th>
-      <th>site_id</th>
-      <th>date</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>10</th>
-      <td>POINT (741132.000 4327061.000)</td>
-      <td>2C6</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>POINT (743109.000 4322924.000)</td>
-      <td>2S11</td>
-      <td>2020-02-01</td>
-    </tr>
-    <tr>
-      <th>46</th>
-      <td>POINT (746303.000 4322571.000)</td>
-      <td>9S40</td>
-      <td>2020-02-01</td>
-    </tr>
-    <tr>
-      <th>0</th>
-      <td>POINT (742453.000 4325752.000)</td>
-      <td>1C14</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>POINT (745598.000 4323988.000)</td>
-      <td>5N41</td>
-      <td>2020-01-30</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>POINT (741960.000 4326644.000)</td>
-      <td>6C10</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>POINT (744757.000 4323667.000)</td>
-      <td>6C24</td>
-      <td>2020-01-31</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>POINT (746546.000 4324066.000)</td>
-      <td>8N45</td>
-      <td>2020-02-01</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>POINT (743402.000 4324736.000)</td>
-      <td>5C20</td>
-      <td>2020-01-30</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>POINT (740839.000 4327345.000)</td>
-      <td>2C4</td>
-      <td>2020-01-31</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="d-have-a-known-date-that-you-wish-to-select-data-for-here-s-how">
@@ -1280,16 +1104,6 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">image_type</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">image_type</span><span class="p">]</span>
 <span class="n">image_type</span> <span class="o">=</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">image_type</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Image Data on </span><span class="si">%s</span><span class="s1"> are: </span><span class="si">%s</span><span class="s1">, with the following list of parameters: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">dt</span><span class="p">),</span> <span class="n">image_instruments</span><span class="p">,</span> <span class="n">image_type</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Point data on 2020-02-12 are: camera, magnaprobe, pit ruler, with the following list of parameters: depth
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Layer Data on 2020-02-12 are: snowmicropen, with the following list of parameters: force, density, grain_size, permittivity, lwc_vol, manual_wetness, grain_type, temperature, hand_hardness
-
-Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of parameters: insar correlation, insar interferogram real, insar interferogram imaginary, insar amplitude
 </pre></div>
 </div>
 </div>
@@ -1345,10 +1159,6 @@ Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of p
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "2d4b1fa5883841dab81600edf1371a3b", "version_major": 2, "version_minor": 0}
-</script></div>
 </div>
 <div class="section" id="query-the-database-to-add-spatial-data-to-our-map">
 <h3>Query the Database to add Spatial Data to Our Map<a class="headerlink" href="#query-the-database-to-add-spatial-data-to-our-map" title="Permalink to this headline">¶</a></h3>
@@ -1410,18 +1220,6 @@ Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of p
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;geopandas.geodataframe.GeoDataFrame&#39;&gt;
-    longitude   latitude                     geometry
-0 -108.221437  39.034623  POINT (-108.22144 39.03462)
-1 -108.220926  39.036475  POINT (-108.22093 39.03648)
-2 -108.220239  39.064288  POINT (-108.22024 39.06429)
-3 -108.220220  39.064180  POINT (-108.22022 39.06418)
-4 -108.219632  39.034409  POINT (-108.21963 39.03441)
-155 records returned!
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="let-s-add-these-points-to-our-map">
@@ -1444,10 +1242,6 @@ Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of p
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7f305c4bade2451ab62b49fef65c38c3", "version_major": 2, "version_minor": 0}
-</script></div>
 </div>
 </div>
 </div>
@@ -1463,124 +1257,6 @@ Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of p
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>field_1</th>
-      <th>Identifier</th>
-      <th>PitID</th>
-      <th>Location</th>
-      <th>Site</th>
-      <th>Easting</th>
-      <th>Northing</th>
-      <th>Zone</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Date</th>
-      <th>Local/Stan</th>
-      <th>geometry</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>CAAMCL_20191220_1300</td>
-      <td>CAAMCL</td>
-      <td>American River Basin</td>
-      <td>Caples Lake</td>
-      <td>757216</td>
-      <td>4288787</td>
-      <td>10</td>
-      <td>38.71033</td>
-      <td>-120.04187</td>
-      <td>12/20</td>
-      <td>13:00:00</td>
-      <td>POINT (-120.04187 38.71033)</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>CAAMCL_20200131_1215</td>
-      <td>CAAMCL</td>
-      <td>American River Basin</td>
-      <td>Caples Lake</td>
-      <td>757220</td>
-      <td>4288788</td>
-      <td>10</td>
-      <td>38.71034</td>
-      <td>-120.04182</td>
-      <td>1/31</td>
-      <td>12:15:00</td>
-      <td>POINT (-120.04182 38.71034)</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>CAAMCL_20200214_1200</td>
-      <td>CAAMCL</td>
-      <td>American River Basin</td>
-      <td>Caples Lake</td>
-      <td>757218</td>
-      <td>4288787</td>
-      <td>10</td>
-      <td>38.71033</td>
-      <td>-120.04185</td>
-      <td>2/14</td>
-      <td>12:00:00</td>
-      <td>POINT (-120.04185 38.71033)</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3</td>
-      <td>CAAMCL_20200221_1200</td>
-      <td>CAAMCL</td>
-      <td>American River Basin</td>
-      <td>Caples Lake</td>
-      <td>757217</td>
-      <td>4288780</td>
-      <td>10</td>
-      <td>38.71027</td>
-      <td>-120.04186</td>
-      <td>2/21</td>
-      <td>12:00:00</td>
-      <td>POINT (-120.04186 38.71027)</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>4</td>
-      <td>CAAMCL_20200228_1130</td>
-      <td>CAAMCL</td>
-      <td>American River Basin</td>
-      <td>Caples Lake</td>
-      <td>757215</td>
-      <td>4288778</td>
-      <td>10</td>
-      <td>38.71025</td>
-      <td>-120.04188</td>
-      <td>2/28</td>
-      <td>11:30:00</td>
-      <td>POINT (-120.04188 38.71025)</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </div>
 <div class="section" id="recap">
@@ -1590,12 +1266,6 @@ Image Data on 2020-02-12 are: UAVSAR, L-band InSAR, with the following list of p
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
-
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"14cf27bf38b747fca393cd2611ee760d": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletTileLayerModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletTileLayerView", "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>", "base": true, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": 18, "max_zoom": 20, "min_native_zoom": 0, "min_zoom": 1, "name": "CartoDB.Positron", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "tile_size", "tms"], "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "tile_size": 256, "tms": false, "url": "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", "visible": true}}, "272c4b6d1d5b4600a00cb76f535ed479": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapStyleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "move"}}, "2d4b1fa5883841dab81600edf1371a3b": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapModel", "state": {"_dom_classes": [], "_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletMapView", "bottom": 0.0, "bounce_at_zoom_limits": true, "box_zoom": true, "center": [40.0, -113.5], "close_popup_on_click": true, "controls": ["IPY_MODEL_f8f1e0f3d1894b6a83aa6ba8a55e8e9e", "IPY_MODEL_e744bcad6ea14e45adf283c84922fdfe"], "crs": {"custom": false, "name": "EPSG3857"}, "default_style": "IPY_MODEL_ed8b7d772d814e9097adb34f08b39288", "double_click_zoom": true, "dragging": true, "dragging_style": "IPY_MODEL_272c4b6d1d5b4600a00cb76f535ed479", "east": 0.0, "fullscreen": false, "inertia": true, "inertia_deceleration": 3000, "inertia_max_speed": 1500, "interpolation": "bilinear", "keyboard": true, "keyboard_pan_offset": 80, "keyboard_zoom_offset": 1, "layers": ["IPY_MODEL_14cf27bf38b747fca393cd2611ee760d", "IPY_MODEL_ae56a31cf7774ff5b1ea8b771857c08b"], "layout": "IPY_MODEL_af12f69c7e254517a0ecc2b3af718945", "left": 9007199254740991.0, "max_zoom": 18.0, "min_zoom": 1.0, "modisdate": "2022-07-05", "north": 0.0, "options": ["bounce_at_zoom_limits", "box_zoom", "center", "close_popup_on_click", "double_click_zoom", "dragging", "fullscreen", "inertia", "inertia_deceleration", "inertia_max_speed", "interpolation", "keyboard", "keyboard_pan_offset", "keyboard_zoom_offset", "max_zoom", "min_zoom", "prefer_canvas", "scroll_wheel_zoom", "tap", "tap_tolerance", "touch_zoom", "world_copy_jump", "zoom", "zoom_animation_threshold", "zoom_delta", "zoom_snap", "zoom_start"], "prefer_canvas": false, "right": 0.0, "scroll_wheel_zoom": false, "south": 0.0, "style": "IPY_MODEL_a910e69b3f12483287b51e699d5edf6d", "tap": true, "tap_tolerance": 15, "top": 9007199254740991.0, "touch_zoom": true, "west": 0.0, "window_url": "", "world_copy_jump": false, "zoom": 4.0, "zoom_animation_threshold": 4, "zoom_delta": 1.0, "zoom_snap": 1.0, "zoom_start": 12.0}}, "548396c41ef14421a1e44862feca911c": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "63806197d3fe47ab95b9369bd591f50e": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapStyleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "move"}}, "680d6cbdbb91495080a84f26f8001a52": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletZoomControlModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletZoomControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletZoomControlView", "options": ["position", "zoom_in_text", "zoom_in_title", "zoom_out_text", "zoom_out_title"], "position": "topleft", "zoom_in_text": "+", "zoom_in_title": "Zoom in", "zoom_out_text": "-", "zoom_out_title": "Zoom out"}}, "7f305c4bade2451ab62b49fef65c38c3": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapModel", "state": {"_dom_classes": [], "_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletMapView", "bottom": 0.0, "bounce_at_zoom_limits": true, "box_zoom": true, "center": [40.0, -113.5], "close_popup_on_click": true, "controls": ["IPY_MODEL_680d6cbdbb91495080a84f26f8001a52", "IPY_MODEL_fbb6e0c370d0459cad8f66590e60dcaf", "IPY_MODEL_8a0588c861fc4a8296a36d5b022310cd"], "crs": {"custom": false, "name": "EPSG3857"}, "default_style": "IPY_MODEL_cf844299f0a8458cb6702ea6c3064896", "double_click_zoom": true, "dragging": true, "dragging_style": "IPY_MODEL_63806197d3fe47ab95b9369bd591f50e", "east": 0.0, "fullscreen": false, "inertia": true, "inertia_deceleration": 3000, "inertia_max_speed": 1500, "interpolation": "bilinear", "keyboard": true, "keyboard_pan_offset": 80, "keyboard_zoom_offset": 1, "layers": ["IPY_MODEL_f2395a0d86d240edbd492c23f1a2df72", "IPY_MODEL_b6b60b5e703b45e783546c7a4a7c194e"], "layout": "IPY_MODEL_548396c41ef14421a1e44862feca911c", "left": 9007199254740991.0, "max_zoom": 18.0, "min_zoom": 1.0, "modisdate": "2022-07-05", "north": 0.0, "options": ["bounce_at_zoom_limits", "box_zoom", "center", "close_popup_on_click", "double_click_zoom", "dragging", "fullscreen", "inertia", "inertia_deceleration", "inertia_max_speed", "interpolation", "keyboard", "keyboard_pan_offset", "keyboard_zoom_offset", "max_zoom", "min_zoom", "prefer_canvas", "scroll_wheel_zoom", "tap", "tap_tolerance", "touch_zoom", "world_copy_jump", "zoom", "zoom_animation_threshold", "zoom_delta", "zoom_snap", "zoom_start"], "prefer_canvas": false, "right": 0.0, "scroll_wheel_zoom": false, "south": 0.0, "style": "IPY_MODEL_a4f9df80570143a8b829e84e6126ed27", "tap": true, "tap_tolerance": 15, "top": 9007199254740991.0, "touch_zoom": true, "west": 0.0, "window_url": "", "world_copy_jump": false, "zoom": 4.0, "zoom_animation_threshold": 4, "zoom_delta": 1.0, "zoom_snap": 1.0, "zoom_start": 12.0}}, "8a0588c861fc4a8296a36d5b022310cd": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletLayersControlModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletLayersControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletLayersControlView", "options": ["position"], "position": "topleft"}}, "a4f9df80570143a8b829e84e6126ed27": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapStyleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "a910e69b3f12483287b51e699d5edf6d": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapStyleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "ae56a31cf7774ff5b1ea8b771857c08b": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletRectangleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletRectangleModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletRectangleView", "base": false, "bottom": false, "bounds": [[31, -125], [49, -102]], "color": "#0033FF", "dash_array": null, "draggable": false, "fill": true, "fill_color": null, "fill_opacity": 0.2, "line_cap": "round", "line_join": "round", "locations": [], "name": "", "no_clip": true, "opacity": 1.0, "options": ["color", "dash_array", "draggable", "fill", "fill_color", "fill_opacity", "line_cap", "line_join", "no_clip", "opacity", "pointer_events", "smooth_factor", "stroke", "transform", "weight"], "pointer_events": "", "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "rotation": true, "scaling": true, "smooth_factor": 1.0, "stroke": true, "transform": false, "uniform_scaling": false, "weight": 5}}, "af12f69c7e254517a0ecc2b3af718945": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b6b60b5e703b45e783546c7a4a7c194e": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletGeoJSONModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletGeoJSONModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletGeoJSONView", "base": false, "bottom": false, "data": {"features": [{"geometry": {"coordinates": [-108.22143736654294, 39.03462275770759], "type": "Point"}, "id": "0", "properties": {"latitude": 39.03462275770759, "longitude": -108.22143736654294}, "type": "Feature"}, {"geometry": {"coordinates": [-108.22092579631844, 39.0364754430594], "type": "Point"}, "id": "1", "properties": {"latitude": 39.0364754430594, "longitude": -108.22092579631844}, "type": "Feature"}, {"geometry": {"coordinates": [-108.22023922899777, 39.06428809399202], "type": "Point"}, "id": "2", "properties": {"latitude": 39.06428809399202, "longitude": -108.22023922899777}, "type": "Feature"}, {"geometry": {"coordinates": [-108.22022037769548, 39.06417953563942], "type": "Point"}, "id": "3", "properties": {"latitude": 39.06417953563942, "longitude": -108.22022037769548}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21963222273214, 39.034408538336336], "type": "Point"}, "id": "4", "properties": {"latitude": 39.034408538336336, "longitude": -108.21963222273214}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21860452010492, 39.06295178388973], "type": "Point"}, "id": "5", "properties": {"latitude": 39.06295178388973, "longitude": -108.21860452010492}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21851302839987, 39.03378723541754], "type": "Point"}, "id": "6", "properties": {"latitude": 39.03378723541754, "longitude": -108.21851302839987}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21781403657259, 39.03629309680316], "type": "Point"}, "id": "7", "properties": {"latitude": 39.03629309680316, "longitude": -108.21781403657259}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21732327014556, 39.06232659828033], "type": "Point"}, "id": "8", "properties": {"latitude": 39.06232659828033, "longitude": -108.21732327014556}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21648097233562, 39.06200017418442], "type": "Point"}, "id": "9", "properties": {"latitude": 39.06200017418442, "longitude": -108.21648097233562}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21556127562778, 39.061879102893414], "type": "Point"}, "id": "10", "properties": {"latitude": 39.061879102893414, "longitude": -108.21556127562778}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21319890405339, 39.05936316182878], "type": "Point"}, "id": "11", "properties": {"latitude": 39.05936316182878, "longitude": -108.21319890405339}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21137293658585, 39.03617520368139], "type": "Point"}, "id": "12", "properties": {"latitude": 39.03617520368139, "longitude": -108.21137293658585}, "type": "Feature"}, {"geometry": {"coordinates": [-108.21038344247991, 39.058674174664255], "type": "Point"}, "id": "13", "properties": {"latitude": 39.058674174664255, "longitude": -108.21038344247991}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20975279652006, 39.03595624802808], "type": "Point"}, "id": "14", "properties": {"latitude": 39.03595624802808, "longitude": -108.20975279652006}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20911223519593, 39.05721129925941], "type": "Point"}, "id": "15", "properties": {"latitude": 39.05721129925941, "longitude": -108.20911223519593}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20815047172141, 39.05610717681743], "type": "Point"}, "id": "16", "properties": {"latitude": 39.05610717681743, "longitude": -108.20815047172141}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20579406225173, 39.03205958353486], "type": "Point"}, "id": "17", "properties": {"latitude": 39.03205958353486, "longitude": -108.20579406225173}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20559829681612, 39.02119895283987], "type": "Point"}, "id": "18", "properties": {"latitude": 39.02119895283987, "longitude": -108.20559829681612}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20413234400863, 39.053983811704484], "type": "Point"}, "id": "19", "properties": {"latitude": 39.053983811704484, "longitude": -108.20413234400863}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20378834171974, 39.05538096859388], "type": "Point"}, "id": "20", "properties": {"latitude": 39.05538096859388, "longitude": -108.20378834171974}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20348114483323, 39.03564377543784], "type": "Point"}, "id": "21", "properties": {"latitude": 39.03564377543784, "longitude": -108.20348114483323}, "type": "Feature"}, {"geometry": {"coordinates": [-108.2033955621495, 39.01994791885283], "type": "Point"}, "id": "22", "properties": {"latitude": 39.01994791885283, "longitude": -108.2033955621495}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20288861721943, 39.02108891762639], "type": "Point"}, "id": "23", "properties": {"latitude": 39.02108891762639, "longitude": -108.20288861721943}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20129160533239, 39.01795146194345], "type": "Point"}, "id": "24", "properties": {"latitude": 39.01795146194345, "longitude": -108.20129160533239}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20090818903557, 39.04960910452067], "type": "Point"}, "id": "25", "properties": {"latitude": 39.04960910452067, "longitude": -108.20090818903557}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20076489438127, 39.05323630580767], "type": "Point"}, "id": "26", "properties": {"latitude": 39.05323630580767, "longitude": -108.20076489438127}, "type": "Feature"}, {"geometry": {"coordinates": [-108.20045236400476, 39.03160707878529], "type": "Point"}, "id": "27", "properties": {"latitude": 39.03160707878529, "longitude": -108.20045236400476}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19987229338378, 39.033133694186056], "type": "Point"}, "id": "28", "properties": {"latitude": 39.033133694186056, "longitude": -108.19987229338378}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19983802883242, 39.03312386195069], "type": "Point"}, "id": "29", "properties": {"latitude": 39.03312386195069, "longitude": -108.19983802883242}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1997381369313, 39.03565300743376], "type": "Point"}, "id": "30", "properties": {"latitude": 39.03565300743376, "longitude": -108.1997381369313}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19875565475864, 39.034791556427685], "type": "Point"}, "id": "31", "properties": {"latitude": 39.034791556427685, "longitude": -108.19875565475864}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19862424668679, 39.01911262467933], "type": "Point"}, "id": "32", "properties": {"latitude": 39.01911262467933, "longitude": -108.19862424668679}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19841479276255, 39.04721585033679], "type": "Point"}, "id": "33", "properties": {"latitude": 39.04721585033679, "longitude": -108.19841479276255}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19778752248236, 39.01866007779271], "type": "Point"}, "id": "34", "properties": {"latitude": 39.01866007779271, "longitude": -108.19778752248236}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19769448722697, 39.02189209794249], "type": "Point"}, "id": "35", "properties": {"latitude": 39.02189209794249, "longitude": -108.19769448722697}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19764604203829, 39.02165669746245], "type": "Point"}, "id": "36", "properties": {"latitude": 39.02165669746245, "longitude": -108.19764604203829}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19705236516776, 39.04427317094712], "type": "Point"}, "id": "37", "properties": {"latitude": 39.04427317094712, "longitude": -108.19705236516776}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19625859528661, 39.03396574621333], "type": "Point"}, "id": "38", "properties": {"latitude": 39.03396574621333, "longitude": -108.19625859528661}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19592449492974, 39.04562442311102], "type": "Point"}, "id": "39", "properties": {"latitude": 39.04562442311102, "longitude": -108.19592449492974}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1943779869894, 39.03332589534543], "type": "Point"}, "id": "40", "properties": {"latitude": 39.03332589534543, "longitude": -108.1943779869894}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19231591052547, 39.01947436699322], "type": "Point"}, "id": "41", "properties": {"latitude": 39.01947436699322, "longitude": -108.19231591052547}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19216852391054, 39.021155511586414], "type": "Point"}, "id": "42", "properties": {"latitude": 39.021155511586414, "longitude": -108.19216852391054}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19194652827834, 39.03376283936172], "type": "Point"}, "id": "43", "properties": {"latitude": 39.03376283936172, "longitude": -108.19194652827834}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19191944646494, 39.03998743543614], "type": "Point"}, "id": "44", "properties": {"latitude": 39.03998743543614, "longitude": -108.19191944646494}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19185143271088, 39.02158030796287], "type": "Point"}, "id": "45", "properties": {"latitude": 39.02158030796287, "longitude": -108.19185143271088}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19157548129412, 39.03146560144451], "type": "Point"}, "id": "46", "properties": {"latitude": 39.03146560144451, "longitude": -108.19157548129412}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19141685766095, 39.01826351214106], "type": "Point"}, "id": "47", "properties": {"latitude": 39.01826351214106, "longitude": -108.19141685766095}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19140026007422, 39.03472265414738], "type": "Point"}, "id": "48", "properties": {"latitude": 39.03472265414738, "longitude": -108.19140026007422}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19103463896819, 39.03403816486377], "type": "Point"}, "id": "49", "properties": {"latitude": 39.03403816486377, "longitude": -108.19103463896819}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19010583288373, 39.03357433373753], "type": "Point"}, "id": "50", "properties": {"latitude": 39.03357433373753, "longitude": -108.19010583288373}, "type": "Feature"}, {"geometry": {"coordinates": [-108.19006136493464, 39.0177894009436], "type": "Point"}, "id": "51", "properties": {"latitude": 39.0177894009436, "longitude": -108.19006136493464}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18975829731649, 39.03971912885595], "type": "Point"}, "id": "52", "properties": {"latitude": 39.03971912885595, "longitude": -108.18975829731649}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1894813320662, 39.031261970372725], "type": "Point"}, "id": "53", "properties": {"latitude": 39.031261970372725, "longitude": -108.1894813320662}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18945154120027, 39.03667568639045], "type": "Point"}, "id": "54", "properties": {"latitude": 39.03667568639045, "longitude": -108.18945154120027}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18782408219361, 39.037807604897154], "type": "Point"}, "id": "55", "properties": {"latitude": 39.037807604897154, "longitude": -108.18782408219361}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18731116282429, 39.03210151611125], "type": "Point"}, "id": "56", "properties": {"latitude": 39.03210151611125, "longitude": -108.18731116282429}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18728379599106, 39.03861438951564], "type": "Point"}, "id": "57", "properties": {"latitude": 39.03861438951564, "longitude": -108.18728379599106}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18681031293202, 39.03220654618196], "type": "Point"}, "id": "58", "properties": {"latitude": 39.03220654618196, "longitude": -108.18681031293202}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18637455013138, 39.03183566619117], "type": "Point"}, "id": "59", "properties": {"latitude": 39.03183566619117, "longitude": -108.18637455013138}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18568367337248, 39.032945116315204], "type": "Point"}, "id": "60", "properties": {"latitude": 39.032945116315204, "longitude": -108.18568367337248}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18567342964606, 39.01923310186932], "type": "Point"}, "id": "61", "properties": {"latitude": 39.01923310186932, "longitude": -108.18567342964606}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18543411432225, 39.03486702389674], "type": "Point"}, "id": "62", "properties": {"latitude": 39.03486702389674, "longitude": -108.18543411432225}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18423271828408, 39.03341457866033], "type": "Point"}, "id": "63", "properties": {"latitude": 39.03341457866033, "longitude": -108.18423271828408}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1834173209633, 39.01671913854266], "type": "Point"}, "id": "64", "properties": {"latitude": 39.01671913854266, "longitude": -108.1834173209633}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18323177089411, 39.03273273362865], "type": "Point"}, "id": "65", "properties": {"latitude": 39.03273273362865, "longitude": -108.18323177089411}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18235416154971, 39.035342158200926], "type": "Point"}, "id": "66", "properties": {"latitude": 39.035342158200926, "longitude": -108.18235416154971}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1822502460726, 39.01877202374605], "type": "Point"}, "id": "67", "properties": {"latitude": 39.01877202374605, "longitude": -108.1822502460726}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18178402549249, 39.019751748108874], "type": "Point"}, "id": "68", "properties": {"latitude": 39.019751748108874, "longitude": -108.18178402549249}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1809127770634, 39.01697391230324], "type": "Point"}, "id": "69", "properties": {"latitude": 39.01697391230324, "longitude": -108.1809127770634}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18072684932028, 39.01845590846829], "type": "Point"}, "id": "70", "properties": {"latitude": 39.01845590846829, "longitude": -108.18072684932028}, "type": "Feature"}, {"geometry": {"coordinates": [-108.18012677604642, 39.032387383274845], "type": "Point"}, "id": "71", "properties": {"latitude": 39.032387383274845, "longitude": -108.18012677604642}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17785583731398, 39.03314323138315], "type": "Point"}, "id": "72", "properties": {"latitude": 39.03314323138315, "longitude": -108.17785583731398}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17678140980806, 39.0267658474241], "type": "Point"}, "id": "73", "properties": {"latitude": 39.0267658474241, "longitude": -108.17678140980806}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17636808133669, 39.019161219628394], "type": "Point"}, "id": "74", "properties": {"latitude": 39.019161219628394, "longitude": -108.17636808133669}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17615893750046, 39.03079582176853], "type": "Point"}, "id": "75", "properties": {"latitude": 39.03079582176853, "longitude": -108.17615893750046}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17577830990707, 39.02846227102886], "type": "Point"}, "id": "76", "properties": {"latitude": 39.02846227102886, "longitude": -108.17577830990707}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17560874185271, 39.028079783120965], "type": "Point"}, "id": "77", "properties": {"latitude": 39.028079783120965, "longitude": -108.17560874185271}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17517111760047, 39.019348435717], "type": "Point"}, "id": "78", "properties": {"latitude": 39.019348435717, "longitude": -108.17517111760047}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17498951789352, 39.02767738857603], "type": "Point"}, "id": "79", "properties": {"latitude": 39.02767738857603, "longitude": -108.17498951789352}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17416756924544, 39.02192772220562], "type": "Point"}, "id": "80", "properties": {"latitude": 39.02192772220562, "longitude": -108.17416756924544}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17399306146595, 39.03036494932604], "type": "Point"}, "id": "81", "properties": {"latitude": 39.03036494932604, "longitude": -108.17399306146595}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17369166055113, 39.02546574121359], "type": "Point"}, "id": "82", "properties": {"latitude": 39.02546574121359, "longitude": -108.17369166055113}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17257036129763, 39.027807920216986], "type": "Point"}, "id": "83", "properties": {"latitude": 39.027807920216986, "longitude": -108.17257036129763}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17202703121949, 39.02434428307895], "type": "Point"}, "id": "84", "properties": {"latitude": 39.02434428307895, "longitude": -108.17202703121949}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17169135921415, 39.030444255067884], "type": "Point"}, "id": "85", "properties": {"latitude": 39.030444255067884, "longitude": -108.17169135921415}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17150847369598, 39.02402539399322], "type": "Point"}, "id": "86", "properties": {"latitude": 39.02402539399322, "longitude": -108.17150847369598}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17135631305068, 39.02002169353377], "type": "Point"}, "id": "87", "properties": {"latitude": 39.02002169353377, "longitude": -108.17135631305068}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17124379098304, 39.03008204199586], "type": "Point"}, "id": "88", "properties": {"latitude": 39.03008204199586, "longitude": -108.17124379098304}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17117273118822, 39.017674890536775], "type": "Point"}, "id": "89", "properties": {"latitude": 39.017674890536775, "longitude": -108.17117273118822}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17061659735758, 39.031616369335175], "type": "Point"}, "id": "90", "properties": {"latitude": 39.031616369335175, "longitude": -108.17061659735758}, "type": "Feature"}, {"geometry": {"coordinates": [-108.17009781382406, 39.03245963091673], "type": "Point"}, "id": "91", "properties": {"latitude": 39.03245963091673, "longitude": -108.17009781382406}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16975699700129, 39.02508197993265], "type": "Point"}, "id": "92", "properties": {"latitude": 39.02508197993265, "longitude": -108.16975699700129}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16907053521783, 39.01826349674738], "type": "Point"}, "id": "93", "properties": {"latitude": 39.01826349674738, "longitude": -108.16907053521783}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16836575580797, 39.01624637414493], "type": "Point"}, "id": "94", "properties": {"latitude": 39.01624637414493, "longitude": -108.16836575580797}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16818763441047, 39.032278101491244], "type": "Point"}, "id": "95", "properties": {"latitude": 39.032278101491244, "longitude": -108.16818763441047}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16733275671113, 39.01840146053016], "type": "Point"}, "id": "96", "properties": {"latitude": 39.01840146053016, "longitude": -108.16733275671113}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1672580693638, 39.01795820330875], "type": "Point"}, "id": "97", "properties": {"latitude": 39.01795820330875, "longitude": -108.1672580693638}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16654071722839, 39.0321569951184], "type": "Point"}, "id": "98", "properties": {"latitude": 39.0321569951184, "longitude": -108.16654071722839}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16621713629071, 39.031004984384495], "type": "Point"}, "id": "99", "properties": {"latitude": 39.031004984384495, "longitude": -108.16621713629071}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16617157319915, 39.01942729244128], "type": "Point"}, "id": "100", "properties": {"latitude": 39.01942729244128, "longitude": -108.16617157319915}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16612803056634, 39.03063344860054], "type": "Point"}, "id": "101", "properties": {"latitude": 39.03063344860054, "longitude": -108.16612803056634}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1653158634249, 39.018010087731106], "type": "Point"}, "id": "102", "properties": {"latitude": 39.018010087731106, "longitude": -108.1653158634249}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16516070480759, 39.01669099715868], "type": "Point"}, "id": "103", "properties": {"latitude": 39.01669099715868, "longitude": -108.16516070480759}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16480727823469, 39.01946618902541], "type": "Point"}, "id": "104", "properties": {"latitude": 39.01946618902541, "longitude": -108.16480727823469}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16468951316398, 39.01692278073399], "type": "Point"}, "id": "105", "properties": {"latitude": 39.01692278073399, "longitude": -108.16468951316398}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16409282641744, 39.016827184538464], "type": "Point"}, "id": "106", "properties": {"latitude": 39.016827184538464, "longitude": -108.16409282641744}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16401243260434, 39.02143784613485], "type": "Point"}, "id": "107", "properties": {"latitude": 39.02143784613485, "longitude": -108.16401243260434}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16368820922699, 39.0307002284909], "type": "Point"}, "id": "108", "properties": {"latitude": 39.0307002284909, "longitude": -108.16368820922699}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16328837610558, 39.020483289962755], "type": "Point"}, "id": "109", "properties": {"latitude": 39.020483289962755, "longitude": -108.16328837610558}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16275063452767, 39.030461193245074], "type": "Point"}, "id": "110", "properties": {"latitude": 39.030461193245074, "longitude": -108.16275063452767}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16262107783388, 39.01580037757149], "type": "Point"}, "id": "111", "properties": {"latitude": 39.01580037757149, "longitude": -108.16262107783388}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16238281544572, 39.01656034442324], "type": "Point"}, "id": "112", "properties": {"latitude": 39.01656034442324, "longitude": -108.16238281544572}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16212365170243, 39.03285133244842], "type": "Point"}, "id": "113", "properties": {"latitude": 39.03285133244842, "longitude": -108.16212365170243}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16211133229905, 39.031427610454756], "type": "Point"}, "id": "114", "properties": {"latitude": 39.031427610454756, "longitude": -108.16211133229905}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16203450052717, 39.01574105311044], "type": "Point"}, "id": "115", "properties": {"latitude": 39.01574105311044, "longitude": -108.16203450052717}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16126214010691, 39.013109630949465], "type": "Point"}, "id": "116", "properties": {"latitude": 39.013109630949465, "longitude": -108.16126214010691}, "type": "Feature"}, {"geometry": {"coordinates": [-108.16000104119986, 39.02874558183991], "type": "Point"}, "id": "117", "properties": {"latitude": 39.02874558183991, "longitude": -108.16000104119986}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15928374866921, 39.01925963778051], "type": "Point"}, "id": "118", "properties": {"latitude": 39.01925963778051, "longitude": -108.15928374866921}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15722011834616, 39.010812928725585], "type": "Point"}, "id": "119", "properties": {"latitude": 39.010812928725585, "longitude": -108.15722011834616}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15693378600697, 39.016805948538966], "type": "Point"}, "id": "120", "properties": {"latitude": 39.016805948538966, "longitude": -108.15693378600697}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15595633812802, 39.018430752740386], "type": "Point"}, "id": "121", "properties": {"latitude": 39.018430752740386, "longitude": -108.15595633812802}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15512714453467, 39.01750961795518], "type": "Point"}, "id": "122", "properties": {"latitude": 39.01750961795518, "longitude": -108.15512714453467}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15479967343127, 39.01214126522517], "type": "Point"}, "id": "123", "properties": {"latitude": 39.01214126522517, "longitude": -108.15479967343127}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1546718490443, 39.00870571112627], "type": "Point"}, "id": "124", "properties": {"latitude": 39.00870571112627, "longitude": -108.1546718490443}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15181355604899, 39.02813138568829], "type": "Point"}, "id": "125", "properties": {"latitude": 39.02813138568829, "longitude": -108.15181355604899}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15178334450462, 39.030896406292555], "type": "Point"}, "id": "126", "properties": {"latitude": 39.030896406292555, "longitude": -108.15178334450462}, "type": "Feature"}, {"geometry": {"coordinates": [-108.15110786043364, 39.03160962530204], "type": "Point"}, "id": "127", "properties": {"latitude": 39.03160962530204, "longitude": -108.15110786043364}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14962085504702, 39.016591320047176], "type": "Point"}, "id": "128", "properties": {"latitude": 39.016591320047176, "longitude": -108.14962085504702}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14889582946005, 39.029744731076285], "type": "Point"}, "id": "129", "properties": {"latitude": 39.029744731076285, "longitude": -108.14889582946005}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14877286492516, 39.032228201572934], "type": "Point"}, "id": "130", "properties": {"latitude": 39.032228201572934, "longitude": -108.14877286492516}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14860967327309, 39.015890914603645], "type": "Point"}, "id": "131", "properties": {"latitude": 39.015890914603645, "longitude": -108.14860967327309}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14791503716627, 39.007603657884985], "type": "Point"}, "id": "132", "properties": {"latitude": 39.007603657884985, "longitude": -108.14791503716627}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14787207256487, 39.01815214516334], "type": "Point"}, "id": "133", "properties": {"latitude": 39.01815214516334, "longitude": -108.14787207256487}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14630002041682, 39.01675331157304], "type": "Point"}, "id": "134", "properties": {"latitude": 39.01675331157304, "longitude": -108.14630002041682}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14596427092235, 39.029402714730004], "type": "Point"}, "id": "135", "properties": {"latitude": 39.029402714730004, "longitude": -108.14596427092235}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14576053935936, 39.03130762871748], "type": "Point"}, "id": "136", "properties": {"latitude": 39.03130762871748, "longitude": -108.14576053935936}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14515916693657, 39.03075236192415], "type": "Point"}, "id": "137", "properties": {"latitude": 39.03075236192415, "longitude": -108.14515916693657}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14350364566792, 39.015648785060904], "type": "Point"}, "id": "138", "properties": {"latitude": 39.015648785060904, "longitude": -108.14350364566792}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1431138144662, 39.02934189091522], "type": "Point"}, "id": "139", "properties": {"latitude": 39.02934189091522, "longitude": -108.1431138144662}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14175248865276, 39.01611937153815], "type": "Point"}, "id": "140", "properties": {"latitude": 39.01611937153815, "longitude": -108.14175248865276}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14158056859242, 39.014367412485974], "type": "Point"}, "id": "141", "properties": {"latitude": 39.014367412485974, "longitude": -108.14158056859242}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14157952238622, 39.03072769083888], "type": "Point"}, "id": "142", "properties": {"latitude": 39.03072769083888, "longitude": -108.14157952238622}, "type": "Feature"}, {"geometry": {"coordinates": [-108.14043579864595, 39.02901495904474], "type": "Point"}, "id": "143", "properties": {"latitude": 39.02901495904474, "longitude": -108.14043579864595}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13941933611433, 39.01555763533912], "type": "Point"}, "id": "144", "properties": {"latitude": 39.01555763533912, "longitude": -108.13941933611433}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13910391830856, 39.031108390851024], "type": "Point"}, "id": "145", "properties": {"latitude": 39.031108390851024, "longitude": -108.13910391830856}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13821675101312, 39.016456042231106], "type": "Point"}, "id": "146", "properties": {"latitude": 39.016456042231106, "longitude": -108.13821675101312}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13744527755205, 39.02956316964255], "type": "Point"}, "id": "147", "properties": {"latitude": 39.02956316964255, "longitude": -108.13744527755205}, "type": "Feature"}, {"geometry": {"coordinates": [-108.1351592153939, 39.030398888881194], "type": "Point"}, "id": "148", "properties": {"latitude": 39.030398888881194, "longitude": -108.1351592153939}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13404742042775, 39.0296148037084], "type": "Point"}, "id": "149", "properties": {"latitude": 39.0296148037084, "longitude": -108.13404742042775}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13394616803406, 39.013828604775554], "type": "Point"}, "id": "150", "properties": {"latitude": 39.013828604775554, "longitude": -108.13394616803406}, "type": "Feature"}, {"geometry": {"coordinates": [-108.13182393407043, 39.01747909261867], "type": "Point"}, "id": "151", "properties": {"latitude": 39.01747909261867, "longitude": -108.13182393407043}, "type": "Feature"}, {"geometry": {"coordinates": [-108.12659890452441, 39.016467530475325], "type": "Point"}, "id": "152", "properties": {"latitude": 39.016467530475325, "longitude": -108.12659890452441}, "type": "Feature"}, {"geometry": {"coordinates": [-108.12461584905586, 39.01610331643039], "type": "Point"}, "id": "153", "properties": {"latitude": 39.01610331643039, "longitude": -108.12461584905586}, "type": "Feature"}, {"geometry": {"coordinates": [-108.00312700623464, 39.03917744689935], "type": "Point"}, "id": "154", "properties": {"latitude": 39.03917744689935, "longitude": -108.00312700623464}, "type": "Feature"}], "type": "FeatureCollection"}, "hover_style": {"fillColor": "red", "fillOpacity": 0.2}, "layers": [], "name": "lwc obs.", "options": [], "point_style": {"color": "red", "fillColor": "blue", "fillOpacity": 0.8, "radius": 5, "weight": 3}, "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "style": {"color": "black", "dashArray": "2", "fillColor": "#3366cc", "fillOpacity": 0.6, "opacity": 0.5, "radius": 8, "weight": 1.9}}}, "cf844299f0a8458cb6702ea6c3064896": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapStyleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "e744bcad6ea14e45adf283c84922fdfe": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletAttributionControlModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletAttributionControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletAttributionControlView", "options": ["position", "prefix"], "position": "bottomright", "prefix": "ipyleaflet"}}, "ed8b7d772d814e9097adb34f08b39288": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletMapStyleModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "f2395a0d86d240edbd492c23f1a2df72": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletTileLayerModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletTileLayerView", "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors &copy; <a href=\"https://carto.com/attributions\">CARTO</a>", "base": true, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": 18, "max_zoom": 20, "min_native_zoom": 0, "min_zoom": 1, "name": "CartoDB.Positron", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "tile_size", "tms"], "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "tile_size": 256, "tms": false, "url": "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png", "visible": true}}, "f8f1e0f3d1894b6a83aa6ba8a55e8e9e": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletZoomControlModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletZoomControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletZoomControlView", "options": ["position", "zoom_in_text", "zoom_in_title", "zoom_out_text", "zoom_out_title"], "position": "topleft", "zoom_in_text": "+", "zoom_in_title": "Zoom in", "zoom_out_text": "-", "zoom_out_title": "Zoom out"}}, "fbb6e0c370d0459cad8f66590e60dcaf": {"model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "model_name": "LeafletAttributionControlModel", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletAttributionControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletAttributionControlView", "options": ["position", "prefix"], "position": "bottomright", "prefix": "ipyleaflet"}}}, "version_major": 2, "version_minor": 0}
-</script>
-
 
     <script type="text/x-thebe-config">
     {
