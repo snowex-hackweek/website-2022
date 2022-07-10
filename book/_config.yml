@@ -40,7 +40,6 @@ execute:
     - "**/*snowmodeling*.ipynb"
     - "**/3_common_pitfalls.ipynb"
     # Temporarily disable
-    - "**/03_database_preview.ipynb"
   allow_errors: false
   # Per-cell notebook execution limit (seconds)
   timeout: 300
