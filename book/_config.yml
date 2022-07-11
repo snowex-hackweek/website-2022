@@ -38,6 +38,8 @@ execute:
   execute_notebooks: 'cache'
   exclude_patterns: 
     - "**/*snowmodeling*.ipynb"
+    - "**/3_common_pitfalls.ipynb"
+    # Temporarily disable
   allow_errors: false
   # Per-cell notebook execution limit (seconds)
   timeout: 300

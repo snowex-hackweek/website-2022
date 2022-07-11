@@ -7,6 +7,7 @@ parts:
   chapters:
     - file: application
     - file: logistics
+    - file: COVID
     - title: Schedule
       url: https://snowex.hackweek.io//index.html?jump_to=schedule
     - title: Team
@@ -50,7 +51,8 @@ parts:
             - file: tutorials/database/4_get_spiral_example
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
-            - file: tutorials/database/7_wrap_up
+            - file: tutorials/database/7_bonus_challenge
+            - file: tutorials/database/8_wrap_up
         - file: tutorials/OOP/index
           title: Object Oriented Programming
           sections:
@@ -63,7 +65,7 @@ parts:
             - file: tutorials/lidar/2_elevation_differencing
             - file: tutorials/lidar/3_common_pitfalls
         - file: tutorials/uavsar/index
-          title: Uavsar
+          title: UAVSAR
           sections:
             - file: tutorials/uavsar/1_accessing_imagery
             - file: tutorials/uavsar/2_types_of_uavsar_images
