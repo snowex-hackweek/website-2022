@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Ground-Based Measurements and Data Descriptions" href="02_data_descriptions.html" />
+    <link rel="next" title="Ground-Based Measurements" href="02_data_descriptions.html" />
     <link rel="prev" title="SnowEx Mission and Dataset Descriptions" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -424,7 +424,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="02_data_descriptions.html">
-       Ground-Based Measurements and Data Descriptions
+       Ground-Based Measurements
       </a>
      </li>
      <li class="toctree-l3">
@@ -670,23 +670,33 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-coverage">
-   Measurement Coverage
+  <a class="reference internal nav-link" href="#data-coverage">
+   Data Coverage
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#campaign-summary-table">
+     Campaign Summary Table
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#where-has-snowex-been">
      Where has SnowEx Been?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#temporal-extent">
-     Temporal Extent
+    <a class="reference internal nav-link" href="#what-s-with-the-iop-versus-the-ts">
+     What’s with the IOP versus the TS?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#focus-on-different-snow-classes">
-     Focus on Different Snow Classes
+    <a class="reference internal nav-link" href="#snow-classification-coverage">
+     Snow Classification Coverage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-we-all-must-wonder-which-snow-classes-have-been-part-of-the-snowex-sampling">
+     Now we all must wonder - Which Snow Classes have been part of the SnowEx sampling?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -722,23 +732,33 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#measurement-coverage">
-   Measurement Coverage
+  <a class="reference internal nav-link" href="#data-coverage">
+   Data Coverage
   </a>
   <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#campaign-summary-table">
+     Campaign Summary Table
+    </a>
+   </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#where-has-snowex-been">
      Where has SnowEx Been?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#temporal-extent">
-     Temporal Extent
+    <a class="reference internal nav-link" href="#what-s-with-the-iop-versus-the-ts">
+     What’s with the IOP versus the TS?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#focus-on-different-snow-classes">
-     Focus on Different Snow Classes
+    <a class="reference internal nav-link" href="#snow-classification-coverage">
+     Snow Classification Coverage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#now-we-all-must-wonder-which-snow-classes-have-been-part-of-the-snowex-sampling">
+     Now we all must wonder - Which Snow Classes have been part of the SnowEx sampling?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -765,8 +785,7 @@ const thebe_selector_output = ".output, .cell_output"
   <img alt="../../_images/01_banner.png" src="../../_images/01_banner.png" />
 <div class="tex2jax_ignore mathjax_ignore section" id="snowex-field-campaigns-overview">
 <h1>SnowEx Field Campaigns Overview<a class="headerlink" href="#snowex-field-campaigns-overview" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="measurement-coverage">
-<h2>Measurement Coverage<a class="headerlink" href="#measurement-coverage" title="Permalink to this headline">¶</a></h2>
+<p>(5 minutes)</p>
 <p>brought to you by:</p>
 <ul class="simple">
 <li><p><strong>Megan Mason</strong> (NASA Goddard / SSAI) <a class="reference external" href="mailto:megan&#46;a&#46;mason&#37;&#52;&#48;nasa&#46;gov">megan<span>&#46;</span>a<span>&#46;</span>mason<span>&#64;</span>nasa<span>&#46;</span>gov</a></p></li>
@@ -777,35 +796,92 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Learning Objectives:</p>
 <ul class="simple">
 <li><p>Visual overview of the NASA SnowEx field campaigns</p></li>
-<li><p>Understand the structure of the different campaigns</p></li>
-<li><p>Get a sense for the different campaign structures</p></li>
+<li><p>Understand the structure of the different campaign types</p></li>
+<li><p>Get a sense for the extent of data coverage</p></li>
 </ul>
+<div class="section" id="data-coverage">
+<h2>Data Coverage<a class="headerlink" href="#data-coverage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="campaign-summary-table">
+<h3>Campaign Summary Table<a class="headerlink" href="#campaign-summary-table" title="Permalink to this headline">¶</a></h3>
+<p>Each year we build upon our efforts to further investigate the identitifed snow remote sensing science gaps. The summary table lists the focus for each campaign by year and type.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><strong>Year</strong></p></th>
+<th class="text-align:left head"><p><strong>Type</strong></p></th>
+<th class="text-align:left head"><p><strong>Campaign Focus</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>2017</p></td>
+<td class="text-align:left"><p>IOP</p></td>
+<td class="text-align:left"><p>Colorado, focused on multiple instruments in a forest gradient.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>2020</p></td>
+<td class="text-align:left"><p>IOP, TS</p></td>
+<td class="text-align:left"><p>Western US, focused on Time Series of L-band InSAR, Active/passive microwave for SWE and Thermal IR for snow surface temp.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p>2021</p></td>
+<td class="text-align:left"><p>TS</p></td>
+<td class="text-align:left"><p>Western US, continued Time Series, L-band InSAR, also addressed Prairie &amp; Albedo questions.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p>2023</p></td>
+<td class="text-align:left"><p>IOP</p></td>
+<td class="text-align:left"><p>Tundra &amp; Boreal forest, focus plans to address SWE/snow depth and albedo objectives.</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>IOP = Intensive Observation Period</em>; <em>TS = Time Series</em></p>
+</div>
 <div class="section" id="where-has-snowex-been">
 <h3>Where has SnowEx Been?<a class="headerlink" href="#where-has-snowex-been" title="Permalink to this headline">¶</a></h3>
 <p>Campaign efforts are focused on various snow climates in the Western United States. SnowEx partnerships and expertise are spread across the US and international.</p>
-<img alt="../../_images/01_where-has-snowex-been.png" src="../../_images/01_where-has-snowex-been.png" />
+<p><img alt="" src="../../_images/01_where-has-snowex-been.png" />
+<strong>Figure 1.</strong> (L) Map of SnowEx ground and UAVSAR airborne flight boxes. (R) Table of SnowEx regional locations for each campaign</p>
 </div>
-<div class="section" id="temporal-extent">
-<h3>Temporal Extent<a class="headerlink" href="#temporal-extent" title="Permalink to this headline">¶</a></h3>
-<p>[add more text here]</p>
-<img alt="../../_images/01_iop-v-ts.png" src="../../_images/01_iop-v-ts.png" />
+<div class="section" id="what-s-with-the-iop-versus-the-ts">
+<h3>What’s with the IOP versus the TS?<a class="headerlink" href="#what-s-with-the-iop-versus-the-ts" title="Permalink to this headline">¶</a></h3>
+<p>These are two different sampling strategies, but result in the same types of measurements and data set products. Depending on the  research application it may not matter at all which you choose to work with, or even combine! The important thing to grasp is the difference in spatial and temporal extent of the campaign periods. If the sampling protocols or data set products change over time, it is for the sake of improvement. When possible, we aim to keep things consistent to continue to build a legacy data set.</p>
+<!-- <figure>
+<img src='./content/01_campaign_venn_diagram.jpg'>
+<figcaption algin = "left"> <b>Figure 2.</b> Diagram to differentiate the Intensive Observation Period (IOP) and Time Series (TS) campaign types. The center describes what components remain consistent amongst the different campaign types.    
+<figure> -->
+<p><img alt="" src="../../_images/01_campaign_venn_diagram.jpg" />
+<strong>Figure 2.</strong> Diagram to differentiate the Intensive Observation Period (IOP) and Time Series (TS) campaign types. The center describes what components remain consistent amongst the different campaign types.</p>
 </div>
-<div class="section" id="focus-on-different-snow-classes">
-<h3>Focus on Different Snow Classes<a class="headerlink" href="#focus-on-different-snow-classes" title="Permalink to this headline">¶</a></h3>
-<p>[statement here about collection data in a variety of climates]</p>
-<p>[insert image of snow-classification-with-ground-obs]</p>
+<div class="section" id="snow-classification-coverage">
+<h3>Snow Classification Coverage<a class="headerlink" href="#snow-classification-coverage" title="Permalink to this headline">¶</a></h3>
+<p>Thanks to Sturm and Liston 2021 (and 1995), we have a global seasonal snow classification system. This is a vital mission planning tool for remote sensing snow studies. Revised from inception, the snow classification system offers improved utility of the climatological snow classes due to improved (much higher) resolution (300 m over North America). This data set can be found at NSIDC and downloaded at multiple resolutions.</p>
+<p><a class="reference external" href="https://nsidc.org/data/NSIDC-0768/versions/1">NSIDC Global Seasonal-Snow Classification, Version 1</a></p>
+<p>Check out <a class="reference external" href="https://journals.ametsoc.org/view/journals/hydr/22/11/JHM-D-21-0070.1.xml">Sturm and Liston, 2021</a> to find out more</p>
+<!-- <figure>
+<img src='./content/01_snow-classes-sturm.png'>
+<figcaption algin = "left"> <b>Figure 3.</b> Snow Classes across North America at 300 m (Sturm and Liston, 2021)    
+<figure> -->
+<p><img alt="" src="../../_images/01_snow-classes-sturm.png" />
+<strong>Figure 3.</strong> Snow Classes across North America at 300 m (Sturm and Liston, 2021)</p>
+</div>
+<div class="section" id="now-we-all-must-wonder-which-snow-classes-have-been-part-of-the-snowex-sampling">
+<h3>Now we all must wonder - Which Snow Classes have been part of the SnowEx sampling?<a class="headerlink" href="#now-we-all-must-wonder-which-snow-classes-have-been-part-of-the-snowex-sampling" title="Permalink to this headline">¶</a></h3>
+<p>As part of the mission statement, SnowEx aims to quantify snow estimation uncertainty across a range of snow classes, terrain and vegetration types. This is important to determine what areas and time periods have high SWE uncertainty across the ensemble of instrument techniques.</p>
+<!-- <figure>
+<img src='./content/01_snow-class-coverage.png'>
+<figcaption algin = "left"> <b>Figure 4.</b> Map of the averaged snow pits by site for the 2020 and 2021 Time Series Campaign. Note, some points are overlapping in the eastern Rocky Mountain region around Colorado. The total number of unique snow pit sites are listed in the legend.     
+<figure> -->
+<p><img alt="" src="../../_images/01_snow-class-coverage.png" />
+<strong>Figure 4.</strong> Map of the averaged snow pits by site for the 2020 and 2021 Time Series Campaign. Note, some points are overlapping in the eastern Rocky Mountain region around Colorado. The total number of unique snow pit sites are listed in the legend.</p>
 </div>
 <div class="section" id="recap">
 <h3>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>The participant-driven SnowEx effort is conducting a multi-year, multi-sensor seasonal snow campaigns, targeting different snow classes to collect a range of coincident in situ and remotely sensed observations.</p></li>
-<li><p>The field and airborne campaigns are designed to directly respond to the current knowledge gaps in remote sensing of seasonal snow.</p></li>
+<li><p>SnowEx campaigns are structured based on the objectives set out in the SnowEx Science Plan. Some of those objectives are meet by conducting an all hands-on, short and intenstive observation period (IOP), while others are addressed by studying the evolution of the snowpack over a much longer time series (TS) style campaign.</p></li>
+<li><p>The coincident field and airborne campaigns are designed to directly respond to the current knowledge gaps in remote sensing of seasonal snow, thus the participant-driven SnowEx effort targets a range of snow classes, terrain and vegetation types.</p></li>
 </ul>
 </div>
 <div class="section" id="references">
 <h3>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h3>
-<p>2020 Experimental plan</p>
-<p>THP Science Plan</p>
+<p><a class="reference external" href="https://snow.nasa.gov/sites/default/files/NASA_SnowEx_Experiment_Plan_v15_draft.pdf">2020 Experimental plan</a></p>
+<p><a class="reference external" href="https://snow.nasa.gov/sites/default/files/SnowEx_Science_Plan_v1.6.pdf">SnowEx Science Plan</a></p>
+<p><a class="reference external" href="https://journals.ametsoc.org/view/journals/hydr/22/11/JHM-D-21-0070.1.xml">Sturm and Liston, 2021</a></p>
 </div>
 </div>
 </div>
@@ -845,7 +921,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="02_data_descriptions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Ground-Based Measurements and Data Descriptions</p>
+        <p class="prev-next-title">Ground-Based Measurements</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

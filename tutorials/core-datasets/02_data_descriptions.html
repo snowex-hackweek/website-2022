@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ground-Based Measurements and Data Descriptions &#8212; SnowEx Hackweek 2022</title>
+    <title>Ground-Based Measurements &#8212; SnowEx Hackweek 2022</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -424,7 +424,7 @@ const thebe_selector_output = ".output, .cell_output"
      </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
-       Ground-Based Measurements and Data Descriptions
+       Ground-Based Measurements
       </a>
      </li>
      <li class="toctree-l3">
@@ -670,9 +670,104 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#share-your-thoughts">
-   Share Your Thoughts
+  <a class="reference internal nav-link" href="#data-descriptions">
+   Data Descriptions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-ground-based-data-sets-are-central-for-all-field-campagins">
+     What ground-based data sets are central for all field campagins?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-snow-pit-span-style-color-gray-layer-data-site-data-in-the-snowex-database">
+     What is a
+     <strong>
+      snow pit
+     </strong>
+     ?
+     <span style="color:gray">
+      ⇨ ‘Layer data’ &amp; ‘Site data’ in the SnowEx database
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-depth-transects-spirals-or-simply-depths-span-style-color-gray-point-data-in-the-snowex-database">
+     What are
+     <strong>
+      depth transects (spirals)
+     </strong>
+     ? or simply
+     <strong>
+      depths
+     </strong>
+     <span style="color:gray">
+      ⇨ ‘Point data’ in the SnowEx database
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-an-interval-board-span-style-color-gray-soon-to-be-point-data-in-the-snowex-database">
+     What is an
+     <strong>
+      interval board
+     </strong>
+     ?
+     <span style="color:gray">
+      ⇨ soon to be ‘Point data’ in the SnowEx database
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-detail-on-what-s-in-a-snow-pit">
+     Additional detail on what’s in a snow pit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-collection">
+     Data Collection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-do-we-care-about-observations-from-snow-pits-and-other-measurements">
+     Why do we care about observations from snow pits and other measurements?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-strategy-and-naming-conventions">
+   Sampling Strategy and Naming Conventions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grand-mesa-iop">
+     2020 Grand Mesa IOP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-series">
+     2020 &amp; 2021 Time Series
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-can-i-find-data">
+     Where can I find data?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snowex-data-sets-are-stored-and-archived-at-the-national-snow-and-ice-data-center-nsidc-in-boulder-colorado">
+       1. SnowEx data sets are stored and archived at the National Snow and Ice Data Center (NSIDC) in Boulder, Colorado.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snowex-sql-database-preview-in-next-tutorial">
+       2. SnowEx SQL Database (preview in next tutorial!)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recap">
@@ -680,9 +775,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+  <a class="reference internal nav-link" href="#share-your-thoughts">
+   Share Your Thoughts
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#group-mind-map-activity">
+     Group Mind Map Activity
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -694,7 +796,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Ground-Based Measurements and Data Descriptions</h1>
+                <h1>Ground-Based Measurements</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -705,9 +807,104 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#share-your-thoughts">
-   Share Your Thoughts
+  <a class="reference internal nav-link" href="#data-descriptions">
+   Data Descriptions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-ground-based-data-sets-are-central-for-all-field-campagins">
+     What ground-based data sets are central for all field campagins?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-a-snow-pit-span-style-color-gray-layer-data-site-data-in-the-snowex-database">
+     What is a
+     <strong>
+      snow pit
+     </strong>
+     ?
+     <span style="color:gray">
+      ⇨ ‘Layer data’ &amp; ‘Site data’ in the SnowEx database
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-depth-transects-spirals-or-simply-depths-span-style-color-gray-point-data-in-the-snowex-database">
+     What are
+     <strong>
+      depth transects (spirals)
+     </strong>
+     ? or simply
+     <strong>
+      depths
+     </strong>
+     <span style="color:gray">
+      ⇨ ‘Point data’ in the SnowEx database
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-an-interval-board-span-style-color-gray-soon-to-be-point-data-in-the-snowex-database">
+     What is an
+     <strong>
+      interval board
+     </strong>
+     ?
+     <span style="color:gray">
+      ⇨ soon to be ‘Point data’ in the SnowEx database
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-detail-on-what-s-in-a-snow-pit">
+     Additional detail on what’s in a snow pit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-collection">
+     Data Collection
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-do-we-care-about-observations-from-snow-pits-and-other-measurements">
+     Why do we care about observations from snow pits and other measurements?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-strategy-and-naming-conventions">
+   Sampling Strategy and Naming Conventions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grand-mesa-iop">
+     2020 Grand Mesa IOP
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-series">
+     2020 &amp; 2021 Time Series
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#where-can-i-find-data">
+     Where can I find data?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snowex-data-sets-are-stored-and-archived-at-the-national-snow-and-ice-data-center-nsidc-in-boulder-colorado">
+       1. SnowEx data sets are stored and archived at the National Snow and Ice Data Center (NSIDC) in Boulder, Colorado.
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#snowex-sql-database-preview-in-next-tutorial">
+       2. SnowEx SQL Database (preview in next tutorial!)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#recap">
@@ -715,9 +912,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
+  <a class="reference internal nav-link" href="#share-your-thoughts">
+   Share Your Thoughts
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#group-mind-map-activity">
+     Group Mind Map Activity
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -728,25 +932,791 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ground-based-measurements-and-data-descriptions">
-<h1>Ground-Based Measurements and Data Descriptions<a class="headerlink" href="#ground-based-measurements-and-data-descriptions" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="ground-based-measurements">
+<h1>Ground-Based Measurements<a class="headerlink" href="#ground-based-measurements" title="Permalink to this headline">¶</a></h1>
+<p>(10 minutes)</p>
 <p>Learning Objectives:</p>
 <ul class="simple">
-<li><p>Become familiar with which measurement types are central to each field campaign</p></li>
+<li><p>Become familiar with which measurements are core validation/calibration data sets</p></li>
 <li><p>Know the sampling strategy and naming conventions for each campaign</p></li>
+<li><p>Learn where to find and search for SnowEx data</p></li>
 </ul>
-<div class="section" id="share-your-thoughts">
-<h2>Share Your Thoughts<a class="headerlink" href="#share-your-thoughts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="data-descriptions">
+<h2>Data Descriptions<a class="headerlink" href="#data-descriptions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-ground-based-data-sets-are-central-for-all-field-campagins">
+<h3>What ground-based data sets are central for all field campagins?<a class="headerlink" href="#what-ground-based-data-sets-are-central-for-all-field-campagins" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/02_pits_and_depths.png" src="../../_images/02_pits_and_depths.png" />
+<p><strong>Figure 1.</strong> Ground-based measurements central to the SnowEx campaigns. (L) Snow Pit: Observer measures the stratigraphy in the snow pit. (M) Depth Transects: Observer uses the MagnaProbe to measure snow depths. (R). Interval Boards: Observer stomps down the snow to place the interval board for another weekly long measurement cycle.</p>
+<!-- ![](./content/02_pits_and_depths.png)
+**Figure 1.** Ground-based measurements central to the SnowEx campaigns. (L) Snow Pit: Observer measures the stratigraphy in the snow pit. (M) Depth Transects: Observer uses the MagnaProbe to measure snow depths. (R). Interval Boards: Observer stomps down the snow to place the interval board for another weekly long measurement cycle. -->
+</div>
+<hr class="docutils" />
+<div class="section" id="what-is-a-snow-pit-span-style-color-gray-layer-data-site-data-in-the-snowex-database">
+<h3>What is a <strong>snow pit</strong>? <span style="color:gray">  ⇨ ‘Layer data’ &amp; ‘Site data’ in the SnowEx database<a class="headerlink" href="#what-is-a-snow-pit-span-style-color-gray-layer-data-site-data-in-the-snowex-database" title="Permalink to this headline">¶</a></h3>
+<p>A snow pit is a vertical profile of snow from the snow surface to the ground.
+This is where we collect a suite of ground observations that aid instrument and model development.</p>
+</div>
+<div class="section" id="what-are-depth-transects-spirals-or-simply-depths-span-style-color-gray-point-data-in-the-snowex-database">
+<h3>What are <strong>depth transects (spirals)</strong>? or simply <strong>depths</strong> <span style="color:gray">  ⇨ ‘Point data’ in the SnowEx database<a class="headerlink" href="#what-are-depth-transects-spirals-or-simply-depths-span-style-color-gray-point-data-in-the-snowex-database" title="Permalink to this headline">¶</a></h3>
+<p>These are point meausurements that tell you how deep the snow is at georeferenced locations.
+There are several instruments available to capture snow depth, some of which are an avalanche probe, MagnaProbe, or Mesa2.</p>
+</div>
+<div class="section" id="what-is-an-interval-board-span-style-color-gray-soon-to-be-point-data-in-the-snowex-database">
+<h3>What is an <strong>interval board</strong>? <span style="color:gray">   ⇨ soon to be ‘Point data’ in the SnowEx database<a class="headerlink" href="#what-is-an-interval-board-span-style-color-gray-soon-to-be-point-data-in-the-snowex-database" title="Permalink to this headline">¶</a></h3>
+<p>An interval board is a 2x2” board with a vertical pole attached at the center.
+The board surface is our reference to track the amount of new snow that falls between field visits.
+The board remains fixed for the season, and gets cleared each visit.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="additional-detail-on-what-s-in-a-snow-pit">
+<h3>Additional detail on what’s in a snow pit<a class="headerlink" href="#additional-detail-on-what-s-in-a-snow-pit" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/02_pit-measurements.png" src="../../_images/02_pit-measurements.png" />
+<p><strong>Figure 2.</strong> Description of parameters that come from a single snow pit visit. The colored ovals on the images correspond to the colored measurements on the left side.</p>
+<!-- ![](./content/02_pit-measurements.png)
+**Figure 2.** Description of parameters that come from a single snow pit visit. The colored ovals on the images correspond to the colored measurements on the left side. -->
+<p>Explore more detail in the <a class="reference external" href="https://snow.nasa.gov/sites/default/files/NASA_SnowEx_Experiment_Plan_v15_draft.pdf">2020 Experimental Plan</a></p>
+</div>
+<div class="section" id="data-collection">
+<h3>Data Collection<a class="headerlink" href="#data-collection" title="Permalink to this headline">¶</a></h3>
+<p>Field note photos from one pit visits. We call these <strong>Pit Sheets</strong>.</p>
+<img alt="../../_images/02_SnowEx20_SnowPits_GMIOP_20200212_2C12_book1_v01.jpg" src="../../_images/02_SnowEx20_SnowPits_GMIOP_20200212_2C12_book1_v01.jpg" />
+<img alt="../../_images/02_stratCodes.png" src="../../_images/02_stratCodes.png" />
+<img alt="../../_images/02_SnowEx20_SnowPits_GMIOP_20200212_2C12_book2_v01.jpg" src="../../_images/02_SnowEx20_SnowPits_GMIOP_20200212_2C12_book2_v01.jpg" />
+<p><strong>Figure 3.</strong> Front and back of the pit sheet field forms. These have largely remained the same throughout the different campaigns. The middle image is a reference for the codes used in the Stratigraphy measurements.</p>
+</div>
+<div class="section" id="why-do-we-care-about-observations-from-snow-pits-and-other-measurements">
+<h3>Why do we care about observations from snow pits and other measurements?<a class="headerlink" href="#why-do-we-care-about-observations-from-snow-pits-and-other-measurements" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>90% because we need to validate what we see from airborne and satellite sensors!!</p></li>
+<li><p>10% because we are geoscientists that want to winter recreate!!</p></li>
+</ul>
+<p>(You can argue those percentages over our movement / coffee break)</p>
+<img alt="../../_images/02_reasons-to-measure.png" src="../../_images/02_reasons-to-measure.png" />
+<p><strong>Figure 4.</strong>  Examples of snow properties and features that are sensitive to modeling and remote sensing signals.</p>
+</div>
+</div>
+<div class="section" id="sampling-strategy-and-naming-conventions">
+<h2>Sampling Strategy and Naming Conventions<a class="headerlink" href="#sampling-strategy-and-naming-conventions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="grand-mesa-iop">
+<h3>2020 Grand Mesa IOP<a class="headerlink" href="#grand-mesa-iop" title="Permalink to this headline">¶</a></h3>
+<img alt="../../_images/02_matrix.png" src="../../_images/02_matrix.png" />
+<p><strong>Figure 5</strong> Nine-member snow and vegetation matrix used to sample and name snow pits during the Grand Mesa IOP campaign</p>
+<p><strong>Vegetation Classes</strong></p>
+<ul class="simple">
+<li><p>1-3 = treeless (0% tree cover)</p></li>
+<li><p>4-6 = sparse (1-30% tree cover)</p></li>
+<li><p>7-9 = dense (31-100% tree cover)</p></li>
+</ul>
+<p><strong>Snow Depth Classes</strong></p>
+<ul class="simple">
+<li><p>1, 4, 7 = shallow (&lt;90cm)</p></li>
+<li><p>2, 5, 8 = medium (90-122cm)</p></li>
+<li><p>3, 6, 9 = deep (&gt;122cm)</p></li>
+</ul>
+<p><strong>Flight Lines</strong></p>
+<ul class="simple">
+<li><p>‘C’ = Crossline</p></li>
+<li><p>‘N’ = North</p></li>
+<li><p>‘S’ = South</p></li>
+</ul>
+<img alt="../../_images/02_GMpitMap.jpg" src="../../_images/02_GMpitMap.jpg" />
+<p><strong>Figure 6.</strong> Grand Mesa IOP 2020 sampling design. The rectangles are the lidar, UAVSAR, SWESARR, Thermal IR, and Gamma flight lines. The point markers are the locations of snow pits.</p>
+</div>
+<div class="section" id="time-series">
+<h3>2020 &amp; 2021 Time Series<a class="headerlink" href="#time-series" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Location     ⇨ Regional Location with existing long-term monitoring infrastructure.</p></li>
+<li><p>Site         ⇨ Averaged unique snow pit site to represent the progression of Time Series snow pits.</p></li>
+<li><p>PitID        ⇨ 6-letter code unique to all snow pit sites; 2-letter state, 2-letter Location; 2-letter site name (e.g <strong>Id</strong>aho, <strong>B</strong>oise <strong>R</strong>iver, <strong>B</strong>ogus <strong>U</strong>pper = IDBRBU</p></li>
+<li><p>Unique PitID ⇨ 6-letter site code and timestamp (e.g. format: XXXXXX_yyyymmdd_hhmm, example: IDBRBU_20200116_1345)</p></li>
+</ul>
+<p><strong>Table 1. (Preliminary) Comprehensive Site Summary for 2020 and 2021 Time Series Campaign</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>State</p></th>
+<th class="head"><p>Location</p></th>
+<th class="head"><p>Site</p></th>
+<th class="head"><p>PitID</p></th>
+<th class="head"><p>Latitude</p></th>
+<th class="head"><p>Longitude</p></th>
+<th class="head"><p>Pit Count</p></th>
+<th class="head"><p>Snow Class</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CA</p></td>
+<td><p>American River Basin</p></td>
+<td><p>Caples Lake</p></td>
+<td><p>CAAMCL</p></td>
+<td><p>38.71029</p></td>
+<td><p>-120.04186</p></td>
+<td><p>7</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>CA</p></td>
+<td><p>Mammoth Lakes</p></td>
+<td><p>CUES</p></td>
+<td><p>CAMLCP</p></td>
+<td><p>37.64324</p></td>
+<td><p>-119.02906</p></td>
+<td><p>9</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>CA</p></td>
+<td><p>Mammoth Lakes</p></td>
+<td><p>Panorama Dome</p></td>
+<td><p>CAMLPD</p></td>
+<td><p>37.61964</p></td>
+<td><p>-119.00029</p></td>
+<td><p>6</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CA</p></td>
+<td><p>Sagehen Creek</p></td>
+<td><p>Forest</p></td>
+<td><p>CASHFO</p></td>
+<td><p>39.42956</p></td>
+<td><p>-120.24211</p></td>
+<td><p>7</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CA</p></td>
+<td><p>Sagehen Creek</p></td>
+<td><p>Open</p></td>
+<td><p>CASHOP</p></td>
+<td><p>39.43037</p></td>
+<td><p>-120.23982</p></td>
+<td><p>7</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CA</p></td>
+<td><p>Sagehen Creek</p></td>
+<td><p>Tower 4</p></td>
+<td><p>CASHT4</p></td>
+<td><p>39.42216</p></td>
+<td><p>-120.29898</p></td>
+<td><p>6</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Cameron Pass</p></td>
+<td><p>Cameron Peak</p></td>
+<td><p>COCPCP</p></td>
+<td><p>40.56381</p></td>
+<td><p>-105.86761</p></td>
+<td><p>16</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Cameron Pass</p></td>
+<td><p>Joe Wright</p></td>
+<td><p>COCPJW</p></td>
+<td><p>40.52406</p></td>
+<td><p>-105.89345</p></td>
+<td><p>8</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Cameron Pass</p></td>
+<td><p>Michigan River</p></td>
+<td><p>COCPMR</p></td>
+<td><p>40.51864</p></td>
+<td><p>-105.89193</p></td>
+<td><p>22</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Aspen</p></td>
+<td><p>COERAP</p></td>
+<td><p>38.92529</p></td>
+<td><p>-106.97109</p></td>
+<td><p>9</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Forest 12</p></td>
+<td><p>COER12</p></td>
+<td><p>38.92973</p></td>
+<td><p>-106.97824</p></td>
+<td><p>12</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Forest 13</p></td>
+<td><p>COER13</p></td>
+<td><p>38.92943</p></td>
+<td><p>-106.97777</p></td>
+<td><p>9</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Forest 14</p></td>
+<td><p>COER14</p></td>
+<td><p>38.92894</p></td>
+<td><p>-106.97757</p></td>
+<td><p>12</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Gothic</p></td>
+<td><p>COERGT</p></td>
+<td><p>38.95925</p></td>
+<td><p>-106.99053</p></td>
+<td><p>9</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Irwin Barn</p></td>
+<td><p>COERIB</p></td>
+<td><p>38.88812</p></td>
+<td><p>-107.10796</p></td>
+<td><p>13</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Open 2</p></td>
+<td><p>COERO2</p></td>
+<td><p>38.92661</p></td>
+<td><p>-106.97848</p></td>
+<td><p>9</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Open 4</p></td>
+<td><p>COERO4</p></td>
+<td><p>38.92627</p></td>
+<td><p>-106.97907</p></td>
+<td><p>12</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Open 6</p></td>
+<td><p>COERO6</p></td>
+<td><p>38.92669</p></td>
+<td><p>-106.97988</p></td>
+<td><p>9</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Trench 13</p></td>
+<td><p>COERTR</p></td>
+<td><p>38.92920</p></td>
+<td><p>-106.97770</p></td>
+<td><p>5</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>East River</p></td>
+<td><p>Upper</p></td>
+<td><p>COERUP</p></td>
+<td><p>38.93331</p></td>
+<td><p>-106.98994</p></td>
+<td><p>12</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Fraser Experimental Forest</p></td>
+<td><p>JPL 1</p></td>
+<td><p>COFEJ1</p></td>
+<td><p>39.90556</p></td>
+<td><p>-105.88282</p></td>
+<td><p>35</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Fraser Experimental Forest</p></td>
+<td><p>JPL 2</p></td>
+<td><p>COFEJ2</p></td>
+<td><p>39.90612</p></td>
+<td><p>-105.88255</p></td>
+<td><p>26</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Fraser Experimental Forest</p></td>
+<td><p>SNB 1</p></td>
+<td><p>COFEB1</p></td>
+<td><p>39.90699</p></td>
+<td><p>-105.87786</p></td>
+<td><p>23</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Fraser Experimental Forest</p></td>
+<td><p>SNB 2</p></td>
+<td><p>COFEB2</p></td>
+<td><p>39.90703</p></td>
+<td><p>-105.87904</p></td>
+<td><p>18</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Grand Mesa</p></td>
+<td><p>County Line Open</p></td>
+<td><p>COGMCO</p></td>
+<td><p>39.03053</p></td>
+<td><p>-108.03220</p></td>
+<td><p>12</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Grand Mesa</p></td>
+<td><p>County Line Tree</p></td>
+<td><p>COGMCT</p></td>
+<td><p>39.03223</p></td>
+<td><p>-108.03438</p></td>
+<td><p>10</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Grand Mesa</p></td>
+<td><p>Mesa West Open</p></td>
+<td><p>COGMWO</p></td>
+<td><p>39.03399</p></td>
+<td><p>-108.21390</p></td>
+<td><p>10</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Grand Mesa</p></td>
+<td><p>Mesa West Trees</p></td>
+<td><p>COGMWT</p></td>
+<td><p>39.03282</p></td>
+<td><p>-108.21291</p></td>
+<td><p>7</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Grand Mesa</p></td>
+<td><p>Skyway Open</p></td>
+<td><p>COGMSO</p></td>
+<td><p>39.04511</p></td>
+<td><p>-108.06209</p></td>
+<td><p>21</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Grand Mesa</p></td>
+<td><p>Skyway Tree</p></td>
+<td><p>COGMST</p></td>
+<td><p>39.04565</p></td>
+<td><p>-108.06333</p></td>
+<td><p>18</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Niwot Ridge</p></td>
+<td><p>C1</p></td>
+<td><p>CONWC1</p></td>
+<td><p>40.03317</p></td>
+<td><p>-105.54616</p></td>
+<td><p>9</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Niwot Ridge</p></td>
+<td><p>Forest Flat</p></td>
+<td><p>CONWFF</p></td>
+<td><p>40.03186</p></td>
+<td><p>-105.54667</p></td>
+<td><p>12</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Niwot Ridge</p></td>
+<td><p>Forest North</p></td>
+<td><p>CONWFN</p></td>
+<td><p>40.03337</p></td>
+<td><p>-105.55380</p></td>
+<td><p>11</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Niwot Ridge</p></td>
+<td><p>Forest South</p></td>
+<td><p>CONWFS</p></td>
+<td><p>40.04021</p></td>
+<td><p>-105.55701</p></td>
+<td><p>13</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Niwot Ridge</p></td>
+<td><p>Open Flat</p></td>
+<td><p>CONWOF</p></td>
+<td><p>40.03579</p></td>
+<td><p>-105.55205</p></td>
+<td><p>15</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Niwot Ridge</p></td>
+<td><p>Saddle</p></td>
+<td><p>CONWSA</p></td>
+<td><p>40.05497</p></td>
+<td><p>-105.59065</p></td>
+<td><p>7</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>CO</p></td>
+<td><p>Senator Beck</p></td>
+<td><p>Senator Beck</p></td>
+<td><p>COSBSB</p></td>
+<td><p>37.90705</p></td>
+<td><p>-107.72626</p></td>
+<td><p>5</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>CO</p></td>
+<td><p>Senator Beck</p></td>
+<td><p>Swamp Angel</p></td>
+<td><p>COSBSA</p></td>
+<td><p>37.90714</p></td>
+<td><p>-107.71121</p></td>
+<td><p>19</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>Banner Open</p></td>
+<td><p>IDBRBO</p></td>
+<td><p>44.30456</p></td>
+<td><p>-115.23601</p></td>
+<td><p>11</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>Banner Snotel</p></td>
+<td><p>IDBRBS</p></td>
+<td><p>44.30362</p></td>
+<td><p>-115.23457</p></td>
+<td><p>23</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>Bogus Lower</p></td>
+<td><p>IDBRBL</p></td>
+<td><p>43.76434</p></td>
+<td><p>-116.10660</p></td>
+<td><p>17</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>Bogus Lower Trees</p></td>
+<td><p>IDBRBT</p></td>
+<td><p>43.76057</p></td>
+<td><p>-116.08979</p></td>
+<td><p>13</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>Bogus Upper</p></td>
+<td><p>IDBRBU</p></td>
+<td><p>43.75881</p></td>
+<td><p>-116.09019</p></td>
+<td><p>11</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>LDP Open</p></td>
+<td><p>IDBRLO</p></td>
+<td><p>43.73707</p></td>
+<td><p>-116.12179</p></td>
+<td><p>19</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>LDP Tree</p></td>
+<td><p>IDBRLT</p></td>
+<td><p>43.73634</p></td>
+<td><p>-116.12053</p></td>
+<td><p>17</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>ID</p></td>
+<td><p>Boise River Basin</p></td>
+<td><p>Mores Creek Summit</p></td>
+<td><p>IDBRMC</p></td>
+<td><p>43.94735</p></td>
+<td><p>-115.67666</p></td>
+<td><p>3</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>MT</p></td>
+<td><p>Central Ag Research Center</p></td>
+<td><p>SnowEx-1</p></td>
+<td><p>MTCASX</p></td>
+<td><p>47.05836</p></td>
+<td><p>-109.95688</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>MT</p></td>
+<td><p>Central Ag Research Center</p></td>
+<td><p>Wheat</p></td>
+<td><p>MTCAWH</p></td>
+<td><p>47.05942</p></td>
+<td><p>-109.95176</p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>MT</p></td>
+<td><p>Central Ag Research Center</p></td>
+<td><p>Wx</p></td>
+<td><p>MTCAWX</p></td>
+<td><p>47.06062</p></td>
+<td><p>-109.95693</p></td>
+<td><p>4</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>NM</p></td>
+<td><p>Jemez River</p></td>
+<td><p>BA Flux Tower</p></td>
+<td><p>NMJRBA</p></td>
+<td><p>35.88859</p></td>
+<td><p>-106.53184</p></td>
+<td><p>8</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>NM</p></td>
+<td><p>Jemez River</p></td>
+<td><p>HQ Met Station</p></td>
+<td><p>NMJRHQ</p></td>
+<td><p>35.85791</p></td>
+<td><p>-106.52137</p></td>
+<td><p>8</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>UT</p></td>
+<td><p>Little Cottonwood Canyon</p></td>
+<td><p>Alta Collins</p></td>
+<td><p>UTLCAC</p></td>
+<td><p>40.57210</p></td>
+<td><p>-111.62997</p></td>
+<td><p>17</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-even"><td><p>UT</p></td>
+<td><p>Little Cottonwood Canyon</p></td>
+<td><p>Atwater</p></td>
+<td><p>UTLCAW</p></td>
+<td><p>40.59125</p></td>
+<td><p>-111.63759</p></td>
+<td><p>20</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Note - This table is a preliminary comprehensive site summary of the 2020 and 2021 Time Series campaigns. If a site was repeated (e.g. Cameron Pass, Michigan River) then the Pit Count column is a sum of the two years). This is preliminary because we are still adjusting and correcting some of the spatial data after confirming locations and sampling designs with site leads. The Snow Class column was extracted from the 300 m Snow Classification data set (Liston, 2021 and can be accessed <a class="reference external" href="https://nsidc.org/data/NSIDC-0768/versions/1">here</a> at NSIDC). See the previous notebook to characterize the Snow Classes. This table does not include about ~50 snow pits that were part of the 2021 TS campaign from the Fraser Experiemental Forest because of the modified spatial sampling design, but will be included in the published data set, and the table will be updated to reflect those additional snow pits.</p>
+<p>This table can be accessed as a geojson from <a class="reference external" href="https://gist.github.com/meganmason/dde13c46a90875e364b1c25a31bff1d8">Megan’s github gists</a></p>
+<p>To use this as a geojson in your project:</p>
 <ol class="simple">
-<li><p>Navigate to this <strong>Google Slides</strong> page</p></li>
-<li><p>Add your thought on data applications now that you know what measurements we have and roughly where they occur</p></li>
+<li><p>Navigate to the link above</p></li>
+<li><p>Check out the map of data (zoom in, zoom out, etc.)</p></li>
+<li><p>Select the ‘Raw’ button from the top right corner</p></li>
+<li><p>Copy/Paste the URL (it’s longer now)</p></li>
+<li><p>Use the code block below to import</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://gist.githubusercontent.com/meganmason/dde13c46a90875e364b1c25a31bff1d8/raw/d361e1a56eeb867bd89c87b4dc13ed431ffff6f6/SNEX_TS_SP_avg_prelim_Hackweek.geojson&quot;</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">gdf</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Location</th>
+      <th>Site</th>
+      <th>PitID</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Pit Count</th>
+      <th>Snow Class</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>CA</td>
+      <td>American River Basin</td>
+      <td>Caples Lake</td>
+      <td>CAAMCL</td>
+      <td>38.71029</td>
+      <td>-120.04186</td>
+      <td>7</td>
+      <td>3</td>
+      <td>POINT (-120.04186 38.71029)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>CA</td>
+      <td>Mammoth Lakes</td>
+      <td>CUES</td>
+      <td>CAMLCP</td>
+      <td>37.64324</td>
+      <td>-119.02906</td>
+      <td>9</td>
+      <td>5</td>
+      <td>POINT (-119.02906 37.64324)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>CA</td>
+      <td>Mammoth Lakes</td>
+      <td>Panorama Dome</td>
+      <td>CAMLPD</td>
+      <td>37.61964</td>
+      <td>-119.00029</td>
+      <td>6</td>
+      <td>6</td>
+      <td>POINT (-119.00029 37.61964)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CA</td>
+      <td>Sagehen Creek</td>
+      <td>Forest</td>
+      <td>CASHFO</td>
+      <td>39.42956</td>
+      <td>-120.24211</td>
+      <td>7</td>
+      <td>6</td>
+      <td>POINT (-120.24211 39.42956)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>CA</td>
+      <td>Sagehen Creek</td>
+      <td>Open</td>
+      <td>CASHOP</td>
+      <td>39.43037</td>
+      <td>-120.23982</td>
+      <td>7</td>
+      <td>6</td>
+      <td>POINT (-120.23982 39.43037)</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="where-can-i-find-data">
+<h3>Where can I find data?<a class="headerlink" href="#where-can-i-find-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="snowex-data-sets-are-stored-and-archived-at-the-national-snow-and-ice-data-center-nsidc-in-boulder-colorado">
+<h4>1. SnowEx data sets are stored and archived at the National Snow and Ice Data Center (NSIDC) in Boulder, Colorado.<a class="headerlink" href="#snowex-data-sets-are-stored-and-archived-at-the-national-snow-and-ice-data-center-nsidc-in-boulder-colorado" title="Permalink to this headline">¶</a></h4>
+<p><strong>Table 2. Summary of Core Data Sets with DOI links for applicable data sets</strong></p>
+<table id="t01">
+<tbody>
+<tr>
+<th>Core Data Sets</th>
+<th>Parameters Available</th>
+<th>Instruments</th>
+<th>NSIDC DOI</th>
+<hr>
+</tr>
+<tr>
+<td>Snow Pits</td>
+<td>Depth, Density, Temp., LWC, Stratigraphy,<br>Grain Size, Wetness, Hand Hardness,<br>Qualitative Environment, SWE</td>
+<td>Standard pit kit</td>
+<td><a href='https://nsidc.org/data/SNEX17_SnowPits/versions/1'>SNEX17_SnowPits_GMIOP</a> 
+<br>
+<a href='https://nsidc.org/data/SNEX20_GM_SP/versions/1'>SNEX20_SnowPits_GMIOP</a>
+<br>
+SNEX20_TS_SP (in review)
+<br>
+SNEX21_TS_SP (future pub.)<td>
+</tr>
+<tr>
+<td>Depth Transects</td>
+<td>Snow Depth - various sampling designs</td>
+<td>MagnaProbe, Mesa2, Pit Ruler</td>
+<td><a href='https://nsidc.org/data/SNEX17_SD/versions/1'>SNEX17_SD</a> 
+<br>
+<a href='https://nsidc.org/data/SNEX20_SD/versions/1'>SNEX20_SD</a>
+<br>
+SNEX20_TS_SD (future pub.)
+<br>
+SNEX21_TS_SD (future pub.)<td>
+</tr>
+<tr>
+<td>Interval Boards</td>
+<td>New snow, SWE, density</td>
+<td>Ruler and spring scale</td>
+<td>SNEX20_TS_IB (in prep.)
+<br>
+SNEX21_TS_IB (future pub.)<td></td>
+</tr>
+<tr>
+</tr>
+<tbody>
+<table> 
+<hr>
+<p><em>Visit <a class="reference external" href="https://nsidc.org/data/snowex">NSIDC’s SnowEx Overview page</a> to see a full table of all available <a class="reference external" href="https://nsidc.org/data/snowex/data_summaries">2017</a>, <a class="reference external" href="https://nsidc.org/data/snowex/data_summaries">2020</a>, and <a class="reference external" href="https://nsidc.org/data/snowex/data_summaries">2021</a> products.</em></p>
+<img alt="../../_images/02_data-package.png" src="../../_images/02_data-package.png" />
+<p><strong>Figure 7.</strong> Representative snow pit data package for an individual pit visit.</p>
+</div>
+<div class="section" id="snowex-sql-database-preview-in-next-tutorial">
+<h4>2. SnowEx SQL Database (preview in next tutorial!)<a class="headerlink" href="#snowex-sql-database-preview-in-next-tutorial" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
 </div>
 <div class="section" id="recap">
 <h2>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>You know which measurements we have a LOT of and are consistent between multiple field campaigns</p></li>
+<li><p>You are aware of the basic sampling strategy for the two campaign types</p></li>
+<li><p>You have a few tools at your finger tips to access and learn more about the data</p></li>
+</ul>
 </div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="share-your-thoughts">
+<h2>Share Your Thoughts<a class="headerlink" href="#share-your-thoughts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="group-mind-map-activity">
+<h3>Group Mind Map Activity<a class="headerlink" href="#group-mind-map-activity" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Navigate to this <a class="reference external" href="https://docs.google.com/presentation/d/1Vht7MCePDKQsts_baUAvtQZBkRsldtMzeOmztkiNAKA/edit#slide=id.g13bf53aeb4c_0_0">Google Slides</a> page to complete the Mind Map activity</p></li>
+<li><p>Wait to be assigned a table number</p></li>
+<li><p>Add your thoughts on data applications and research topics now that you know what measurements we have and where they occur.</p></li>
+</ol>
+</div>
 </div>
 </div>
 
