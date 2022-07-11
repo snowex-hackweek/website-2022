@@ -737,7 +737,17 @@ const thebe_selector_output = ".output, .cell_output"
 <h1>Introduction to Lidar Remote Sensing<a class="headerlink" href="#introduction-to-lidar-remote-sensing" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-lidar">
 <h2>What is Lidar<a class="headerlink" href="#what-is-lidar" title="Permalink to this headline">¶</a></h2>
-<p>Lidar stands for light detection and Ranging also called 3D laser scanning. It is a crucial remote sensing system for measuring elevation across wide areas. There are different types depending on: platform used, physical process or scattering process. Based on the platform used, we find 3 types of LiDAR:</p>
+<p>Lidar stands for light detection and Ranging also called 3D laser scanning. It is an active remote sensing techniques for measuring elevation across wide areas.</p>
+<ul class="simple">
+<li><p>Pulses of laser light are beamed to surface</p></li>
+<li><p>Return travel time determines distance to surface</p></li>
+</ul>
+<p>Lidar provides highly accuracte elevation data at high resolution</p>
+<figure>
+<img src = 'https://i.imgur.com/QTc48KV.png' style="width:100%">
+<figcaption align =  'center'><b>1 meter Lidar DEM vs 10 meter pixel USGS DEM. Source: Middlebury Remote Sensing</b></figcaption>
+</figure>
+<p>There are different types depending on: platform used, physical process or scattering process. Based on the platform used, we find 3 types of LiDAR:</p>
 <ol class="simple">
 <li><p>Ground-based LiDAR</p></li>
 <li><p>Airborne LiDAR</p></li>
@@ -747,6 +757,12 @@ const thebe_selector_output = ".output, .cell_output"
 <figure>
 <img src = 'https://gmv.cast.uark.edu/wp-content/uploads/2013/01/ALS_scematic.jpg' style="width:100%">
 <figcaption align =  'center'><b>Source: https://gmv.cast.uark.edu/scanning-2/airborne-laser-scanning//</b></figcaption>
+</figure>
+<p>Lidar records two types of data- Range distance and Intensity. Range is a function of two-way travel time to ground and back. Intensity is the fraction of photons returned controlled by material properties.</p>
+<p>Each lidar pulse yields multiple returns. The number and complexity of returns provide information about the surface material.</p>
+<figure>
+<img src = 'https://gisgeography.com/wp-content/uploads/2015/08/Number-Returns.png' style="width:100%">
+<figcaption align =  'center'><b>Source: GISGeography</b></figcaption>
 </figure>
 <p>Depending on the feature the point return is coming from, elevation models can be Digital Terrain Model (DTM) or Digital Surface Model (DSM). DTM is the three-dimensional representation of the terrain without natural or man-made objects. DSM is a three-dimensional representation of the heights of the Earth’s surface, including natural or man-made objects located on it.</p>
 <figure>
@@ -758,7 +774,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>In this activity, we will open a .las file, in the <a class="reference external" href="http://plas.io/">plas.io free online lidar data viewer</a> and explore some attributes associated with a lidar data point cloud.</p>
 <ol class="simple">
 <li><p>Load the data: under file, select Autzen stadium. To navigate around, use left click and drag to tilt up and down, righ click and drag to move around. scroll bar to zoom in and out</p></li>
-<li><p>Adjust Intesnity</p></li>
+<li><p>Adjust Intensity</p></li>
 <li><p>Change the lidar point cloud color options to classification</p></li>
 <li><p>Explore</p></li>
 </ol>
