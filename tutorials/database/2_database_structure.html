@@ -838,11 +838,10 @@ do research with. With that in mind follow the steps below to see how the the da
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the connection function from the snowexsql library</span>
 <span class="kn">from</span> <span class="nn">snowexsql.db</span> <span class="kn">import</span> <span class="n">get_db</span>
 
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">inspect</span>
+
 <span class="c1"># This is what you will use for all of hackweek to access the db</span>
 <span class="n">db_name</span> <span class="o">=</span> <span class="s1">&#39;snow:hackweek@db.snowexdata.org/snowex&#39;</span>
-
-<span class="c1"># Using the function get_db, we receive 2 ways to interact with the database</span>
-<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -852,17 +851,19 @@ do research with. With that in mind follow the steps below to see how the the da
 <h3>Step 2: Query the DB to see what tables are available<a class="headerlink" href="#step-2-query-the-db-to-see-what-tables-are-available" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Output the list of tables in the database </span>
-<span class="n">engine</span><span class="o">.</span><span class="n">table_names</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the function get_db, we receive 2 ways to interact with the database</span>
+<span class="n">engine</span><span class="p">,</span> <span class="n">session</span> <span class="o">=</span> <span class="n">get_db</span><span class="p">(</span><span class="n">db_name</span><span class="p">)</span>
+
+<span class="c1"># Output the list of tables in the database </span>
+<span class="n">tables</span> <span class="o">=</span> <span class="n">inspect</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span><span class="o">.</span><span class="n">get_table_names</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tables</span><span class="p">)</span>
+
+<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2086/3417980224.py:2: SADeprecationWarning: The Engine.table_names() method is deprecated and will be removed in a future release.  Please refer to Inspector.get_table_names(). (deprecated since: 1.4)
-  engine.table_names()
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;spatial_ref_sys&#39;, &#39;points&#39;, &#39;layers&#39;, &#39;sites&#39;, &#39;images&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;spatial_ref_sys&#39;, &#39;points&#39;, &#39;layers&#39;, &#39;sites&#39;, &#39;images&#39;]
 </pre></div>
 </div>
 </div>
@@ -870,7 +871,7 @@ do research with. With that in mind follow the steps below to see how the the da
 <p>We can also import classes that reflect these tables in python!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">snowexsql.data</span> <span class="kn">import</span> <span class="n">LayerData</span><span class="p">,</span> <span class="n">PointData</span><span class="p">,</span> <span class="n">ImageData</span><span class="p">,</span> <span class="n">SiteData</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">snowexsql.data</span> <span class="kn">import</span> <span class="n">PointData</span><span class="p">,</span> <span class="n">LayerData</span><span class="p">,</span> <span class="n">ImageData</span><span class="p">,</span> <span class="n">SiteData</span>
 </pre></div>
 </div>
 </div>
@@ -880,7 +881,7 @@ do research with. With that in mind follow the steps below to see how the the da
 <h3>Step 3: Query a Table to see what columns you can use!<a class="headerlink" href="#step-3-query-a-table-to-see-what-columns-you-can-use" title="Permalink to this headline">¶</a></h3>
 <p>In our python library <a class="reference external" href="https://github.com/SnowEx/snowexsql/">snowexsql</a> there are classes that reflect the database tables. This makes it easier to use in python.
 For google purposes this is also called Object Relational Mapping (ORM).</p>
-<p>Import the table class from <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/snowexsql.html#module-snowexsql.data"><code class="docutils literal notranslate"><span class="pre">snowexsql.data</span></code></a> and <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/snowexsql.html#snowexsql.db.get_table_attributes"><code class="docutils literal notranslate"><span class="pre">snowexsql.db.get_table_attributes</span></code></a>. The use <code class="docutils literal notranslate"><span class="pre">get_table_attributes</span></code> to see what
+<p>Import the table class from <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/snowexsql.html#module-snowexsql.data">snowexsql.data</a> and <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/snowexsql.html#snowexsql.db.get_table_attributes">snowexsql.db.get_table_attributes</a>. The use <code class="docutils literal notranslate"><span class="pre">get_table_attributes</span></code> to see what
 columns are in each table!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -936,14 +937,6 @@ columns are in each table!</p>
 <div class="section" id="discussion-what-s-the-difference-in-these-tables">
 <h2>Discussion: What’s the difference in these tables?<a class="headerlink" href="#discussion-what-s-the-difference-in-these-tables" title="Permalink to this headline">¶</a></h2>
 <p>If working by yourself checkout the readthedocs page on <a class="reference external" href="https://snowexsql.readthedocs.io/en/latest/database_structure.html">database structure</a> to see how data gets categorized.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Close out the session to avoid hanging transactions</span>
-<span class="n">session</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="bonus-step-learning-to-help-yourself">
 <h2>Bonus Step: Learning to help yourself<a class="headerlink" href="#bonus-step-learning-to-help-yourself" title="Permalink to this headline">¶</a></h2>
