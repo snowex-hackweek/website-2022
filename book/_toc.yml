@@ -32,7 +32,7 @@ parts:
     - file: tutorials/index
       sections:
         - file: tutorials/example/tutorial-notebook
-        - file: tutorials/Machine_Learning_Tutorial
+        - file: tutorials/machine_learning/Machine_Learning_Tutorial
         - file: tutorials/git_and_jupyterlab/index
           title: Git, GitHub, and JupyterLab
           sections:
