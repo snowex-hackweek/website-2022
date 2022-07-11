@@ -591,7 +591,6 @@ people:
         link: https://github.com/mlwrzesien
     user_groups:
       - Tutorial Lead
-  # =============
   - title: Xiaolan Xu
     avatar: https://avatars.githubusercontent.com/u/7988251?v=4
     role: Tutorial Lead
@@ -634,7 +633,6 @@ people:
         link: https://github.com/NCristea
     user_groups:
       - eScience Hackweek Team
-  # =============
   - title: Ibrahim Olalekan Alabi
     avatar: https://avatars.githubusercontent.com/u/72909059?v=4
     role: Graduate Student
@@ -651,4 +649,3 @@ people:
         link: https://github.com/Ibrahim-Ola
     user_groups:
       - Tutorial Lead
-
