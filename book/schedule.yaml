@@ -12,6 +12,9 @@ tabs:
         leads:
           - Anthony Arendt
           - Charley Haley
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=b469aKcusX4
       - time: 9:45 - 10:15
         location: Maple Hall
         title: Overview of the SnowEx Mission and Description of the Datasets (Part 1)
@@ -20,6 +23,9 @@ tabs:
           - HP Marshall
           - Carrie Vuyovich
           - Megan Mason
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=iJLRoaetVRI
       - time: 10:15 - 10:45
         title: coffee and movement break
         description:
@@ -31,12 +37,18 @@ tabs:
           - HP Marshall
           - Carrie Vuyovich
           - Megan Mason
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=QnUt1joLQEQ
       - time: 11:00 - 11:45
         location: Maple Hall
         title: Getting Started on Technology
         description: Still having trouble with getting any technology going? We're here to help you debug!
         leads:
           - Joachim Meyer
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=EpVzNGLFdMc
       - time: 11:45 - 12:15
         location: Maple Hall
         title: Project Ideation
@@ -44,6 +56,9 @@ tabs:
         leads:
           - Charley Haley
           - Anthony Arendt
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=y-sCwHqZhH8
       - time: 12:15 - 1:15
         title: lunch
         description:
@@ -54,10 +69,16 @@ tabs:
         leads:
           - Charley Haley
           - Anthony Arendt
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=LTqdP3UNjf4
       - time: 2:15 - 3:15
         location: Maple Hall
         title: Project Set up and Logistics
         description: Meet your teammates, figure out how/when you want to meet and communicate.
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=BKtZox0NhEM
   - title: Day 2
     date: Tuesday 12 July
     contents:

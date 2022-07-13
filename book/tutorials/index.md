@@ -18,6 +18,6 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | [Overview of the SnowEx Mission and Description of the Datasets Part II](./core-datasets/index.md) |  [YouTube](https://www.youtube.com/watch?v=QnUt1joLQEQ) |
 | Getting Started with Technology | [YouTube](https://www.youtube.com/watch?v=EpVzNGLFdMc) |
 | Project Ideation | [YouTube](https://www.youtube.com/watch?v=y-sCwHqZhH8) |
-| Formation of Hacking Projects | - [YouTube](https://www.youtube.com/watch?v=LTqdP3UNjf4) |
-| Project Setup and Logistics | - [YouTube](https://www.youtube.com/watch?v=BKtZox0NhEM) |
+| Formation of Hacking Projects | [YouTube](https://www.youtube.com/watch?v=LTqdP3UNjf4) |
+| Project Setup and Logistics | [YouTube](https://www.youtube.com/watch?v=BKtZox0NhEM) |
 | - | - |
