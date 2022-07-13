@@ -8,7 +8,7 @@ through these tutorials interactively. On JupyterHub, your home directory persis
 so any changes you make to the tutorials will be saved and be there for you next
 time you log in.
 
-All live tutorial recordings available via UW eScience [YouTube Playlist](https://www.youtube.com/playlist?list=PLA6PlfxWZPLSTUaS0uR8FMcNC2wqztwjJ). Or see the table below for links to specific tutorial notebooks and recordings:
+All live tutorial recordings available via UW eScience [YouTube Playlist](https://www.youtube.com/playlist?list=PLA6PlfxWZPLRg-IuxBspxus8HezUuFLYe). Or see the table below for links to specific tutorial notebooks and recordings:
 
 
 | Tutorial | Recording Link |
