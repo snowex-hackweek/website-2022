@@ -31,7 +31,7 @@ parts:
   chapters:
     - file: tutorials/index
       sections:
-        - file: tutorials/example/tutorial-notebook
+        - file: tutorials/machine_learning/Machine_Learning_Tutorial
         - file: tutorials/git_and_jupyterlab/index
           title: Git, GitHub, and JupyterLab
           sections:
@@ -51,7 +51,8 @@ parts:
             - file: tutorials/database/4_get_spiral_example
             - file: tutorials/database/5_plot_raster_example
             - file: tutorials/database/6_exporting_data
-            - file: tutorials/database/7_wrap_up
+            - file: tutorials/database/7_bonus_challenge
+            - file: tutorials/database/8_wrap_up
         - file: tutorials/OOP/index
           title: Object Oriented Programming
           sections:
