@@ -117,26 +117,37 @@ tabs:
     - time: 8:30 - 9:00
       title: Open source science and NASA Mission development
       leads:
-      - HP Marshall
-      - Jessica Lundquest
+        - HP Marshall
+        - Jessica Lundquest
+      resources:
+          - title: "Recording"
+            url: https://youtu.be/Ij_pl-Z24LQ
     - time: 9:00 - 9:45
       title: Signals of Opportunity
       leads:
-      - Xiaolan Xu
-      - Rashmi Shah
-      - Simon Yueh
+        - Xiaolan Xu
+        - Rashmi Shah
+        - Simon Yueh
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/Wr36s0kDB50
     - time: 9:45 - 10:00
       title: coffee and movement break
     - time: 10:00 - 10:45
       title: SWESARR
       leads:
-      - Dylan Boyd
-      - Batuhan Osmanoglu
+        - Dylan Boyd
+        - Batuhan Osmanoglu
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/d7S0fUVfzjw
     - time: 10:45 - 12:00
       title: LiDAR
       leads:
-      - Naheem Adebisi
-      - Clare Webster
+        - Naheem Adebisi
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/yf06lfL4qZo
     - time: 12:00 - 1:00
       title: lunch
     - time: 1:0 - 4:30
