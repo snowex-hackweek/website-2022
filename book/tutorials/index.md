@@ -21,3 +21,10 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | Formation of Hacking Projects | [YouTube](https://www.youtube.com/watch?v=LTqdP3UNjf4) |
 | Project Setup and Logistics | [YouTube](https://www.youtube.com/watch?v=BKtZox0NhEM) |
 | - | - |
+| Day 2 | Coming soon |
+| - | - |
+| Open source science and NASA Mission development | [YouTube](https://youtu.be/Ij_pl-Z24LQ) |
+| Signals of Opportunity | [YouTube](https://youtu.be/Wr36s0kDB50) |
+| [SWESARR](./microwave/swesarr/swesarr_tut.ipynb) | [YouTube](https://youtu.be/d7S0fUVfzjw) |
+| [LiDAR](./lidar/index.md) | [YouTube](https://youtu.be/yf06lfL4qZo) |
+| - | - |
