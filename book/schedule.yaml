@@ -1,9 +1,9 @@
 timezone: UTC -7 (Pacific Daylight Time)
 tabs:
   - title: Day 1
-    date: Monday 11 Jul
+    date: Monday 11 July
     contents:
-      - time: 8:00 - 8:45 
+      - time: 8:00 - 8:45
         location: Maple Hall
         title: Registration
       - time: 8:45 - 9:45
@@ -12,6 +12,9 @@ tabs:
         leads:
           - Anthony Arendt
           - Charley Haley
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=b469aKcusX4
       - time: 9:45 - 10:15
         location: Maple Hall
         title: Overview of the SnowEx Mission and Description of the Datasets (Part 1)
@@ -19,7 +22,10 @@ tabs:
         leads:
           - HP Marshall
           - Carrie Vuyovich
-          - Megan Mason  
+          - Megan Mason
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=iJLRoaetVRI
       - time: 10:15 - 10:45
         title: coffee and movement break
         description:
@@ -31,12 +37,18 @@ tabs:
           - HP Marshall
           - Carrie Vuyovich
           - Megan Mason
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=QnUt1joLQEQ
       - time: 11:00 - 11:45
         location: Maple Hall
         title: Getting Started on Technology
         description: Still having trouble with getting any technology going? We're here to help you debug!
         leads:
           - Joachim Meyer
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=EpVzNGLFdMc
       - time: 11:45 - 12:15
         location: Maple Hall
         title: Project Ideation
@@ -44,6 +56,9 @@ tabs:
         leads:
           - Charley Haley
           - Anthony Arendt
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=y-sCwHqZhH8
       - time: 12:15 - 1:15
         title: lunch
         description:
@@ -54,12 +69,18 @@ tabs:
         leads:
           - Charley Haley
           - Anthony Arendt
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=LTqdP3UNjf4
       - time: 2:15 - 3:15
         location: Maple Hall
         title: Project Set up and Logistics
         description: Meet your teammates, figure out how/when you want to meet and communicate.
+        resources:
+          - title: "Recording"
+            url: https://www.youtube.com/watch?v=BKtZox0NhEM
   - title: Day 2
-    date: Tues 12 Jul
+    date: Tuesday 12 July
     contents:
     - time: 8:30 - 9:30
       title: Object Oriented Programming for Collaborative Development in Python
@@ -68,7 +89,7 @@ tabs:
           - working together
       leads:
       - Romina Piunno
-    - time: 9:30 - 10:00 
+    - time: 9:30 - 10:00
       title: Project Team Building
       leads:
       - Naomi Alterman
@@ -83,15 +104,15 @@ tabs:
     - time: 11:45 - 12:45
       title: lunch
       description:
-    - time: 12:45 - 1:15 
+    - time: 12:45 - 1:15
       title: NSIDC Data Access
       leads:
       - Gail Reckase
       - Amy Steiker
-    - time: 1:15 - 4:30   
+    - time: 1:15 - 4:30
       title: Project work
   - title: Day 3
-    date: Wed 13 Jul
+    date: Wednesday 13 July
     contents:
     - time: 8:30 - 9:00
       title: Open source science and NASA Mission development
@@ -121,14 +142,14 @@ tabs:
     - time: 1:0 - 4:30
       title: Project Work
   - title: Day 4
-    date: Thurs 14 Jul
+    date: Thursday 14 July
     contents:
     - time: 8:30 - 10:00
       title: Machine Learning
       leads:
       - Ibrahim Olalekan Alabi
       - Evi Ofekeze
-    - time: 10:00 - 10:15 
+    - time: 10:00 - 10:15
       title: coffee and movement break
     - time: 10:15 - 11:00
       title: AVIRIS-NG
@@ -150,17 +171,17 @@ tabs:
     - time: 1:30 - 4:30
       title: project work
   - title: Day 5
-    date: Fri 15 Jul
+    date: Friday 15 July
     contents:
     - time: 8:30 - 10:30
       title: open session / project work
-    - time: 10:30 - 11:00 
+    - time: 10:30 - 11:00
       title: coffee and group photo
-    - time: 11:00 - 11:30 
+    - time: 11:00 - 11:30
       title: Hackweek Evaluation Form
-      leads: 
+      leads:
       - Anthony Arendt
-    - time: 11:30 - 12:30 
+    - time: 11:30 - 12:30
       title: lunch
     - time: 12:30 - 3:30
       title: Project Presentations
