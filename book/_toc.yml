@@ -86,7 +86,7 @@ parts:
             - file: tutorials/microwave/swesarr/swesarr_tut
               title: SWESARR
             - file: tutorials/microwave/SoOp/SoOp_tut
-              title: Singals of Opportunity  
+              title: Signals of Opportunity  
         - file: tutorials/aviris-ng/index
           title: AVIRIS-NG
           sections:
