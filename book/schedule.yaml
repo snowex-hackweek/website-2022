@@ -88,27 +88,39 @@ tabs:
           - icepyx
           - working together
       leads:
-      - Romina Piunno
+        - Romina Piunno
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/OBd68n8H1Iw
     - time: 9:30 - 10:00
       title: Project Team Building
       leads:
-      - Naomi Alterman
+        - Naomi Alterman
+      resources:
+          - title: "Recording"
+            url: https://youtu.be/i2LwexVwcf8
     - time: 10:00 - 10:15
       title: coffee and movement break
       description:
     - time: 10:15 - 11:45
       title: Databases
       leads:
-      - Micah Johnson
-      - Micah Sandusky
+        - Micah Johnson
+        - Micah Sandusky
+      resources:
+          - title: "Recording"
+            url: https://youtu.be/meWHEi0eA_o
     - time: 11:45 - 12:45
       title: lunch
       description:
     - time: 12:45 - 1:15
       title: NSIDC Data Access
       leads:
-      - Gail Reckase
-      - Amy Steiker
+        - Gail Reckase
+        - Amy Steiker
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/iJeHInWmYSc
     - time: 1:15 - 4:30
       title: Project work
   - title: Day 3
@@ -158,27 +170,39 @@ tabs:
     - time: 8:30 - 10:00
       title: Machine Learning
       leads:
-      - Ibrahim Olalekan Alabi
-      - Evi Ofekeze
+        - Ibrahim Olalekan Alabi
+        - Evi Ofekeze
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/IQvV-tPQM-w
     - time: 10:00 - 10:15
       title: coffee and movement break
     - time: 10:15 - 11:00
       title: AVIRIS-NG
       leads:
-      - Chelsea Ackroyd
-      - Joachim Meyer
+        - Chelsea Ackroyd
+        - Joachim Meyer
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/-9msRToAXNE
     - time: 11:00 - 11:45
       title: Snow Modeling
       leads:
-      - Melissa Wrzesien
-      - Brendan McAndrew
+        - Melissa Wrzesien
+        - Brendan McAndrew
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/AtF-7LdW2es
     - time: 11:45 - 12:45
       title: lunch
     - time: 12:45 - 1:30
       title: UAVSAR
       leads:
-      - Jack Tarricone
-      - Zach Keskinen
+        - Jack Tarricone
+        - Zach Keskinen
+      resources:
+        - title: "Recording"
+          url: https://youtu.be/SOM4HbZW3B4
     - time: 1:30 - 4:30
       title: project work
   - title: Day 5
