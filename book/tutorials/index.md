@@ -13,7 +13,7 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 
 | Tutorial | Recording Link |
 | -  | - |
-| Welcome Session  | [YouTube](https://www.youtube.com/watch?v=b469aKcusX4) |
+| [Welcome Session](https://drive.google.com/file/d/1-IiK_CFLqBtt2rMA0UTSsD-0iV9kWT6U/view)  | [YouTube](https://www.youtube.com/watch?v=b469aKcusX4) |
 | [Overview of the SnowEx Mission and Description of the Datasets Part I](./core-datasets/index.md) |  [YouTube](https://www.youtube.com/watch?v=iJLRoaetVRI) |
 | [Overview of the SnowEx Mission and Description of the Datasets Part II](./core-datasets/index.md) |  [YouTube](https://www.youtube.com/watch?v=QnUt1joLQEQ) |
 | Getting Started with Technology | [YouTube](https://www.youtube.com/watch?v=EpVzNGLFdMc) |
@@ -26,7 +26,7 @@ All live tutorial recordings available via UW eScience [YouTube Playlist](https:
 | [Databases](./database/index.md) | [YouTube](https://youtu.be/meWHEi0eA_o) |
 | [NSIDC Data Access](./nsidc-data-access/index.md) | [YouTube](https://youtu.be/iJeHInWmYSc) |
 | - | - |
-| Open source science and NASA Mission development | [YouTube](https://youtu.be/Ij_pl-Z24LQ) |
+| [Open source science and NASA Mission development](https://drive.google.com/file/d/1AwqcpBZiPIg43_gxUkovubiR6hEQP93_/view) | [YouTube](https://youtu.be/Ij_pl-Z24LQ) |
 | Signals of Opportunity | [YouTube](https://youtu.be/Wr36s0kDB50) |
 | [SWESARR](./microwave/swesarr/swesarr_tut.ipynb) | [YouTube](https://youtu.be/d7S0fUVfzjw) |
 | [LiDAR](./lidar/index.md) | [YouTube](https://youtu.be/yf06lfL4qZo) |
