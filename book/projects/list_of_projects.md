@@ -1,4 +1,6 @@
-# List of Projects for the 2022 event
+# List of Projects 
+
+Links to the GitHub repository and the Friday presentations for the 2022 event projects.
 
 | Project Name (with link to GitHub repo)                                            | final presentation                    |
 |:-----------------------------------------------------------------------------------|:--------------------------------------|
