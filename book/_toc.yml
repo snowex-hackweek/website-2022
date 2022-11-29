@@ -61,9 +61,9 @@ parts:
         - file: tutorials/lidar/index
           title: Lidar Remote Sensing of Snow
           sections:
-            - file: tutorials/lidar/1_introduction_to_lidar
-            - file: tutorials/lidar/2_elevation_differencing
-            - file: tutorials/lidar/3_common_pitfalls
+            - file: tutorials/lidar/1_introduction_to_lidar_v2
+            - file: tutorials/lidar/2_elevation_differencing_v2
+            - file: tutorials/lidar/3_common_pitfalls_v2
         - file: tutorials/uavsar/index
           title: UAVSAR
           sections:
