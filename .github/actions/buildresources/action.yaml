@@ -33,7 +33,7 @@ runs:
       shell: bash -l {0}
       run: |
         ./scripts/build_resources.sh
-        
+
     - name: Dump Build Logs
       if: always()
       shell: bash -l {0}
@@ -47,10 +47,10 @@ runs:
         personal_token: ${{inputs.token}}
         publish_dir: book/_build/html
         publish_branch: gh-pages
-        cname: snowex.hackweek.io
+        cname: snowex-2022.hackweek.io
 
     - name: Save Build
-      if: ${{ always() && inputs.jb-save == 'true'}} 
+      if: ${{ always() && inputs.jb-save == 'true'}}
       uses: actions/upload-artifact@v2
       with:
         name: build

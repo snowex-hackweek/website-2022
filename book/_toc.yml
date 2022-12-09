@@ -9,9 +9,9 @@ parts:
     - file: logistics
     - file: COVID
     - title: Schedule
-      url: https://snowex.hackweek.io//index.html?jump_to=schedule
+      url: https://snowex-2022.hackweek.io/index.html?jump_to=schedule
     - title: Team
-      url: https://snowex.hackweek.io//index.html?jump_to=team
+      url: https://snowex-2022.hackweek.io/index.html?jump_to=team
     - file: mission
     - file: CoC
 - caption: Preparation
@@ -86,7 +86,7 @@ parts:
             - file: tutorials/microwave/swesarr/swesarr_tut
               title: SWESARR
             - file: tutorials/microwave/SoOP/SoOp_tut
-              title: Signals of Opportunity  
+              title: Signals of Opportunity
         - file: tutorials/aviris-ng/index
           title: AVIRIS-NG
           sections:
