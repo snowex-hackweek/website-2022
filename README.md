@@ -1,7 +1,4 @@
 # SnowEx Hackweek 2022 Website
 [![Deploy](https://github.com/snowex-hackweek/website2022/actions/workflows/deploy.yaml/badge.svg)](https://github.com/snowex-hackweek/website2022/actions/workflows/deploy.yaml)
 
-
-## How to contribute
-
-We welcome contributions! Have a look at our [code of conduct](./CODE_OF_CONDUCT.md) and [contributing guide](./CONTRIBUTING.md).
+https://snowex-2022.hackweek.io/
