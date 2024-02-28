@@ -17,7 +17,7 @@ banner:
   - url: intro.html
     title: 2022 Jupyter Book
     new_window: false
-  - url: https://snowex-hackweek.github.io/website
+  - url: https://snowex-2021.hackweek.io/intro.html
     title: 2021 Website
     new_window: true
   image: https://geohackweek.github.io/assets/images/banner.jpg
